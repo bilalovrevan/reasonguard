@@ -31,6 +31,12 @@ env/
 *.swo
 *~
 
+# Editor / local agent state
+.claude/
+
+# Archived raw data
+archive/v1_prototypes/*.csv
+
 # Office temp files
 ~$*.docx
 ~$*.xlsx
