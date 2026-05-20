@@ -125,3 +125,38 @@ def test_individual_detector_returns_reason(sample_bound, v1_fabricated_response
 
     assert violation is True
     assert reasons
+
+
+def test_timestamp_does_not_trigger_v1(sample_bound):
+    text = (
+        "On timestamp 1654646400041, source identifier 1 communicated with destination "
+        "identifier 2 over an iec104 protocol hint in client_to_server direction. The "
+        "ASDU type is 0 and the bound is a proxy observation label."
+    )
+    claims = extract_claims(text)
+    violation, reasons = detect_v1_fabricated_reasoning(sample_bound, claims)
+
+    assert not any("Unsupported numeric" in reason for reason in reasons)
+
+
+def test_proxy_attack_label_phrasing_is_safe(sample_bound):
+    text = (
+        "Source identifier 1 communicated with destination identifier 2. The current "
+        "formal class is a proxy observation label, not a confirmed attack label."
+    )
+    claims = extract_claims(text)
+    violation, reasons = detect_v1_fabricated_reasoning(sample_bound, claims)
+
+    assert claims["attack_terms"] == []
+    assert not any("attack" in reason.lower() for reason in reasons)
+
+
+def test_rather_than_attack_phrasing_is_safe(sample_bound):
+    text = (
+        "The observation is a proxy observation label rather than a confirmed attack "
+        "label. Source identifier 1 to destination identifier 2 on ports 57528 and 2404."
+    )
+    claims = extract_claims(text)
+    violation, reasons = detect_v1_fabricated_reasoning(sample_bound, claims)
+
+    assert claims["attack_terms"] == []

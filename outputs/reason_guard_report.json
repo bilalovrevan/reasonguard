@@ -1,12 +1,12 @@
 {
   "summary": {
     "total_responses": 520,
-    "no_violation": 100,
-    "V1_fabricated_reasoning": 120,
+    "no_violation": 109,
+    "V1_fabricated_reasoning": 110,
     "V2_contradicted_reasoning": 100,
     "V3_over_generalised_reasoning": 100,
-    "V4_under_specified_reasoning": 408,
-    "V5_incoherent_reasoning": 2
+    "V4_under_specified_reasoning": 404,
+    "V5_incoherent_reasoning": 0
   },
   "results": [
     {
@@ -82,8 +82,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -108,9 +107,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           2,
@@ -356,8 +353,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -382,9 +378,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           4,
@@ -630,8 +624,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -656,9 +649,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           4,
@@ -904,8 +895,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -930,9 +920,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           6,
@@ -1178,8 +1166,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -1204,9 +1191,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -1452,8 +1437,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -1478,9 +1462,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           10,
@@ -1726,8 +1708,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -1752,9 +1733,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           6,
@@ -2000,8 +1979,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -2026,9 +2004,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -2274,8 +2250,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -2300,9 +2275,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           5,
@@ -2548,8 +2521,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -2574,9 +2546,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           6,
@@ -2822,8 +2792,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -2848,9 +2817,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -3096,8 +3063,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -3122,9 +3088,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           10,
@@ -3370,8 +3334,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -3396,9 +3359,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           6,
@@ -3644,8 +3605,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -3670,9 +3630,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -3918,8 +3876,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -3944,9 +3901,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           10,
@@ -4192,8 +4147,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -4218,9 +4172,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           6,
@@ -4466,8 +4418,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -4492,9 +4443,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           6,
@@ -4740,8 +4689,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -4766,9 +4714,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -5014,8 +4960,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -5040,9 +4985,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           10,
@@ -5288,8 +5231,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -5314,9 +5256,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           4,
@@ -5562,8 +5502,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -5588,9 +5527,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           6,
@@ -5836,8 +5773,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -5862,9 +5798,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -6110,8 +6044,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -6136,9 +6069,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           6,
@@ -6384,8 +6315,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -6410,9 +6340,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           10,
@@ -6658,8 +6586,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -6684,9 +6611,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -6932,8 +6857,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -6958,9 +6882,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           7,
@@ -7206,8 +7128,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -7232,9 +7153,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           10,
@@ -7480,8 +7399,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -7506,9 +7424,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           9,
@@ -7754,8 +7670,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -7780,9 +7695,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           3,
@@ -8028,8 +7941,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -8054,9 +7966,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           4,
@@ -8302,8 +8212,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -8328,9 +8237,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           6,
@@ -8576,8 +8483,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -8602,9 +8508,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -8850,8 +8754,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -8876,9 +8779,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           10,
@@ -9124,8 +9025,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -9150,9 +9050,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           4,
@@ -9398,8 +9296,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -9424,9 +9321,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           4,
@@ -9672,8 +9567,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -9698,9 +9592,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -9946,8 +9838,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -9972,9 +9863,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           6,
@@ -10220,8 +10109,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -10246,9 +10134,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -10494,8 +10380,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -10520,9 +10405,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           10,
@@ -10768,8 +10651,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -10794,9 +10676,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           4,
@@ -11042,8 +10922,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -11068,9 +10947,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           5,
@@ -11316,8 +11193,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -11342,9 +11218,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           6,
@@ -11590,8 +11464,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -11616,9 +11489,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -11864,8 +11735,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -11890,9 +11760,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           10,
@@ -12138,8 +12006,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -12164,9 +12031,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -12412,8 +12277,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -12438,9 +12302,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           6,
@@ -12686,8 +12548,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -12712,9 +12573,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           10,
@@ -12960,8 +12819,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -12986,9 +12844,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           6,
@@ -13234,8 +13090,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -13260,9 +13115,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           4,
@@ -13508,8 +13361,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -13534,9 +13386,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           6,
@@ -13782,8 +13632,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -13808,9 +13657,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -14056,8 +13903,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -14082,9 +13928,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           10,
@@ -14330,8 +14174,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -14356,9 +14199,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           6,
@@ -14604,8 +14445,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -14630,9 +14470,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -14878,8 +14716,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -14904,9 +14741,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           10,
@@ -15152,8 +14987,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -15178,9 +15012,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           11,
@@ -15426,8 +15258,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -15452,9 +15283,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           4,
@@ -15700,8 +15529,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -15726,9 +15554,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           3,
@@ -15974,8 +15800,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -16000,9 +15825,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           6,
@@ -16248,8 +16071,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -16274,9 +16096,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -16522,8 +16342,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -16548,9 +16367,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           10,
@@ -16796,8 +16613,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -16822,9 +16638,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           4,
@@ -17070,8 +16884,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -17096,9 +16909,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -17344,8 +17155,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -17370,9 +17180,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           5,
@@ -17618,8 +17426,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -17644,9 +17451,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           7,
@@ -17892,8 +17697,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -17918,9 +17722,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           6,
@@ -18166,8 +17968,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -18192,9 +17993,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           6,
@@ -18440,8 +18239,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -18466,9 +18264,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -18714,8 +18510,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -18740,9 +18535,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           7,
@@ -18988,8 +18781,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -19014,9 +18806,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           10,
@@ -19262,8 +19052,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -19288,9 +19077,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           9,
@@ -19536,8 +19323,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -19562,9 +19348,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -19810,8 +19594,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -19836,9 +19619,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           4,
@@ -20084,8 +19865,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -20110,9 +19890,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           6,
@@ -20358,8 +20136,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -20384,9 +20161,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -20632,8 +20407,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -20658,9 +20432,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           10,
@@ -20906,8 +20678,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -20932,9 +20703,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           6,
@@ -21180,8 +20949,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -21206,9 +20974,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           6,
@@ -21454,8 +21220,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -21480,9 +21245,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -21728,8 +21491,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -21754,9 +21516,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           10,
@@ -22002,8 +21762,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -22028,9 +21787,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           6,
@@ -22276,8 +22033,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -22302,9 +22058,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -22550,8 +22304,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -22576,9 +22329,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           10,
@@ -22824,8 +22575,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -22850,9 +22600,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           4,
@@ -23098,8 +22846,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -23124,9 +22871,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           12,
@@ -23372,8 +23117,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -23398,9 +23142,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           3,
@@ -23646,8 +23388,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -23672,9 +23413,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -23920,8 +23659,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -23946,9 +23684,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           4,
@@ -24194,8 +23930,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -24220,9 +23955,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           6,
@@ -24468,8 +24201,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -24494,9 +24226,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -24742,8 +24472,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -24768,9 +24497,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           10,
@@ -25016,8 +24743,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -25042,9 +24768,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -25290,8 +25014,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -25316,9 +25039,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           10,
@@ -25564,8 +25285,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -25590,9 +25310,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           6,
@@ -25838,8 +25556,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -25864,9 +25581,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -26112,8 +25827,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -26138,9 +25852,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           10,
@@ -26386,8 +26098,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -26412,9 +26123,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           6,
@@ -26660,8 +26369,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -26686,9 +26394,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           8,
@@ -26934,8 +26640,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -26960,9 +26665,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           5,
@@ -27208,8 +26911,7 @@
       "reasons": {
         "V1": [
           "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-          "Unsupported causal language: ['is using']"
+          "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
         ],
         "V2": [],
         "V3": [],
@@ -27234,9 +26936,7 @@
           "isolated",
           "prevent further"
         ],
-        "causal_terms": [
-          "is using"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
           7,
@@ -27410,133 +27110,11 @@
       "per_claim_verdicts": null
     },
     {
-      "response_id": "evt_000001_ollama_phi3_mini",
+      "response_id": "evt_000001_ollama_llama3_1_8b-instruct-q4_0",
       "event_id": "evt_000001",
       "response_type": "real_llm_output",
-      "model_name": "phi3:mini",
-      "response": "The formally bounded IEC-104 network observation, identified by Event ID evt_000001 within dataset eon_iec at granularity atomic_row and timestamped as 1654646400041 in Formal Bound version 2.1 with a proxy schema status of IEC104_CONTROL_FRAME_OBSERVATION, indicates that source identifier 1 communicated to destination identifier 2 using the iec104 protocol through client-to0server directionality. The communication utilized an s_or_u_format control frame type with a packet size of 46 bytes and length field value of 4 across ports 57528 (source) and 2404 (destination). Notably, the ASDU address was observed as zero for all fields: address, cot, items, and type. This observation is labeled under IEC104_CONTROL_FRAME_OBSERVATION proxy formal class status but does not confirm an attack or malicious intent within this single timestamped event without additional contextual information beyond the provided bound.",
-      "violation_codes": [
-        "V1"
-      ],
-      "severity": "high",
-      "violations": {
-        "V1_fabricated_reasoning": true,
-        "V2_contradicted_reasoning": false,
-        "V3_over_generalised_reasoning": false,
-        "V4_under_specified_reasoning": false,
-        "V5_incoherent_reasoning": false
-      },
-      "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['attack', 'malicious']",
-          "Unsupported causal language: ['indicates that']",
-          "Unsupported numeric identifiers or values: [1654646400041]"
-        ],
-        "V2": [],
-        "V3": [],
-        "V4": [],
-        "V5": []
-      },
-      "lexicon_claims": {
-        "attack_terms": [
-          "attack",
-          "malicious"
-        ],
-        "mitigation_terms": [],
-        "causal_terms": [
-          "indicates that"
-        ],
-        "normality_terms": [],
-        "numbers": [
-          104,
-          1654646400041,
-          2,
-          1,
-          1,
-          2,
-          46,
-          4,
-          57528,
-          2404
-        ],
-        "direction_terms": [],
-        "mentions_source": true,
-        "mentions_destination": true,
-        "mentions_port": true,
-        "mentions_asdu": true,
-        "mentions_proxy": true,
-        "mentions_not_confirmed": true
-      },
-      "spacy_claims": null,
-      "per_claim_verdicts": null
-    },
-    {
-      "response_id": "evt_000002_ollama_phi3_mini",
-      "event_id": "evt_000002",
-      "response_type": "real_llm_output",
-      "model_name": "phi3:mini",
-      "response": "The IEC104 network observation, identified by Event ID evt_000002 within dataset eon_iec at granularity atomic_row and timestamped as 1654646400081 in Formal Bound version 2.1 under the proxy schema status IEC104_BASELINE_MEASUREMENT_OBSERVATION, indicates a server-tos\n\nclient communication event where source identifier 3 transmitted to destination identifier 4 using protocol hint iec104 in a packet size of 193 bytes with frame format i_format_information_transfer. The observed data unit (ASDU) fields include an ASDU address of 11, COT value of 3, and item count of one for type 36 within the IEC-104 standard framework. It is important to note that this formal class label serves as a proxy observation rather than confirming any malicious activity or security breach in accordance with its status 'proxy_not_ground_truth_attack_label'. The packet length field stands at 25, and the source port used was 2404 while the destination port observed is 57592. As of now, there are no additional claims or mitigation actions suggested by this formal bound observation beyond its own timestamped event data.",
-      "violation_codes": [
-        "V1"
-      ],
-      "severity": "high",
-      "violations": {
-        "V1_fabricated_reasoning": true,
-        "V2_contradicted_reasoning": false,
-        "V3_over_generalised_reasoning": false,
-        "V4_under_specified_reasoning": false,
-        "V5_incoherent_reasoning": false
-      },
-      "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['attack', 'malicious']",
-          "Unsupported numeric identifiers or values: [1654646400081]"
-        ],
-        "V2": [],
-        "V3": [],
-        "V4": [],
-        "V5": []
-      },
-      "lexicon_claims": {
-        "attack_terms": [
-          "attack",
-          "malicious"
-        ],
-        "mitigation_terms": [],
-        "causal_terms": [],
-        "normality_terms": [],
-        "numbers": [
-          1654646400081,
-          2,
-          1,
-          3,
-          4,
-          193,
-          11,
-          3,
-          36,
-          104,
-          25,
-          2404,
-          57592
-        ],
-        "direction_terms": [],
-        "mentions_source": true,
-        "mentions_destination": true,
-        "mentions_port": true,
-        "mentions_asdu": true,
-        "mentions_proxy": true,
-        "mentions_not_confirmed": false
-      },
-      "spacy_claims": null,
-      "per_claim_verdicts": null
-    },
-    {
-      "response_id": "evt_000003_ollama_phi3_mini",
-      "event_id": "evt_000003",
-      "response_type": "real_llm_output",
-      "model_name": "phi3:mini",
-      "response": "The IEC104_OBSERVATION_UNCLASSIFIED label indicates that, as of version 2.1 with a proxy schema status until an official automaton is established for classification, source identifier '3' transmitted data to destination identifier '4' using the iec104 protocol over server-to0client communication direction at timestamp ms: 1654646400081. The packet size was recorded as 193 bytes with a length field of 40, and it included ASDU fields such as address '11', coterminous term (COT) value '3', type '36' for the number of items in an ASDU being two, without any explicit malicious intent or causality identified. The formal class status remains proxy_not_ground_truth_attack_label as no confirmed attack labels are present within this observation bound.",
+      "model_name": "llama3.1:8b-instruct-q4_0",
+      "response": "Here is a precise operational English explanation of the formally bounded IEC-104 network observation:\n\nOn timestamp 1654646400041, source identifier 1 communicated with destination identifier 2 over an iec104 protocol hint in client_to_server direction. The observed frame type was s_or_u_format_control and matched the iec104_control_frame_pattern pattern. The communication involved a packet size of 46 bytes and a packet length field of 4. The ASDU address, COT, items count, and type were all 0. The proxy formal class for this observation is IEC104_CONTROL_FRAME_OBSERVATION, which should not be considered as a confirmed attack label but rather as a proxy observation label.",
       "violation_codes": [
         "V1",
         "V4"
@@ -27551,72 +27129,7 @@
       },
       "reasons": {
         "V1": [
-          "Unsupported attack or maliciousness terms: ['malicious']",
-          "Unsupported causal language: ['indicates that']",
-          "Unsupported numeric identifiers or values: [1654646400081]"
-        ],
-        "V2": [],
-        "V3": [],
-        "V4": [
-          "Missing port reference."
-        ],
-        "V5": []
-      },
-      "lexicon_claims": {
-        "attack_terms": [
-          "malicious"
-        ],
-        "mitigation_terms": [],
-        "causal_terms": [
-          "indicates that"
-        ],
-        "normality_terms": [],
-        "numbers": [
-          2,
-          1,
-          3,
-          4,
-          1654646400081,
-          193,
-          40,
-          11,
-          3,
-          36
-        ],
-        "direction_terms": [],
-        "mentions_source": true,
-        "mentions_destination": true,
-        "mentions_port": false,
-        "mentions_asdu": true,
-        "mentions_proxy": true,
-        "mentions_not_confirmed": false
-      },
-      "spacy_claims": null,
-      "per_claim_verdicts": null
-    },
-    {
-      "response_id": "evt_000004_ollama_phi3_mini",
-      "event_id": "evt_000004",
-      "response_type": "real_llm_output",
-      "model_name": "phi3:mini",
-      "response": "The IEC104 network observation, identified by Event ID evt_000004 within dataset eon_iec at granularity atomic_row and timestamped as 1654646400083 under Formal Bound version 2.1 with a proxy schema status of IEC104_BASELINE_MEASUREMENT_OBSERVATION, indicates that source identifier 5 communicated to destination identifier 6 using the iec104 protocol in a server-to0client direction via frame type i_format_information_transfer. The packet size was recorded at 67 bytes with an IEC field length of 25 and involved ASDU address 11, wherein ASDU items were one for typeset as 36 COT cot is set to 3. This observation aligns with the dominant pattern observed in IEC104 communications but remains a proxy label without ground truth attack confirmation due to its formal class status of not being an official automaton schema-based security incident indicator within this context.",
-      "violation_codes": [
-        "V1",
-        "V4"
-      ],
-      "severity": "high",
-      "violations": {
-        "V1_fabricated_reasoning": true,
-        "V2_contradicted_reasoning": false,
-        "V3_over_generalised_reasoning": false,
-        "V4_under_specified_reasoning": true,
-        "V5_incoherent_reasoning": false
-      },
-      "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['attack']",
-          "Unsupported causal language: ['due to', 'indicates that']",
-          "Unsupported numeric identifiers or values: [1654646400083]"
+          "Unsupported attack or maliciousness terms: ['attack']"
         ],
         "V2": [],
         "V3": [],
@@ -27630,24 +27143,20 @@
           "attack"
         ],
         "mitigation_terms": [],
-        "causal_terms": [
-          "due to",
-          "indicates that"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
-          1654646400083,
-          2,
+          104,
+          1654646400041,
           1,
-          5,
-          6,
-          67,
-          25,
-          11,
-          36,
-          3
+          2,
+          46,
+          4,
+          0
         ],
-        "direction_terms": [],
+        "direction_terms": [
+          "client_to_server"
+        ],
         "mentions_source": true,
         "mentions_destination": true,
         "mentions_port": false,
@@ -27659,216 +27168,24 @@
       "per_claim_verdicts": null
     },
     {
-      "response_id": "evt_000005_ollama_phi3_mini",
-      "event_id": "evt_000005",
+      "response_id": "evt_000002_ollama_llama3_1_8b-instruct-q4_0",
+      "event_id": "evt_000002",
       "response_type": "real_llm_output",
-      "model_name": "phi3:mini",
-      "response": "The IEC104 network communication observed at timestamp ms 1654646400083, identified by event ID evt_000005 within dataset eon_iec and granularity atomic_row under schema status proxy_until_official_automaton_schema (formal bound version 2.1), involves a server-to0\n\nTo create an accurate formal network observation in IEC-104 communication, the following elements must be included: Protocol hint iec104; Communication direction from source identifier 7 to destination identifier 8 as per observed features (source_id and destination_id); Source port number of 2404 with a corresponding destination port of 50606. The packet size is noted at 67 bytes, while the length field within this frame stands at 25; ASDU address recorded as 11, along with an associated COT (Common Object Dictionary) value of 3 and one item in the ASDU list for type numbered 36 are all consistent observations. The formal class label IEC104_BASELINE_MEASUREMENT_OBSERVATION is applied to this event pattern which aligns with a dominant measurement-related communication behavior within ICS networks, as per the observed protocol hint and direction of traffic flow (server_to_client). It's important to note that while these features are consistent with IEC104 network operations for industrial control systems, they do not inherently indicate any form of malicious activity or security breach. The formal class status is identified as proxy_not_ground_truth_attack_label; hence it should be interpreted strictly within the context provided by this observation without extending to broader inferences about network integrity and potential threats beyond what has been explicitly observed in these data points at timestamp ms 1654646400083.",
+      "model_name": "llama3.1:8b-instruct-q4_0",
+      "response": "Here is a precise operational English explanation of the formally bounded IEC-104 network observation:\n\nOn timestamp 1654646400081, source identifier 3 communicated with destination identifier 4 over the iec104 protocol in server_to_client direction. The observed packet size was 193 bytes and the packet length field was 25. The communication involved an i_format_information_transfer frame type, dominant_iec104_measurement_pattern observation pattern, and IEC104_BASELINE_MEASUREMENT_OBSERVATION proxy formal class. The ASDU fields indicated an address of 11, COT of 3, item count of 1, and type of 36.",
       "violation_codes": [
-        "V1"
-      ],
-      "severity": "high",
-      "violations": {
-        "V1_fabricated_reasoning": true,
-        "V2_contradicted_reasoning": false,
-        "V3_over_generalised_reasoning": false,
-        "V4_under_specified_reasoning": false,
-        "V5_incoherent_reasoning": false
-      },
-      "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['attack', 'malicious']",
-          "Unsupported numeric identifiers or values: [1654646400083]"
-        ],
-        "V2": [],
-        "V3": [],
-        "V4": [],
-        "V5": []
-      },
-      "lexicon_claims": {
-        "attack_terms": [
-          "attack",
-          "malicious"
-        ],
-        "mitigation_terms": [],
-        "causal_terms": [],
-        "normality_terms": [],
-        "numbers": [
-          1654646400083,
-          2,
-          1,
-          104,
-          7,
-          8,
-          2404,
-          50606,
-          67,
-          25,
-          11,
-          3,
-          36,
-          1654646400083
-        ],
-        "direction_terms": [
-          "server_to_client"
-        ],
-        "mentions_source": true,
-        "mentions_destination": true,
-        "mentions_port": true,
-        "mentions_asdu": true,
-        "mentions_proxy": true,
-        "mentions_not_confirmed": false
-      },
-      "spacy_claims": null,
-      "per_claim_verdicts": null
-    },
-    {
-      "response_id": "evt_000006_ollama_phi3_mini",
-      "event_id": "evt_000006",
-      "response_type": "real_llm_output",
-      "model_name": "phi3:mini",
-      "response": "The IEC104 network observation, identified by Event ID evt_000006 within dataset eon_iec at granularity atomic_row and timestamped as 1654646400083 in Formal Bound version 2.1 under the proxy schema status IEC104_BASELINE_MEASUREMENT_OBSERVATION, indicates a server-tos\n\nclient communication event where source identifier 9 transmitted to destination identifier 10 using protocol hint iec104 in a packet size of 67 bytes with an ASDU length field value of 25. The frame type observed was i_format_information_transfer, and the associated formal class label is IEC104_BASELINE_MEASUREMENT_OBSERVATION which indicates this as a proxy observation rather than a confirmed attack or malicious activity within an industrial control system network context based on provided metadata. The source port used was 2404 while the destination port observed was 53778, along with ASDU address of 11 and type being identified by number 36 in accordance to IEC-104 standard fields as per formal bound documentation.",
-      "violation_codes": [
-        "V1"
-      ],
-      "severity": "high",
-      "violations": {
-        "V1_fabricated_reasoning": true,
-        "V2_contradicted_reasoning": false,
-        "V3_over_generalised_reasoning": false,
-        "V4_under_specified_reasoning": false,
-        "V5_incoherent_reasoning": false
-      },
-      "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['attack', 'malicious']",
-          "Unsupported numeric identifiers or values: [1654646400083]"
-        ],
-        "V2": [],
-        "V3": [],
-        "V4": [],
-        "V5": []
-      },
-      "lexicon_claims": {
-        "attack_terms": [
-          "attack",
-          "malicious"
-        ],
-        "mitigation_terms": [],
-        "causal_terms": [],
-        "normality_terms": [],
-        "numbers": [
-          1654646400083,
-          2,
-          1,
-          9,
-          10,
-          67,
-          25,
-          2404,
-          53778,
-          11,
-          36,
-          104
-        ],
-        "direction_terms": [],
-        "mentions_source": true,
-        "mentions_destination": true,
-        "mentions_port": true,
-        "mentions_asdu": true,
-        "mentions_proxy": true,
-        "mentions_not_confirmed": false
-      },
-      "spacy_claims": null,
-      "per_claim_verdicts": null
-    },
-    {
-      "response_id": "evt_000007_ollama_phi3_mini",
-      "event_id": "evt_000007",
-      "response_type": "real_llm_output",
-      "model_name": "phi3:mini",
-      "response": "The IEC104 network observation, identified by Event ID evt_000007 within dataset eon_iec at granularity atomic_row and timestamped as 1654646400084 in Formal Bound version 2.1 under the proxy schema status IEC104_BASELINE_MEASUREMENT_OBSERVATION, indicates a server-to07:30 IST\n\nObserved features include communication from source identifier 5 to destination identifier 6 with observed bytes of 67 and packet length field set at 25. The protocol hinted is IEC104 as per the dominant_iec104_measurement_pattern, which aligns with a server-to-client direction for an i_format_information_transfer frame type. Notably, source port number 2404 and destination port number 36410 were utilized in this exchange alongside ASDU address of 11, where the associated COT is set to 3 with a single item count within ASDU type 36 being observed. It's important to recognize that while these details are consistent with IEC-104 communication standards and protocol behavior, they do not inherently confirm any malicious activity or security breach as per the formal class status of proxy_not_ground_truth_attack_label. The current observation serves solely for baseline measurement purposes within this network segment without implying a confirmed attack scenario based on available data at hand.",
-      "violation_codes": [
-        "V1"
-      ],
-      "severity": "high",
-      "violations": {
-        "V1_fabricated_reasoning": true,
-        "V2_contradicted_reasoning": false,
-        "V3_over_generalised_reasoning": false,
-        "V4_under_specified_reasoning": false,
-        "V5_incoherent_reasoning": false
-      },
-      "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['attack', 'malicious']",
-          "Unsupported numeric identifiers or values: [1654646400084]"
-        ],
-        "V2": [],
-        "V3": [],
-        "V4": [],
-        "V5": []
-      },
-      "lexicon_claims": {
-        "attack_terms": [
-          "attack",
-          "malicious"
-        ],
-        "mitigation_terms": [],
-        "causal_terms": [],
-        "normality_terms": [],
-        "numbers": [
-          1654646400084,
-          2,
-          1,
-          30,
-          5,
-          6,
-          67,
-          25,
-          2404,
-          36410,
-          11,
-          3,
-          36,
-          104
-        ],
-        "direction_terms": [
-          "server_to_client"
-        ],
-        "mentions_source": true,
-        "mentions_destination": true,
-        "mentions_port": true,
-        "mentions_asdu": true,
-        "mentions_proxy": true,
-        "mentions_not_confirmed": false
-      },
-      "spacy_claims": null,
-      "per_claim_verdicts": null
-    },
-    {
-      "response_id": "evt_000008_ollama_phi3_mini",
-      "event_id": "evt_000008",
-      "response_type": "real_llm_output",
-      "model_name": "phi3:mini",
-      "response": "The IEC104 network observation (evt_000008) within dataset eon_iec, timestamped at 1654646400084 and classified under proxy_not_ground_truth_attack_label status in formal version 2.1 of the IEC-104 schema (proxy_until_official_automaton_schema), indicates a server to client communication event between source identifier 7 and destination identifier 8, using protocol hint iec104 with observed packet size being 67 bytes wherein pkt_length is noted as 25. The frame type identified for this transmission was i_format_information_transfer which aligns with the IEC-104 dominant measurement pattern and adheres to ASDU fields including an address of 11, cot numbered at 3, a single item count (asdu_items: 1), and type designated as 36. This observation is consistent within its formal class labeling it as IEC104_BASELINE_MEASUREMENT_OBSERVATION without implying any confirmed malicious intent or security breach beyond the scope of this data point, maintaining a professional stance on network traffic analysis in industrial control systems.",
-      "violation_codes": [
-        "V1",
         "V4"
       ],
-      "severity": "high",
+      "severity": "low",
       "violations": {
-        "V1_fabricated_reasoning": true,
+        "V1_fabricated_reasoning": false,
         "V2_contradicted_reasoning": false,
         "V3_over_generalised_reasoning": false,
         "V4_under_specified_reasoning": true,
         "V5_incoherent_reasoning": false
       },
       "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['attack', 'malicious']",
-          "Unsupported numeric identifiers or values: [1654646400084]"
-        ],
+        "V1": [],
         "V2": [],
         "V3": [],
         "V4": [
@@ -27877,23 +27194,17 @@
         "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "attack",
-          "malicious"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
         "causal_terms": [],
         "normality_terms": [],
         "numbers": [
-          1654646400084,
-          2,
-          1,
           104,
-          7,
-          8,
-          67,
+          1654646400081,
+          3,
+          4,
+          193,
           25,
-          104,
           11,
           3,
           1,
@@ -27913,11 +27224,342 @@
       "per_claim_verdicts": null
     },
     {
-      "response_id": "evt_000009_ollama_phi3_mini",
+      "response_id": "evt_000003_ollama_llama3_1_8b-instruct-q4_0",
+      "event_id": "evt_000003",
+      "response_type": "real_llm_output",
+      "model_name": "llama3.1:8b-instruct-q4_0",
+      "response": "Here is a formally bounded IEC-104 network observation in precise operational English:\n\nOn timestamp 1654646400081, server identifier 3 communicated with client identifier 4 over iec104 protocol hint using server_to_client communication direction. The observed source port was 2404 and the destination port was 57592. A packet of size 193 bytes was transmitted, with a packet length field indicating 40 bytes. The ASDU address was 11, type was 36, COT was 3, and item count was 2. This observation is classified as IEC104_OBSERVATION_UNCLASSIFIED, which is currently a proxy formal class label, not a confirmed attack label.",
+      "violation_codes": [],
+      "severity": "none",
+      "violations": {
+        "V1_fabricated_reasoning": false,
+        "V2_contradicted_reasoning": false,
+        "V3_over_generalised_reasoning": false,
+        "V4_under_specified_reasoning": false,
+        "V5_incoherent_reasoning": false
+      },
+      "reasons": {
+        "V1": [],
+        "V2": [],
+        "V3": [],
+        "V4": [],
+        "V5": []
+      },
+      "lexicon_claims": {
+        "attack_terms": [],
+        "mitigation_terms": [],
+        "causal_terms": [],
+        "normality_terms": [],
+        "numbers": [
+          104,
+          1654646400081,
+          3,
+          4,
+          2404,
+          57592,
+          193,
+          40,
+          11,
+          36,
+          3,
+          2
+        ],
+        "direction_terms": [
+          "server_to_client"
+        ],
+        "mentions_source": true,
+        "mentions_destination": true,
+        "mentions_port": true,
+        "mentions_asdu": true,
+        "mentions_proxy": true,
+        "mentions_not_confirmed": false
+      },
+      "spacy_claims": null,
+      "per_claim_verdicts": null
+    },
+    {
+      "response_id": "evt_000004_ollama_llama3_1_8b-instruct-q4_0",
+      "event_id": "evt_000004",
+      "response_type": "real_llm_output",
+      "model_name": "llama3.1:8b-instruct-q4_0",
+      "response": "Here is a precise operational English explanation of the formally bounded IEC-104 network observation:\n\nOn timestamp 1654646400083, source identifier 5 communicated with destination identifier 6 over an iec104 protocol hint in server_to_client direction. The observed frame type was i_format_information_transfer and the proxy formal class is IEC104_BASELINE_MEASUREMENT_OBSERVATION, which is a proxy observation label not a confirmed attack label. The communication involved source port 2404 and destination port 36410, with a packet size of 67 bytes and a packet length field of 25. The ASDU fields indicated an address of 11, type of 36, COT of 3, and item count of 1.",
+      "violation_codes": [],
+      "severity": "none",
+      "violations": {
+        "V1_fabricated_reasoning": false,
+        "V2_contradicted_reasoning": false,
+        "V3_over_generalised_reasoning": false,
+        "V4_under_specified_reasoning": false,
+        "V5_incoherent_reasoning": false
+      },
+      "reasons": {
+        "V1": [],
+        "V2": [],
+        "V3": [],
+        "V4": [],
+        "V5": []
+      },
+      "lexicon_claims": {
+        "attack_terms": [],
+        "mitigation_terms": [],
+        "causal_terms": [],
+        "normality_terms": [],
+        "numbers": [
+          104,
+          1654646400083,
+          5,
+          6,
+          2404,
+          36410,
+          67,
+          25,
+          11,
+          36,
+          3,
+          1
+        ],
+        "direction_terms": [
+          "server_to_client"
+        ],
+        "mentions_source": true,
+        "mentions_destination": true,
+        "mentions_port": true,
+        "mentions_asdu": true,
+        "mentions_proxy": true,
+        "mentions_not_confirmed": false
+      },
+      "spacy_claims": null,
+      "per_claim_verdicts": null
+    },
+    {
+      "response_id": "evt_000005_ollama_llama3_1_8b-instruct-q4_0",
+      "event_id": "evt_000005",
+      "response_type": "real_llm_output",
+      "model_name": "llama3.1:8b-instruct-q4_0",
+      "response": "Here is a precise operational English explanation of the formally bounded IEC-104 network observation:\n\nOn timestamp 1654646400083, source identifier 7 communicated with destination identifier 8 over an iec104 protocol hint in server_to_client direction. The observed frame type was i_format_information_transfer and the proxy formal class is IEC104_BASELINE_MEASUREMENT_OBSERVATION, which should be treated as a label and not a confirmed attack label. The source port was 2404 and destination port was 50606, with a packet size of 67 bytes and length field of 25. The ASDU address was 11, type was 36, COT was 3, and item count was 1.",
+      "violation_codes": [],
+      "severity": "none",
+      "violations": {
+        "V1_fabricated_reasoning": false,
+        "V2_contradicted_reasoning": false,
+        "V3_over_generalised_reasoning": false,
+        "V4_under_specified_reasoning": false,
+        "V5_incoherent_reasoning": false
+      },
+      "reasons": {
+        "V1": [],
+        "V2": [],
+        "V3": [],
+        "V4": [],
+        "V5": []
+      },
+      "lexicon_claims": {
+        "attack_terms": [],
+        "mitigation_terms": [],
+        "causal_terms": [],
+        "normality_terms": [],
+        "numbers": [
+          104,
+          1654646400083,
+          7,
+          8,
+          2404,
+          50606,
+          67,
+          25,
+          11,
+          36,
+          3,
+          1
+        ],
+        "direction_terms": [
+          "server_to_client"
+        ],
+        "mentions_source": true,
+        "mentions_destination": true,
+        "mentions_port": true,
+        "mentions_asdu": true,
+        "mentions_proxy": true,
+        "mentions_not_confirmed": false
+      },
+      "spacy_claims": null,
+      "per_claim_verdicts": null
+    },
+    {
+      "response_id": "evt_000006_ollama_llama3_1_8b-instruct-q4_0",
+      "event_id": "evt_000006",
+      "response_type": "real_llm_output",
+      "model_name": "llama3.1:8b-instruct-q4_0",
+      "response": "Here is a precise operational English explanation of the formally bounded IEC-104 network observation:\n\nOn timestamp 1654646400083, server identifier 9 communicated with client identifier 10 over iec104 protocol hint in server_to_client direction. The observed source port was 2404 and the destination port was 53778. The packet size was 67 bytes with a length field of 25. The ASDU address was 11, type was 36, COT was 3, and item count was 1. This observation is classified as IEC104_BASELINE_MEASUREMENT_OBSERVATION, which is currently a proxy formal class label, not a confirmed attack label.",
+      "violation_codes": [],
+      "severity": "none",
+      "violations": {
+        "V1_fabricated_reasoning": false,
+        "V2_contradicted_reasoning": false,
+        "V3_over_generalised_reasoning": false,
+        "V4_under_specified_reasoning": false,
+        "V5_incoherent_reasoning": false
+      },
+      "reasons": {
+        "V1": [],
+        "V2": [],
+        "V3": [],
+        "V4": [],
+        "V5": []
+      },
+      "lexicon_claims": {
+        "attack_terms": [],
+        "mitigation_terms": [],
+        "causal_terms": [],
+        "normality_terms": [],
+        "numbers": [
+          104,
+          1654646400083,
+          9,
+          10,
+          2404,
+          53778,
+          67,
+          25,
+          11,
+          36,
+          3,
+          1
+        ],
+        "direction_terms": [
+          "server_to_client"
+        ],
+        "mentions_source": true,
+        "mentions_destination": true,
+        "mentions_port": true,
+        "mentions_asdu": true,
+        "mentions_proxy": true,
+        "mentions_not_confirmed": false
+      },
+      "spacy_claims": null,
+      "per_claim_verdicts": null
+    },
+    {
+      "response_id": "evt_000007_ollama_llama3_1_8b-instruct-q4_0",
+      "event_id": "evt_000007",
+      "response_type": "real_llm_output",
+      "model_name": "llama3.1:8b-instruct-q4_0",
+      "response": "Here is a precise operational English explanation of the formally bounded IEC-104 network observation:\n\nOn timestamp 1654646400084, source identifier 5 communicated with destination identifier 6 over the iec104 protocol hint in server_to_client direction. The observed frame type was i_format_information_transfer and the dominant observation pattern was dominant_iec104_measurement_pattern. The communication involved a packet size of 67 bytes and a packet length field of 25, transmitted on source port 2404 to destination port 36410. The ASDU address was 11, with an ASDU type of 36, COT of 3, and ASDU item count of 1. The current formal class is IEC104_BASELINE_MEASUREMENT_OBSERVATION, which is a proxy observation label, not a confirmed attack label.",
+      "violation_codes": [],
+      "severity": "none",
+      "violations": {
+        "V1_fabricated_reasoning": false,
+        "V2_contradicted_reasoning": false,
+        "V3_over_generalised_reasoning": false,
+        "V4_under_specified_reasoning": false,
+        "V5_incoherent_reasoning": false
+      },
+      "reasons": {
+        "V1": [],
+        "V2": [],
+        "V3": [],
+        "V4": [],
+        "V5": []
+      },
+      "lexicon_claims": {
+        "attack_terms": [],
+        "mitigation_terms": [],
+        "causal_terms": [],
+        "normality_terms": [],
+        "numbers": [
+          104,
+          1654646400084,
+          5,
+          6,
+          67,
+          25,
+          2404,
+          36410,
+          11,
+          36,
+          3,
+          1
+        ],
+        "direction_terms": [
+          "server_to_client"
+        ],
+        "mentions_source": true,
+        "mentions_destination": true,
+        "mentions_port": true,
+        "mentions_asdu": true,
+        "mentions_proxy": true,
+        "mentions_not_confirmed": false
+      },
+      "spacy_claims": null,
+      "per_claim_verdicts": null
+    },
+    {
+      "response_id": "evt_000008_ollama_llama3_1_8b-instruct-q4_0",
+      "event_id": "evt_000008",
+      "response_type": "real_llm_output",
+      "model_name": "llama3.1:8b-instruct-q4_0",
+      "response": "Here is a precise operational English explanation of the formally bounded IEC-104 network observation:\n\nOn timestamp 1654646400084, source identifier 7 communicated with destination identifier 8 over an iec104 protocol hint in server_to_client direction. The observed frame type was i_format_information_transfer and the dominant observation pattern was dominant_iec104_measurement_pattern. The communication involved a packet size of 67 bytes and a packet length field of 25. The ASDU address was 11, with an ASDU type of 36, COT of 3, and ASDU item count of 1. The proxy formal class for this observation is IEC104_BASELINE_MEASUREMENT_OBSERVATION, which should not be considered a confirmed attack label.",
+      "violation_codes": [
+        "V1",
+        "V4"
+      ],
+      "severity": "high",
+      "violations": {
+        "V1_fabricated_reasoning": true,
+        "V2_contradicted_reasoning": false,
+        "V3_over_generalised_reasoning": false,
+        "V4_under_specified_reasoning": true,
+        "V5_incoherent_reasoning": false
+      },
+      "reasons": {
+        "V1": [
+          "Unsupported attack or maliciousness terms: ['attack']"
+        ],
+        "V2": [],
+        "V3": [],
+        "V4": [
+          "Missing port reference."
+        ],
+        "V5": []
+      },
+      "lexicon_claims": {
+        "attack_terms": [
+          "attack"
+        ],
+        "mitigation_terms": [],
+        "causal_terms": [],
+        "normality_terms": [],
+        "numbers": [
+          104,
+          1654646400084,
+          7,
+          8,
+          67,
+          25,
+          11,
+          36,
+          3,
+          1
+        ],
+        "direction_terms": [
+          "server_to_client"
+        ],
+        "mentions_source": true,
+        "mentions_destination": true,
+        "mentions_port": false,
+        "mentions_asdu": true,
+        "mentions_proxy": true,
+        "mentions_not_confirmed": false
+      },
+      "spacy_claims": null,
+      "per_claim_verdicts": null
+    },
+    {
+      "response_id": "evt_000009_ollama_llama3_1_8b-instruct-q4_0",
       "event_id": "evt_000009",
       "response_type": "real_llm_output",
-      "model_name": "phi3:mini",
-      "response": "The IEC104 control frame pattern was observed within a client_to_server communication direction, where source identifier 6 transmitted to destination identifier 5 using protocol hint iec104 at timestamp ms 1654646400086. The packet size recorded is 46 bytes with the length field set as 4 and communicated through ports 36410 (source) and 2404 (destination). This observation falls under the IEC104_CONTROL_FRAME_OBSERVATION formal class, which indicates that this is a proxy label for an observed event rather than confirmation of malicious activity. The ASDU address was noted as 0 with no items listed in the fields (ASDU type and COT are both zero), aligning with expected IEC-104 control frame characteristics without implying any security breach or attack within this single timestamp observation, according to schema status proxy_until_official_automaton_schema.",
+      "model_name": "llama3.1:8b-instruct-q4_0",
+      "response": "Here is the explanation:\n\nOn timestamp 1654646400086 ms, a client-to-server communication was observed on an IEC-104 network. The source identifier 6 communicated with destination identifier 5. The observed protocol hint is iec104, and the frame type is s_or_u_format_control. The source port is 36410, and the destination port is 2404. The packet size is 46 bytes, and the packet length field is 4. The ASDU address is 0, and the ASDU type, COT, and item count are all 0. The proxy formal class for this observation is IEC104_CONTROL_FRAME_OBSERVATION, which should not be considered a confirmed attack label.",
       "violation_codes": [
         "V1"
       ],
@@ -27931,9 +27573,7 @@
       },
       "reasons": {
         "V1": [
-          "Unsupported attack or maliciousness terms: ['attack', 'malicious']",
-          "Unsupported causal language: ['indicates that']",
-          "Unsupported numeric identifiers or values: [1654646400086]"
+          "Unsupported attack or maliciousness terms: ['attack']"
         ],
         "V2": [],
         "V3": [],
@@ -27942,24 +27582,22 @@
       },
       "lexicon_claims": {
         "attack_terms": [
-          "attack",
-          "malicious"
+          "attack"
         ],
         "mitigation_terms": [],
-        "causal_terms": [
-          "indicates that"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
+          1654646400086,
+          104,
           6,
           5,
-          1654646400086,
-          46,
-          4,
           36410,
           2404,
+          46,
+          4,
           0,
-          104
+          0
         ],
         "direction_terms": [
           "client_to_server"
@@ -27975,59 +27613,45 @@
       "per_claim_verdicts": null
     },
     {
-      "response_id": "evt_000010_ollama_phi3_mini",
+      "response_id": "evt_000010_ollama_llama3_1_8b-instruct-q4_0",
       "event_id": "evt_000010",
       "response_type": "real_llm_output",
-      "model_name": "phi3:mini",
-      "response": "The IEC104 network observation, identified by Event ID evt_000010 within eon_iec dataset and timestamped at 1654646400086 using Formal Bound version 2.1 with a proxy schema status of 'proxy_until_official_automaton_schema', indicates that source identifier 5 communicated to destination identifier 6 via the IEC-104 protocol, specifically through an i_format_information_transfer frame type in server_to_client direction over ports 2404 and 36410 respectively. The packet size was recorded as 67 bytes with a length field of 25 within ASDU fields where the address is set to 11, cot numbered at 3, an item count of one for type 36 items in row format (atomic_row). This observation aligns with the dominant IEC-104 measurement pattern and falls under the proxy formal class label 'IEC104_BASELINE_MEASUREMENT_OBSERVATION', which is not a ground truth attack label. As such, no malicious intent or causality can be inferred from this observation alone without additional contextual information beyond what has been formally bounded in this event metadata and observed features set forth by the IEC-104 standard for industrial control systems communication protocols.",
-      "violation_codes": [
-        "V1"
-      ],
-      "severity": "high",
+      "model_name": "llama3.1:8b-instruct-q4_0",
+      "response": "Here is a precise operational English explanation of the formally bounded IEC-104 network observation:\n\nOn timestamp 1654646400086, source identifier 5 communicated with destination identifier 6 over an iec104 protocol hint in server_to_client direction. The observed frame type was i_format_information_transfer and the proxy formal class is IEC104_BASELINE_MEASUREMENT_OBSERVATION, which is a proxy observation label not a confirmed attack label. The communication involved source port 2404 and destination port 36410, with a packet size of 67 bytes and a packet length field of 25. The ASDU address was 11, type was 36, COT was 3, and item count was 1.",
+      "violation_codes": [],
+      "severity": "none",
       "violations": {
-        "V1_fabricated_reasoning": true,
+        "V1_fabricated_reasoning": false,
         "V2_contradicted_reasoning": false,
         "V3_over_generalised_reasoning": false,
         "V4_under_specified_reasoning": false,
         "V5_incoherent_reasoning": false
       },
       "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['attack', 'malicious']",
-          "Unsupported causal language: ['indicates that']",
-          "Unsupported numeric identifiers or values: [1654646400086]"
-        ],
+        "V1": [],
         "V2": [],
         "V3": [],
         "V4": [],
         "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "attack",
-          "malicious"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
-        "causal_terms": [
-          "indicates that"
-        ],
+        "causal_terms": [],
         "normality_terms": [],
         "numbers": [
+          104,
           1654646400086,
-          2,
-          1,
           5,
           6,
-          104,
           2404,
           36410,
           67,
           25,
           11,
-          3,
           36,
-          104,
-          104
+          3,
+          1
         ],
         "direction_terms": [
           "server_to_client"
@@ -28043,55 +27667,49 @@
       "per_claim_verdicts": null
     },
     {
-      "response_id": "evt_000011_ollama_phi3_mini",
-      "event_id": "evt_000011",
+      "response_id": "evt_000001_ollama_phi3_mini",
+      "event_id": "evt_000001",
       "response_type": "real_llm_output",
       "model_name": "phi3:mini",
-      "response": "The IEC104 network observation (evt_000011) within eon_iec dataset at atomic granularity indicates a server-tosider communication event, where source identifier '7' transmitted to destination identifier '8'. The packet size was recorded as 67 bytes with an IEC104 frame type of i_format_information_transfer. Notably, the observed data exchange occurred on ports 2404 and 50606 respectively at timestamp ms: 1654646400086 using a schema that is currently labeled as proxy until official ground truth can be established for IEC104_BASELINE_MEASUREMENT_OBSERVATION. The formal class status indicates this observation serves only as an initial label and not yet confirmed malicious activity, with the protocol hint of iec104 being consistent throughout the event's observed features in alignment with expected network behavior for IEC-based industrial control systems communication patterns at that time point.",
-      "violation_codes": [
-        "V1",
-        "V4"
-      ],
-      "severity": "high",
+      "response": "The IEC104 control frame pattern was observed within an industrial communication network, as per Event ID evt_000001 in dataset eon_iec with a timestamp of 1654646400041 and using Formal Bound version 2.1 under the proxy schema status until official automaton schema is available. The communication direction was client to server, involving source identifier 1 communicating with destination identifier 2 over ports 57528 (source) and 2404 (destination), respectively. A packet of size 46 bytes containing an IEC104 s_or_u_format control frame type data was transmitted without any additional ASDU address, COT, or item count information provided in the formal bound observation. The proxy label for this event is identified as IEC104_CONTROL_FRAME_OBSERVATION; however, it does not serve as a ground truth attack label within our current schema status of 'proxy until official automaton schema'. As such, no definitive security conclusion can be drawn from the observed data alone.",
+      "violation_codes": [],
+      "severity": "none",
       "violations": {
-        "V1_fabricated_reasoning": true,
+        "V1_fabricated_reasoning": false,
         "V2_contradicted_reasoning": false,
         "V3_over_generalised_reasoning": false,
-        "V4_under_specified_reasoning": true,
+        "V4_under_specified_reasoning": false,
         "V5_incoherent_reasoning": false
       },
       "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['malicious']",
-          "Unsupported numeric identifiers or values: [1654646400086]"
-        ],
+        "V1": [],
         "V2": [],
         "V3": [],
-        "V4": [
-          "Missing ASDU reference."
-        ],
+        "V4": [],
         "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "malicious"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
         "causal_terms": [],
         "normality_terms": [],
         "numbers": [
-          7,
-          8,
-          67,
+          1654646400041,
+          2,
+          1,
+          1,
+          2,
+          57528,
           2404,
-          50606,
-          1654646400086
+          46
         ],
-        "direction_terms": [],
+        "direction_terms": [
+          "client_to_server"
+        ],
         "mentions_source": true,
         "mentions_destination": true,
         "mentions_port": true,
-        "mentions_asdu": false,
+        "mentions_asdu": true,
         "mentions_proxy": true,
         "mentions_not_confirmed": false
       },
@@ -28099,11 +27717,116 @@
       "per_claim_verdicts": null
     },
     {
-      "response_id": "evt_000012_ollama_phi3_mini",
-      "event_id": "evt_000012",
+      "response_id": "evt_000002_ollama_phi3_mini",
+      "event_id": "evt_000002",
       "response_type": "real_llm_output",
       "model_name": "phi3:mini",
-      "response": "The IEC104 network observation, identified by Event ID evt_000012 within dataset eon_iec at granularity atomic_row and timestamped as 1654646400088 using Formal Bound version 2.1 under the proxy schema status IEC104_BASELINE_MEASUREMENT_OBSERVATION, indicates a server-tos\n\nclient communication event where source identifier 9 transmitted data to destination identifier 10 over TCP/IP port numbers 2404 and 53778 respectively. The packet size was recorded at 94 bytes with the length field set as 25, conforming to IEC-104 protocol standards for industrial communication systems. This event aligns with a dominant_iec104_measurement_pattern within an i_format_information_transfer frame type and is associated with ASDU address 11 of the specified ASDU coterminous entity, which has one item (ASDU-type:36) to convey. It's important to note that this formal class label serves as a proxy observation rather than an established ground truth for any malicious activity or security breach within the network infrastructure at hand.",
+      "response": "The IEC104 network observation, identified by Event ID evt_000002 within eon_iec dataset and timestamped at 1654646400081 under Formal Bound version 2.1 with a proxy schema status of 'proxy_until_official_automaton_schema', indicates that source identifier 3 communicated to destination identifier 4 using the IEC-104 protocol hint, specifically through an i_format_information_transfer frame type in server_to_client direction. The packet size was observed at 193 bytes with a length field of 25 and involved ASDU address 11, wherein ASDU items were one (item count), the cot numbered as 3, and it pertains to an IEC104-based measurement observation pattern. It is important to note that this formal class label 'IEC104_BASELINE_MEASUREMENT_OBSERVATION' serves only as a proxy for ground truth attack labels; hence no definitive security conclusions can be drawn from the observed data alone at this time, and further investigation may be required.",
+      "violation_codes": [],
+      "severity": "none",
+      "violations": {
+        "V1_fabricated_reasoning": false,
+        "V2_contradicted_reasoning": false,
+        "V3_over_generalised_reasoning": false,
+        "V4_under_specified_reasoning": false,
+        "V5_incoherent_reasoning": false
+      },
+      "reasons": {
+        "V1": [],
+        "V2": [],
+        "V3": [],
+        "V4": [],
+        "V5": []
+      },
+      "lexicon_claims": {
+        "attack_terms": [],
+        "mitigation_terms": [],
+        "causal_terms": [],
+        "normality_terms": [],
+        "numbers": [
+          1654646400081,
+          2,
+          1,
+          3,
+          4,
+          104,
+          193,
+          25,
+          11,
+          3
+        ],
+        "direction_terms": [
+          "server_to_client"
+        ],
+        "mentions_source": true,
+        "mentions_destination": true,
+        "mentions_port": true,
+        "mentions_asdu": true,
+        "mentions_proxy": true,
+        "mentions_not_confirmed": false
+      },
+      "spacy_claims": null,
+      "per_claim_verdicts": null
+    },
+    {
+      "response_id": "evt_000003_ollama_phi3_mini",
+      "event_id": "evt_000003",
+      "response_type": "real_llm_output",
+      "model_name": "phi3:mini",
+      "response": "The IEC104_OBSERVATION_UNCLASSIFIED label indicates that, based on the provided formal observation of event evt_000003 within dataset eon_iec at granularity atomic_row and timestamped as 1654646400081 using schema proxy_until_official_automaton_schema in version 2.1, the network traffic between source identifier 3 (source port: 2404) and destination identifier 4 (destination port: 57592), which follows an iec104 protocol hint with a packet size of 193 bytes including frame length field value of 40 in i_format information transfer, has not been classified as malicious. The observed ASDU address is 11, and the associated fields include type: 36 (COT cot), item count: 2 with a packet format code represented by 'frame_fmt': 0. This observation remains consistent within its formal schema status without implying any confirmed security conclusion or malicious intent beyond what has been explicitly observed in this bound event data, and no additional claims outside the provided information are made to maintain professional analyst language integrity.",
+      "violation_codes": [],
+      "severity": "none",
+      "violations": {
+        "V1_fabricated_reasoning": false,
+        "V2_contradicted_reasoning": false,
+        "V3_over_generalised_reasoning": false,
+        "V4_under_specified_reasoning": false,
+        "V5_incoherent_reasoning": false
+      },
+      "reasons": {
+        "V1": [],
+        "V2": [],
+        "V3": [],
+        "V4": [],
+        "V5": []
+      },
+      "lexicon_claims": {
+        "attack_terms": [],
+        "mitigation_terms": [],
+        "causal_terms": [],
+        "normality_terms": [],
+        "numbers": [
+          1654646400081,
+          2,
+          1,
+          3,
+          2404,
+          4,
+          57592,
+          193,
+          40,
+          11,
+          36,
+          2,
+          0
+        ],
+        "direction_terms": [],
+        "mentions_source": true,
+        "mentions_destination": true,
+        "mentions_port": true,
+        "mentions_asdu": true,
+        "mentions_proxy": true,
+        "mentions_not_confirmed": false
+      },
+      "spacy_claims": null,
+      "per_claim_verdicts": null
+    },
+    {
+      "response_id": "evt_000004_ollama_phi3_mini",
+      "event_id": "evt_000004",
+      "response_type": "real_llm_output",
+      "model_name": "phi3:mini",
+      "response": "The IEC104 network observation, identified by Event ID evt_000004 within dataset eon_iec at granularity atomic_row and timestamped as 1654646400083 in Formal Bound version 2.1 under the proxy schema status IEC104_BASELINE_MEASUREMENT_OBSERVATION, indicates a server-tos\n\nclient communication event where source identifier 5 transmitted an i_format_information_transfer frame to destination identifier 6 using protocol hint iec104. The packet size was recorded at 67 bytes with the length field set as 25 and observed through ASDU address 11, type 36, coterminous termination point (COT) of 3, involving a single item within an atomic_row granularity structure. It is important to note that this formal class label serves only as a proxy observation at present; it does not confirm any malicious activity or intent and should be further investigated for ground truth verification before drawing conclusions about the network's security posture in relation to IEC-104 communications standards.",
       "violation_codes": [
         "V1"
       ],
@@ -28117,8 +27840,7 @@
       },
       "reasons": {
         "V1": [
-          "Unsupported attack or maliciousness terms: ['malicious']",
-          "Unsupported numeric identifiers or values: [1654646400088]"
+          "Unsupported attack or maliciousness terms: ['malicious']"
         ],
         "V2": [],
         "V3": [],
@@ -28133,17 +27855,75 @@
         "causal_terms": [],
         "normality_terms": [],
         "numbers": [
-          1654646400088,
+          1654646400083,
           2,
           1,
-          9,
-          10,
-          2404,
-          53778,
-          94,
+          5,
+          6,
+          67,
           25,
-          104,
           11,
+          36,
+          3,
+          104
+        ],
+        "direction_terms": [],
+        "mentions_source": true,
+        "mentions_destination": true,
+        "mentions_port": true,
+        "mentions_asdu": true,
+        "mentions_proxy": true,
+        "mentions_not_confirmed": true
+      },
+      "spacy_claims": null,
+      "per_claim_verdicts": null
+    },
+    {
+      "response_id": "evt_000005_ollama_phi3_mini",
+      "event_id": "evt_000005",
+      "response_type": "real_llm_output",
+      "model_name": "phi3:mini",
+      "response": "The IEC104 network observation, identified by Event ID evt_000005 within eon_iec dataset and timestamped at 1654646400083 using Formal Bound version 2.1 under the proxy schema status 'proxy_until_official_automaton_schema', indicates a server-tos\n\nclient communication event where source identifier 7 transmitted an IFC format information transfer frame to destination identifier 8 via ports 2404 and 50606, respectively. The packet size was recorded at 67 bytes with the length field set to 25 within ASDU fields asdu_address:11, cot:3, items:1 for type:36 (COT-I). This observation aligns with a dominant IEC104 measurement pattern and is classified under the proxy formal label 'IEC104_BASELINE_MEASUREMENT_OBSERVATION'. It's important to note that this classification does not confirm any malicious activity but rather serves as an initial network behavioral analysis. Further investigation would be required for a definitive security assessment, and no mitigation actions are suggested at this stage based on the provided formal bound alone.",
+      "violation_codes": [
+        "V1"
+      ],
+      "severity": "high",
+      "violations": {
+        "V1_fabricated_reasoning": true,
+        "V2_contradicted_reasoning": false,
+        "V3_over_generalised_reasoning": false,
+        "V4_under_specified_reasoning": false,
+        "V5_incoherent_reasoning": false
+      },
+      "reasons": {
+        "V1": [
+          "Unsupported attack or maliciousness terms: ['malicious']"
+        ],
+        "V2": [],
+        "V3": [],
+        "V4": [],
+        "V5": []
+      },
+      "lexicon_claims": {
+        "attack_terms": [
+          "malicious"
+        ],
+        "mitigation_terms": [],
+        "causal_terms": [],
+        "normality_terms": [],
+        "numbers": [
+          1654646400083,
+          2,
+          1,
+          7,
+          8,
+          2404,
+          50606,
+          67,
+          25,
+          11,
+          3,
+          1,
           36
         ],
         "direction_terms": [],
@@ -28152,203 +27932,17 @@
         "mentions_port": true,
         "mentions_asdu": true,
         "mentions_proxy": true,
-        "mentions_not_confirmed": false
+        "mentions_not_confirmed": true
       },
       "spacy_claims": null,
       "per_claim_verdicts": null
     },
     {
-      "response_id": "evt_000013_ollama_phi3_mini",
-      "event_id": "evt_000013",
+      "response_id": "evt_000006_ollama_phi3_mini",
+      "event_id": "evt_000006",
       "response_type": "real_llm_output",
       "model_name": "phi3:mini",
-      "response": "The IEC104 network observation (evt_000013) within eon_iec dataset at atomic granularity indicates a server-tosider communication event, where source identifier '5' transmitted to destination identifier '6'. The packet size was recorded as 67 bytes with an IEC104 frame format for information transfer. Notably, the observed data aligns with known patterns of normal ICS network behavior under protocol hint iec104 and maintains consistency in source port (2404) and destination port (36410). The ASDU address was 11, type numbered as '36', COT at value '3', with a single item count. This observation is classified under the proxy IEC104_BASELINE_MEASUREMENT_OBSERVATION formal label and does not explicitly indicate malicious intent or confirm any security breach within this singular timestamped event (1654646400117). As such, no immediate mitigation actions are required based on the current information.",
-      "violation_codes": [
-        "V1",
-        "V5"
-      ],
-      "severity": "high",
-      "violations": {
-        "V1_fabricated_reasoning": true,
-        "V2_contradicted_reasoning": false,
-        "V3_over_generalised_reasoning": false,
-        "V4_under_specified_reasoning": false,
-        "V5_incoherent_reasoning": true
-      },
-      "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['malicious']",
-          "Unsupported numeric identifiers or values: [1654646400117]"
-        ],
-        "V2": [],
-        "V3": [],
-        "V4": [],
-        "V5": [
-          "Conflicting terms detected: 'normal' and 'malicious'."
-        ]
-      },
-      "lexicon_claims": {
-        "attack_terms": [
-          "malicious"
-        ],
-        "mitigation_terms": [],
-        "causal_terms": [],
-        "normality_terms": [],
-        "numbers": [
-          5,
-          6,
-          67,
-          2404,
-          36410,
-          11,
-          36,
-          3,
-          1654646400117
-        ],
-        "direction_terms": [],
-        "mentions_source": true,
-        "mentions_destination": true,
-        "mentions_port": true,
-        "mentions_asdu": true,
-        "mentions_proxy": true,
-        "mentions_not_confirmed": false
-      },
-      "spacy_claims": null,
-      "per_claim_verdicts": null
-    },
-    {
-      "response_id": "evt_000014_ollama_phi3_mini",
-      "event_id": "evt_000014",
-      "response_type": "real_llm_output",
-      "model_name": "phi3:mini",
-      "response": "The IEC104 network observation, identified by Event ID evt_000014 within dataset eon_iec at granularity atomic_row and timestamped as 1654646400117 using Formal Bound version 2.1 under the proxy schema status IEC104_BASELINE_MEASUREMENT_OBSERVATION, indicates a server-tos\n\nclient communication event where source identifier 7 transmitted data to destination identifier 8 via port numbers 2404 and 50606 respectively. The packet size was recorded at 67 bytes with the length field set as 25 within an IEC104 protocol context, specifically using frame type i_format_information_transfer which aligns with a dominant pattern observed in this dataset for IEC-based measurements. It is important to note that while these observations are consistent with expected network behavior under normal operation conditions and adhere strictly to the formal bound provided, they currently serve as proxy observation labels rather than confirmed indicators of malicious activity or security incidents within the industrial control system (ICS) environment being monitored.",
-      "violation_codes": [
-        "V1",
-        "V4",
-        "V5"
-      ],
-      "severity": "high",
-      "violations": {
-        "V1_fabricated_reasoning": true,
-        "V2_contradicted_reasoning": false,
-        "V3_over_generalised_reasoning": false,
-        "V4_under_specified_reasoning": true,
-        "V5_incoherent_reasoning": true
-      },
-      "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['malicious']",
-          "Unsupported numeric identifiers or values: [1654646400117]"
-        ],
-        "V2": [],
-        "V3": [],
-        "V4": [
-          "Missing ASDU reference."
-        ],
-        "V5": [
-          "Conflicting terms detected: 'normal' and 'malicious'."
-        ]
-      },
-      "lexicon_claims": {
-        "attack_terms": [
-          "malicious"
-        ],
-        "mitigation_terms": [],
-        "causal_terms": [],
-        "normality_terms": [],
-        "numbers": [
-          1654646400117,
-          2,
-          1,
-          7,
-          8,
-          2404,
-          50606,
-          67,
-          25
-        ],
-        "direction_terms": [],
-        "mentions_source": true,
-        "mentions_destination": true,
-        "mentions_port": true,
-        "mentions_asdu": false,
-        "mentions_proxy": true,
-        "mentions_not_confirmed": false
-      },
-      "spacy_claims": null,
-      "per_claim_verdicts": null
-    },
-    {
-      "response_id": "evt_000015_ollama_phi3_mini",
-      "event_id": "evt_000015",
-      "response_type": "real_llm_output",
-      "model_name": "phi3:mini",
-      "response": "The IEC104 network observation, identified by Event ID evt_000015 within dataset eon_iec and timestamped at 1654646400117 using Formal Bound version 2.1 with a proxy schema status of 'proxy_until_official_automaton_schema', indicates that source identifier 9 communicated to destination identifier 10 via the IEC-104 protocol, specifically through an i_format_information_transfer frame type in server_to_client direction. The packet size was observed at 67 bytes with a length field of 25 and involved ASDU address 11, wherein ASDU items were one (36 for the item type), COT numbered as 3, using source port 2404 and destination port 53778. The formal class IEC104_BASELINE_MEASUREMENT_OBSERVATION is assigned to this event; however, it remains a proxy observation label without ground truth for attack confirmation within the bounds of available data at this time.",
-      "violation_codes": [
-        "V1"
-      ],
-      "severity": "high",
-      "violations": {
-        "V1_fabricated_reasoning": true,
-        "V2_contradicted_reasoning": false,
-        "V3_over_generalised_reasoning": false,
-        "V4_under_specified_reasoning": false,
-        "V5_incoherent_reasoning": false
-      },
-      "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['attack']",
-          "Unsupported causal language: ['indicates that']",
-          "Unsupported numeric identifiers or values: [1654646400117]"
-        ],
-        "V2": [],
-        "V3": [],
-        "V4": [],
-        "V5": []
-      },
-      "lexicon_claims": {
-        "attack_terms": [
-          "attack"
-        ],
-        "mitigation_terms": [],
-        "causal_terms": [
-          "indicates that"
-        ],
-        "normality_terms": [],
-        "numbers": [
-          1654646400117,
-          2,
-          1,
-          9,
-          10,
-          104,
-          67,
-          25,
-          11,
-          36,
-          3,
-          2404,
-          53778
-        ],
-        "direction_terms": [
-          "server_to_client"
-        ],
-        "mentions_source": true,
-        "mentions_destination": true,
-        "mentions_port": true,
-        "mentions_asdu": true,
-        "mentions_proxy": true,
-        "mentions_not_confirmed": false
-      },
-      "spacy_claims": null,
-      "per_claim_verdicts": null
-    },
-    {
-      "response_id": "evt_000016_ollama_phi3_mini",
-      "event_id": "evt_000016",
-      "response_type": "real_llm_output",
-      "model_name": "phi3:mini",
-      "response": "The IEC104 network observation, identified by Event ID evt_000016 within dataset eon_iec at granularity atomic_row and timestamped as 1654646400144 in Formal Bound version 2.1 under the proxy schema status IEC104_BASELINE_MEASUREMENT_OBSERVATION, indicates a server-tos\n\nclient communication event where source identifier 5 transmitted to destination identifier 6 using protocol hint iec104 in a packet size of 67 bytes. The observed data unit (ASDU) fields include an ASDU address of 11, type numbered as 36 with COT set at 3 and containing one item within the i_format information transfer frame format marked by zero-value for its field identifier. This observation pattern aligns with a dominant IEC104 measurement behavior without providing any indication towards malicious intent or security breach, remaining strictly as an informational network event under proxy formal class status which does not equate to ground truth attack labeling within the context of this bound analysis.",
+      "response": "The IEC104 network observation, identified by Event ID evt_000006 within dataset eon_iec at granularity atomic_row and timestamped as 1654646400083 in Formal Bound version 2.1 under the proxy schema status IEC104_BASELINE_MEASUREMENT_OBSERVATION, indicates a server-tos\n\nclient communication event where source identifier 9 transmitted data to destination identifier 10 using protocol hint iec104 in a packet size of 67 bytes with an ASDU length field value of 25. The observed frame type is i_format_information_transfer, and the associated formal class status confirms it as proxy observation label rather than ground truth for attack labels. This communication event aligns with expected IEC-104 network behavior without any explicit indication of malicious intent or security breach within this bound's scope. The ASDU address is 11, and the type indicates a single item measurement (ASDU_ITEM: 36) from cot number 3 at source identifier asdu location 11 with no additional devices, network segments, operators, substations, or assets implicated beyond those identifiers provided. No causal explanations for timing patterns are inferred within this formal bound; thus, the absence of such claims is consistent with its scope and limitations.",
       "violation_codes": [
         "V1",
         "V4"
@@ -28363,8 +27957,7 @@
       },
       "reasons": {
         "V1": [
-          "Unsupported attack or maliciousness terms: ['attack', 'malicious']",
-          "Unsupported numeric identifiers or values: [1654646400144]"
+          "Unsupported attack or maliciousness terms: ['attack', 'malicious']"
         ],
         "V2": [],
         "V3": [],
@@ -28382,15 +27975,18 @@
         "causal_terms": [],
         "normality_terms": [],
         "numbers": [
-          1654646400144,
+          1654646400083,
           2,
           1,
-          5,
-          6,
+          9,
+          10,
           67,
+          25,
+          104,
           11,
           36,
-          3
+          3,
+          11
         ],
         "direction_terms": [],
         "mentions_source": true,
@@ -28404,129 +28000,11 @@
       "per_claim_verdicts": null
     },
     {
-      "response_id": "evt_000017_ollama_phi3_mini",
-      "event_id": "evt_000017",
+      "response_id": "evt_000007_ollama_phi3_mini",
+      "event_id": "evt_000007",
       "response_type": "real_llm_output",
       "model_name": "phi3:mini",
-      "response": "The IEC104 network observation identified by Event ID evt_000017 within eon_iec dataset, at granularity atomic_row and timestamped as 1654646400166 using Formal Bound version 2.1 under the proxy schema status IEC104_BASELINE_MEASUREMENT_OBSERVATION indicates a server-tos\nclient communication event where source identifier 5 transmitted to destination identifier 6, utilizing protocol hint iec104 and observed packet size of 67 bytes. The data transfer occurred over the network with source port numbered as 2404 and destination port at 36410. Accordingly, this event's formal class status is identified as proxy_not_ground_truth_attack_label; hence it does not confirm any malicious activity within our industrial control systems (ICS) network based on the available information in the formal bound alone.",
-      "violation_codes": [
-        "V1",
-        "V4"
-      ],
-      "severity": "high",
-      "violations": {
-        "V1_fabricated_reasoning": true,
-        "V2_contradicted_reasoning": false,
-        "V3_over_generalised_reasoning": false,
-        "V4_under_specified_reasoning": true,
-        "V5_incoherent_reasoning": false
-      },
-      "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['attack', 'malicious']",
-          "Unsupported numeric identifiers or values: [1654646400166]"
-        ],
-        "V2": [],
-        "V3": [],
-        "V4": [
-          "Missing ASDU reference."
-        ],
-        "V5": []
-      },
-      "lexicon_claims": {
-        "attack_terms": [
-          "attack",
-          "malicious"
-        ],
-        "mitigation_terms": [],
-        "causal_terms": [],
-        "normality_terms": [],
-        "numbers": [
-          1654646400166,
-          2,
-          1,
-          5,
-          6,
-          67,
-          2404,
-          36410
-        ],
-        "direction_terms": [],
-        "mentions_source": true,
-        "mentions_destination": true,
-        "mentions_port": true,
-        "mentions_asdu": false,
-        "mentions_proxy": true,
-        "mentions_not_confirmed": true
-      },
-      "spacy_claims": null,
-      "per_claim_verdicts": null
-    },
-    {
-      "response_id": "evt_000018_ollama_phi3_mini",
-      "event_id": "evt_000018",
-      "response_type": "real_llm_output",
-      "model_name": "phi3:mini",
-      "response": "The IEC104 network observation, identified by Event ID evt_000018 within dataset eon_iec at granularity atomic_row and timestamped as 1654646400166 using Formal Bound version 2.1 under the proxy schema status IEC104_BASELINE_MEASUREMENT_OBSERVATION, indicates a server-tos\n\nclient communication event where source identifier 7 transmitted data to destination identifier 8 via port numbers 2404 and 50606 respectively. The packet size was recorded at 67 bytes with the length field set as 25 within an IEC104 protocol context, specifically using i_format_information_transfer frame type which aligns with a dominant_iec104_measurement_pattern observation pattern. It is important to note that this formal class serves merely as a proxy label for measurement and does not confirm any malicious activity or security breach within the industrial control system network at this time, based solely on the provided bound information.",
-      "violation_codes": [
-        "V1",
-        "V4"
-      ],
-      "severity": "high",
-      "violations": {
-        "V1_fabricated_reasoning": true,
-        "V2_contradicted_reasoning": false,
-        "V3_over_generalised_reasoning": false,
-        "V4_under_specified_reasoning": true,
-        "V5_incoherent_reasoning": false
-      },
-      "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['malicious']",
-          "Unsupported numeric identifiers or values: [1654646400166]"
-        ],
-        "V2": [],
-        "V3": [],
-        "V4": [
-          "Missing ASDU reference."
-        ],
-        "V5": []
-      },
-      "lexicon_claims": {
-        "attack_terms": [
-          "malicious"
-        ],
-        "mitigation_terms": [],
-        "causal_terms": [],
-        "normality_terms": [],
-        "numbers": [
-          1654646400166,
-          2,
-          1,
-          7,
-          8,
-          2404,
-          50606,
-          67,
-          25
-        ],
-        "direction_terms": [],
-        "mentions_source": true,
-        "mentions_destination": true,
-        "mentions_port": true,
-        "mentions_asdu": false,
-        "mentions_proxy": true,
-        "mentions_not_confirmed": true
-      },
-      "spacy_claims": null,
-      "per_claim_verdicts": null
-    },
-    {
-      "response_id": "evt_000019_ollama_phi3_mini",
-      "event_id": "evt_000019",
-      "response_type": "real_llm_output",
-      "model_name": "phi3:mini",
-      "response": "The IEC104 network observation, identified by Event ID evt_000019 within dataset eon_iec at granularity atomic_row and timestamped as 1654646400166 in Formal Bound version 2.1 under the proxy schema status IEC104_BASELINE_MEASUREMENT_OBSERVATION, indicates a server-tos\n\nclient communication event where source identifier 9 transmitted data to destination identifier 10 using protocol hint iec104 in packet size of 67 bytes with frame format i_format_information_transfer. The observed ASDU address is 11, type is 36 (COT:3), and item count stands at one within the context provided by this formal bound observation pattern known as dominant_iec104_measurement_pattern. It's important to note that while these details are consistent with IEC-104 protocol operations, they do not confirm any malicious activity or security breach without further ground truth validation of attack labels which is currently unconfirmed in this formal bound observation status as proxy_not_ground_truth_attack_label.",
+      "response": "The IEC104 network observation, identified by Event ID evt_000007 within eon_iec dataset and timestamped at 1654646400084 using Formal Bound version 2.1 under the proxy schema status of 'proxy_until_official_automaton_schema', indicates a server-tos\n\nclient communication event where source identifier 5 transmitted an i_format_information_transfer frame to destination identifier 6 via ports 2404 and 36410, respectively. The packet size was recorded at 67 bytes with the length field set to 25 within ASDU fields asdu_address: 11, cot: 3, items: 1 for type: 36 (COT-type). This event aligns with a dominant IEC104 measurement pattern and is classified under the proxy formal label of 'IEC104_BASELINE_MEASUREMENT_OBSERVATION'. It's important to note that this classification does not confirm any malicious activity, as it remains within expected operational parameters for a standard IEC-104 communication event.",
       "violation_codes": [
         "V1"
       ],
@@ -28540,8 +28018,7 @@
       },
       "reasons": {
         "V1": [
-          "Unsupported attack or maliciousness terms: ['attack', 'malicious']",
-          "Unsupported numeric identifiers or values: [1654646400166]"
+          "Unsupported attack or maliciousness terms: ['malicious']"
         ],
         "V2": [],
         "V3": [],
@@ -28550,22 +28027,25 @@
       },
       "lexicon_claims": {
         "attack_terms": [
-          "attack",
           "malicious"
         ],
         "mitigation_terms": [],
         "causal_terms": [],
         "normality_terms": [],
         "numbers": [
-          1654646400166,
+          1654646400084,
           2,
           1,
-          9,
-          10,
+          5,
+          6,
+          2404,
+          36410,
           67,
+          25,
           11,
-          36,
           3,
+          1,
+          36,
           104
         ],
         "direction_terms": [],
@@ -28580,11 +28060,11 @@
       "per_claim_verdicts": null
     },
     {
-      "response_id": "evt_000020_ollama_phi3_mini",
-      "event_id": "evt_000020",
+      "response_id": "evt_000008_ollama_phi3_mini",
+      "event_id": "evt_000008",
       "response_type": "real_llm_output",
       "model_name": "phi3:mini",
-      "response": "The IEC104 network observation (evt_000020) within eon_iec dataset at atomic granularity indicates a server-tosider communication event, where source identifier '3' transmitted to destination identifier '4'. The packet size was recorded as 175 bytes with the length field set to 25. This transmission followed an IEC104 protocol hint and utilized i_format_information_transfer frame type within a dominant pattern of measurement, observed at timestamp ms: 1654646400261 using formal class label 'IEC104_BASELINE_MEASUREMENT_OBSERVATION'. The source port was noted as 2404 and the destination port as 57592, with ASDU address at 11. It's important to note that this observation is a proxy label for measurement purposes only; it does not confirm any malicious activity or security breach within the network based on current formal class status 'proxy_not_ground_truth_attack_label'.",
+      "response": "The IEC104 network observation, identified by Event ID evt_000008 within eon_iec dataset and timestamped at 1654646400084 using Formal Bound version 2.1 under the proxy schema status 'proxy_until_official_automaton_schema', indicates a server-tos\n\nclient communication event where source identifier 7 transmitted an i_format_information_transfer frame to destination identifier 8 via ports 2404 and 50606, respectively. The packet size was recorded at 67 bytes with the length field set to 25 within ASDU fields asdu_address:11, cot:3, items:1 for type:36 (COT-based I/O). This event aligns with a dominant IEC104 measurement pattern and is classified under the proxy formal label of 'IEC104_BASELINE_MEASUREMENT_OBSERVATION'. It's important to note that this classification does not confirm any malicious activity but rather serves as an observation for potential baseline behavior in a network utilizing IEC-104 protocol.",
       "violation_codes": [
         "V1"
       ],
@@ -28598,8 +28078,7 @@
       },
       "reasons": {
         "V1": [
-          "Unsupported attack or maliciousness terms: ['attack', 'malicious']",
-          "Unsupported numeric identifiers or values: [1654646400261]"
+          "Unsupported attack or maliciousness terms: ['malicious']"
         ],
         "V2": [],
         "V3": [],
@@ -28608,23 +28087,140 @@
       },
       "lexicon_claims": {
         "attack_terms": [
-          "attack",
           "malicious"
         ],
         "mitigation_terms": [],
         "causal_terms": [],
         "normality_terms": [],
         "numbers": [
-          3,
-          4,
-          175,
-          25,
-          1654646400261,
+          1654646400084,
+          2,
+          1,
+          7,
+          8,
           2404,
-          57592,
-          11
+          50606,
+          67,
+          25,
+          11,
+          3,
+          1,
+          36,
+          104
         ],
         "direction_terms": [],
+        "mentions_source": true,
+        "mentions_destination": true,
+        "mentions_port": true,
+        "mentions_asdu": true,
+        "mentions_proxy": true,
+        "mentions_not_confirmed": true
+      },
+      "spacy_claims": null,
+      "per_claim_verdicts": null
+    },
+    {
+      "response_id": "evt_000009_ollama_phi3_mini",
+      "event_id": "evt_000009",
+      "response_type": "real_llm_output",
+      "model_name": "phi3:mini",
+      "response": "The IEC104 control frame pattern was observed within an industrial communication network, where source identifier '6' transmitted a s_or_u_format_control frame to destination identifier '5'. The transmission occurred in client-to0 server direction with protocol hint iec104. Source port 36410 and destination port 2404 were utilized for this communication, which included an ASDU address of 0, indicating no specific data unit was addressed within the frame's content fields at that time. The packet size recorded is consistent with a length field value of 4 bytes across all frames in question. It should be noted that while these observations are made using proxy formal class labels such as IEC104_CONTROL_FRAME_OBSERVATION, they do not confirm any malicious activity or security breach within the network at this time; rather, it is a non-ground truth observation awaiting further analysis.",
+      "violation_codes": [
+        "V1"
+      ],
+      "severity": "high",
+      "violations": {
+        "V1_fabricated_reasoning": true,
+        "V2_contradicted_reasoning": false,
+        "V3_over_generalised_reasoning": false,
+        "V4_under_specified_reasoning": false,
+        "V5_incoherent_reasoning": false
+      },
+      "reasons": {
+        "V1": [
+          "Unsupported attack or maliciousness terms: ['malicious']"
+        ],
+        "V2": [],
+        "V3": [],
+        "V4": [],
+        "V5": []
+      },
+      "lexicon_claims": {
+        "attack_terms": [
+          "malicious"
+        ],
+        "mitigation_terms": [],
+        "causal_terms": [],
+        "normality_terms": [],
+        "numbers": [
+          6,
+          5,
+          36410,
+          2404,
+          0,
+          4
+        ],
+        "direction_terms": [],
+        "mentions_source": true,
+        "mentions_destination": true,
+        "mentions_port": true,
+        "mentions_asdu": true,
+        "mentions_proxy": true,
+        "mentions_not_confirmed": true
+      },
+      "spacy_claims": null,
+      "per_claim_verdicts": null
+    },
+    {
+      "response_id": "evt_000010_ollama_phi3_mini",
+      "event_id": "evt_000010",
+      "response_type": "real_llm_output",
+      "model_name": "phi3:mini",
+      "response": "The IEC104 protocol hint indicates a server_to_client communication direction, with source identifier 5 and destination identifier 6 engaged in an i_format_information_transfer frame type event (evt_000010). The packet size is recorded at 67 bytes over the observed ports of 2404 for sending and 36410 for receiving. This communication aligns with a dominant IEC-104 measurement pattern, classified under the proxy formal label as an IEC104_BASELINE_MEASUREMENT_OBSERVATION within schema status 'proxy_until_official_automaton_schema'. The ASDU address is 11, and it includes a single item of type 36 with COT value 3. As the formal class does not confirm an attack label but rather serves as a proxy observation for measurement purposes, no further security conclusions can be drawn from this bound alone without additional context or evidence beyond what has been observed at timestamp ms: 1654646400086 in version 2.1 of the formal schema status.",
+      "violation_codes": [
+        "V1"
+      ],
+      "severity": "high",
+      "violations": {
+        "V1_fabricated_reasoning": true,
+        "V2_contradicted_reasoning": false,
+        "V3_over_generalised_reasoning": false,
+        "V4_under_specified_reasoning": false,
+        "V5_incoherent_reasoning": false
+      },
+      "reasons": {
+        "V1": [
+          "Unsupported attack or maliciousness terms: ['attack']"
+        ],
+        "V2": [],
+        "V3": [],
+        "V4": [],
+        "V5": []
+      },
+      "lexicon_claims": {
+        "attack_terms": [
+          "attack"
+        ],
+        "mitigation_terms": [],
+        "causal_terms": [],
+        "normality_terms": [],
+        "numbers": [
+          5,
+          6,
+          67,
+          2404,
+          36410,
+          104,
+          11,
+          36,
+          3,
+          1654646400086,
+          2,
+          1
+        ],
+        "direction_terms": [
+          "server_to_client"
+        ],
         "mentions_source": true,
         "mentions_destination": true,
         "mentions_port": true,

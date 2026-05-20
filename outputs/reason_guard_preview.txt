@@ -3,12 +3,12 @@
 SUMMARY:
 {
   "total_responses": 520,
-  "no_violation": 100,
-  "V1_fabricated_reasoning": 120,
+  "no_violation": 109,
+  "V1_fabricated_reasoning": 110,
   "V2_contradicted_reasoning": 100,
   "V3_over_generalised_reasoning": 100,
-  "V4_under_specified_reasoning": 408,
-  "V5_incoherent_reasoning": 2
+  "V4_under_specified_reasoning": 404,
+  "V5_incoherent_reasoning": 0
 }
 
 {
@@ -85,8 +85,7 @@ SUMMARY:
   "reasons": {
     "V1": [
       "Unsupported attack or maliciousness terms: ['attack', 'malicious', 'replay', 'compromise', 'attacker']",
-      "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']",
-      "Unsupported causal language: ['is using']"
+      "Unsupported mitigation terms: ['isolate', 'isolated', 'prevent further']"
     ],
     "V2": [],
     "V3": [],
@@ -111,9 +110,7 @@ SUMMARY:
       "isolated",
       "prevent further"
     ],
-    "causal_terms": [
-      "is using"
-    ],
+    "causal_terms": [],
     "normality_terms": [],
     "numbers": [
       2,

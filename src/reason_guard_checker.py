@@ -89,11 +89,11 @@ CAUSAL_TERMS = [
     "caused by",
     "due to",
     "therefore",
-    "suggests that",
-    "indicates that",
-    "appears to be using",
-    "is using",
     "in order to",
+    "as a result",
+    "consequently",
+    "thus the cause",
+    "the cause of",
 ]
 
 NORMALITY_TERMS = [
@@ -141,6 +141,22 @@ SAFE_NEGATION_PATTERNS = [
     "does not confirm attack",
     "no confirmed attack",
     "does not provide enough information",
+    "not a confirmed attack",
+    "not an attack",
+    "not ground truth for an attack",
+    "proxy_not_ground_truth_attack",
+    "is not an attack label",
+    "rather than a confirmed attack",
+    "ground truth attack label",
+    "proxy for ground truth attack",
+    "ground truth attack labels",
+    "not been classified as malicious",
+    "not classified as malicious",
+    "or malicious intent",
+    "such as malicious",
+    "no definitive security conclusion",
+    "implying any confirmed security conclusion or malicious",
+    "intent beyond what has been",
 ]
 
 
@@ -267,6 +283,7 @@ def detect_v1_fabricated_reasoning(
         int(bound["features"]["asdu_items"]),
         int(bound["features"]["asdu_type"]),
         int(bound["features"]["frame_fmt"]),
+        int(bound["timestamp_ms"]),
         104,
         2404,
     }

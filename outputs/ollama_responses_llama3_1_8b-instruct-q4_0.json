@@ -1,0 +1,192 @@
+[
+  {
+    "response_id": "evt_000001_ollama_llama3_1_8b-instruct-q4_0",
+    "original_event_id": "evt_000001",
+    "response_type": "real_llm_output",
+    "model_name": "llama3.1:8b-instruct-q4_0",
+    "model_backend": "ollama_local",
+    "response": "Here is a precise operational English explanation of the formally bounded IEC-104 network observation:\n\nOn timestamp 1654646400041, source identifier 1 communicated with destination identifier 2 over an iec104 protocol hint in client_to_server direction. The observed frame type was s_or_u_format_control and matched the iec104_control_frame_pattern pattern. The communication involved a packet size of 46 bytes and a packet length field of 4. The ASDU address, COT, items count, and type were all 0. The proxy formal class for this observation is IEC104_CONTROL_FRAME_OBSERVATION, which should not be considered as a confirmed attack label but rather as a proxy observation label.",
+    "generation_ok": true,
+    "elapsed_seconds": 8.018487215042114,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646400041,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_000002_ollama_llama3_1_8b-instruct-q4_0",
+    "original_event_id": "evt_000002",
+    "response_type": "real_llm_output",
+    "model_name": "llama3.1:8b-instruct-q4_0",
+    "model_backend": "ollama_local",
+    "response": "Here is a precise operational English explanation of the formally bounded IEC-104 network observation:\n\nOn timestamp 1654646400081, source identifier 3 communicated with destination identifier 4 over the iec104 protocol in server_to_client direction. The observed packet size was 193 bytes and the packet length field was 25. The communication involved an i_format_information_transfer frame type, dominant_iec104_measurement_pattern observation pattern, and IEC104_BASELINE_MEASUREMENT_OBSERVATION proxy formal class. The ASDU fields indicated an address of 11, COT of 3, item count of 1, and type of 36.",
+    "generation_ok": true,
+    "elapsed_seconds": 10.781491756439209,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646400081,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_000003_ollama_llama3_1_8b-instruct-q4_0",
+    "original_event_id": "evt_000003",
+    "response_type": "real_llm_output",
+    "model_name": "llama3.1:8b-instruct-q4_0",
+    "model_backend": "ollama_local",
+    "response": "Here is a formally bounded IEC-104 network observation in precise operational English:\n\nOn timestamp 1654646400081, server identifier 3 communicated with client identifier 4 over iec104 protocol hint using server_to_client communication direction. The observed source port was 2404 and the destination port was 57592. A packet of size 193 bytes was transmitted, with a packet length field indicating 40 bytes. The ASDU address was 11, type was 36, COT was 3, and item count was 2. This observation is classified as IEC104_OBSERVATION_UNCLASSIFIED, which is currently a proxy formal class label, not a confirmed attack label.",
+    "generation_ok": true,
+    "elapsed_seconds": 11.204475164413452,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646400081,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_000004_ollama_llama3_1_8b-instruct-q4_0",
+    "original_event_id": "evt_000004",
+    "response_type": "real_llm_output",
+    "model_name": "llama3.1:8b-instruct-q4_0",
+    "model_backend": "ollama_local",
+    "response": "Here is a precise operational English explanation of the formally bounded IEC-104 network observation:\n\nOn timestamp 1654646400083, source identifier 5 communicated with destination identifier 6 over an iec104 protocol hint in server_to_client direction. The observed frame type was i_format_information_transfer and the proxy formal class is IEC104_BASELINE_MEASUREMENT_OBSERVATION, which is a proxy observation label not a confirmed attack label. The communication involved source port 2404 and destination port 36410, with a packet size of 67 bytes and a packet length field of 25. The ASDU fields indicated an address of 11, type of 36, COT of 3, and item count of 1.",
+    "generation_ok": true,
+    "elapsed_seconds": 12.328330993652344,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646400083,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_000005_ollama_llama3_1_8b-instruct-q4_0",
+    "original_event_id": "evt_000005",
+    "response_type": "real_llm_output",
+    "model_name": "llama3.1:8b-instruct-q4_0",
+    "model_backend": "ollama_local",
+    "response": "Here is a precise operational English explanation of the formally bounded IEC-104 network observation:\n\nOn timestamp 1654646400083, source identifier 7 communicated with destination identifier 8 over an iec104 protocol hint in server_to_client direction. The observed frame type was i_format_information_transfer and the proxy formal class is IEC104_BASELINE_MEASUREMENT_OBSERVATION, which should be treated as a label and not a confirmed attack label. The source port was 2404 and destination port was 50606, with a packet size of 67 bytes and length field of 25. The ASDU address was 11, type was 36, COT was 3, and item count was 1.",
+    "generation_ok": true,
+    "elapsed_seconds": 12.226989269256592,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646400083,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_000006_ollama_llama3_1_8b-instruct-q4_0",
+    "original_event_id": "evt_000006",
+    "response_type": "real_llm_output",
+    "model_name": "llama3.1:8b-instruct-q4_0",
+    "model_backend": "ollama_local",
+    "response": "Here is a precise operational English explanation of the formally bounded IEC-104 network observation:\n\nOn timestamp 1654646400083, server identifier 9 communicated with client identifier 10 over iec104 protocol hint in server_to_client direction. The observed source port was 2404 and the destination port was 53778. The packet size was 67 bytes with a length field of 25. The ASDU address was 11, type was 36, COT was 3, and item count was 1. This observation is classified as IEC104_BASELINE_MEASUREMENT_OBSERVATION, which is currently a proxy formal class label, not a confirmed attack label.",
+    "generation_ok": true,
+    "elapsed_seconds": 11.261244297027588,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646400083,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_000007_ollama_llama3_1_8b-instruct-q4_0",
+    "original_event_id": "evt_000007",
+    "response_type": "real_llm_output",
+    "model_name": "llama3.1:8b-instruct-q4_0",
+    "model_backend": "ollama_local",
+    "response": "Here is a precise operational English explanation of the formally bounded IEC-104 network observation:\n\nOn timestamp 1654646400084, source identifier 5 communicated with destination identifier 6 over the iec104 protocol hint in server_to_client direction. The observed frame type was i_format_information_transfer and the dominant observation pattern was dominant_iec104_measurement_pattern. The communication involved a packet size of 67 bytes and a packet length field of 25, transmitted on source port 2404 to destination port 36410. The ASDU address was 11, with an ASDU type of 36, COT of 3, and ASDU item count of 1. The current formal class is IEC104_BASELINE_MEASUREMENT_OBSERVATION, which is a proxy observation label, not a confirmed attack label.",
+    "generation_ok": true,
+    "elapsed_seconds": 12.612802743911743,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646400084,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_000008_ollama_llama3_1_8b-instruct-q4_0",
+    "original_event_id": "evt_000008",
+    "response_type": "real_llm_output",
+    "model_name": "llama3.1:8b-instruct-q4_0",
+    "model_backend": "ollama_local",
+    "response": "Here is a precise operational English explanation of the formally bounded IEC-104 network observation:\n\nOn timestamp 1654646400084, source identifier 7 communicated with destination identifier 8 over an iec104 protocol hint in server_to_client direction. The observed frame type was i_format_information_transfer and the dominant observation pattern was dominant_iec104_measurement_pattern. The communication involved a packet size of 67 bytes and a packet length field of 25. The ASDU address was 11, with an ASDU type of 36, COT of 3, and ASDU item count of 1. The proxy formal class for this observation is IEC104_BASELINE_MEASUREMENT_OBSERVATION, which should not be considered a confirmed attack label.",
+    "generation_ok": true,
+    "elapsed_seconds": 11.76682996749878,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646400084,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_000009_ollama_llama3_1_8b-instruct-q4_0",
+    "original_event_id": "evt_000009",
+    "response_type": "real_llm_output",
+    "model_name": "llama3.1:8b-instruct-q4_0",
+    "model_backend": "ollama_local",
+    "response": "Here is the explanation:\n\nOn timestamp 1654646400086 ms, a client-to-server communication was observed on an IEC-104 network. The source identifier 6 communicated with destination identifier 5. The observed protocol hint is iec104, and the frame type is s_or_u_format_control. The source port is 36410, and the destination port is 2404. The packet size is 46 bytes, and the packet length field is 4. The ASDU address is 0, and the ASDU type, COT, and item count are all 0. The proxy formal class for this observation is IEC104_CONTROL_FRAME_OBSERVATION, which should not be considered a confirmed attack label.",
+    "generation_ok": true,
+    "elapsed_seconds": 11.390109777450562,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646400086,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_000010_ollama_llama3_1_8b-instruct-q4_0",
+    "original_event_id": "evt_000010",
+    "response_type": "real_llm_output",
+    "model_name": "llama3.1:8b-instruct-q4_0",
+    "model_backend": "ollama_local",
+    "response": "Here is a precise operational English explanation of the formally bounded IEC-104 network observation:\n\nOn timestamp 1654646400086, source identifier 5 communicated with destination identifier 6 over an iec104 protocol hint in server_to_client direction. The observed frame type was i_format_information_transfer and the proxy formal class is IEC104_BASELINE_MEASUREMENT_OBSERVATION, which is a proxy observation label not a confirmed attack label. The communication involved source port 2404 and destination port 36410, with a packet size of 67 bytes and a packet length field of 25. The ASDU address was 11, type was 36, COT was 3, and item count was 1.",
+    "generation_ok": true,
+    "elapsed_seconds": 11.496603012084961,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646400086,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  }
+]

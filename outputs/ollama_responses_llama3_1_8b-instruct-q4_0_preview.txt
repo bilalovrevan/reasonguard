@@ -1,5 +1,5 @@
 === OLLAMA LLM RESPONSE PREVIEW ===
-Total responses: 20
+Total responses: 10
 
 Response ID: evt_000001_ollama_llama3_1_8b-instruct-q4_0
 Model: llama3.1:8b-instruct-q4_0
