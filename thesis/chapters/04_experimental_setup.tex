@@ -1,0 +1,54 @@
+\chapter{Experimental Setup}
+\label{ch:experimental-setup}
+
+\section{Datasets}
+\label{sec:datasets}
+
+Two datasets, both publicly available on IEEE DataPort, are used in the empirical
+evaluation: the Modbus dataset for ICS anomaly detection \autocite{RysavyMatousek2021Modbus}
+and the ICS dataset for smart-grid anomaly detection \autocite{MatousekRysavyGrofcik2022SmartGrid}.
+
+[Author's note: report the number of events, the event-type distribution, and the
+preprocessing applied to each dataset before bound construction.]
+
+\section{Language Models}
+\label{sec:models}
+
+Three local models are deployed via Ollama with 4-bit quantisation on a CPU-only
+inference path: Llama-3.1-8B-Instruct, Mistral-7B-v0.3-Instruct, and Phi-3-Mini.
+Two cloud models are accessed via vendor APIs: GPT-4o-mini (OpenAI) and Gemini-1.5-Flash
+(Google).
+
+[Author's note: report inference latency, observed determinism, and per-model token
+counts. Tabulate the model selection rationale with respect to model size and
+quantisation.]
+
+\section{Prompt Design}
+\label{sec:prompts}
+
+Each prompt comprises a system prompt that sets the analyst role and the strict-rule
+context, and a user prompt that contains the formal bound and the explicit lists of
+allowed, required, and forbidden claims. Three prompt variants are compared in a
+20-sample pilot at the start of the evaluation block.
+
+[Author's note: include the full system and user prompt templates as appendix listings;
+report the pilot results and justify the choice of the production prompt variant.]
+
+\section{Evaluation Protocol}
+\label{sec:protocol}
+
+The evaluation produces five hundred explanations per model and per event type, for a
+target of 2\,500 explanation pairs across five models and five event types. Each
+explanation is processed by \textsc{ReasonGuard} and labelled with its violation
+codes and severity. Two hundred explanation pairs are manually annotated for ground
+truth, and per-class precision, recall, and $F_{1}$ are reported. A subset of fifty
+explanations is independently labelled by a VUT Brno domain expert at the M4
+milestone, and inter-rater agreement is reported as Cohen's $\kappa$.
+
+\section{Tracking, Reproducibility, and Data Provenance}
+\label{sec:reproducibility}
+
+All runs are tracked in MLflow with the configuration described in
+Section~\ref{sec:implementation-notes}. The MLflow experiment per pipeline stage and the
+artefact paths are listed in Appendix~\ref{app:reproducibility}. The full pipeline can
+be reproduced from the published GitHub repository and the published Zenodo dataset.

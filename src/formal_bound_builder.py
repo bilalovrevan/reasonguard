@@ -1,0 +1,379 @@
+from __future__ import annotations
+
+import json
+from typing import Any
+
+import pandas as pd
+
+from src.event_type_classifier import (
+    annotate_bounds_with_event_type,
+    count_event_types,
+)
+from src.mlflow_tracker import (
+    log_artifact,
+    log_metrics,
+    log_params,
+    start_run,
+)
+from src.pipeline_config import (
+    DATASET_NAME,
+    EVENT_GRANULARITY,
+    FORMAL_BOUNDS_JSON,
+    FORMAL_BOUNDS_JSONL,
+    FORMAL_BOUNDS_PREVIEW,
+    FORMAL_BOUNDS_SUMMARY,
+    FORMAL_BOUND_VERSION,
+    MLFLOW_EXPERIMENT_FORMAL_BOUNDS,
+    SAMPLE_INPUT_FILE,
+    ensure_project_directories,
+)
+
+
+REQUIRED_COLUMNS = [
+    "dstip",
+    "srcip",
+    "time",
+    "bytes",
+    "dstport",
+    "asdu_address",
+    "srcport",
+    "asdu_cot",
+    "asdu_items",
+    "asdu_type",
+    "frame_fmt",
+    "pkt_length",
+]
+
+
+def safe_int(value: Any) -> int:
+    if pd.isna(value):
+        return 0
+    return int(value)
+
+
+def infer_protocol(row: pd.Series) -> str:
+    if safe_int(row["srcport"]) == 2404 or safe_int(row["dstport"]) == 2404:
+        return "iec104"
+    return "unknown"
+
+
+def infer_direction(row: pd.Series) -> str:
+    srcport = safe_int(row["srcport"])
+    dstport = safe_int(row["dstport"])
+
+    if srcport == 2404 and dstport != 2404:
+        return "server_to_client"
+
+    if dstport == 2404 and srcport != 2404:
+        return "client_to_server"
+
+    if srcport == 2404 and dstport == 2404:
+        return "iec104_internal_or_ambiguous"
+
+    return "unknown"
+
+
+def infer_frame_type(row: pd.Series) -> str:
+    frame_fmt = safe_int(row["frame_fmt"])
+
+    if frame_fmt == 0:
+        return "i_format_information_transfer"
+
+    if frame_fmt == 1:
+        return "s_or_u_format_control"
+
+    if frame_fmt == 2:
+        return "u_format_control"
+
+    return "unknown_frame_format"
+
+
+def infer_observation_pattern(row: pd.Series) -> str:
+    protocol = infer_protocol(row)
+    frame_type = infer_frame_type(row)
+
+    asdu_type = safe_int(row["asdu_type"])
+    asdu_cot = safe_int(row["asdu_cot"])
+    asdu_items = safe_int(row["asdu_items"])
+    frame_fmt = safe_int(row["frame_fmt"])
+    pkt_length = safe_int(row["pkt_length"])
+
+    if (
+        protocol == "iec104"
+        and asdu_type == 36
+        and asdu_cot == 3
+        and asdu_items == 1
+        and frame_fmt == 0
+        and pkt_length == 25
+    ):
+        return "dominant_iec104_measurement_pattern"
+
+    if protocol == "iec104" and frame_type == "i_format_information_transfer":
+        return "iec104_information_transfer_pattern"
+
+    if protocol == "iec104" and frame_type in ["s_or_u_format_control", "u_format_control"]:
+        return "iec104_control_frame_pattern"
+
+    if protocol == "iec104":
+        return "iec104_non_dominant_pattern"
+
+    return "unknown_or_non_iec104_pattern"
+
+
+def infer_proxy_formal_class(row: pd.Series) -> str:
+    protocol = infer_protocol(row)
+    frame_type = infer_frame_type(row)
+    pattern = infer_observation_pattern(row)
+
+    if protocol != "iec104":
+        return "UNKNOWN_NON_IEC104"
+
+    if pattern == "dominant_iec104_measurement_pattern":
+        return "IEC104_BASELINE_MEASUREMENT_OBSERVATION"
+
+    if frame_type in ["s_or_u_format_control", "u_format_control"]:
+        return "IEC104_CONTROL_FRAME_OBSERVATION"
+
+    return "IEC104_OBSERVATION_UNCLASSIFIED"
+
+
+def build_allowed_facts(row: pd.Series) -> dict[str, Any]:
+    return {
+        "protocol_hint": infer_protocol(row),
+        "communication_direction": infer_direction(row),
+        "frame_type": infer_frame_type(row),
+        "source_id": safe_int(row["srcip"]),
+        "destination_id": safe_int(row["dstip"]),
+        "srcport": safe_int(row["srcport"]),
+        "dstport": safe_int(row["dstport"]),
+        "bytes": safe_int(row["bytes"]),
+        "pkt_length": safe_int(row["pkt_length"]),
+        "asdu_address": safe_int(row["asdu_address"]),
+        "asdu_cot": safe_int(row["asdu_cot"]),
+        "asdu_items": safe_int(row["asdu_items"]),
+        "asdu_type": safe_int(row["asdu_type"]),
+        "frame_fmt": safe_int(row["frame_fmt"]),
+        "observation_pattern": infer_observation_pattern(row),
+        "proxy_formal_class": infer_proxy_formal_class(row),
+    }
+
+
+def build_allowed_claims(row: pd.Series) -> list[str]:
+    facts = build_allowed_facts(row)
+
+    return [
+        f"The observed protocol hint is {facts['protocol_hint']}.",
+        f"The observed communication direction is {facts['communication_direction']}.",
+        f"The observed frame type is {facts['frame_type']}.",
+        f"Source identifier {facts['source_id']} communicated with destination identifier {facts['destination_id']}.",
+        f"The observed source port is {facts['srcport']} and the observed destination port is {facts['dstport']}.",
+        f"The observed packet size is {facts['bytes']} bytes and the packet length field is {facts['pkt_length']}.",
+        f"The observed ASDU address is {facts['asdu_address']}.",
+        f"The observed ASDU type is {facts['asdu_type']}, COT is {facts['asdu_cot']}, and ASDU item count is {facts['asdu_items']}.",
+        f"The proxy formal class is {facts['proxy_formal_class']}.",
+        f"The observation pattern is {facts['observation_pattern']}.",
+    ]
+
+
+def build_required_claims() -> list[str]:
+    return [
+        "The explanation must mention the observed source and destination identifiers.",
+        "The explanation must mention the observed source and destination ports.",
+        "The explanation must remain consistent with the observed IEC-104 protocol hint when present.",
+        "The explanation must remain consistent with the observed ASDU fields.",
+        "The explanation must state that the current formal class is a proxy observation label, not a confirmed attack label.",
+    ]
+
+
+def build_forbidden_claims() -> list[str]:
+    return [
+        "Do not claim a confirmed cyber attack.",
+        "Do not claim confirmed maliciousness.",
+        "Do not claim replay, flooding, MITM, scanning, command injection, or denial of service unless explicitly present in the formal bound.",
+        "Do not invent additional devices, network segments, operators, substations, or assets.",
+        "Do not invent causal explanations.",
+        "Do not invent timing patterns beyond the single observed timestamp.",
+        "Do not invent mitigation requirements such as isolation, shutdown, blocking, or emergency response.",
+        "Do not state that the event is verified normal traffic unless the formal class explicitly says so.",
+    ]
+
+
+def build_machine_constraints(row: pd.Series) -> dict[str, Any]:
+    facts = build_allowed_facts(row)
+
+    return {
+        "must_match": {
+            "source_id": facts["source_id"],
+            "destination_id": facts["destination_id"],
+            "srcport": facts["srcport"],
+            "dstport": facts["dstport"],
+            "asdu_type": facts["asdu_type"],
+            "asdu_cot": facts["asdu_cot"],
+            "asdu_items": facts["asdu_items"],
+            "frame_fmt": facts["frame_fmt"],
+            "protocol_hint": facts["protocol_hint"],
+            "communication_direction": facts["communication_direction"],
+        },
+        "attack_claim_allowed": False,
+        "malicious_claim_allowed": False,
+        "mitigation_claim_allowed": False,
+        "causal_claim_allowed": False,
+        "normality_claim_allowed": False,
+        "scope_expansion_allowed": False,
+    }
+
+
+def row_to_formal_bound(row: pd.Series, event_index: int) -> dict[str, Any]:
+    facts = build_allowed_facts(row)
+
+    return {
+        "event_id": f"evt_{event_index:06d}",
+        "dataset": DATASET_NAME,
+        "event_granularity": EVENT_GRANULARITY,
+        "timestamp_ms": safe_int(row["time"]),
+        "formal_bound_version": FORMAL_BOUND_VERSION,
+        "schema_status": "proxy_until_official_automaton_schema",
+        "protocol_hint": facts["protocol_hint"],
+        "communication_direction": facts["communication_direction"],
+        "frame_type": facts["frame_type"],
+        "observation_pattern": facts["observation_pattern"],
+        "formal_class": facts["proxy_formal_class"],
+        "formal_class_status": "proxy_not_ground_truth_attack_label",
+        "features": {
+            "source_id": facts["source_id"],
+            "destination_id": facts["destination_id"],
+            "bytes": facts["bytes"],
+            "pkt_length": facts["pkt_length"],
+            "srcport": facts["srcport"],
+            "dstport": facts["dstport"],
+            "asdu_address": facts["asdu_address"],
+            "asdu_cot": facts["asdu_cot"],
+            "asdu_items": facts["asdu_items"],
+            "asdu_type": facts["asdu_type"],
+            "frame_fmt": facts["frame_fmt"],
+        },
+        "allowed_facts": facts,
+        "allowed_claims": build_allowed_claims(row),
+        "required_claims": build_required_claims(),
+        "forbidden_claims": build_forbidden_claims(),
+        "machine_constraints": build_machine_constraints(row),
+        "thesis_note": (
+            "This formal bound is generated from one atomic IEC-104 row. "
+            "The current formal class is a proxy observation label until the official "
+            "automaton output schema is integrated."
+        ),
+    }
+
+
+def validate_dataframe(df: pd.DataFrame) -> None:
+    missing_columns = [column for column in REQUIRED_COLUMNS if column not in df.columns]
+
+    if missing_columns:
+        raise ValueError(f"Input CSV is missing required columns: {missing_columns}")
+
+    if df.empty:
+        raise ValueError("Input CSV is empty.")
+
+
+def write_jsonl(records: list[dict[str, Any]], output_path) -> None:
+    with open(output_path, "w", encoding="utf-8") as file:
+        for record in records:
+            file.write(json.dumps(record, ensure_ascii=False) + "\n")
+
+
+def write_preview(records: list[dict[str, Any]]) -> None:
+    lines = [
+        "=== FORMAL BOUNDS PREVIEW ===",
+        f"Total bounds created: {len(records)}",
+        "",
+    ]
+
+    for record in records[:3]:
+        lines.append(json.dumps(record, indent=2, ensure_ascii=False))
+        lines.append("")
+
+    FORMAL_BOUNDS_PREVIEW.write_text("\n".join(lines), encoding="utf-8")
+
+
+def build_summary(df: pd.DataFrame, bounds: list[dict[str, Any]]) -> dict[str, Any]:
+    formal_class_counts: dict[str, int] = {}
+    direction_counts: dict[str, int] = {}
+    pattern_counts: dict[str, int] = {}
+
+    for bound in bounds:
+        formal_class = bound["formal_class"]
+        direction = bound["communication_direction"]
+        pattern = bound["observation_pattern"]
+
+        formal_class_counts[formal_class] = formal_class_counts.get(formal_class, 0) + 1
+        direction_counts[direction] = direction_counts.get(direction, 0) + 1
+        pattern_counts[pattern] = pattern_counts.get(pattern, 0) + 1
+
+    return {
+        "input_file": str(SAMPLE_INPUT_FILE),
+        "total_rows": int(len(df)),
+        "total_bounds": int(len(bounds)),
+        "dataset": DATASET_NAME,
+        "event_granularity": EVENT_GRANULARITY,
+        "formal_bound_version": FORMAL_BOUND_VERSION,
+        "formal_class_counts": formal_class_counts,
+        "communication_direction_counts": direction_counts,
+        "observation_pattern_counts": pattern_counts,
+        "proxy_event_type_counts": count_event_types(bounds),
+        "note": "Formal classes are proxy labels until the official automaton output schema is available.",
+    }
+
+
+def main() -> None:
+    ensure_project_directories()
+
+    if not SAMPLE_INPUT_FILE.exists():
+        raise FileNotFoundError(
+            f"Input file not found: {SAMPLE_INPUT_FILE}\n"
+            "Expected location: data/raw/sample_003.csv"
+        )
+
+    df = pd.read_csv(SAMPLE_INPUT_FILE)
+    validate_dataframe(df)
+
+    raw_bounds = [row_to_formal_bound(row, index + 1) for index, row in df.iterrows()]
+    bounds = annotate_bounds_with_event_type(raw_bounds)
+    summary = build_summary(df, bounds)
+
+    with open(FORMAL_BOUNDS_JSON, "w", encoding="utf-8") as file:
+        json.dump(bounds, file, indent=2, ensure_ascii=False)
+
+    write_jsonl(bounds, FORMAL_BOUNDS_JSONL)
+    write_preview(bounds)
+
+    with open(FORMAL_BOUNDS_SUMMARY, "w", encoding="utf-8") as file:
+        json.dump(summary, file, indent=2, ensure_ascii=False)
+
+    with start_run(
+        experiment_name=MLFLOW_EXPERIMENT_FORMAL_BOUNDS,
+        run_name=f"build_{FORMAL_BOUND_VERSION}",
+        tags={"stage": "formal_bound_builder"},
+    ):
+        log_params({
+            "input_file": SAMPLE_INPUT_FILE.name,
+            "dataset": DATASET_NAME,
+            "formal_bound_version": FORMAL_BOUND_VERSION,
+        })
+        log_metrics({
+            "total_rows": float(len(df)),
+            "total_bounds": float(len(bounds)),
+        })
+        log_artifact(FORMAL_BOUNDS_SUMMARY)
+        log_artifact(FORMAL_BOUNDS_PREVIEW)
+
+    print("Formal bound generation completed successfully.")
+    print(f"Input rows: {len(df)}")
+    print(f"Bounds created: {len(bounds)}")
+    print(f"JSON: {FORMAL_BOUNDS_JSON}")
+    print(f"JSONL: {FORMAL_BOUNDS_JSONL}")
+    print(f"Preview: {FORMAL_BOUNDS_PREVIEW}")
+    print(f"Summary: {FORMAL_BOUNDS_SUMMARY}")
+
+
+if __name__ == "__main__":
+    main()

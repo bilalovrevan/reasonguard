@@ -1,0 +1,43 @@
+\chapter{Results}
+\label{ch:results}
+
+\section{Overview}
+\label{sec:results-overview}
+
+[Author's note: open the chapter with the headline numbers from the full
+2\,500-explanation evaluation. Report the overall violation rate and the breakdown
+per violation class.]
+
+\section{Detector Performance on the Annotated Set}
+\label{sec:results-detector}
+
+[Author's note: report per-class precision, recall, and $F_{1}$ on the 200 manually
+annotated pairs. Show a confusion matrix and the rows that the detector misclassified.
+Highlight whether $F_{1}$ exceeds the milestone target of 0.80 per class.]
+
+\section{Violation Patterns per Model}
+\label{sec:results-per-model}
+
+[Author's note: tabulate the violation distribution per model. Report whether
+quantisation level or model size correlates with specific violation classes. Include
+a $\chi^{2}$ test for the model $\times$ violation class association.]
+
+\section{Violation Patterns per Event Type}
+\label{sec:results-per-event}
+
+[Author's note: tabulate the violation distribution per event type. Discuss which
+event types are systematically harder for the language models to explain faithfully.]
+
+\section{Inter-Rater Agreement with the Domain Expert}
+\label{sec:results-kappa}
+
+[Author's note: report the Cohen's $\kappa$ between \textsc{ReasonGuard} and the VUT
+Brno domain expert on the 50-sample shared set. Discuss whether the M5 target
+$\kappa>0.70$ is reached, and document any taxonomy refinements that follow from
+the disagreement analysis.]
+
+\section{Latency and Operational Cost}
+\label{sec:results-latency}
+
+[Author's note: report per-model latency on the local hardware and the per-model API
+cost for the cloud models. Show the cost-versus-violation-rate trade-off.]

@@ -1,0 +1,27 @@
+{
+  "input_file": "/Users/ravanbilalov/Desktop/Reasonguard/data/raw/sample_003.csv",
+  "total_rows": 20000,
+  "total_bounds": 20000,
+  "dataset": "eon_iec",
+  "event_granularity": "atomic_row",
+  "formal_bound_version": "2.1",
+  "formal_class_counts": {
+    "IEC104_CONTROL_FRAME_OBSERVATION": 3683,
+    "IEC104_BASELINE_MEASUREMENT_OBSERVATION": 15161,
+    "IEC104_OBSERVATION_UNCLASSIFIED": 1088,
+    "UNKNOWN_NON_IEC104": 68
+  },
+  "communication_direction_counts": {
+    "client_to_server": 3543,
+    "server_to_client": 16312,
+    "unknown": 68,
+    "iec104_internal_or_ambiguous": 77
+  },
+  "observation_pattern_counts": {
+    "iec104_control_frame_pattern": 3683,
+    "dominant_iec104_measurement_pattern": 15161,
+    "iec104_information_transfer_pattern": 1088,
+    "unknown_or_non_iec104_pattern": 68
+  },
+  "note": "Formal classes are proxy labels until the official automaton output schema is available."
+}

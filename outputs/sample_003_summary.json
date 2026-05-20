@@ -1,0 +1,61 @@
+{
+  "file_name": "sample_003.csv",
+  "row_count": 20000,
+  "column_count": 12,
+  "columns": [
+    "dstip",
+    "srcip",
+    "time",
+    "bytes",
+    "dstport",
+    "asdu_address",
+    "srcport",
+    "asdu_cot",
+    "asdu_items",
+    "asdu_type",
+    "frame_fmt",
+    "pkt_length"
+  ],
+  "dtypes": {
+    "dstip": "int64",
+    "srcip": "int64",
+    "time": "int64",
+    "bytes": "int64",
+    "dstport": "int64",
+    "asdu_address": "int64",
+    "srcport": "int64",
+    "asdu_cot": "int64",
+    "asdu_items": "int64",
+    "asdu_type": "int64",
+    "frame_fmt": "int64",
+    "pkt_length": "int64"
+  },
+  "missing_values": {
+    "dstip": 0,
+    "srcip": 0,
+    "time": 0,
+    "bytes": 0,
+    "dstport": 0,
+    "asdu_address": 0,
+    "srcport": 0,
+    "asdu_cot": 0,
+    "asdu_items": 0,
+    "asdu_type": 0,
+    "frame_fmt": 0,
+    "pkt_length": 0
+  },
+  "unique_counts": {
+    "dstip": 891,
+    "srcip": 864,
+    "time": 5565,
+    "bytes": 73,
+    "dstport": 681,
+    "asdu_address": 282,
+    "srcport": 693,
+    "asdu_cot": 6,
+    "asdu_items": 16,
+    "asdu_type": 13,
+    "frame_fmt": 3,
+    "pkt_length": 40
+  }
+}

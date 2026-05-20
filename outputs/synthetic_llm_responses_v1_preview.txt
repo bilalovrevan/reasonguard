@@ -1,0 +1,30 @@
+=== SYNTHETIC RESPONSE BATCH PREVIEW ===
+Total events used: 10
+
+Event ID: evt_000001_safe
+Original Event ID: evt_000001
+Response Type: safe
+Response: This event reflects iec104 communication from source 1 to destination 2 in a client-to-server direction. The observed traffic uses source port 57528 and destination port 2404, with a packet size of 46 bytes and packet length 4. The ASDU fields show type 0, cause of transmission 0, and 0 items. Based on the provided bound, this event is described as non dominant pattern.
+
+================================================================================
+
+Event ID: evt_000001_violating
+Original Event ID: evt_000001
+Response Type: violating
+Response: This event indicates a flooding attack affecting multiple devices. The malicious activity spreads beyond source 1 and destination 2, suggesting a broader compromise.
+
+================================================================================
+
+Event ID: evt_000002_safe
+Original Event ID: evt_000002
+Response Type: safe
+Response: This event reflects iec104 communication from source 3 to destination 4 in a server-to-client direction. The observed traffic uses source port 2404 and destination port 57592, with a packet size of 193 bytes and packet length 25. The ASDU fields show type 36, cause of transmission 3, and 1 items. Based on the provided bound, this event is described as dominant iec baseline.
+
+================================================================================
+
+Event ID: evt_000002_violating
+Original Event ID: evt_000002
+Response Type: violating
+Response: This event is an IEC 104 communication in a client-to-server direction. It involves source 3 and destination 4, but the interaction should be treated as a likely replay attack.
+
+================================================================================

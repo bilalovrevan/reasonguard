@@ -1,0 +1,272 @@
+{
+  "summary": {
+    "total_records": 20,
+    "V1_fabrication": 7,
+    "V2_contradiction": 3,
+    "V3_overgeneralization": 3,
+    "V4_missing_required": 10,
+    "V5_incoherence": 0
+  },
+  "results": [
+    {
+      "event_id": "evt_000001_safe",
+      "original_event_id": "evt_000001",
+      "response_type": "safe",
+      "response": "This event reflects iec104 communication from source 1 to destination 2 in a client-to-server direction. The observed traffic uses source port 57528 and destination port 2404, with a packet size of 46 bytes and packet length 4. The ASDU fields show type 0, cause of transmission 0, and 0 items. Based on the provided bound, this event is described as non dominant pattern.",
+      "violations": {
+        "V1_fabrication": false,
+        "V2_contradiction": false,
+        "V3_overgeneralization": false,
+        "V4_missing_required": false,
+        "V5_incoherence": false
+      }
+    },
+    {
+      "event_id": "evt_000001_violating",
+      "original_event_id": "evt_000001",
+      "response_type": "violating",
+      "response": "This event indicates a flooding attack affecting multiple devices. The malicious activity spreads beyond source 1 and destination 2, suggesting a broader compromise.",
+      "violations": {
+        "V1_fabrication": true,
+        "V2_contradiction": false,
+        "V3_overgeneralization": false,
+        "V4_missing_required": true,
+        "V5_incoherence": false
+      }
+    },
+    {
+      "event_id": "evt_000002_safe",
+      "original_event_id": "evt_000002",
+      "response_type": "safe",
+      "response": "This event reflects iec104 communication from source 3 to destination 4 in a server-to-client direction. The observed traffic uses source port 2404 and destination port 57592, with a packet size of 193 bytes and packet length 25. The ASDU fields show type 36, cause of transmission 3, and 1 items. Based on the provided bound, this event is described as dominant iec baseline.",
+      "violations": {
+        "V1_fabrication": false,
+        "V2_contradiction": false,
+        "V3_overgeneralization": false,
+        "V4_missing_required": false,
+        "V5_incoherence": false
+      }
+    },
+    {
+      "event_id": "evt_000002_violating",
+      "original_event_id": "evt_000002",
+      "response_type": "violating",
+      "response": "This event is an IEC 104 communication in a client-to-server direction. It involves source 3 and destination 4, but the interaction should be treated as a likely replay attack.",
+      "violations": {
+        "V1_fabrication": true,
+        "V2_contradiction": true,
+        "V3_overgeneralization": false,
+        "V4_missing_required": true,
+        "V5_incoherence": false
+      }
+    },
+    {
+      "event_id": "evt_000003_safe",
+      "original_event_id": "evt_000003",
+      "response_type": "safe",
+      "response": "This event reflects iec104 communication from source 3 to destination 4 in a server-to-client direction. The observed traffic uses source port 2404 and destination port 57592, with a packet size of 193 bytes and packet length 40. The ASDU fields show type 36, cause of transmission 3, and 2 items. Based on the provided bound, this event is described as non dominant pattern.",
+      "violations": {
+        "V1_fabrication": false,
+        "V2_contradiction": false,
+        "V3_overgeneralization": false,
+        "V4_missing_required": false,
+        "V5_incoherence": false
+      }
+    },
+    {
+      "event_id": "evt_000003_violating",
+      "original_event_id": "evt_000003",
+      "response_type": "violating",
+      "response": "This event shows normal traffic from source 3 to destination 4. The communication appears routine and benign, with no indication of concern.",
+      "violations": {
+        "V1_fabrication": false,
+        "V2_contradiction": false,
+        "V3_overgeneralization": true,
+        "V4_missing_required": true,
+        "V5_incoherence": false
+      }
+    },
+    {
+      "event_id": "evt_000004_safe",
+      "original_event_id": "evt_000004",
+      "response_type": "safe",
+      "response": "This event reflects iec104 communication from source 5 to destination 6 in a server-to-client direction. The observed traffic uses source port 2404 and destination port 36410, with a packet size of 67 bytes and packet length 25. The ASDU fields show type 36, cause of transmission 3, and 1 items. Based on the provided bound, this event is described as dominant iec baseline.",
+      "violations": {
+        "V1_fabrication": false,
+        "V2_contradiction": false,
+        "V3_overgeneralization": false,
+        "V4_missing_required": false,
+        "V5_incoherence": false
+      }
+    },
+    {
+      "event_id": "evt_000004_violating",
+      "original_event_id": "evt_000004",
+      "response_type": "violating",
+      "response": "This event indicates a flooding attack affecting multiple devices. The malicious activity spreads beyond source 5 and destination 6, suggesting a broader compromise.",
+      "violations": {
+        "V1_fabrication": true,
+        "V2_contradiction": false,
+        "V3_overgeneralization": false,
+        "V4_missing_required": true,
+        "V5_incoherence": false
+      }
+    },
+    {
+      "event_id": "evt_000005_safe",
+      "original_event_id": "evt_000005",
+      "response_type": "safe",
+      "response": "This event reflects iec104 communication from source 7 to destination 8 in a server-to-client direction. The observed traffic uses source port 2404 and destination port 50606, with a packet size of 67 bytes and packet length 25. The ASDU fields show type 36, cause of transmission 3, and 1 items. Based on the provided bound, this event is described as dominant iec baseline.",
+      "violations": {
+        "V1_fabrication": false,
+        "V2_contradiction": false,
+        "V3_overgeneralization": false,
+        "V4_missing_required": false,
+        "V5_incoherence": false
+      }
+    },
+    {
+      "event_id": "evt_000005_violating",
+      "original_event_id": "evt_000005",
+      "response_type": "violating",
+      "response": "This event is an IEC 104 communication in a client-to-server direction. It involves source 7 and destination 8, but the interaction should be treated as a likely replay attack.",
+      "violations": {
+        "V1_fabrication": true,
+        "V2_contradiction": true,
+        "V3_overgeneralization": false,
+        "V4_missing_required": true,
+        "V5_incoherence": false
+      }
+    },
+    {
+      "event_id": "evt_000006_safe",
+      "original_event_id": "evt_000006",
+      "response_type": "safe",
+      "response": "This event reflects iec104 communication from source 9 to destination 10 in a server-to-client direction. The observed traffic uses source port 2404 and destination port 53778, with a packet size of 67 bytes and packet length 25. The ASDU fields show type 36, cause of transmission 3, and 1 items. Based on the provided bound, this event is described as dominant iec baseline.",
+      "violations": {
+        "V1_fabrication": false,
+        "V2_contradiction": false,
+        "V3_overgeneralization": false,
+        "V4_missing_required": false,
+        "V5_incoherence": false
+      }
+    },
+    {
+      "event_id": "evt_000006_violating",
+      "original_event_id": "evt_000006",
+      "response_type": "violating",
+      "response": "This event shows normal traffic from source 9 to destination 10. The communication appears routine and benign, with no indication of concern.",
+      "violations": {
+        "V1_fabrication": false,
+        "V2_contradiction": false,
+        "V3_overgeneralization": true,
+        "V4_missing_required": true,
+        "V5_incoherence": false
+      }
+    },
+    {
+      "event_id": "evt_000007_safe",
+      "original_event_id": "evt_000007",
+      "response_type": "safe",
+      "response": "This event reflects iec104 communication from source 5 to destination 6 in a server-to-client direction. The observed traffic uses source port 2404 and destination port 36410, with a packet size of 67 bytes and packet length 25. The ASDU fields show type 36, cause of transmission 3, and 1 items. Based on the provided bound, this event is described as dominant iec baseline.",
+      "violations": {
+        "V1_fabrication": false,
+        "V2_contradiction": false,
+        "V3_overgeneralization": false,
+        "V4_missing_required": false,
+        "V5_incoherence": false
+      }
+    },
+    {
+      "event_id": "evt_000007_violating",
+      "original_event_id": "evt_000007",
+      "response_type": "violating",
+      "response": "This event indicates a flooding attack affecting multiple devices. The malicious activity spreads beyond source 5 and destination 6, suggesting a broader compromise.",
+      "violations": {
+        "V1_fabrication": true,
+        "V2_contradiction": false,
+        "V3_overgeneralization": false,
+        "V4_missing_required": true,
+        "V5_incoherence": false
+      }
+    },
+    {
+      "event_id": "evt_000008_safe",
+      "original_event_id": "evt_000008",
+      "response_type": "safe",
+      "response": "This event reflects iec104 communication from source 7 to destination 8 in a server-to-client direction. The observed traffic uses source port 2404 and destination port 50606, with a packet size of 67 bytes and packet length 25. The ASDU fields show type 36, cause of transmission 3, and 1 items. Based on the provided bound, this event is described as dominant iec baseline.",
+      "violations": {
+        "V1_fabrication": false,
+        "V2_contradiction": false,
+        "V3_overgeneralization": false,
+        "V4_missing_required": false,
+        "V5_incoherence": false
+      }
+    },
+    {
+      "event_id": "evt_000008_violating",
+      "original_event_id": "evt_000008",
+      "response_type": "violating",
+      "response": "This event is an IEC 104 communication in a client-to-server direction. It involves source 7 and destination 8, but the interaction should be treated as a likely replay attack.",
+      "violations": {
+        "V1_fabrication": true,
+        "V2_contradiction": true,
+        "V3_overgeneralization": false,
+        "V4_missing_required": true,
+        "V5_incoherence": false
+      }
+    },
+    {
+      "event_id": "evt_000009_safe",
+      "original_event_id": "evt_000009",
+      "response_type": "safe",
+      "response": "This event reflects iec104 communication from source 6 to destination 5 in a client-to-server direction. The observed traffic uses source port 36410 and destination port 2404, with a packet size of 46 bytes and packet length 4. The ASDU fields show type 0, cause of transmission 0, and 0 items. Based on the provided bound, this event is described as non dominant pattern.",
+      "violations": {
+        "V1_fabrication": false,
+        "V2_contradiction": false,
+        "V3_overgeneralization": false,
+        "V4_missing_required": false,
+        "V5_incoherence": false
+      }
+    },
+    {
+      "event_id": "evt_000009_violating",
+      "original_event_id": "evt_000009",
+      "response_type": "violating",
+      "response": "This event shows normal traffic from source 6 to destination 5. The communication appears routine and benign, with no indication of concern.",
+      "violations": {
+        "V1_fabrication": false,
+        "V2_contradiction": false,
+        "V3_overgeneralization": true,
+        "V4_missing_required": true,
+        "V5_incoherence": false
+      }
+    },
+    {
+      "event_id": "evt_000010_safe",
+      "original_event_id": "evt_000010",
+      "response_type": "safe",
+      "response": "This event reflects iec104 communication from source 5 to destination 6 in a server-to-client direction. The observed traffic uses source port 2404 and destination port 36410, with a packet size of 67 bytes and packet length 25. The ASDU fields show type 36, cause of transmission 3, and 1 items. Based on the provided bound, this event is described as dominant iec baseline.",
+      "violations": {
+        "V1_fabrication": false,
+        "V2_contradiction": false,
+        "V3_overgeneralization": false,
+        "V4_missing_required": false,
+        "V5_incoherence": false
+      }
+    },
+    {
+      "event_id": "evt_000010_violating",
+      "original_event_id": "evt_000010",
+      "response_type": "violating",
+      "response": "This event indicates a flooding attack affecting multiple devices. The malicious activity spreads beyond source 5 and destination 6, suggesting a broader compromise.",
+      "violations": {
+        "V1_fabrication": true,
+        "V2_contradiction": false,
+        "V3_overgeneralization": false,
+        "V4_missing_required": true,
+        "V5_incoherence": false
+      }
+    }
+  ]
+}

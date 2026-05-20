@@ -1,0 +1,63 @@
+\chapter{Discussion}
+\label{ch:discussion}
+
+\section{Empirical Implications}
+\label{sec:discussion-empirical}
+
+[Author's note: synthesise the empirical findings from Chapter~\ref{ch:results} into a
+small number of takeaways. State which models are safe for which event types and
+under what conditions a fallback to a smaller model is operationally acceptable.]
+
+\section{Threats to Validity}
+\label{sec:discussion-threats}
+
+\paragraph{Construct validity.}
+\textsc{ReasonGuard} treats the formal verdict as a bound on what an explanation may
+claim. If the formal verdict is itself incomplete or proxy in nature, the bound is
+correspondingly weaker. Throughout the thesis the proxy fields are clearly labelled
+and the analysis is conditional on the documented bound.
+
+\paragraph{Internal validity.}
+The V1--V5 detector is rule-based and therefore deterministic given a fixed bound and
+a fixed explanation. The principal internal-validity concern is the manual annotation
+of the 200-pair ground-truth set, which is subject to annotator bias. The
+inter-rater agreement with the VUT Brno domain expert in Section~\ref{sec:results-kappa}
+mitigates this concern.
+
+\paragraph{External validity.}
+The empirical evaluation is conducted on IEC-104 and Modbus traffic from VUT Brno
+testbeds. Generalisation to other protocols and to non-ICS settings is not claimed,
+although the framework is protocol-agnostic by construction.
+
+\section{Operational Deployment Guidelines}
+\label{sec:discussion-deployment}
+
+[Author's note: structure this section as a checklist for organisations deploying an
+LLM-based explanation layer on top of a formally verified detector. Map each item to
+the EU AI Act provision that it satisfies.]
+
+\section{Mapping to the European Union AI Act}
+\label{sec:discussion-eu-ai-act}
+
+\subsection{Article~13: Transparency}
+[Author's note: explain how the V1--V5 reports satisfy the transparency obligation by
+giving operators an inspectable, claim-level account of where each explanation does and
+does not match the formal verdict.]
+
+\subsection{Article~17: Quality Management}
+[Author's note: explain how the MLflow-tracked, reproducible evaluation pipeline
+satisfies the quality-management obligation by providing an auditable record of model
+behaviour across versions.]
+
+\subsection{Annex~III: Critical Infrastructure}
+[Author's note: explain how the V1--V5 severity classification maps to the
+risk-management requirement that high-impact explanations are gated by an additional
+review step before being shown to operators.]
+
+\section{Limitations and Future Work}
+\label{sec:discussion-future}
+
+[Author's note: list at least four limitations that motivate the future work section in
+Chapter~\ref{ch:conclusion}. Examples: the proxy schema until the NES@FIT schema is
+finalised, the static rule-based classifier, the restricted set of models considered,
+and the absence of an online user study with operators.]

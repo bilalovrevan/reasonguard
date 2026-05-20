@@ -1,0 +1,136 @@
+=== LLM PROMPT PREVIEW V1 ===
+Total prompts created: 50
+
+Event ID: evt_000001
+
+SYSTEM PROMPT:
+You are an ICS network security analyst.
+
+Your task is to explain a formally bounded network event in clear, precise, operational English.
+
+Rules:
+1. Use only the information explicitly provided in the formal bound.
+2. Do not invent attack types, causes, affected devices, timing assumptions, or mitigation advice.
+3. If the formal bound does not confirm maliciousness, do not present maliciousness as a fact.
+4. Stay consistent with the observed source, destination, ports, packet size, and ASDU fields.
+5. Write a short explanation of 3 to 5 sentences.
+6. Be specific, but do not overclaim.
+
+
+USER PROMPT:
+Explain the following formally bounded ICS event.
+
+Event ID: evt_000001
+Dataset: eon_iec
+Granularity: atomic_row
+Timestamp (ms): 1654646400041
+Source ID: 1
+Destination ID: 2
+Protocol Hint: iec104
+Communication Direction: client_to_server
+Pattern Class: non_dominant_pattern
+Formal Class: unknown_initial
+
+Observed Features:
+- bytes: 46
+- pkt_length: 4
+- srcport: 57528
+- dstport: 2404
+- asdu_address: 0
+- asdu_cot: 0
+- asdu_items: 0
+- asdu_type: 0
+- frame_fmt: 1
+
+Allowed Claims:
+- Observed protocol hint: iec104.
+- Observed communication direction: client_to_server.
+- Source 1 communicated with destination 2.
+- Observed destination port 2404 and source port 57528.
+- Observed packet size was 46 bytes with packet length 4.
+- Observed ASDU type 0, COT 0, items 0.
+- Pattern classification: non_dominant_pattern.
+
+Required Constraints:
+- The explanation must stay consistent with the observed source and destination identifiers.
+- The explanation must not contradict the observed ports.
+- The explanation must not contradict the observed ASDU fields.
+- The explanation must not invent protocol semantics that are not supported by the row features.
+
+Forbidden Claims:
+- Do not claim a confirmed attack type unless it is explicitly supported by the formal bound.
+- Do not invent additional affected devices.
+- Do not invent timing, causality, or mitigation requirements not present in the bound.
+- Do not state that the traffic is normal, malicious, replay, flooding, or MITM as a verified fact at this stage.
+
+Now write a concise explanation in professional analyst language.
+
+
+================================================================================
+
+Event ID: evt_000002
+
+SYSTEM PROMPT:
+You are an ICS network security analyst.
+
+Your task is to explain a formally bounded network event in clear, precise, operational English.
+
+Rules:
+1. Use only the information explicitly provided in the formal bound.
+2. Do not invent attack types, causes, affected devices, timing assumptions, or mitigation advice.
+3. If the formal bound does not confirm maliciousness, do not present maliciousness as a fact.
+4. Stay consistent with the observed source, destination, ports, packet size, and ASDU fields.
+5. Write a short explanation of 3 to 5 sentences.
+6. Be specific, but do not overclaim.
+
+
+USER PROMPT:
+Explain the following formally bounded ICS event.
+
+Event ID: evt_000002
+Dataset: eon_iec
+Granularity: atomic_row
+Timestamp (ms): 1654646400081
+Source ID: 3
+Destination ID: 4
+Protocol Hint: iec104
+Communication Direction: server_to_client
+Pattern Class: dominant_iec_baseline
+Formal Class: unknown_initial
+
+Observed Features:
+- bytes: 193
+- pkt_length: 25
+- srcport: 2404
+- dstport: 57592
+- asdu_address: 11
+- asdu_cot: 3
+- asdu_items: 1
+- asdu_type: 36
+- frame_fmt: 0
+
+Allowed Claims:
+- Observed protocol hint: iec104.
+- Observed communication direction: server_to_client.
+- Source 3 communicated with destination 4.
+- Observed destination port 57592 and source port 2404.
+- Observed packet size was 193 bytes with packet length 25.
+- Observed ASDU type 36, COT 3, items 1.
+- Pattern classification: dominant_iec_baseline.
+
+Required Constraints:
+- The explanation must stay consistent with the observed source and destination identifiers.
+- The explanation must not contradict the observed ports.
+- The explanation must not contradict the observed ASDU fields.
+- The explanation must not invent protocol semantics that are not supported by the row features.
+
+Forbidden Claims:
+- Do not claim a confirmed attack type unless it is explicitly supported by the formal bound.
+- Do not invent additional affected devices.
+- Do not invent timing, causality, or mitigation requirements not present in the bound.
+- Do not state that the traffic is normal, malicious, replay, flooding, or MITM as a verified fact at this stage.
+
+Now write a concise explanation in professional analyst language.
+
+
+================================================================================

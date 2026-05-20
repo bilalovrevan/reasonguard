@@ -1,0 +1,42 @@
+=== SYNTHETIC RESPONSE PREVIEW ===
+Total synthetic responses: 500
+
+Response ID: evt_000001_clean_supported
+Type: clean_supported
+The formal bound describes an iec104 observation from source identifier 1 to destination identifier 2. The observed source port is 57528 and the destination port is 2404, with communication direction classified as client_to_server. The ASDU fields are type 0, COT 0, item count 0, and address 0. The current formal class is a proxy observation label, so the bound does not confirm maliciousness or normality.
+
+Response ID: evt_000001_v1_fabricated
+Type: v1_fabricated
+This event shows a confirmed replay attack against destination 2. The attacker is using malicious IEC-104 traffic to manipulate the control process. The affected substation should be isolated immediately to prevent further compromise.
+
+Response ID: evt_000001_v2_contradicted
+Type: v2_contradicted
+The event is best understood as server_to_client communication from source identifier 1 to destination identifier 2. This direction should be used even though it differs from the formal observation. The ASDU type is 0 and the port information should be interpreted accordingly.
+
+Response ID: evt_000001_v3_over_generalised
+Type: v3_over_generalised
+This appears to be routine IEC-104 traffic with standard communication behavior. The observation looks typical for an industrial control system exchange. No specific concern is visible from this event.
+
+Response ID: evt_000001_v4_under_specified
+Type: v4_under_specified
+The event is an IEC-104 observation with some ASDU-related information. It may be useful for understanding communication behavior. The bound does not provide enough information for a stronger conclusion.
+
+Response ID: evt_000002_clean_supported
+Type: clean_supported
+The formal bound describes an iec104 observation from source identifier 3 to destination identifier 4. The observed source port is 2404 and the destination port is 57592, with communication direction classified as server_to_client. The ASDU fields are type 36, COT 3, item count 1, and address 11. The current formal class is a proxy observation label, so the bound does not confirm maliciousness or normality.
+
+Response ID: evt_000002_v1_fabricated
+Type: v1_fabricated
+This event shows a confirmed replay attack against destination 4. The attacker is using malicious IEC-104 traffic to manipulate the control process. The affected substation should be isolated immediately to prevent further compromise.
+
+Response ID: evt_000002_v2_contradicted
+Type: v2_contradicted
+The event is best understood as client_to_server communication from source identifier 3 to destination identifier 4. This direction should be used even though it differs from the formal observation. The ASDU type is 36 and the port information should be interpreted accordingly.
+
+Response ID: evt_000002_v3_over_generalised
+Type: v3_over_generalised
+This appears to be routine IEC-104 traffic with standard communication behavior. The observation looks typical for an industrial control system exchange. No specific concern is visible from this event.
+
+Response ID: evt_000002_v4_under_specified
+Type: v4_under_specified
+The event is an IEC-104 observation with some ASDU-related information. It may be useful for understanding communication behavior. The bound does not provide enough information for a stronger conclusion.

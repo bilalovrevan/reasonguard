@@ -1,0 +1,140 @@
+=== FORMAL BOUND V1 PREVIEW ===
+Total bounds created: 20000
+
+{
+  "event_id": "evt_000001",
+  "dataset": "eon_iec",
+  "event_granularity": "atomic_row",
+  "timestamp_ms": 1654646400041,
+  "source_id": 1,
+  "destination_id": 2,
+  "protocol_hint": "iec104",
+  "communication_direction": "client_to_server",
+  "pattern_class": "non_dominant_pattern",
+  "formal_class": "unknown_initial",
+  "features": {
+    "bytes": 46,
+    "pkt_length": 4,
+    "srcport": 57528,
+    "dstport": 2404,
+    "asdu_address": 0,
+    "asdu_cot": 0,
+    "asdu_items": 0,
+    "asdu_type": 0,
+    "frame_fmt": 1
+  },
+  "allowed_claims": [
+    "Observed protocol hint: iec104.",
+    "Observed communication direction: client_to_server.",
+    "Source 1 communicated with destination 2.",
+    "Observed destination port 2404 and source port 57528.",
+    "Observed packet size was 46 bytes with packet length 4.",
+    "Observed ASDU type 0, COT 0, items 0.",
+    "Pattern classification: non_dominant_pattern."
+  ],
+  "required_claims": [
+    "The explanation must stay consistent with the observed source and destination identifiers.",
+    "The explanation must not contradict the observed ports.",
+    "The explanation must not contradict the observed ASDU fields.",
+    "The explanation must not invent protocol semantics that are not supported by the row features."
+  ],
+  "forbidden_claims": [
+    "Do not claim a confirmed attack type unless it is explicitly supported by the formal bound.",
+    "Do not invent additional affected devices.",
+    "Do not invent timing, causality, or mitigation requirements not present in the bound.",
+    "Do not state that the traffic is normal, malicious, replay, flooding, or MITM as a verified fact at this stage."
+  ],
+  "notes": "Formal bound v1 generated directly from one atomic IEC observation."
+}
+
+{
+  "event_id": "evt_000002",
+  "dataset": "eon_iec",
+  "event_granularity": "atomic_row",
+  "timestamp_ms": 1654646400081,
+  "source_id": 3,
+  "destination_id": 4,
+  "protocol_hint": "iec104",
+  "communication_direction": "server_to_client",
+  "pattern_class": "dominant_iec_baseline",
+  "formal_class": "unknown_initial",
+  "features": {
+    "bytes": 193,
+    "pkt_length": 25,
+    "srcport": 2404,
+    "dstport": 57592,
+    "asdu_address": 11,
+    "asdu_cot": 3,
+    "asdu_items": 1,
+    "asdu_type": 36,
+    "frame_fmt": 0
+  },
+  "allowed_claims": [
+    "Observed protocol hint: iec104.",
+    "Observed communication direction: server_to_client.",
+    "Source 3 communicated with destination 4.",
+    "Observed destination port 57592 and source port 2404.",
+    "Observed packet size was 193 bytes with packet length 25.",
+    "Observed ASDU type 36, COT 3, items 1.",
+    "Pattern classification: dominant_iec_baseline."
+  ],
+  "required_claims": [
+    "The explanation must stay consistent with the observed source and destination identifiers.",
+    "The explanation must not contradict the observed ports.",
+    "The explanation must not contradict the observed ASDU fields.",
+    "The explanation must not invent protocol semantics that are not supported by the row features."
+  ],
+  "forbidden_claims": [
+    "Do not claim a confirmed attack type unless it is explicitly supported by the formal bound.",
+    "Do not invent additional affected devices.",
+    "Do not invent timing, causality, or mitigation requirements not present in the bound.",
+    "Do not state that the traffic is normal, malicious, replay, flooding, or MITM as a verified fact at this stage."
+  ],
+  "notes": "Formal bound v1 generated directly from one atomic IEC observation."
+}
+
+{
+  "event_id": "evt_000003",
+  "dataset": "eon_iec",
+  "event_granularity": "atomic_row",
+  "timestamp_ms": 1654646400081,
+  "source_id": 3,
+  "destination_id": 4,
+  "protocol_hint": "iec104",
+  "communication_direction": "server_to_client",
+  "pattern_class": "non_dominant_pattern",
+  "formal_class": "unknown_initial",
+  "features": {
+    "bytes": 193,
+    "pkt_length": 40,
+    "srcport": 2404,
+    "dstport": 57592,
+    "asdu_address": 11,
+    "asdu_cot": 3,
+    "asdu_items": 2,
+    "asdu_type": 36,
+    "frame_fmt": 0
+  },
+  "allowed_claims": [
+    "Observed protocol hint: iec104.",
+    "Observed communication direction: server_to_client.",
+    "Source 3 communicated with destination 4.",
+    "Observed destination port 57592 and source port 2404.",
+    "Observed packet size was 193 bytes with packet length 40.",
+    "Observed ASDU type 36, COT 3, items 2.",
+    "Pattern classification: non_dominant_pattern."
+  ],
+  "required_claims": [
+    "The explanation must stay consistent with the observed source and destination identifiers.",
+    "The explanation must not contradict the observed ports.",
+    "The explanation must not contradict the observed ASDU fields.",
+    "The explanation must not invent protocol semantics that are not supported by the row features."
+  ],
+  "forbidden_claims": [
+    "Do not claim a confirmed attack type unless it is explicitly supported by the formal bound.",
+    "Do not invent additional affected devices.",
+    "Do not invent timing, causality, or mitigation requirements not present in the bound.",
+    "Do not state that the traffic is normal, malicious, replay, flooding, or MITM as a verified fact at this stage."
+  ],
+  "notes": "Formal bound v1 generated directly from one atomic IEC observation."
+}

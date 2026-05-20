@@ -1,0 +1,9 @@
+{
+  "total_responses": 20,
+  "no_violation": 0,
+  "V1_fabricated_reasoning": 20,
+  "V2_contradicted_reasoning": 1,
+  "V3_over_generalised_reasoning": 1,
+  "V4_under_specified_reasoning": 7,
+  "V5_incoherent_reasoning": 2
+}

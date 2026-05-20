@@ -1,0 +1,24 @@
+[
+  {
+    "event_id": "evt_000001",
+    "response": "This event represents an IEC 104 communication from source 1 to destination 2 in a client-to-server direction. The traffic is sent from source port 57528 to destination port 2404 and consists of a small packet of 46 bytes with packet length 4. The ASDU fields indicate type 0 with no items and no specific cause of transmission. This should be considered normal traffic in the network.",
+    "violations": {
+      "V1_fabrication": false,
+      "V2_contradiction": false,
+      "V3_overgeneralization": true,
+      "V4_missing_required": false,
+      "V5_incoherence": false
+    }
+  },
+  {
+    "event_id": "evt_000002",
+    "response": "This event shows an IEC 104 communication from source 3 to destination 4 in a server-to-client direction. The source uses port 2404 and communicates to destination port 57592, with a packet size of 193 bytes and packet length 25. The ASDU values are type 36, cause of transmission 3, and one item, which aligns with the dominant IEC baseline pattern. This indicates a possible flooding attack affecting multiple devices.",
+    "violations": {
+      "V1_fabrication": true,
+      "V2_contradiction": false,
+      "V3_overgeneralization": false,
+      "V4_missing_required": false,
+      "V5_incoherence": false
+    }
+  }
+]

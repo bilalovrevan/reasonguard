@@ -1,0 +1,31 @@
+\chapter{Reproducibility Notes}
+\label{app:reproducibility}
+
+\section{Repository}
+The full source code, the evaluation scripts, and this LaTeX manuscript are released
+under the MIT licence at \texttt{https://github.com/<placeholder>/reasonguard}. The
+annotated evaluation dataset is published on Zenodo at
+\texttt{https://doi.org/<placeholder>}.
+
+\section{Software Versions}
+[Author's note: list the Python version, the spaCy version, the Ollama version, the
+MLflow version, and the operating system used for the canonical evaluation run.]
+
+\section{Reproduction Commands}
+\begin{lstlisting}[language=bash,caption={End-to-end reproduction},label={lst:repro}]
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python -m spacy download en_core_web_lg
+
+python -m src.formal_bound_builder
+python -m src.prompt_builder
+python -m src.synthetic_response_generator
+python -m src.ollama_llm_runner
+python -m src.reason_guard_checker
+python -m src.manual_annotation
+\end{lstlisting}
+
+\section{MLflow Tracking}
+[Author's note: list the MLflow experiment names, the recorded parameters, and the
+recorded metrics per stage. Cross-reference Section~\ref{sec:reproducibility}.]

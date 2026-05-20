@@ -1,0 +1,158 @@
+[
+  {
+    "column_name": "dstip",
+    "dtype": "int64",
+    "missing_values": 0,
+    "unique_values": 891,
+    "example_values": [
+      "2",
+      "4",
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  {
+    "column_name": "srcip",
+    "dtype": "int64",
+    "missing_values": 0,
+    "unique_values": 864,
+    "example_values": [
+      "1",
+      "3",
+      "3",
+      "5",
+      "7"
+    ]
+  },
+  {
+    "column_name": "time",
+    "dtype": "int64",
+    "missing_values": 0,
+    "unique_values": 5565,
+    "example_values": [
+      "1654646400041",
+      "1654646400081",
+      "1654646400081",
+      "1654646400083",
+      "1654646400083"
+    ]
+  },
+  {
+    "column_name": "bytes",
+    "dtype": "int64",
+    "missing_values": 0,
+    "unique_values": 73,
+    "example_values": [
+      "46",
+      "193",
+      "193",
+      "67",
+      "67"
+    ]
+  },
+  {
+    "column_name": "dstport",
+    "dtype": "int64",
+    "missing_values": 0,
+    "unique_values": 681,
+    "example_values": [
+      "2404",
+      "57592",
+      "57592",
+      "36410",
+      "50606"
+    ]
+  },
+  {
+    "column_name": "asdu_address",
+    "dtype": "int64",
+    "missing_values": 0,
+    "unique_values": 282,
+    "example_values": [
+      "0",
+      "11",
+      "11",
+      "11",
+      "11"
+    ]
+  },
+  {
+    "column_name": "srcport",
+    "dtype": "int64",
+    "missing_values": 0,
+    "unique_values": 693,
+    "example_values": [
+      "57528",
+      "2404",
+      "2404",
+      "2404",
+      "2404"
+    ]
+  },
+  {
+    "column_name": "asdu_cot",
+    "dtype": "int64",
+    "missing_values": 0,
+    "unique_values": 6,
+    "example_values": [
+      "0",
+      "3",
+      "3",
+      "3",
+      "3"
+    ]
+  },
+  {
+    "column_name": "asdu_items",
+    "dtype": "int64",
+    "missing_values": 0,
+    "unique_values": 16,
+    "example_values": [
+      "0",
+      "1",
+      "2",
+      "1",
+      "1"
+    ]
+  },
+  {
+    "column_name": "asdu_type",
+    "dtype": "int64",
+    "missing_values": 0,
+    "unique_values": 13,
+    "example_values": [
+      "0",
+      "36",
+      "36",
+      "36",
+      "36"
+    ]
+  },
+  {
+    "column_name": "frame_fmt",
+    "dtype": "int64",
+    "missing_values": 0,
+    "unique_values": 3,
+    "example_values": [
+      "1",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "column_name": "pkt_length",
+    "dtype": "int64",
+    "missing_values": 0,
+    "unique_values": 40,
+    "example_values": [
+      "4",
+      "25",
+      "40",
+      "25",
+      "25"
+    ]
+  }
+]

@@ -1,0 +1,45 @@
+\chapter{Conclusion}
+\label{ch:conclusion}
+
+\section{Summary of Contributions}
+\label{sec:conclusion-summary}
+
+This thesis introduced \textsc{ReasonGuard}, a framework for runtime verification of
+artificial-intelligence reasoning against formally verified bounds. The framework
+treats the structured output of a formal automaton-based detector as a machine-readable
+bound on what an AI explanation may correctly claim, and it classifies any crossing of
+that bound into a taxonomy of five reasoning violation classes. The framework was
+empirically validated on the IEC-104 dataset published by the NES@FIT group at Brno
+University of Technology, and the empirical findings were translated into operational
+deployment guidelines and mapped to the relevant provisions of the European Union AI
+Act.
+
+\section{Answers to the Research Questions}
+\label{sec:conclusion-answers}
+
+[Author's note: produce one short paragraph per research question from
+Section~\ref{sec:research-questions}. Each paragraph should state the answer, cite the
+chapter that contains the supporting evidence, and acknowledge the conditions under
+which the answer holds.]
+
+\section{Future Work}
+\label{sec:conclusion-future}
+
+\paragraph{Integration of the official NES@FIT automaton schema.}
+The current bound layer uses a proxy classifier for the formal-class field. The
+immediate next step is to replace the proxy with the official schema and to repeat
+the evaluation against the upgraded bound.
+
+\paragraph{Learning-based per-claim classifier.}
+The per-claim three-state classifier is currently rule-based. A learning-based
+classifier trained on the manually annotated set would close the precision-recall
+trade-off observed in Section~\ref{sec:results-detector}.
+
+\paragraph{Operator-in-the-loop user study.}
+A study with operators would measure whether the V1--V5 severity classification
+changes operator behaviour relative to the unguarded baseline. This is essential
+before deploying \textsc{ReasonGuard} in production.
+
+\paragraph{Multi-protocol generalisation.}
+The framework is protocol-agnostic by construction. Generalisation to DNP3 and S7
+would broaden the operational applicability and is the natural next contribution.

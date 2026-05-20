@@ -1,0 +1,89 @@
+\chapter{Related Work}
+\label{ch:related-work}
+
+\section{Formal Methods and Automaton-Based ICS Detection}
+\label{sec:related-formal}
+
+Model checking and automaton-based verification have a long history in protocol
+analysis, with the foundational reference text by Clarke and colleagues setting the
+agenda for several decades of work \autocite{ClarkeModelChecking2001}. In the ICS
+domain, the NES@FIT group at the Faculty of Information Technology, Brno University
+of Technology has produced a series of automaton-based detectors for IEC-104
+communication \autocite{HolikMatousekRysavyVojnar2023}. The output of these
+detectors is a structured verdict with class, affected devices, and timing
+information, and it forms the formally verified bound on which the work of this
+thesis is grounded.
+
+A complementary line of work in the first supervisor's previous publications has
+addressed formal reachability analysis in networks with dynamic behaviour
+\autocite{DeSilva2014FormalReachability}. The methodology there showed that the
+output of a formal analysis can be structured for downstream consumption rather than
+treated solely as an internal verification artefact; the same intuition motivates
+this thesis.
+
+[Author's note: extend this section with the M2 reading notes; emphasise the gap
+between the formal-output side and the AI-explanation side that this thesis closes.]
+
+\section{LLM Faithfulness and Hallucination Research}
+\label{sec:related-faithfulness}
+
+The faithfulness of large-language-model outputs has been studied extensively in the
+context of summarisation \autocite{Maynez2020Faithfulness} and in long-form text
+generation \autocite{Min2023FActScore}. Honovich and colleagues established a common
+evaluation methodology for factual consistency by re-aligning several existing
+benchmarks \autocite{Honovich2022True}. These contributions share a common
+methodology: the output of the model is compared against a reference (a source
+document or a knowledge base) and a score is produced.
+
+The framework presented in this thesis differs from these in two ways. First, the
+reference is not a source document but a formally verified detector output, and the
+comparison is therefore against a machine-readable bound rather than against natural
+language. Second, the comparison is performed at runtime so that violations can be
+acted on rather than only reported.
+
+[Author's note: extend this section with the M2 reading notes; show how FActScore-style
+claim decomposition informed the per-claim three-state classifier described in
+Chapter~\ref{ch:framework}.]
+
+\section{Runtime Verification Theory}
+\label{sec:related-rv}
+
+Runtime verification is the formal area concerned with checking whether an execution
+of a system satisfies a specified property at run time
+\autocite{LeuckerSchallhart2009RuntimeVerification}. The classical setting checks
+program executions against linear-temporal-logic or related specifications. This
+thesis applies the runtime-verification viewpoint to AI explanations: the property to
+be verified is the faithfulness of the explanation against the formal detector
+output, and the monitor specification is the bound itself.
+
+[Author's note: discuss the difference between safety properties and liveness
+properties in the context of explanations; the bounds described in
+Chapter~\ref{ch:framework} are safety properties.]
+
+\section{The European Union AI Act and Safety-Critical AI}
+\label{sec:related-eu-ai-act}
+
+The European Union AI Act introduces transparency obligations (Article~13) and
+quality-management obligations (Article~17) for AI systems deployed in critical
+infrastructure (Annex~III). These provisions are particularly relevant for AI systems
+that translate the output of safety-critical detection mechanisms into natural
+language for operators, since both the form and the content of the explanation become
+regulated outputs.
+
+[Author's note: the operational deployment guidelines presented in
+Chapter~\ref{ch:discussion} are mapped to these provisions; cite the AI Act consolidated
+text and the relevant Commission guidance.]
+
+\section{Position of This Thesis}
+\label{sec:position}
+
+The four lines of work surveyed above each contribute one component of the framework
+introduced here. Formal methods and automaton-based detection contribute the verified
+bound layer. Faithfulness research contributes the methodology for decomposing an
+explanation into atomic claims. Runtime verification contributes the theoretical
+foundation for evaluating a property of an execution at run time. The EU AI Act
+contributes the governance context that motivates an operational guideline.
+
+The contribution of this thesis is the integration of these four threads into a
+single runtime verification framework for AI reasoning that is grounded in formally
+verified detector outputs and that is empirically validated in the ICS domain.

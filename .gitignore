@@ -1,0 +1,65 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Office temp files
+~$*.docx
+~$*.xlsx
+
+# Data and outputs that should not be committed
+datasets/Datasets 001/
+datasets/Datasets 004/
+datasets/Datasets 005/
+datasets/dedup_eon_iec_vut-003.csv
+datasets/dedup_eon_iec_vut_processed-002.csv
+data/raw/*.csv
+data/raw/*.pcap
+data/processed/*.jsonl
+data/processed/*.json
+
+# Large generated outputs
+outputs/formal_bounds_sample_003.json
+outputs/formal_bounds_sample_003.jsonl
+outputs/formal_bounds_v1_sample_003.json
+outputs/formal_bounds_v1_sample_003.jsonl
+
+# MLflow
+mlruns/
+mlflow.db
+
+# Logs
+*.log
+logs/
+
+# Local environment overrides
+.env
+.env.local
