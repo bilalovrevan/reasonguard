@@ -13,6 +13,7 @@ from src.mlflow_tracker import (
 from src.pipeline_config import (
     LLM_PROMPTS_JSONL,
     MLFLOW_EXPERIMENT_CHECKER,
+    OLLAMA_RESPONSES_JSONL,
     REASONGUARD_PREVIEW,
     REASONGUARD_REPORT_JSON,
     REASONGUARD_REPORT_JSONL,
@@ -578,7 +579,20 @@ def main() -> None:
     ensure_project_directories()
 
     prompt_records = load_jsonl(LLM_PROMPTS_JSONL)
-    response_records = load_jsonl(SYNTHETIC_RESPONSES_JSONL)
+
+    response_records: list[dict[str, Any]] = []
+
+    if SYNTHETIC_RESPONSES_JSONL.exists():
+        response_records.extend(load_jsonl(SYNTHETIC_RESPONSES_JSONL))
+
+    if OLLAMA_RESPONSES_JSONL.exists():
+        response_records.extend(load_jsonl(OLLAMA_RESPONSES_JSONL))
+
+    if not response_records:
+        raise RuntimeError(
+            "No response records found. Run the synthetic generator or the Ollama "
+            "runner first."
+        )
 
     prompts_by_event = {
         record["event_id"]: record

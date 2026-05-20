@@ -23,5 +23,11 @@
     "iec104_information_transfer_pattern": 1088,
     "unknown_or_non_iec104_pattern": 68
   },
+  "proxy_event_type_counts": {
+    "topology_change_proxy_until_official_schema": 3683,
+    "normal_modbus_polling_proxy_until_official_schema": 16205,
+    "network_scan_proxy_until_official_schema": 68,
+    "function_code_violation_proxy_until_official_schema": 44
+  },
   "note": "Formal classes are proxy labels until the official automaton output schema is available."
 }

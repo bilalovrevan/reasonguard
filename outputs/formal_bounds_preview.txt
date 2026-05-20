@@ -94,7 +94,8 @@ Total bounds created: 20000
     "normality_claim_allowed": false,
     "scope_expansion_allowed": false
   },
-  "thesis_note": "This formal bound is generated from one atomic IEC-104 row. The current formal class is a proxy observation label until the official automaton output schema is integrated."
+  "thesis_note": "This formal bound is generated from one atomic IEC-104 row. The current formal class is a proxy observation label until the official automaton output schema is integrated.",
+  "proxy_event_type": "topology_change_proxy_until_official_schema"
 }
 
 {
@@ -190,7 +191,8 @@ Total bounds created: 20000
     "normality_claim_allowed": false,
     "scope_expansion_allowed": false
   },
-  "thesis_note": "This formal bound is generated from one atomic IEC-104 row. The current formal class is a proxy observation label until the official automaton output schema is integrated."
+  "thesis_note": "This formal bound is generated from one atomic IEC-104 row. The current formal class is a proxy observation label until the official automaton output schema is integrated.",
+  "proxy_event_type": "normal_modbus_polling_proxy_until_official_schema"
 }
 
 {
@@ -286,5 +288,6 @@ Total bounds created: 20000
     "normality_claim_allowed": false,
     "scope_expansion_allowed": false
   },
-  "thesis_note": "This formal bound is generated from one atomic IEC-104 row. The current formal class is a proxy observation label until the official automaton output schema is integrated."
+  "thesis_note": "This formal bound is generated from one atomic IEC-104 row. The current formal class is a proxy observation label until the official automaton output schema is integrated.",
+  "proxy_event_type": "normal_modbus_polling_proxy_until_official_schema"
 }

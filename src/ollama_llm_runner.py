@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import time
 import urllib.error
 import urllib.request
@@ -194,6 +195,22 @@ def per_model_output_paths(model_name: str) -> tuple[Path, Path, Path]:
     )
 
 
+def resolve_models() -> list[str]:
+    """Allow ad-hoc runs to override the configured model list via an env variable.
+
+    Set ``REASONGUARD_OLLAMA_MODELS`` to a comma-separated model list to limit a run
+    to a subset of models without editing the config. Empty or unset falls back to
+    the full ``OLLAMA_MODELS`` list.
+    """
+
+    override = os.environ.get("REASONGUARD_OLLAMA_MODELS", "").strip()
+
+    if override:
+        return [name.strip() for name in override.split(",") if name.strip()]
+
+    return list(OLLAMA_MODELS)
+
+
 def main() -> None:
     ensure_project_directories()
 
@@ -207,8 +224,9 @@ def main() -> None:
     selected_prompts = prompt_records[:OLLAMA_PILOT_LIMIT]
 
     all_responses: list[dict[str, Any]] = []
+    models = resolve_models()
 
-    for model_name in OLLAMA_MODELS:
+    for model_name in models:
         print("")
         print("=" * 80)
         print(f"Running Ollama model: {model_name}")
@@ -250,7 +268,7 @@ def main() -> None:
 
     print("")
     print("Ollama multi-model batch completed.")
-    print(f"Models executed: {len(OLLAMA_MODELS)}")
+    print(f"Models executed: {len(models)}")
     print(f"Total responses: {len(all_responses)}")
     print(f"Successful responses: {ok_total}/{len(all_responses)}")
     print(f"Combined JSONL: {OLLAMA_RESPONSES_JSONL}")

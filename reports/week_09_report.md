@@ -13,25 +13,46 @@ extraction pipeline: spaCy NER on LLM outputs" block.
 ## 2. Delivered this week
 
 - Closed the end-to-end pipeline from raw IEC-104 rows to V1–V5 violation reports.
-- Generated 20 000 formal bounds and 100 prompt records from `sample_003.csv`.
+- Generated 20 000 formal bounds (schema v2.1, proxy event-type annotated) and 100
+  prompt records from `sample_003.csv`.
 - Produced 500 adversarial synthetic responses covering clean output and the four
-  primary violation patterns (V1, V2, V3, V4) plus the V5 incoherence case.
-- Ran the first real local-LLM pilot via Ollama on `phi3:mini` (20 responses).
-- Implemented the V1–V5 detector with severity classification (high / medium / low /
-  none).
-- Cleaned the repository: archived eight legacy v1/v2 prototypes and six root-level
-  duplicates of `src/` modules into `archive/`.
-- Added `requirements.txt`, `pyproject.toml`, and a project-level `README.md`.
+  primary violation patterns (V1, V2, V3, V4); V5 templates are now present in the
+  generator but excluded from the pilot batch by `SYNTHETIC_RESPONSES_PER_PROMPT`.
+- Ran the first real local-LLM pilot via Ollama on `phi3:mini`: 20 / 20 successful
+  generations at ~9.5 s mean latency on CPU.
+- Combined synthetic and real-LLM responses through the same checker run and produced
+  the first cross-source violation report (520 cases).
+- Implemented the V1–V5 detector with severity classification, plus the optional
+  per-claim three-state output (SUPPORTED / UNSUPPORTED / CONTRADICTED) when spaCy is
+  installed.
+- Added MLflow tracking around the formal-bound builder, the Ollama runner, and the
+  checker.
+- Added an `archive/v1_prototypes/` and `archive/root_duplicates/` cleanup; removed
+  eight legacy prototypes and six root-level duplicates from the working tree.
+- Added `requirements.txt`, `pyproject.toml`, a 31-case `pytest` suite (all passing),
+  and a project-level `README.md`.
 - Wrote the week-9 meeting pack and the updated three-minute talking points.
+- Initialised the Overleaf-ready LaTeX skeleton under `thesis/` (seven chapters, three
+  appendices, references.bib with all eight required papers).
+- Created the structured reading-note templates for all eight required papers under
+  `thesis_notes/`.
 
 ## 3. Honest gap vs the exposé week-9 target
 
-- Five ICS event types are not yet covered. Only IEC-104 is in the pipeline.
-- Real-LLM volume is 20, not 2 000+.
-- MLflow tracking is not wired.
-- spaCy NER claim extraction is not implemented; the current detector uses curated
-  keyword and regular-expression rules.
+- Five ICS event types are not yet covered. The proxy classifier identifies four of
+  the five within the IEC-104 dataset; the replay-attack proxy class has zero rows
+  in the current `sample_003.csv` and will require either the full eon-iec dump or a
+  different VUT dataset for coverage.
+- Real-LLM volume is 20 of the targeted 2 000+. The pipeline is verified end-to-end;
+  the remaining work is throughput, not architecture.
+- MLflow tracking is wired but no run has been inspected in the UI yet.
+- spaCy NER claim extraction is wired and the per-claim three-state output is
+  available, but spaCy is not yet installed locally so the per-claim field is
+  `None` in the current report.
 - The schema is still the proxy schema, not the official NES@FIT automaton schema.
+- The V1 detector fires on every `phi3:mini` output because of multi-clause negation
+  patterns that the current safe-negation list does not catch. This is the highest
+  priority W10 refinement.
 
 ## 4. Risks and mitigations
 
