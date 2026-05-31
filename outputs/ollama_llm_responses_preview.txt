@@ -1,62 +1,62 @@
 === OLLAMA LLM RESPONSE PREVIEW ===
-Total responses: 20
+Total responses: 40
 
-Response ID: evt_000001_ollama_llama3_1_8b-instruct-q4_0
+Response ID: evt_015867_ollama_llama3_1_8b-instruct-q4_0
 Model: llama3.1:8b-instruct-q4_0
-Event ID: evt_000001
+Event ID: evt_015867
 OK: True
-Elapsed seconds: 8.018487215042114
+Elapsed seconds: 14.25077509880066
 Response:
 Here is a precise operational English explanation of the formally bounded IEC-104 network observation:
 
-On timestamp 1654646400041, source identifier 1 communicated with destination identifier 2 over an iec104 protocol hint in client_to_server direction. The observed frame type was s_or_u_format_control and matched the iec104_control_frame_pattern pattern. The communication involved a packet size of 46 bytes and a packet length field of 4. The ASDU address, COT, items count, and type were all 0. The proxy formal class for this observation is IEC104_CONTROL_FRAME_OBSERVATION, which should not be considered as a confirmed attack label but rather as a proxy observation label.
+On timestamp 1654646411950, source identifier 885 communicated with destination identifier 8 over an iec104 protocol hint in client_to_server direction. The observed frame type was i_format_information_transfer and followed the iec104_information_transfer_pattern. The communication involved a packet size of 62 bytes and a packet length field of 20. The ASDU address was 4655, with an ASDU type of 103, COT of 7, and ASDU item count of 1. The observed source port was 4115 and the observed destination port was 2404. The current formal class is IEC104_OBSERVATION_UNCLASSIFIED, which is a proxy observation label and not a confirmed attack label.
 
 ================================================================================
 
-Response ID: evt_000002_ollama_llama3_1_8b-instruct-q4_0
+Response ID: evt_003293_ollama_llama3_1_8b-instruct-q4_0
 Model: llama3.1:8b-instruct-q4_0
-Event ID: evt_000002
+Event ID: evt_003293
 OK: True
-Elapsed seconds: 10.781491756439209
+Elapsed seconds: 13.236581802368164
+Response:
+Here is the explanation of the formally bounded ICS network event:
+
+On timestamp 1654646405272, a client-to-server communication was observed on an IEC-104 protocol hint network. The source identifier 38 communicated with destination identifier 37 using port 51770 and port 2404, respectively. The packet size is 60 bytes with a length field of 18. The ASDU address is 1001, type is 50, COT is 6, and item count is 1. This observation pattern matches the iec104_information_transfer_pattern. The current formal class for this event is IEC104_OBSERVATION_UNCLASSIFIED, which is a proxy observation label and not a confirmed attack label.
+
+================================================================================
+
+Response ID: evt_000609_ollama_llama3_1_8b-instruct-q4_0
+Model: llama3.1:8b-instruct-q4_0
+Event ID: evt_000609
+OK: True
+Elapsed seconds: 13.537397146224976
 Response:
 Here is a precise operational English explanation of the formally bounded IEC-104 network observation:
 
-On timestamp 1654646400081, source identifier 3 communicated with destination identifier 4 over the iec104 protocol in server_to_client direction. The observed packet size was 193 bytes and the packet length field was 25. The communication involved an i_format_information_transfer frame type, dominant_iec104_measurement_pattern observation pattern, and IEC104_BASELINE_MEASUREMENT_OBSERVATION proxy formal class. The ASDU fields indicated an address of 11, COT of 3, item count of 1, and type of 36.
+On June 15, 2022, at 23:40:04 UTC (timestamp ms: 1654646404376), an IEC-104 protocol communication was observed between two devices on the network. The source identifier 37 communicated with destination identifier 38 using server-to-client communication direction. The observed packet size is 60 bytes and the packet length field is 18. The ASDU address is 1001, type is 50, COT is 7, and item count is 1. The proxy formal class for this observation is IEC104_OBSERVATION_UNCLASSIFIED, indicating that it has not been verified as a confirmed attack label.
 
 ================================================================================
 
-Response ID: evt_000003_ollama_llama3_1_8b-instruct-q4_0
+Response ID: evt_005946_ollama_llama3_1_8b-instruct-q4_0
 Model: llama3.1:8b-instruct-q4_0
-Event ID: evt_000003
+Event ID: evt_005946
 OK: True
-Elapsed seconds: 11.204475164413452
-Response:
-Here is a formally bounded IEC-104 network observation in precise operational English:
-
-On timestamp 1654646400081, server identifier 3 communicated with client identifier 4 over iec104 protocol hint using server_to_client communication direction. The observed source port was 2404 and the destination port was 57592. A packet of size 193 bytes was transmitted, with a packet length field indicating 40 bytes. The ASDU address was 11, type was 36, COT was 3, and item count was 2. This observation is classified as IEC104_OBSERVATION_UNCLASSIFIED, which is currently a proxy formal class label, not a confirmed attack label.
-
-================================================================================
-
-Response ID: evt_000004_ollama_llama3_1_8b-instruct-q4_0
-Model: llama3.1:8b-instruct-q4_0
-Event ID: evt_000004
-OK: True
-Elapsed seconds: 12.328330993652344
+Elapsed seconds: 13.368262767791748
 Response:
 Here is a precise operational English explanation of the formally bounded IEC-104 network observation:
 
-On timestamp 1654646400083, source identifier 5 communicated with destination identifier 6 over an iec104 protocol hint in server_to_client direction. The observed frame type was i_format_information_transfer and the proxy formal class is IEC104_BASELINE_MEASUREMENT_OBSERVATION, which is a proxy observation label not a confirmed attack label. The communication involved source port 2404 and destination port 36410, with a packet size of 67 bytes and a packet length field of 25. The ASDU fields indicated an address of 11, type of 36, COT of 3, and item count of 1.
+On timestamp 1654646405954, source identifier 1 communicated with destination identifier 661 using the iec104 protocol hint in server_to_client direction. The observed frame type was i_format_information_transfer and followed the iec104_information_transfer_pattern. The communication involved a packet size of 74 bytes and a packet length field of 20. The ASDU address was 4452, with an ASDU type of 103, COT of 6, and ASDU item count of 1. The current formal class is IEC104_OBSERVATION_UNCLASSIFIED, which is a proxy observation label and not a confirmed attack label.
 
 ================================================================================
 
-Response ID: evt_000005_ollama_llama3_1_8b-instruct-q4_0
+Response ID: evt_005652_ollama_llama3_1_8b-instruct-q4_0
 Model: llama3.1:8b-instruct-q4_0
-Event ID: evt_000005
+Event ID: evt_005652
 OK: True
-Elapsed seconds: 12.226989269256592
+Elapsed seconds: 15.042015790939331
 Response:
 Here is a precise operational English explanation of the formally bounded IEC-104 network observation:
 
-On timestamp 1654646400083, source identifier 7 communicated with destination identifier 8 over an iec104 protocol hint in server_to_client direction. The observed frame type was i_format_information_transfer and the proxy formal class is IEC104_BASELINE_MEASUREMENT_OBSERVATION, which should be treated as a label and not a confirmed attack label. The source port was 2404 and destination port was 50606, with a packet size of 67 bytes and length field of 25. The ASDU address was 11, type was 36, COT was 3, and item count was 1.
+On timestamp 1654646405882, an IEC-104 client-to-server communication was observed between source identifier 38 and destination identifier 37. The observed protocol hint is iec104, and the frame type is i_format_information_transfer. The source port is 51770, and the destination port is 2404. The packet size is 60 bytes with a length field of 18. The ASDU address is 1001, and the ASDU type is 50 with COT 6 and item count 1. The observed communication pattern matches iec104_information_transfer_pattern. The current formal class for this observation is IEC104_OBSERVATION_UNCLASSIFIED, which is a proxy label and not a confirmed attack label.
 
 ================================================================================

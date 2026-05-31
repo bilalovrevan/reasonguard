@@ -1,9 +1,9 @@
 {
-  "total_responses": 520,
-  "no_violation": 109,
-  "V1_fabricated_reasoning": 110,
-  "V2_contradicted_reasoning": 100,
-  "V3_over_generalised_reasoning": 100,
-  "V4_under_specified_reasoning": 404,
-  "V5_incoherent_reasoning": 0
+  "total_responses": 240,
+  "no_violation": 52,
+  "V1_fabricated_reasoning": 67,
+  "V2_contradicted_reasoning": 30,
+  "V3_over_generalised_reasoning": 40,
+  "V4_under_specified_reasoning": 166,
+  "V5_incoherent_reasoning": 1
 }

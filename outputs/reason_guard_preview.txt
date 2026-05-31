@@ -2,21 +2,21 @@
 
 SUMMARY:
 {
-  "total_responses": 520,
-  "no_violation": 109,
-  "V1_fabricated_reasoning": 110,
-  "V2_contradicted_reasoning": 100,
-  "V3_over_generalised_reasoning": 100,
-  "V4_under_specified_reasoning": 404,
-  "V5_incoherent_reasoning": 0
+  "total_responses": 240,
+  "no_violation": 52,
+  "V1_fabricated_reasoning": 67,
+  "V2_contradicted_reasoning": 30,
+  "V3_over_generalised_reasoning": 40,
+  "V4_under_specified_reasoning": 166,
+  "V5_incoherent_reasoning": 1
 }
 
 {
-  "response_id": "evt_000001_clean_supported",
-  "event_id": "evt_000001",
+  "response_id": "evt_015867_clean_supported",
+  "event_id": "evt_015867",
   "response_type": "clean_supported",
   "model_name": "synthetic_rule_based",
-  "response": "The formal bound describes an iec104 observation from source identifier 1 to destination identifier 2. The observed source port is 57528 and the destination port is 2404, with communication direction classified as client_to_server. The ASDU fields are type 0, COT 0, item count 0, and address 0. The current formal class is a proxy observation label, so the bound does not confirm maliciousness or normality.",
+  "response": "The formal bound describes an iec104 observation from source identifier 885 to destination identifier 8. The observed source port is 4115 and the destination port is 2404, with communication direction classified as client_to_server. The ASDU fields are type 103, COT 7, item count 1, and address 4655. The current formal class is a proxy observation label, so the bound does not confirm maliciousness or normality.",
   "violation_codes": [],
   "severity": "none",
   "violations": {
@@ -41,14 +41,14 @@ SUMMARY:
       "normality"
     ],
     "numbers": [
-      1,
-      2,
-      57528,
+      885,
+      8,
+      4115,
       2404,
-      0,
-      0,
-      0,
-      0
+      103,
+      7,
+      1,
+      4655
     ],
     "direction_terms": [
       "client_to_server"
@@ -60,16 +60,150 @@ SUMMARY:
     "mentions_proxy": true,
     "mentions_not_confirmed": true
   },
-  "spacy_claims": null,
-  "per_claim_verdicts": null
+  "spacy_claims": {
+    "entities": [
+      [
+        "iec104",
+        "PROTOCOL"
+      ],
+      [
+        "source identifier",
+        "NETWORK_ENDPOINT"
+      ],
+      [
+        "885",
+        "CARDINAL"
+      ],
+      [
+        "destination identifier",
+        "NETWORK_ENDPOINT"
+      ],
+      [
+        "8",
+        "CARDINAL"
+      ],
+      [
+        "source port",
+        "NETWORK_ENDPOINT"
+      ],
+      [
+        "4115",
+        "DATE"
+      ],
+      [
+        "destination port",
+        "NETWORK_ENDPOINT"
+      ],
+      [
+        "2404",
+        "CARDINAL"
+      ],
+      [
+        "client_to_server",
+        "DIRECTION"
+      ],
+      [
+        "ASDU",
+        "ASDU_FIELD"
+      ],
+      [
+        "103",
+        "CARDINAL"
+      ],
+      [
+        "COT",
+        "ASDU_FIELD"
+      ],
+      [
+        "1",
+        "CARDINAL"
+      ],
+      [
+        "4655",
+        "CARDINAL"
+      ],
+      [
+        "proxy",
+        "UNCERTAINTY"
+      ],
+      [
+        "does not confirm",
+        "UNCERTAINTY"
+      ]
+    ],
+    "numbers": [
+      885,
+      8,
+      4115,
+      2404,
+      103,
+      7,
+      1,
+      4655
+    ],
+    "protocols": [
+      "iec104"
+    ],
+    "directions": [
+      "client_to_server"
+    ],
+    "attack_categories": [],
+    "mitigation_terms": [],
+    "normality_terms": [],
+    "uncertainty_terms": [
+      "proxy",
+      "does not confirm"
+    ],
+    "asdu_mentions": 1,
+    "source_mentions": 2,
+    "destination_mentions": 2,
+    "port_mentions": 2
+  },
+  "per_claim_verdicts": [
+    {
+      "claim": "communication_direction",
+      "verdict": "SUPPORTED",
+      "evidence": [
+        "client_to_server"
+      ]
+    },
+    {
+      "claim": "source_identifier_present",
+      "verdict": "SUPPORTED",
+      "evidence": [
+        "source_mentions=2"
+      ]
+    },
+    {
+      "claim": "destination_identifier_present",
+      "verdict": "SUPPORTED",
+      "evidence": [
+        "destination_mentions=2"
+      ]
+    },
+    {
+      "claim": "port_information_present",
+      "verdict": "SUPPORTED",
+      "evidence": [
+        "port_mentions=2"
+      ]
+    },
+    {
+      "claim": "asdu_fields_present",
+      "verdict": "SUPPORTED",
+      "evidence": [
+        "asdu_mentions=1"
+      ]
+    }
+  ]
 }
 
 {
-  "response_id": "evt_000001_v1_fabricated",
-  "event_id": "evt_000001",
+  "response_id": "evt_015867_v1_fabricated",
+  "event_id": "evt_015867",
   "response_type": "v1_fabricated",
   "model_name": "synthetic_rule_based",
-  "response": "This event shows a confirmed replay attack against destination 2. The attacker is using malicious IEC-104 traffic to manipulate the control process. The affected substation should be isolated immediately to prevent further compromise.",
+  "response": "This event shows a confirmed replay attack against destination 8. The attacker is using malicious IEC-104 traffic to manipulate the control process. The affected substation should be isolated immediately to prevent further compromise.",
   "violation_codes": [
     "V1",
     "V4"
@@ -113,7 +247,7 @@ SUMMARY:
     "causal_terms": [],
     "normality_terms": [],
     "numbers": [
-      2,
+      8,
       104
     ],
     "direction_terms": [],
@@ -124,16 +258,91 @@ SUMMARY:
     "mentions_proxy": false,
     "mentions_not_confirmed": false
   },
-  "spacy_claims": null,
-  "per_claim_verdicts": null
+  "spacy_claims": {
+    "entities": [
+      [
+        "replay attack",
+        "ATTACK_CATEGORY"
+      ],
+      [
+        "8",
+        "CARDINAL"
+      ],
+      [
+        "isolated",
+        "MITIGATION"
+      ]
+    ],
+    "numbers": [
+      8,
+      104
+    ],
+    "protocols": [],
+    "directions": [],
+    "attack_categories": [
+      "replay attack"
+    ],
+    "mitigation_terms": [
+      "isolated"
+    ],
+    "normality_terms": [],
+    "uncertainty_terms": [],
+    "asdu_mentions": 0,
+    "source_mentions": 0,
+    "destination_mentions": 1,
+    "port_mentions": 0
+  },
+  "per_claim_verdicts": [
+    {
+      "claim": "communication_direction",
+      "verdict": "UNSUPPORTED",
+      "evidence": []
+    },
+    {
+      "claim": "source_identifier_present",
+      "verdict": "UNSUPPORTED",
+      "evidence": []
+    },
+    {
+      "claim": "destination_identifier_present",
+      "verdict": "SUPPORTED",
+      "evidence": [
+        "destination_mentions=1"
+      ]
+    },
+    {
+      "claim": "port_information_present",
+      "verdict": "UNSUPPORTED",
+      "evidence": []
+    },
+    {
+      "claim": "asdu_fields_present",
+      "verdict": "UNSUPPORTED",
+      "evidence": []
+    },
+    {
+      "claim": "attack_category_claim",
+      "verdict": "UNSUPPORTED",
+      "evidence": [
+        "replay attack"
+      ]
+    },
+    {
+      "claim": "mitigation_claim",
+      "verdict": "UNSUPPORTED",
+      "evidence": [
+        "isolated"
+      ]
+    }
+  ]
 }
 
 {
-  "response_id": "evt_000001_v2_contradicted",
-  "event_id": "evt_000001",
+  "response_id": "evt_015867_v2_contradicted",
+  "event_id": "evt_015867",
   "response_type": "v2_contradicted",
   "model_name": "synthetic_rule_based",
-  "response": "The event is best understood as server_to_client communication from source identifier 1 to destination identifier 2. This direction should be used even though it differs from the formal observation. The ASDU type is 0 and the port information should be interpreted accordingly.",
+  "response": "The event is best understood as server_to_client communication from source identifier 885 to destination identifier 8. This direction should be used even though it differs from the formal observation. The ASDU type is 103 and the port information should be interpreted accordingly.",
   "violation_codes": [
     "V2",
     "V4"
@@ -163,9 +372,9 @@ SUMMARY:
     "causal_terms": [],
     "normality_terms": [],
     "numbers": [
-      1,
-      2,
-      0
+      885,
+      8,
+      103
     ],
     "direction_terms": [
       "server_to_client"
@@ -177,13 +386,97 @@ SUMMARY:
     "mentions_proxy": false,
     "mentions_not_confirmed": false
   },
-  "spacy_claims": null,
-  "per_claim_verdicts": null
+  "spacy_claims": {
+    "entities": [
+      [
+        "server_to_client",
+        "DIRECTION"
+      ],
+      [
+        "source identifier",
+        "NETWORK_ENDPOINT"
+      ],
+      [
+        "885",
+        "CARDINAL"
+      ],
+      [
+        "destination identifier",
+        "NETWORK_ENDPOINT"
+      ],
+      [
+        "8",
+        "CARDINAL"
+      ],
+      [
+        "ASDU",
+        "ASDU_FIELD"
+      ],
+      [
+        "103",
+        "CARDINAL"
+      ]
+    ],
+    "numbers": [
+      885,
+      8,
+      103
+    ],
+    "protocols": [],
+    "directions": [
+      "server_to_client"
+    ],
+    "attack_categories": [],
+    "mitigation_terms": [],
+    "normality_terms": [],
+    "uncertainty_terms": [],
+    "asdu_mentions": 1,
+    "source_mentions": 1,
+    "destination_mentions": 1,
+    "port_mentions": 1
+  },
+  "per_claim_verdicts": [
+    {
+      "claim": "communication_direction",
+      "verdict": "CONTRADICTED",
+      "evidence": [
+        "server_to_client"
+      ]
+    },
+    {
+      "claim": "source_identifier_present",
+      "verdict": "SUPPORTED",
+      "evidence": [
+        "source_mentions=1"
+      ]
+    },
+    {
+      "claim": "destination_identifier_present",
+      "verdict": "SUPPORTED",
+      "evidence": [
+        "destination_mentions=1"
+      ]
+    },
+    {
+      "claim": "port_information_present",
+      "verdict": "SUPPORTED",
+      "evidence": [
+        "port_mentions=1"
+      ]
+    },
+    {
+      "claim": "asdu_fields_present",
+      "verdict": "SUPPORTED",
+      "evidence": [
+        "asdu_mentions=1"
+      ]
+    }
+  ]
 }
 
 {
-  "response_id": "evt_000001_v3_over_generalised",
-  "event_id": "evt_000001",
+  "response_id": "evt_015867_v3_over_generalised",
+  "event_id": "evt_015867",
   "response_type": "v3_over_generalised",
   "model_name": "synthetic_rule_based",
   "response": "This appears to be routine IEC-104 traffic with standard communication behavior. The observation looks typical for an industrial control system exchange. No specific concern is visible from this event.",
@@ -235,13 +528,74 @@ SUMMARY:
     "mentions_proxy": false,
     "mentions_not_confirmed": false
   },
-  "spacy_claims": null,
-  "per_claim_verdicts": null
+  "spacy_claims": {
+    "entities": [
+      [
+        "routine",
+        "NORMALITY"
+      ],
+      [
+        "typical",
+        "NORMALITY"
+      ]
+    ],
+    "numbers": [
+      104
+    ],
+    "protocols": [],
+    "directions": [],
+    "attack_categories": [],
+    "mitigation_terms": [],
+    "normality_terms": [
+      "routine",
+      "typical"
+    ],
+    "uncertainty_terms": [],
+    "asdu_mentions": 0,
+    "source_mentions": 0,
+    "destination_mentions": 0,
+    "port_mentions": 0
+  },
+  "per_claim_verdicts": [
+    {
+      "claim": "communication_direction",
+      "verdict": "UNSUPPORTED",
+      "evidence": []
+    },
+    {
+      "claim": "source_identifier_present",
+      "verdict": "UNSUPPORTED",
+      "evidence": []
+    },
+    {
+      "claim": "destination_identifier_present",
+      "verdict": "UNSUPPORTED",
+      "evidence": []
+    },
+    {
+      "claim": "port_information_present",
+      "verdict": "UNSUPPORTED",
+      "evidence": []
+    },
+    {
+      "claim": "asdu_fields_present",
+      "verdict": "UNSUPPORTED",
+      "evidence": []
+    },
+    {
+      "claim": "normality_claim",
+      "verdict": "UNSUPPORTED",
+      "evidence": [
+        "routine",
+        "typical"
+      ]
+    }
+  ]
 }
 
 {
-  "response_id": "evt_000001_v4_under_specified",
-  "event_id": "evt_000001",
+  "response_id": "evt_015867_v4_under_specified",
+  "event_id": "evt_015867",
   "response_type": "v4_under_specified",
   "model_name": "synthetic_rule_based",
   "response": "The event is an IEC-104 observation with some ASDU-related information. It may be useful for understanding communication behavior. The bound does not provide enough information for a stronger conclusion.",
@@ -283,6 +637,54 @@ SUMMARY:
     "mentions_proxy": false,
     "mentions_not_confirmed": true
   },
-  "spacy_claims": null,
-  "per_claim_verdicts": null
+  "spacy_claims": {
+    "entities": [
+      [
+        "ASDU",
+        "ASDU_FIELD"
+      ]
+    ],
+    "numbers": [
+      104
+    ],
+    "protocols": [],
+    "directions": [],
+    "attack_categories": [],
+    "mitigation_terms": [],
+    "normality_terms": [],
+    "uncertainty_terms": [],
+    "asdu_mentions": 1,
+    "source_mentions": 0,
+    "destination_mentions": 0,
+    "port_mentions": 0
+  },
+  "per_claim_verdicts": [
+    {
+      "claim": "communication_direction",
+      "verdict": "UNSUPPORTED",
+      "evidence": []
+    },
+    {
+      "claim": "source_identifier_present",
+      "verdict": "UNSUPPORTED",
+      "evidence": []
+    },
+    {
+      "claim": "destination_identifier_present",
+      "verdict": "UNSUPPORTED",
+      "evidence": []
+    },
+    {
+      "claim": "port_information_present",
+      "verdict": "UNSUPPORTED",
+      "evidence": []
+    },
+    {
+      "claim": "asdu_fields_present",
+      "verdict": "SUPPORTED",
+      "evidence": [
+        "asdu_mentions=1"
+      ]
+    }
+  ]
 }

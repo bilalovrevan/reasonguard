@@ -605,6 +605,11 @@ def main() -> None:
     if OLLAMA_RESPONSES_JSONL.exists():
         response_records.extend(load_jsonl(OLLAMA_RESPONSES_JSONL))
 
+    from src.cloud_llm_runner import CLOUD_RESPONSES_JSONL
+
+    if CLOUD_RESPONSES_JSONL.exists():
+        response_records.extend(load_jsonl(CLOUD_RESPONSES_JSONL))
+
     if not response_records:
         raise RuntimeError(
             "No response records found. Run the synthetic generator or the Ollama "

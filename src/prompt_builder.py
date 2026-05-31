@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import json
+import os
+import random
 from typing import Any
 
 from src.pipeline_config import (
@@ -9,6 +11,7 @@ from src.pipeline_config import (
     LLM_PROMPTS_JSONL,
     LLM_PROMPTS_PREVIEW,
     MAX_PROMPT_EVENTS,
+    RANDOM_SEED,
     ensure_project_directories,
 )
 
@@ -138,6 +141,38 @@ def write_preview(prompt_records: list[dict[str, Any]]) -> None:
     LLM_PROMPTS_PREVIEW.write_text("\n".join(lines), encoding="utf-8")
 
 
+def stratified_sample(
+    bounds: list[dict[str, Any]],
+    per_event_type: int,
+) -> list[dict[str, Any]]:
+    """Return up to ``per_event_type`` bounds for each distinct proxy_event_type.
+
+    Empty event-type buckets are skipped silently. Sampling is seeded by
+    ``RANDOM_SEED`` so the selection is reproducible across runs.
+    """
+
+    rng = random.Random(RANDOM_SEED)
+    buckets: dict[str, list[dict[str, Any]]] = {}
+
+    for bound in bounds:
+        event_type = bound.get("proxy_event_type", "unknown")
+        buckets.setdefault(event_type, []).append(bound)
+
+    selected: list[dict[str, Any]] = []
+
+    for event_type in sorted(buckets):
+        available = buckets[event_type]
+        sample_size = min(per_event_type, len(available))
+
+        if sample_size == 0:
+            continue
+
+        sampled = rng.sample(available, k=sample_size)
+        selected.extend(sampled)
+
+    return selected
+
+
 def main() -> None:
     ensure_project_directories()
 
@@ -148,7 +183,20 @@ def main() -> None:
         )
 
     bounds = load_jsonl(FORMAL_BOUNDS_JSONL)
-    selected_bounds = bounds[:MAX_PROMPT_EVENTS]
+
+    stratify_enabled = os.environ.get("REASONGUARD_STRATIFY", "").strip().lower() in {
+        "1",
+        "true",
+        "yes",
+        "on",
+    }
+
+    if stratify_enabled:
+        per_type = int(os.environ.get("REASONGUARD_PER_EVENT_TYPE", "20"))
+        selected_bounds = stratified_sample(bounds, per_event_type=per_type)
+        print(f"Stratified sampling enabled: {per_type} per event type")
+    else:
+        selected_bounds = bounds[:MAX_PROMPT_EVENTS]
 
     prompt_records = [bound_to_prompt_record(bound) for bound in selected_bounds]
 

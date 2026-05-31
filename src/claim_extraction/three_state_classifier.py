@@ -192,6 +192,10 @@ def classify_claims_against_bound(
             "frame_fmt",
         )
     }
+
+    if "timestamp_ms" in bound:
+        allowed_numbers.add(int(bound["timestamp_ms"]))
+
     allowed_numbers |= {104, 2404}
 
     unsupported_numbers = sorted(

@@ -211,6 +211,21 @@ def resolve_models() -> list[str]:
     return list(OLLAMA_MODELS)
 
 
+def resolve_pilot_limit() -> int:
+    """Allow per-run override of the pilot-limit through an env variable.
+
+    Set ``REASONGUARD_PILOT_LIMIT`` to an integer to take that many prompts from the
+    head of the prompt file. Empty or unset falls back to ``OLLAMA_PILOT_LIMIT``.
+    """
+
+    override = os.environ.get("REASONGUARD_PILOT_LIMIT", "").strip()
+
+    if override.isdigit():
+        return int(override)
+
+    return OLLAMA_PILOT_LIMIT
+
+
 def main() -> None:
     ensure_project_directories()
 
@@ -221,7 +236,8 @@ def main() -> None:
         )
 
     prompt_records = load_jsonl(LLM_PROMPTS_JSONL)
-    selected_prompts = prompt_records[:OLLAMA_PILOT_LIMIT]
+    pilot_limit = resolve_pilot_limit()
+    selected_prompts = prompt_records[:pilot_limit]
 
     all_responses: list[dict[str, Any]] = []
     models = resolve_models()

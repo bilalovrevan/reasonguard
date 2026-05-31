@@ -16,6 +16,11 @@ from src.pipeline_config import (
     ensure_project_directories,
 )
 
+try:
+    import numpy as np
+except ImportError:
+    np = None  # type: ignore
+
 
 FIGURES_DIR = OUTPUT_DIR / "figures"
 
@@ -127,6 +132,44 @@ def plot_clean_rate_bar(
     plt.close(figure)
 
 
+def plot_confusion_matrix(
+    matrix: dict[str, dict[str, int]],
+    output_path: Path,
+    title: str = "Confusion matrix (rows = human, columns = machine)",
+) -> None:
+    """Render the confusion matrix produced by ``evaluation_metrics``."""
+
+    labels = sorted(matrix.keys())
+    n_labels = len(labels)
+
+    if n_labels == 0:
+        return
+
+    values = [[matrix[true_label].get(pred_label, 0) for pred_label in labels] for true_label in labels]
+
+    figure, axes = plt.subplots(figsize=(6, 5))
+    image = axes.imshow(values, cmap="Blues", aspect="auto")
+
+    axes.set_xticks(range(n_labels))
+    axes.set_yticks(range(n_labels))
+    axes.set_xticklabels(labels, rotation=30, ha="right")
+    axes.set_yticklabels(labels)
+    axes.set_xlabel("Machine label (predicted)")
+    axes.set_ylabel("Human label (true)")
+    axes.set_title(title)
+
+    for i in range(n_labels):
+        for j in range(n_labels):
+            value = values[i][j]
+            cell_text_color = "white" if value > max(max(row) for row in values) / 2 else "black"
+            axes.text(j, i, str(value), ha="center", va="center", color=cell_text_color, fontsize=10)
+
+    figure.colorbar(image, ax=axes, fraction=0.046, pad=0.04)
+    figure.tight_layout()
+    figure.savefig(output_path, dpi=160)
+    plt.close(figure)
+
+
 def main() -> None:
     ensure_project_directories()
     FIGURES_DIR.mkdir(parents=True, exist_ok=True)
@@ -149,9 +192,25 @@ def main() -> None:
     plot_per_model_violation_bars(counts, per_model_path)
     plot_clean_rate_bar(counts, clean_rate_path)
 
+    confusion_matrix_path = FIGURES_DIR / "confusion_matrix.png"
+    metrics_json_path = OUTPUT_DIR / "evaluation_metrics.json"
+
+    if metrics_json_path.exists():
+        with open(metrics_json_path, encoding="utf-8") as file:
+            metrics = json.load(file)
+
+        matrix = metrics.get("confusion_matrix")
+
+        if matrix:
+            plot_confusion_matrix(matrix, confusion_matrix_path)
+
     print("Visualisations written successfully.")
     print(f"Per-model violation rates: {per_model_path}")
     print(f"Clean rate per model: {clean_rate_path}")
+
+    if confusion_matrix_path.exists():
+        print(f"Confusion matrix: {confusion_matrix_path}")
+
     print("")
     print("Per-model raw counts:")
 

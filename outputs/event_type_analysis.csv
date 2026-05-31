@@ -1,0 +1,9 @@
+model,event_type,total,clean,clean_rate,V1,V2,V3,V4,V5,V1_rate,V2_rate,V3_rate,V4_rate,V5_rate
+llama3.1:8b-instruct-q4_0,function_code_violation_proxy_until_official_schema,10,6,0.6,3,0,0,2,0,0.3,0.0,0.0,0.2,0.0
+llama3.1:8b-instruct-q4_0,network_scan_proxy_until_official_schema,10,4,0.4,6,0,0,0,0,0.6,0.0,0.0,0.0,0.0
+phi3:mini,function_code_violation_proxy_until_official_schema,10,2,0.2,8,0,0,3,0,0.8,0.0,0.0,0.3,0.0
+phi3:mini,network_scan_proxy_until_official_schema,10,0,0.0,10,0,0,1,1,1.0,0.0,0.0,0.1,0.1
+synthetic_rule_based,function_code_violation_proxy_until_official_schema,50,10,0.2,10,10,10,40,0,0.2,0.2,0.2,0.8,0.0
+synthetic_rule_based,network_scan_proxy_until_official_schema,50,10,0.2,10,0,10,40,0,0.2,0.0,0.2,0.8,0.0
+synthetic_rule_based,normal_modbus_polling_proxy_until_official_schema,50,10,0.2,10,10,10,40,0,0.2,0.2,0.2,0.8,0.0
+synthetic_rule_based,topology_change_proxy_until_official_schema,50,10,0.2,10,10,10,40,0,0.2,0.2,0.2,0.8,0.0
