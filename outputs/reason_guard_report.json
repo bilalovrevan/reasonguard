@@ -1,12 +1,12 @@
 {
   "summary": {
     "total_responses": 240,
-    "no_violation": 52,
-    "V1_fabricated_reasoning": 67,
+    "no_violation": 66,
+    "V1_fabricated_reasoning": 50,
     "V2_contradicted_reasoning": 30,
     "V3_over_generalised_reasoning": 40,
     "V4_under_specified_reasoning": 166,
-    "V5_incoherent_reasoning": 1
+    "V5_incoherent_reasoning": 0
   },
   "results": [
     {
@@ -27179,7 +27179,6 @@
       },
       "reasons": {
         "V1": [
-          "Unsupported attack or maliciousness terms: ['attack']",
           "Unsupported numeric identifiers or values: [2022]"
         ],
         "V2": [],
@@ -27190,9 +27189,7 @@
         "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "attack"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
         "causal_terms": [],
         "normality_terms": [],
@@ -27783,30 +27780,24 @@
       "response_type": "real_llm_output",
       "model_name": "llama3.1:8b-instruct-q4_0",
       "response": "Here is a precise operational English explanation of the formally bounded IEC-104 network observation:\n\nOn timestamp 1654646405628, an IEC-104 information transfer frame was observed traveling from source identifier 615 to destination identifier 1 on port 1024 (source) and port 2404 (destination). The packet size is 74 bytes with a length field of 20. The ASDU address is 4117, type is 103, COT is 7, and item count is 1. This observation is classified as IEC104_OBSERVATION_UNCLASSIFIED, which is a proxy formal class indicating that it has not been verified as an attack label.",
-      "violation_codes": [
-        "V1"
-      ],
-      "severity": "high",
+      "violation_codes": [],
+      "severity": "none",
       "violations": {
-        "V1_fabricated_reasoning": true,
+        "V1_fabricated_reasoning": false,
         "V2_contradicted_reasoning": false,
         "V3_over_generalised_reasoning": false,
         "V4_under_specified_reasoning": false,
         "V5_incoherent_reasoning": false
       },
       "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['attack']"
-        ],
+        "V1": [],
         "V2": [],
         "V3": [],
         "V4": [],
         "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "attack"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
         "causal_terms": [],
         "normality_terms": [],
@@ -28173,30 +28164,24 @@
       "response_type": "real_llm_output",
       "model_name": "llama3.1:8b-instruct-q4_0",
       "response": "Here is the explanation of the formally bounded ICS network event:\n\nOn timestamp 1654646404992, a server-to-client communication was observed on an IEC-104 protocol hint. The source identifier 37 communicated with destination identifier 38 over ports 2404 and 51770, respectively. The packet size was 60 bytes, with a length field of 18. The ASDU address was 1001, type was 50, COT was 7, and item count was 1. The observed frame type was i_format_information_transfer, and the communication direction was server_to_client. The proxy formal class is IEC104_OBSERVATION_UNCLASSIFIED, indicating that this classification has not been verified as a confirmed attack label.",
-      "violation_codes": [
-        "V1"
-      ],
-      "severity": "high",
+      "violation_codes": [],
+      "severity": "none",
       "violations": {
-        "V1_fabricated_reasoning": true,
+        "V1_fabricated_reasoning": false,
         "V2_contradicted_reasoning": false,
         "V3_over_generalised_reasoning": false,
         "V4_under_specified_reasoning": false,
         "V5_incoherent_reasoning": false
       },
       "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['attack']"
-        ],
+        "V1": [],
         "V2": [],
         "V3": [],
         "V4": [],
         "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "attack"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
         "causal_terms": [],
         "normality_terms": [],
@@ -28977,30 +28962,24 @@
       "response_type": "real_llm_output",
       "model_name": "llama3.1:8b-instruct-q4_0",
       "response": "Here is a precise operational English explanation of the formally bounded IEC-104 network observation:\n\nOn timestamp 1654646404694, source identifier 38 communicated with destination identifier 126 over an unknown protocol hint and communication direction. The observed frame type was s_or_u_format_control. The packet size was 46 bytes, with a packet length field of 4. The source port was 51717 and the destination port was 2405. The ASDU address was 0, COT was 0, and ASDU item count was 0. The proxy formal class is UNKNOWN_NON_IEC104, indicating that the observed pattern does not conform to standard IEC-104 protocol. This observation label is a proxy until an official automaton schema is available, and should not be considered as a confirmed attack label.",
-      "violation_codes": [
-        "V1"
-      ],
-      "severity": "high",
+      "violation_codes": [],
+      "severity": "none",
       "violations": {
-        "V1_fabricated_reasoning": true,
+        "V1_fabricated_reasoning": false,
         "V2_contradicted_reasoning": false,
         "V3_over_generalised_reasoning": false,
         "V4_under_specified_reasoning": false,
         "V5_incoherent_reasoning": false
       },
       "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['attack']"
-        ],
+        "V1": [],
         "V2": [],
         "V3": [],
         "V4": [],
         "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "attack"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
         "causal_terms": [],
         "normality_terms": [],
@@ -29565,30 +29544,24 @@
       "response_type": "real_llm_output",
       "model_name": "llama3.1:8b-instruct-q4_0",
       "response": "Here is the explanation of the formally bounded IEC-104 network observation:\n\nOn timestamp 1654646410961, source identifier 788 communicated with destination identifier 38 over an unknown protocol hint and communication direction. The observed frame type was u_format_control. The packet size was 46 bytes, with a packet length field of 4. The source port was 2405 and the destination port was 51704. The ASDU address, COT, and item count were all 0, indicating no IEC-104 protocol-specific data was transmitted. The proxy formal class is UNKNOWN_NON_IEC104, which indicates that the observed pattern does not conform to standard IEC-104 communication protocols. This classification is a proxy observation label and should not be considered as a confirmed attack label.",
-      "violation_codes": [
-        "V1"
-      ],
-      "severity": "high",
+      "violation_codes": [],
+      "severity": "none",
       "violations": {
-        "V1_fabricated_reasoning": true,
+        "V1_fabricated_reasoning": false,
         "V2_contradicted_reasoning": false,
         "V3_over_generalised_reasoning": false,
         "V4_under_specified_reasoning": false,
         "V5_incoherent_reasoning": false
       },
       "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['attack']"
-        ],
+        "V1": [],
         "V2": [],
         "V3": [],
         "V4": [],
         "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "attack"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
         "causal_terms": [],
         "normality_terms": [],
@@ -29741,30 +29714,24 @@
       "response_type": "real_llm_output",
       "model_name": "llama3.1:8b-instruct-q4_0",
       "response": "Here is a precise operational English explanation of the formally bounded IEC-104 network observation:\n\nOn timestamp 1654646406803, source identifier 38 communicated with destination identifier 735 over an unknown protocol hint and communication direction. The observed frame type was s_or_u_format_control. The packet size was 46 bytes, with a packet length field of 4. The ASDU address, COT, and item count were all 0. The observed source port was 51842 and the destination port was 2405. The proxy formal class is UNKNOWN_NON_IEC104, indicating that the observation pattern does not conform to expected IEC-104 protocol behavior. This classification is a proxy label and should not be considered a confirmed attack label.",
-      "violation_codes": [
-        "V1"
-      ],
-      "severity": "high",
+      "violation_codes": [],
+      "severity": "none",
       "violations": {
-        "V1_fabricated_reasoning": true,
+        "V1_fabricated_reasoning": false,
         "V2_contradicted_reasoning": false,
         "V3_over_generalised_reasoning": false,
         "V4_under_specified_reasoning": false,
         "V5_incoherent_reasoning": false
       },
       "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['attack']"
-        ],
+        "V1": [],
         "V2": [],
         "V3": [],
         "V4": [],
         "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "attack"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
         "causal_terms": [],
         "normality_terms": [],
@@ -29919,30 +29886,24 @@
       "response_type": "real_llm_output",
       "model_name": "llama3.1:8b-instruct-q4_0",
       "response": "Here is a formally bounded IEC-104 network observation in precise operational English:\n\nOn timestamp 1654646411288, source identifier 38 communicated with destination identifier 818 over an unknown protocol hint and communication direction. The observed frame type was u_format_control. The packet size was 46 bytes, with a packet length field of 4. The source port was 51859 and the destination port was 2405. The ASDU address was 0, COT was 0, and ASDU item count was 0. The proxy formal class is UNKNOWN_NON_IEC104, indicating an unknown or non-IEC104 pattern. This observation label is a proxy until official automaton schema status, and should not be considered a confirmed attack label.",
-      "violation_codes": [
-        "V1"
-      ],
-      "severity": "high",
+      "violation_codes": [],
+      "severity": "none",
       "violations": {
-        "V1_fabricated_reasoning": true,
+        "V1_fabricated_reasoning": false,
         "V2_contradicted_reasoning": false,
         "V3_over_generalised_reasoning": false,
         "V4_under_specified_reasoning": false,
         "V5_incoherent_reasoning": false
       },
       "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['attack']"
-        ],
+        "V1": [],
         "V2": [],
         "V3": [],
         "V4": [],
         "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "attack"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
         "causal_terms": [],
         "normality_terms": [],
@@ -30741,30 +30702,24 @@
       "response_type": "real_llm_output",
       "model_name": "phi3:mini",
       "response": "The IEC104_OBSERVATION_UNCLASSIFIED label indicates that, based on the provided formal observation of event evt_015867 within dataset eon_iec at granularity atomic_row and timestamped as 1654646411950 using schema proxy_until_official_automaton_schema in version 2.1, the network traffic between source identifier 885 (client) and destination identifier 8 has been identified through IEC-104 protocol hint as an i_format_information_transfer pattern with a packet size of 62 bytes over ports 4115 to 2404. The observed ASDU fields, including address 4655, cot number 7, and item count one for type 103 devices, align consistently within the formal bound's parameters without any explicit indication of malicious intent or security breach as per the proxy_not_ground_truth_attack_label status.",
-      "violation_codes": [
-        "V1"
-      ],
-      "severity": "high",
+      "violation_codes": [],
+      "severity": "none",
       "violations": {
-        "V1_fabricated_reasoning": true,
+        "V1_fabricated_reasoning": false,
         "V2_contradicted_reasoning": false,
         "V3_over_generalised_reasoning": false,
         "V4_under_specified_reasoning": false,
         "V5_incoherent_reasoning": false
       },
       "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['malicious']"
-        ],
+        "V1": [],
         "V2": [],
         "V3": [],
         "V4": [],
         "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "malicious"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
         "causal_terms": [],
         "normality_terms": [],
@@ -30917,21 +30872,18 @@
       "model_name": "phi3:mini",
       "response": "The IEC104_OBSERVATION_UNCLASSIFIED label indicates that, based on the provided formal observation of event evt_003293 within dataset eon_iec at granularity atomic_row and timestamped as 1654646405272 using schema proxy_until_official_automaton_schema in version 2.1, the network traffic between source identifier 38 (client) and destination identifier 37 (server), through ports 51770 and 2404 respectively, has been identified as an IEC-104 protocol communication with a packet size of 60 bytes wherein the length field is noted to be 18. The frame type i_format_information_transfer suggests that this event represents data transfer within industrial control systems (ICS) networks using IEC-104 standard, without any explicit indication towards malicious intent or confirmation of a security incident as per the formal class status and observation pattern provided in the bound.",
       "violation_codes": [
-        "V1",
         "V4"
       ],
-      "severity": "high",
+      "severity": "low",
       "violations": {
-        "V1_fabricated_reasoning": true,
+        "V1_fabricated_reasoning": false,
         "V2_contradicted_reasoning": false,
         "V3_over_generalised_reasoning": false,
         "V4_under_specified_reasoning": true,
         "V5_incoherent_reasoning": false
       },
       "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['malicious']"
-        ],
+        "V1": [],
         "V2": [],
         "V3": [],
         "V4": [
@@ -30940,9 +30892,7 @@
         "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "malicious"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
         "causal_terms": [],
         "normality_terms": [],
@@ -31079,21 +31029,18 @@
       "model_name": "phi3:mini",
       "response": "The IEC104_OBSERVATION_UNCLASSIFIED label indicates that, based on the provided formal observation of event evt_000609 within dataset eon_iec at granularity atomic_row and timestamped as 1654646404376 using schema proxy_until_official_automaton_schema version 2.1, the network traffic between source identifier 37 and destination identifier 38 has been identified through IEC-104 protocol hint with a packet size of 60 bytes (pkt_length field value is 18). The communication direction observed was server to client via port numbers 2404 for the source and 51770 for the destination. This traffic pattern, identified as iec104_information_transfer_pattern with frame type i_format_information_transfer, is associated solesly within these identifiers without any additional context or causality implied by this formal bound alone. The proxy-based classification of IEC104 protocol hint and the packet details remain consistent throughout our observation analysis; however, it's important to note that as per current information available in the formal class status—proxy_not_ground_truth_attack_label—no confirmed malicious intent or security breach can be concluded from this single event.",
       "violation_codes": [
-        "V1",
         "V4"
       ],
-      "severity": "high",
+      "severity": "low",
       "violations": {
-        "V1_fabricated_reasoning": true,
+        "V1_fabricated_reasoning": false,
         "V2_contradicted_reasoning": false,
         "V3_over_generalised_reasoning": false,
         "V4_under_specified_reasoning": true,
         "V5_incoherent_reasoning": false
       },
       "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['malicious']"
-        ],
+        "V1": [],
         "V2": [],
         "V3": [],
         "V4": [
@@ -31102,9 +31049,7 @@
         "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "malicious"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
         "causal_terms": [],
         "normality_terms": [],
@@ -31459,30 +31404,24 @@
       "response_type": "real_llm_output",
       "model_name": "phi3:mini",
       "response": "The IEC104_OBSERVATION_UNCLASSIFIED label indicates that, based on the provided formal observation of event evt_005652 within dataset eon_iec at granularity atomic_row and timestamped as 1654646405882 using schema proxy_until_official_automaton_schema in version 2.1, the network traffic observed between source identifier 38 (client) and destination identifier 37 (server), via ports 51770 and 2404 respectively, does not explicitly confirm a security incident or malicious activity within this IEC-104 communication event as per current formal class status. The packet size of 60 bytes with an ASDU length field value of 18 aligns with the observed i_format_information_transfer frame type and adheres to other specified protocol hints, ports, and fields within this IEC-104 network event observation without additional context suggesting malicious intent or causality.",
-      "violation_codes": [
-        "V1"
-      ],
-      "severity": "high",
+      "violation_codes": [],
+      "severity": "none",
       "violations": {
-        "V1_fabricated_reasoning": true,
+        "V1_fabricated_reasoning": false,
         "V2_contradicted_reasoning": false,
         "V3_over_generalised_reasoning": false,
         "V4_under_specified_reasoning": false,
         "V5_incoherent_reasoning": false
       },
       "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['malicious']"
-        ],
+        "V1": [],
         "V2": [],
         "V3": [],
         "V4": [],
         "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "malicious"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
         "causal_terms": [],
         "normality_terms": [],
@@ -31620,30 +31559,24 @@
       "response_type": "real_llm_output",
       "model_name": "phi3:mini",
       "response": "The IEC104_OBSERVATION_UNCLASSIFIED label indicates that this event, with Event ID evt_004683 from dataset eon_iec at granularity atomic_row and timestamped as 1654646405628 in Formal Bound version 2.1 under the proxy_until_official_automaton_schema, is a client-to-server communication within an IEC-104 network framework. Source identifier 615 transmitted data to destination identifier 1 using source port number 1024 and received on destination port 2404 with packet size of 74 bytes over the ASDU address field value 4117, conforming to IEC-104 i_format_information_transfer frame type. The observed data transfer pattern aligns with iec104_information_transfer_pattern and adheres strictly within the formal bound's parameters without implying any malicious intent or security breach as no confirmed attack labels are present in this observation, maintaining a professional analyst language throughout our assessment.",
-      "violation_codes": [
-        "V1"
-      ],
-      "severity": "high",
+      "violation_codes": [],
+      "severity": "none",
       "violations": {
-        "V1_fabricated_reasoning": true,
+        "V1_fabricated_reasoning": false,
         "V2_contradicted_reasoning": false,
         "V3_over_generalised_reasoning": false,
         "V4_under_specified_reasoning": false,
         "V5_incoherent_reasoning": false
       },
       "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['malicious']"
-        ],
+        "V1": [],
         "V2": [],
         "V3": [],
         "V4": [],
         "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "malicious"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
         "causal_terms": [],
         "normality_terms": [],
@@ -31792,21 +31725,18 @@
       "model_name": "phi3:mini",
       "response": "The IEC104_OBSERVATION_UNCLASSIFIED label indicates that, based on event ID evt_003685 within dataset eon_iec at granularity atomic_row and timestamped as 1654646405370 with formal bound version 2.1 under the proxy_until_official_automaton_schema, source identifier 37 communicated to destination identifier 38 using IEC-104 protocol hint over a server_to_client direction via frame type i_format_information_transfer. The packet size was observed at 60 bytes with length field value of 18 and the ASDU address, cot, items count were noted as 1001, 7, respectively for an ASDU type identified by number 50. This observation remains within a proxy formal class status without ground truth attack label confirmation or any implied malicious intent beyond what is explicitly stated in this bound.",
       "violation_codes": [
-        "V1",
         "V4"
       ],
-      "severity": "high",
+      "severity": "low",
       "violations": {
-        "V1_fabricated_reasoning": true,
+        "V1_fabricated_reasoning": false,
         "V2_contradicted_reasoning": false,
         "V3_over_generalised_reasoning": false,
         "V4_under_specified_reasoning": true,
         "V5_incoherent_reasoning": false
       },
       "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['malicious']"
-        ],
+        "V1": [],
         "V2": [],
         "V3": [],
         "V4": [
@@ -31815,9 +31745,7 @@
         "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "malicious"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
         "causal_terms": [],
         "normality_terms": [],
@@ -31985,30 +31913,24 @@
       "response_type": "real_llm_output",
       "model_name": "phi3:mini",
       "response": "The IEC104_OBSERVATION_UNCLASSIFIED label indicates that, based on the provided formal observation of event evt_002293 within dataset eon_iec at granularity atomic_row and timestamped as 1654646404992 using schema proxy_until_official_automaton_schema in version 2.1, the network traffic between source identifier 37 (source port: 2404) and destination identifier 38 (destination port: 51770), which follows an iec104 protocol hint with a packet size of 60 bytes wherein only one ASDU item is present, has not been classified as malicious. The observed frame type i_format_information_transfer and the communication direction server_to_client align with expected IEC-104 network behavior without any explicit indication towards a security breach or attack within this formal bound observation context.",
-      "violation_codes": [
-        "V1"
-      ],
-      "severity": "high",
+      "violation_codes": [],
+      "severity": "none",
       "violations": {
-        "V1_fabricated_reasoning": true,
+        "V1_fabricated_reasoning": false,
         "V2_contradicted_reasoning": false,
         "V3_over_generalised_reasoning": false,
         "V4_under_specified_reasoning": false,
         "V5_incoherent_reasoning": false
       },
       "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['attack']"
-        ],
+        "V1": [],
         "V2": [],
         "V3": [],
         "V4": [],
         "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "attack"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
         "causal_terms": [],
         "normality_terms": [],
@@ -32376,30 +32298,24 @@
       "response_type": "real_llm_output",
       "model_name": "phi3:mini",
       "response": "The IEC104_OBSERVATION_UNCLASSIFIED label has been applied to a network event where source identifier 38 initiated an information transfer using protocol hint iec104, directed from client (source) to server (destination). The communication occurred on the timestamp ms: 1654646404866. Source and destination identifiers are consistent with observed ASDU fields such as address, cot, items, type; source port is noted at 51770 while the destination port stands at 2404. The packet size was recorded to be 60 bytes across a length field of 18 within an i_format information transfer frame pattern specific to IEC-104 communication protocols, as per the formal bound version 2.1 schema status under proxy until official automaton is established for ground truth attack labeling. This observation remains unclassified and does not confirm any malicious intent or security breach within this network segment based on available data at timestamp ms: 1654646404866, as per the formal bound provided by eon_iec dataset with atomic row granularity.",
-      "violation_codes": [
-        "V1"
-      ],
-      "severity": "high",
+      "violation_codes": [],
+      "severity": "none",
       "violations": {
-        "V1_fabricated_reasoning": true,
+        "V1_fabricated_reasoning": false,
         "V2_contradicted_reasoning": false,
         "V3_over_generalised_reasoning": false,
         "V4_under_specified_reasoning": false,
         "V5_incoherent_reasoning": false
       },
       "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['malicious']"
-        ],
+        "V1": [],
         "V2": [],
         "V3": [],
         "V4": [],
         "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "malicious"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
         "causal_terms": [],
         "normality_terms": [],
@@ -32577,7 +32493,6 @@
       },
       "reasons": {
         "V1": [
-          "Unsupported attack or maliciousness terms: ['attack', 'malicious']",
           "Unsupported causal language: ['due to']"
         ],
         "V2": [],
@@ -32586,10 +32501,7 @@
         "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "attack",
-          "malicious"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
         "causal_terms": [
           "due to"
@@ -32738,7 +32650,6 @@
       },
       "reasons": {
         "V1": [
-          "Unsupported attack or maliciousness terms: ['attack', 'malicious']",
           "Unsupported causal language: ['due to']"
         ],
         "V2": [],
@@ -32747,10 +32658,7 @@
         "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "attack",
-          "malicious"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
         "causal_terms": [
           "due to"
@@ -32941,7 +32849,6 @@
       },
       "reasons": {
         "V1": [
-          "Unsupported attack or maliciousness terms: ['attack', 'malicious']",
           "Unsupported causal language: ['due to', 'consequently']"
         ],
         "V2": [],
@@ -32953,10 +32860,7 @@
         "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "attack",
-          "malicious"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
         "causal_terms": [
           "due to",
@@ -33083,7 +32987,6 @@
       },
       "reasons": {
         "V1": [
-          "Unsupported attack or maliciousness terms: ['attack', 'malicious']",
           "Unsupported causal language: ['due to']"
         ],
         "V2": [],
@@ -33092,10 +32995,7 @@
         "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "attack",
-          "malicious"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
         "causal_terms": [
           "due to"
@@ -33297,31 +33197,24 @@
       "response_type": "real_llm_output",
       "model_name": "phi3:mini",
       "response": "The network observation identified by Event ID evt_012416 within eon_iec dataset at granularity atomic_row and timestamped as 1654646410961, utilizes a communication direction that remains unspecified. The frame type in question is u_format_control with an observed packet size of 46 bytes over ports 2405 (source) to 51704 (destination). Notably, the source identifier marked as '788' and destination at '38', along with ASDU fields such as address set to zero for all three - address, cot, items – aligns with a non-IEC-104 pattern. The formal class assigned is UNKNOWN_NON_IEC104; however, it's important to clarify that this label serves merely as an observation proxy and does not confirm any malicious activity or attack within the industrial control system network at present.\n\n\nGiven these details from a 2.1 schema status under 'proxy_until_official_automaton_schema', no definitive security conclusion can be drawn sole0nce based on this single observation alone, and further investigation is warranted to ascertain the nature of such network traffic within ICS environments.",
-      "violation_codes": [
-        "V1"
-      ],
-      "severity": "high",
+      "violation_codes": [],
+      "severity": "none",
       "violations": {
-        "V1_fabricated_reasoning": true,
+        "V1_fabricated_reasoning": false,
         "V2_contradicted_reasoning": false,
         "V3_over_generalised_reasoning": false,
         "V4_under_specified_reasoning": false,
         "V5_incoherent_reasoning": false
       },
       "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['attack', 'malicious']"
-        ],
+        "V1": [],
         "V2": [],
         "V3": [],
         "V4": [],
         "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "attack",
-          "malicious"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
         "causal_terms": [],
         "normality_terms": [],
@@ -33458,34 +33351,24 @@
       "response_type": "real_llm_output",
       "model_name": "phi3:mini",
       "response": "The network observation identified by Event ID evt_009034 within eon_iec dataset at granularity atomic_row, timestamped as ms:1654646406803 under Formal Bound version 2.1 and using the proxy_until_official_automaton_schema schema status indicates a communication event between source identifier 38 and destination identifier 735 over ports 51842 (source) to 2405 (destination). The packet size is recorded as 46 bytes with a length field of 4, while the ASDU address stands at zero. This observation falls under the proxy formal class UNKNOWN_NON_IEC104 and follows an unknown or non-IEC-104 pattern in terms of its observed frame type s_or_u_format_control without any additional information on protocol hint, communication direction, causality, timing patterns, affected assets, malicious intent, mitigation actions, or confirmations regarding normalcy. As such, the formal class status indicates that this is not a ground truth attack label but rather an unverified proxy observation within IEC-104 network traffic analysis parameters at present.",
-      "violation_codes": [
-        "V1",
-        "V5"
-      ],
-      "severity": "high",
+      "violation_codes": [],
+      "severity": "none",
       "violations": {
-        "V1_fabricated_reasoning": true,
+        "V1_fabricated_reasoning": false,
         "V2_contradicted_reasoning": false,
         "V3_over_generalised_reasoning": false,
         "V4_under_specified_reasoning": false,
-        "V5_incoherent_reasoning": true
+        "V5_incoherent_reasoning": false
       },
       "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['malicious']"
-        ],
+        "V1": [],
         "V2": [],
         "V3": [],
         "V4": [],
-        "V5": [
-          "Conflicting terms detected: 'normal' and 'malicious'.",
-          "Conflicting terms detected: 'normal' and 'attack'."
-        ]
+        "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "malicious"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
         "causal_terms": [],
         "normality_terms": [],
@@ -33651,7 +33534,6 @@
       },
       "reasons": {
         "V1": [
-          "Unsupported attack or maliciousness terms: ['attack', 'malicious']",
           "Unsupported causal language: ['due to']"
         ],
         "V2": [],
@@ -33660,10 +33542,7 @@
         "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "attack",
-          "malicious"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
         "causal_terms": [
           "due to"
@@ -33834,30 +33713,24 @@
       "response_type": "real_llm_output",
       "model_name": "phi3:mini",
       "response": "The network observation labeled as evt_015283 within eon_iec dataset at granularity level atomic_row, timestamped precisely at 1654646411801 according to Formal Bound version 2.1 and using the proxy_until_official_automaton_schema schema status indicates an event where source identifier 8 communicated with destination identifier 864 over a packet size of 58 bytes, utilizing port numbers 42320 for sending and receiving respectively. The frame format observed was s_or_u_format_control without explicit confirmation on the protocol or communication direction being IEC-104 compliant as per formal class UNKNOWN_NON_IEC104, which suggests that this is a proxy observation label rather than an identified attack. The ASDU address was 0 with no items listed in its count and type also at zero; these details align consistently within the observed IEC-104 protocol hint when present as per formal class status indicating it's not yet grounded against known attacks, thus avoiding any security conclusion without further analysis.",
-      "violation_codes": [
-        "V1"
-      ],
-      "severity": "high",
+      "violation_codes": [],
+      "severity": "none",
       "violations": {
-        "V1_fabricated_reasoning": true,
+        "V1_fabricated_reasoning": false,
         "V2_contradicted_reasoning": false,
         "V3_over_generalised_reasoning": false,
         "V4_under_specified_reasoning": false,
         "V5_incoherent_reasoning": false
       },
       "reasons": {
-        "V1": [
-          "Unsupported attack or maliciousness terms: ['attack']"
-        ],
+        "V1": [],
         "V2": [],
         "V3": [],
         "V4": [],
         "V5": []
       },
       "lexicon_claims": {
-        "attack_terms": [
-          "attack"
-        ],
+        "attack_terms": [],
         "mitigation_terms": [],
         "causal_terms": [],
         "normality_terms": [],

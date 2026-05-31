@@ -1,9 +1,9 @@
 {
   "total_responses": 240,
-  "no_violation": 52,
-  "V1_fabricated_reasoning": 67,
+  "no_violation": 66,
+  "V1_fabricated_reasoning": 50,
   "V2_contradicted_reasoning": 30,
   "V3_over_generalised_reasoning": 40,
   "V4_under_specified_reasoning": 166,
-  "V5_incoherent_reasoning": 1
+  "V5_incoherent_reasoning": 0
 }

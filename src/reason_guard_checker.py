@@ -202,15 +202,37 @@ def is_safe_negated_usage(response: str, term: str) -> bool:
     return False
 
 
+def _try_spacy_negation_filter(response: str, terms: list[str]) -> list[str] | None:
+    try:
+        from src.claim_extraction.extractor import SpacyClaimExtractor
+        from src.claim_extraction.negation_scope import filter_unsafe_terms
+    except Exception:
+        return None
+
+    extractor = SpacyClaimExtractor()
+
+    try:
+        if extractor._nlp is None:
+            extractor._nlp = extractor._load_pipeline()
+    except RuntimeError:
+        return None
+
+    doc = extractor._nlp(response)
+    return filter_unsafe_terms(doc, terms)
+
+
 def extract_attack_terms(response: str) -> list[str]:
-    found_terms = []
+    candidate_terms = [term for term in ATTACK_TERMS if term in normalize_text(response)]
 
-    for term in ATTACK_TERMS:
-        if term in normalize_text(response):
-            if not is_safe_negated_usage(response, term):
-                found_terms.append(term)
+    if not candidate_terms:
+        return []
 
-    return found_terms
+    spacy_filtered = _try_spacy_negation_filter(response, candidate_terms)
+
+    if spacy_filtered is not None:
+        return spacy_filtered
+
+    return [term for term in candidate_terms if not is_safe_negated_usage(response, term)]
 
 
 def extract_claims(response: str) -> dict[str, Any]:
@@ -407,9 +429,42 @@ def detect_v4_under_specified_reasoning(
     return bool(reasons), reasons
 
 
+def _try_spacy_incoherence(response: str) -> list[str] | None:
+    try:
+        from src.claim_extraction.coherence import find_incoherent_sentences
+        from src.claim_extraction.extractor import SpacyClaimExtractor
+    except Exception:
+        return None
+
+    extractor = SpacyClaimExtractor()
+
+    try:
+        if extractor._nlp is None:
+            extractor._nlp = extractor._load_pipeline()
+    except RuntimeError:
+        return None
+
+    doc = extractor._nlp(response)
+    findings = find_incoherent_sentences(doc)
+
+    if not findings:
+        return []
+
+    return [
+        f"Conflicting terms in one sentence: '{finding.left_term}' and "
+        f"'{finding.right_term}'."
+        for finding in findings
+    ]
+
+
 def detect_v5_incoherent_reasoning(
     response: str,
 ) -> tuple[bool, list[str]]:
+    spacy_reasons = _try_spacy_incoherence(response)
+
+    if spacy_reasons is not None:
+        return bool(spacy_reasons), spacy_reasons
+
     response_lower = normalize_text(response)
 
     safe_negated_incoherence_patterns = [
