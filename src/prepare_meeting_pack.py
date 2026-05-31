@@ -1,209 +1,218 @@
-from pathlib import Path
+from __future__ import annotations
+
 import json
+from datetime import UTC, datetime
+from pathlib import Path
+from typing import Any
+
 import pandas as pd
 
+from src.pipeline_config import (
+    FORMAL_BOUNDS_JSONL,
+    FORMAL_BOUNDS_SUMMARY,
+    LLM_PROMPTS_JSONL,
+    MEETING_PACK_DIR,
+    MEETING_SUMMARY_CSV,
+    OLLAMA_RESPONSES_JSONL,
+    REASONGUARD_REPORT_JSON,
+    REASONGUARD_REPORT_JSONL,
+    REASONGUARD_SUMMARY_CSV,
+    SYNTHETIC_RESPONSES_JSONL,
+    ensure_project_directories,
+)
 
-OUTPUT_DIR = Path("outputs")
-MEETING_DIR = Path("meeting_pack")
-MEETING_DIR.mkdir(exist_ok=True)
 
-REQUIRED_FILES = {
-    "formal_bounds": OUTPUT_DIR / "formal_bounds_sample_003.jsonl",
-    "prompts": OUTPUT_DIR / "llm_prompts_sample_003.jsonl",
-    "synthetic_responses": OUTPUT_DIR / "synthetic_llm_responses_sample_003.jsonl",
-    "reason_guard_report": OUTPUT_DIR / "reason_guard_report.json",
-    "reason_guard_summary": OUTPUT_DIR / "reason_guard_summary.json",
-    "reason_guard_summary_csv": OUTPUT_DIR / "reason_guard_summary.csv",
-}
+PIPELINE_STATS_PATH = MEETING_PACK_DIR / "pipeline_stats.md"
 
 
-def load_json(path: Path) -> dict:
+def load_json(path: Path) -> Any:
     with open(path, "r", encoding="utf-8") as file:
         return json.load(file)
 
 
-def load_jsonl(path: Path) -> list[dict]:
+def load_jsonl(path: Path) -> list[dict[str, Any]]:
     records = []
+
     with open(path, "r", encoding="utf-8") as file:
         for line in file:
             line = line.strip()
+
             if line:
                 records.append(json.loads(line))
+
     return records
 
 
-def check_required_files() -> None:
-    missing = []
+def per_model_counts(report_records: list[dict[str, Any]]) -> dict[str, dict[str, int]]:
+    counts: dict[str, dict[str, int]] = {}
 
-    for name, path in REQUIRED_FILES.items():
-        if not path.exists():
-            missing.append(f"{name}: {path}")
-
-    if missing:
-        raise FileNotFoundError(
-            "The following required output files are missing:\n"
-            + "\n".join(missing)
-            + "\nRun python run_pipeline.py first."
+    for record in report_records:
+        model_name = record.get("model_name") or "unknown"
+        bucket = counts.setdefault(
+            model_name,
+            {"total": 0, "clean": 0, "V1": 0, "V2": 0, "V3": 0, "V4": 0, "V5": 0},
         )
 
+        bucket["total"] += 1
 
-def build_markdown_report() -> str:
-    bounds = load_jsonl(REQUIRED_FILES["formal_bounds"])
-    prompts = load_jsonl(REQUIRED_FILES["prompts"])
-    responses = load_jsonl(REQUIRED_FILES["synthetic_responses"])
-    report = load_json(REQUIRED_FILES["reason_guard_report"])
-    summary = report["summary"]
-    results = report["results"]
+        if not record.get("violation_codes"):
+            bucket["clean"] += 1
 
-    first_bound = bounds[0]
-    first_prompt = prompts[0]
-    first_result = next(item for item in results if "error" not in item)
+        for code in record.get("violation_codes", []):
+            if code in bucket:
+                bucket[code] += 1
 
-    lines = []
+    return counts
 
-    lines.append("# ReasonGuard Meeting Pack")
-    lines.append("")
-    lines.append("## 1. Current project status")
-    lines.append("")
-    lines.append("I have implemented a first end-to-end vertical prototype of the ReasonGuard pipeline.")
-    lines.append("")
-    lines.append("Current working pipeline:")
-    lines.append("")
-    lines.append("```text")
-    lines.append("sample_003.csv")
-    lines.append("  -> formal_bound_builder.py")
-    lines.append("  -> formal_bounds_sample_003.jsonl")
-    lines.append("  -> prompt_builder.py")
-    lines.append("  -> llm_prompts_sample_003.jsonl")
-    lines.append("  -> synthetic_response_generator.py")
-    lines.append("  -> synthetic_llm_responses_sample_003.jsonl")
-    lines.append("  -> reason_guard_checker.py")
-    lines.append("  -> reason_guard_report.json / reason_guard_summary.csv")
-    lines.append("```")
-    lines.append("")
 
-    lines.append("## 2. What has been completed")
-    lines.append("")
-    lines.append(f"- Formal bounds generated: {len(bounds)}")
-    lines.append(f"- LLM prompts generated: {len(prompts)}")
-    lines.append(f"- Synthetic LLM responses generated: {len(responses)}")
-    lines.append(f"- ReasonGuard responses analysed: {summary['total_responses']}")
-    lines.append(f"- No violation: {summary['no_violation']}")
-    lines.append(f"- V1 fabricated reasoning: {summary['V1_fabricated_reasoning']}")
-    lines.append(f"- V2 contradicted reasoning: {summary['V2_contradicted_reasoning']}")
-    lines.append(f"- V3 over-generalised reasoning: {summary['V3_over_generalised_reasoning']}")
-    lines.append(f"- V4 under-specified reasoning: {summary['V4_under_specified_reasoning']}")
-    lines.append(f"- V5 incoherent reasoning: {summary['V5_incoherent_reasoning']}")
-    lines.append("")
+def render_per_model_table(counts: dict[str, dict[str, int]]) -> str:
+    if not counts:
+        return "No per-model breakdown available."
 
-    lines.append("## 3. Formal bound example")
-    lines.append("")
-    lines.append("```json")
-    lines.append(json.dumps(first_bound, indent=2))
-    lines.append("```")
-    lines.append("")
+    headers = ["model", "total", "clean", "V1", "V2", "V3", "V4", "V5"]
+    lines = ["| " + " | ".join(headers) + " |"]
+    lines.append("| " + " | ".join("---" for _ in headers) + " |")
 
-    lines.append("## 4. Prompt example")
-    lines.append("")
-    lines.append("### System prompt")
-    lines.append("")
-    lines.append("```text")
-    lines.append(first_prompt["system_prompt"])
-    lines.append("```")
-    lines.append("")
-    lines.append("### User prompt")
-    lines.append("")
-    lines.append("```text")
-    lines.append(first_prompt["user_prompt"])
-    lines.append("```")
-    lines.append("")
-
-    lines.append("## 5. ReasonGuard output example")
-    lines.append("")
-    lines.append("```json")
-    lines.append(json.dumps(first_result, indent=2))
-    lines.append("```")
-    lines.append("")
-
-    lines.append("## 6. Important limitation")
-    lines.append("")
-    lines.append(
-        "The current formal class is still a proxy observation label, because the official automaton output schema has not yet been integrated. "
-        "Therefore, the current prototype demonstrates the verification architecture and V1-V5 checking logic, but it does not yet claim final domain-ground-truth attack labels."
-    )
-    lines.append("")
-
-    lines.append("## 7. Immediate next steps")
-    lines.append("")
-    lines.append("1. Confirm whether the proxy formal bound schema is acceptable until the official automaton schema is available.")
-    lines.append("2. Replace synthetic responses with real local LLM outputs from Ollama.")
-    lines.append("3. Run a 100-event pilot with one local model.")
-    lines.append("4. Save each model response in the same JSONL format.")
-    lines.append("5. Run ReasonGuard on real LLM responses.")
-    lines.append("6. Start manual annotation of 50-100 outputs.")
-    lines.append("7. Prepare methodology text for the thesis in Overleaf.")
-    lines.append("")
-
-    lines.append("## 8. Questions for supervisor assistant")
-    lines.append("")
-    lines.append("1. Is the current JSON formal bound structure acceptable as an interim schema?")
-    lines.append("2. Which fields from the official automaton output should be mandatory in the final bound?")
-    lines.append("3. Should the evaluation start with IEC-104 only, or should Modbus be integrated immediately?")
-    lines.append("4. Is synthetic response testing acceptable as a software validation step before real LLM inference?")
-    lines.append("5. For the first pilot, is 100 events x 1 model sufficient?")
-    lines.append("")
+    for model_name in sorted(counts):
+        row = counts[model_name]
+        lines.append(
+            "| "
+            + " | ".join(
+                [
+                    model_name,
+                    str(row["total"]),
+                    str(row["clean"]),
+                    str(row["V1"]),
+                    str(row["V2"]),
+                    str(row["V3"]),
+                    str(row["V4"]),
+                    str(row["V5"]),
+                ]
+            )
+            + " |"
+        )
 
     return "\n".join(lines)
 
 
-def build_short_talking_points() -> str:
-    return """# 3-Minute Meeting Talking Points
+def collect_inputs() -> dict[str, Any]:
+    inputs: dict[str, Any] = {
+        "generated_at": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "have_bounds": FORMAL_BOUNDS_JSONL.exists(),
+        "have_prompts": LLM_PROMPTS_JSONL.exists(),
+        "have_synthetic": SYNTHETIC_RESPONSES_JSONL.exists(),
+        "have_ollama": OLLAMA_RESPONSES_JSONL.exists(),
+        "have_report": REASONGUARD_REPORT_JSON.exists(),
+    }
 
-## What I built
-I built a first end-to-end vertical prototype of ReasonGuard. It takes a sample IEC-104 dataset, converts each row into a machine-readable formal bound, builds LLM prompts from those bounds, generates test explanations, and checks those explanations against the V1-V5 violation taxonomy.
+    if inputs["have_bounds"]:
+        inputs["bounds_count"] = sum(1 for _ in open(FORMAL_BOUNDS_JSONL, encoding="utf-8"))
 
-## What works now
-The current pipeline produces:
-- formal JSON bounds,
-- LLM-ready prompts,
-- synthetic explanation responses,
-- ReasonGuard violation reports,
-- summary CSV and JSON results.
+    if inputs["have_prompts"]:
+        inputs["prompts_count"] = sum(1 for _ in open(LLM_PROMPTS_JSONL, encoding="utf-8"))
 
-## Why synthetic responses are used now
-I used synthetic responses first to test whether the violation checker correctly detects fabricated reasoning, contradicted reasoning, over-generalisation, under-specification, and incoherence before running real LLMs.
+    if inputs["have_synthetic"]:
+        inputs["synthetic_count"] = sum(1 for _ in open(SYNTHETIC_RESPONSES_JSONL, encoding="utf-8"))
 
-## Current limitation
-The formal class is currently a proxy observation label because the official automaton output schema is not yet integrated. I am not treating it as a final attack label.
+    if inputs["have_ollama"]:
+        inputs["ollama_count"] = sum(1 for _ in open(OLLAMA_RESPONSES_JSONL, encoding="utf-8"))
 
-## What I need feedback on
-I need feedback on whether my current formal bound schema is acceptable as an interim structure and which fields should be mandatory once the official automaton schema is available.
+    if FORMAL_BOUNDS_SUMMARY.exists():
+        inputs["bounds_summary"] = load_json(FORMAL_BOUNDS_SUMMARY)
 
-## Next step
-My next technical step is to replace synthetic responses with real local LLM responses and run a 100-event pilot.
-"""
+    if inputs["have_report"]:
+        report = load_json(REASONGUARD_REPORT_JSON)
+        inputs["summary"] = report.get("summary", {})
+
+    if REASONGUARD_REPORT_JSONL.exists():
+        report_records = load_jsonl(REASONGUARD_REPORT_JSONL)
+        inputs["per_model"] = per_model_counts(report_records)
+
+    return inputs
+
+
+def render_pipeline_stats(inputs: dict[str, Any]) -> str:
+    lines = [
+        "# ReasonGuard Pipeline Stats",
+        "",
+        "*This file is auto-generated by `src/prepare_meeting_pack.py`. The curated*",
+        "*weekly meeting pack lives in `week_NN_meeting_pack.md` and is hand-written.*",
+        "",
+        f"Generated at (UTC): {inputs['generated_at']}",
+        "",
+        "## Artefact counts",
+        "",
+    ]
+
+    lines.append(f"- Formal bounds: {inputs.get('bounds_count', 'n/a')}")
+    lines.append(f"- LLM prompts: {inputs.get('prompts_count', 'n/a')}")
+    lines.append(f"- Synthetic responses: {inputs.get('synthetic_count', 'n/a')}")
+    lines.append(f"- Real local-LLM responses (Ollama): {inputs.get('ollama_count', 'n/a')}")
+    lines.append("")
+
+    summary = inputs.get("summary", {})
+
+    if summary:
+        lines.append("## Violation summary")
+        lines.append("")
+        lines.append(f"- Total responses analysed: {summary.get('total_responses')}")
+        lines.append(f"- No violation (clean): {summary.get('no_violation')}")
+        lines.append(f"- V1 fabricated reasoning: {summary.get('V1_fabricated_reasoning')}")
+        lines.append(f"- V2 contradicted reasoning: {summary.get('V2_contradicted_reasoning')}")
+        lines.append(f"- V3 over-generalised reasoning: {summary.get('V3_over_generalised_reasoning')}")
+        lines.append(f"- V4 under-specified reasoning: {summary.get('V4_under_specified_reasoning')}")
+        lines.append(f"- V5 incoherent reasoning: {summary.get('V5_incoherent_reasoning')}")
+        lines.append("")
+
+    per_model = inputs.get("per_model")
+
+    if per_model:
+        lines.append("## Per-model breakdown")
+        lines.append("")
+        lines.append(render_per_model_table(per_model))
+        lines.append("")
+
+    bounds_summary = inputs.get("bounds_summary", {})
+    proxy_event_counts = bounds_summary.get("proxy_event_type_counts")
+
+    if proxy_event_counts:
+        lines.append("## Proxy event-type distribution")
+        lines.append("")
+
+        for event_type, count in sorted(proxy_event_counts.items(), key=lambda pair: -pair[1]):
+            lines.append(f"- {event_type}: {count}")
+
+        lines.append("")
+
+    return "\n".join(lines)
+
+
+def copy_summary_csv() -> Path | None:
+    if not REASONGUARD_SUMMARY_CSV.exists():
+        return None
+
+    df = pd.read_csv(REASONGUARD_SUMMARY_CSV)
+    df.to_csv(MEETING_SUMMARY_CSV, index=False)
+
+    return MEETING_SUMMARY_CSV
 
 
 def main() -> None:
-    check_required_files()
+    ensure_project_directories()
 
-    meeting_report = build_markdown_report()
-    talking_points = build_short_talking_points()
+    inputs = collect_inputs()
+    stats_markdown = render_pipeline_stats(inputs)
 
-    report_path = MEETING_DIR / "reason_guard_meeting_pack.md"
-    talking_points_path = MEETING_DIR / "talking_points_3_min.md"
+    PIPELINE_STATS_PATH.write_text(stats_markdown, encoding="utf-8")
+    csv_path = copy_summary_csv()
 
-    report_path.write_text(meeting_report, encoding="utf-8")
-    talking_points_path.write_text(talking_points, encoding="utf-8")
+    print("Meeting pack stats refreshed successfully.")
+    print(f"Pipeline stats: {PIPELINE_STATS_PATH}")
 
-    if REQUIRED_FILES["reason_guard_summary_csv"].exists():
-        df = pd.read_csv(REQUIRED_FILES["reason_guard_summary_csv"])
-        df.to_csv(MEETING_DIR / "reason_guard_summary_for_meeting.csv", index=False)
-
-    print("Meeting pack created successfully.")
-    print(f"Main report: {report_path}")
-    print(f"Talking points: {talking_points_path}")
-    print(f"CSV summary: {MEETING_DIR / 'reason_guard_summary_for_meeting.csv'}")
+    if csv_path is not None:
+        print(f"Meeting CSV: {csv_path}")
+    else:
+        print("Summary CSV not present yet; skipping copy.")
 
 
 if __name__ == "__main__":

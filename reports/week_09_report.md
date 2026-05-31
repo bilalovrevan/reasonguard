@@ -36,6 +36,15 @@ extraction pipeline: spaCy NER on LLM outputs" block.
   appendices, references.bib with all eight required papers).
 - Created the structured reading-note templates for all eight required papers under
   `thesis_notes/`.
+- Generated the first 50-row manual annotation batch under
+  `annotation/annotation_batch.csv`; this is the seed of the 200-pair ground-truth
+  set required at the M4 milestone.
+- Rewrote `src/prepare_meeting_pack.py` so that it produces an auto-generated
+  `meeting_pack/pipeline_stats.md` and a refreshed meeting CSV without overwriting
+  the hand-written `week_09_meeting_pack.md`.
+- Added `src/viz.py` with two figures saved under `outputs/figures/`:
+  `violation_rate_per_model.png` and `clean_rate_per_model.png`. The figures can be
+  shown directly in the meeting and reused later in the thesis Results chapter.
 
 ## 3. Honest gap vs the exposé week-9 target
 
