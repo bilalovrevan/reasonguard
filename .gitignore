@@ -37,6 +37,9 @@ env/
 # Archived raw data
 archive/v1_prototypes/*.csv
 
+# Manual backup copies used during long pilot runs
+outputs/ollama_responses_*.SAVED.jsonl
+
 # Office temp files
 ~$*.docx
 ~$*.xlsx

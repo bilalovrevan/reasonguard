@@ -4,51 +4,148 @@
 \section{Datasets}
 \label{sec:datasets}
 
-Two datasets, both publicly available on IEEE DataPort, are used in the empirical
-evaluation: the Modbus dataset for ICS anomaly detection \autocite{RysavyMatousek2021Modbus}
-and the ICS dataset for smart-grid anomaly detection \autocite{MatousekRysavyGrofcik2022SmartGrid}.
+The empirical evaluation uses two publicly available datasets published on
+IEEE DataPort by the NES@FIT group at the Faculty of Information Technology,
+Brno University of Technology.
 
-[Author's note: report the number of events, the event-type distribution, and the
-preprocessing applied to each dataset before bound construction.]
+The first dataset, \emph{Modbus Dataset for ICS Anomaly Detection}
+\autocite{RysavyMatousek2021Modbus}, captures Modbus traffic from a
+controlled industrial testbed. The dataset is used for the function code
+violation and replay attack event types in the exposé.
+
+The second dataset, \emph{ICS Dataset for Smart Grid Anomaly Detection}
+\autocite{MatousekRysavyGrofcik2022SmartGrid}, captures IEC-104 traffic from
+a smart-grid testbed. The pipeline currently uses the eon-iec subset of this
+dataset; the working file is \texttt{data/raw/sample\_003.csv} with 20\,000
+atomic IEC-104 rows.
+
+[Author's note: report exact row counts after each preprocessing step, plus
+the column dictionary that links each CSV column to a feature in the formal
+bound.]
+
+\section{Proxy Event-Type Distribution}
+\label{sec:event-type-distribution}
+
+Under the proxy classifier (Section~\ref{subsec:proxy-event-types}) the
+20\,000 IEC-104 bounds decompose into four observed event types:
+
+\begin{center}
+\begin{tabular}{lr}
+  \toprule
+  Proxy event type & Count \\
+  \midrule
+  normal\_modbus\_polling & 16\,205 \\
+  topology\_change & 3\,683 \\
+  network\_scan & 68 \\
+  function\_code\_violation & 44 \\
+  replay\_attack & 0 (absent from sample) \\
+  \bottomrule
+\end{tabular}
+\end{center}
+
+The fifth canonical event type (replay attack) is absent from the current
+sample. The evaluation therefore covers four of the five canonical event
+types under the proxy regime; the fifth will be added once the
+function\_code\_violation and replay\_attack categories are sourced from the
+Modbus dataset.
 
 \section{Language Models}
 \label{sec:models}
 
-Three local models are deployed via Ollama with 4-bit quantisation on a CPU-only
-inference path: Llama-3.1-8B-Instruct, Mistral-7B-v0.3-Instruct, and Phi-3-Mini.
-Two cloud models are accessed via vendor APIs: GPT-4o-mini (OpenAI) and Gemini-1.5-Flash
-(Google).
+\subsection{Local Models}
+The pipeline runs three local models through Ollama 0.23.3 with 4-bit
+quantisation on a CPU-only inference path:
 
-[Author's note: report inference latency, observed determinism, and per-model token
-counts. Tabulate the model selection rationale with respect to model size and
-quantisation.]
+\begin{itemize}
+  \item \texttt{llama3.1:8b-instruct-q4\_0} ($\approx$ 4.7~GB on disk).
+  \item \texttt{mistral:7b-instruct-v0.3-q4\_0} ($\approx$ 4.1~GB on disk).
+  \item \texttt{phi3:mini} ($\approx$ 2.2~GB on disk).
+\end{itemize}
+
+Each call uses the same generation parameters: temperature 0.1, top-p 0.9.
+Latency on the reference hardware is approximately 11--14 seconds per
+prompt for the 7B and 8B models, and approximately 11~seconds for
+\texttt{phi3:mini}.
+
+\subsection{Cloud Models}
+\label{subsec:cloud-models}
+
+The cloud-model batch uses \texttt{gpt-4o-mini} (OpenAI) and
+\texttt{gemini-1.5-flash} (Google). The runner at
+\texttt{src/cloud\_llm\_runner.py} is implemented as a thin urllib client and
+gracefully skips when the corresponding API key environment variable is
+unset. The cloud batch is deferred to weeks 13--14 to keep the API spend
+predictable and to allow the local-model results to stabilise the violation
+taxonomy first.
 
 \section{Prompt Design}
 \label{sec:prompts}
 
-Each prompt comprises a system prompt that sets the analyst role and the strict-rule
-context, and a user prompt that contains the formal bound and the explicit lists of
-allowed, required, and forbidden claims. Three prompt variants are compared in a
-20-sample pilot at the start of the evaluation block.
+Every prompt comprises a fixed analyst system prompt and a user prompt that
+embeds the JSON formal bound together with the explicit lists of allowed,
+required, and forbidden claims. The user prompt is intentionally verbose so
+that any deviation in the LLM output is a deliberate model failure rather
+than a prompt-engineering shortfall. Three prompt variants will be compared
+in a 20-sample pilot at the start of the W11 evaluation block; the
+production variant is the one used to produce all responses reported in
+Chapter~\ref{ch:results}.
 
-[Author's note: include the full system and user prompt templates as appendix listings;
-report the pilot results and justify the choice of the production prompt variant.]
+\section{Stratified Sampling}
+\label{sec:stratified-sampling}
+
+To compare model behaviour across event types, prompt selection uses
+stratified sampling: \texttt{src/prompt\_builder.py} samples a fixed number
+of bounds per proxy event type (controlled by the
+\texttt{REASONGUARD\_PER\_EVENT\_TYPE} environment variable, default 20).
+The sampler is seeded by \texttt{RANDOM\_SEED} so the selection is
+reproducible. The current production run uses 25 bounds per event type,
+yielding 100 prompts in total across the four observed event types.
 
 \section{Evaluation Protocol}
 \label{sec:protocol}
 
-The evaluation produces five hundred explanations per model and per event type, for a
-target of 2\,500 explanation pairs across five models and five event types. Each
-explanation is processed by \textsc{ReasonGuard} and labelled with its violation
-codes and severity. Two hundred explanation pairs are manually annotated for ground
-truth, and per-class precision, recall, and $F_{1}$ are reported. A subset of fifty
-explanations is independently labelled by a VUT Brno domain expert at the M4
-milestone, and inter-rater agreement is reported as Cohen's $\kappa$.
+The evaluation has three populations.
+
+\paragraph{Synthetic regression set.}
+For every selected bound the generator produces a small set of canonical
+responses, one per V class plus one clean response. This set is the source
+of truth for the V1--V5 detector unit tests. It is not used to draw
+conclusions about model behaviour.
+
+\paragraph{Local-model batch.}
+The three local models each produce one explanation per prompt. The
+resulting (model, event\_type) cells are the production data analysed in
+Chapter~\ref{ch:results}.
+
+\paragraph{Cloud-model batch.}
+The two cloud models each produce one explanation per prompt. The results
+are added to the same combined report and the same per-event-type analysis.
+
+The verification step is the same for all three populations: every response
+is processed by \texttt{src/reason\_guard\_checker.py}, which produces the
+V1--V5 violation set, the severity rating, and (when spaCy is installed) the
+per-claim three-state verdicts.
+
+\section{Manual Annotation}
+\label{sec:manual-annotation}
+
+The exposé requires manually annotated explanation pairs for the M4
+milestone (200 pairs at week 14). The first 50-row pilot batch is generated
+by \texttt{src/manual\_annotation.py} and saved to
+\texttt{annotation/annotation\_batch.csv}; the annotator fills in
+\texttt{human\_label} and \texttt{human\_severity} columns and saves the
+result as \texttt{annotation\_results.csv}. The
+\texttt{src/evaluation\_metrics.py} module then computes per-class
+precision, recall, F1, accuracy, the confusion matrix, and Cohen's $\kappa$.
 
 \section{Tracking, Reproducibility, and Data Provenance}
 \label{sec:reproducibility}
 
-All runs are tracked in MLflow with the configuration described in
-Section~\ref{sec:implementation-notes}. The MLflow experiment per pipeline stage and the
-artefact paths are listed in Appendix~\ref{app:reproducibility}. The full pipeline can
-be reproduced from the published GitHub repository and the published Zenodo dataset.
+All runs are tracked in MLflow at the SQLite URI declared in
+\texttt{src/pipeline\_config.MLFLOW\_TRACKING\_URI}. The MLflow experiment
+names per pipeline stage are listed in Appendix~\ref{app:reproducibility}.
+The full pipeline can be reproduced from the published GitHub repository
+and the published Zenodo dataset (links pending the M8 milestone).
+
+[Author's note: insert the canonical "reproduce these results" code block
+once the M8 milestone freezes the schema and the artefact set.]
