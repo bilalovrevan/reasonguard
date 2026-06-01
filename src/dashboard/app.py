@@ -24,7 +24,6 @@ import streamlit as st
 from src.pipeline_config import FORMAL_BOUNDS_JSONL
 from src.reason_guard_checker import check_response
 
-
 EXAMPLE_RESPONSE_OPTIONS = {
     "Clean (well-bounded)": (
         "The formal bound describes an iec104 observation from source identifier "
@@ -78,7 +77,7 @@ def load_first_bounds(path: Path, limit: int = 10) -> list[dict[str, Any]]:
 
     records = []
 
-    with open(path, "r", encoding="utf-8") as file:
+    with open(path, encoding="utf-8") as file:
         for line in file:
             line = line.strip()
 

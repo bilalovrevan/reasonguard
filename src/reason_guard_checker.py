@@ -181,7 +181,7 @@ SAFE_NEGATION_PATTERNS = [
 def load_jsonl(path) -> list[dict[str, Any]]:
     records = []
 
-    with open(path, "r", encoding="utf-8") as file:
+    with open(path, encoding="utf-8") as file:
         for line in file:
             line = line.strip()
 

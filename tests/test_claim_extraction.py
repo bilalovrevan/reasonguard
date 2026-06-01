@@ -4,12 +4,12 @@ from src.claim_extraction.entity_ruler import (
     ICS_ENTITY_PATTERNS,
     build_entity_ruler_patterns,
 )
+from src.claim_extraction.extractor import ExtractedClaims
 from src.claim_extraction.three_state_classifier import (
     ClaimVerdict,
     PerClaimVerdict,
     classify_claims_against_bound,
 )
-from src.claim_extraction.extractor import ExtractedClaims
 
 
 def _sample_bound() -> dict:

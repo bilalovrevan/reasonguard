@@ -50,7 +50,7 @@ from src.pipeline_config import (
 def load_jsonl(path: Path) -> list[dict[str, Any]]:
     records = []
 
-    with open(path, "r", encoding="utf-8") as file:
+    with open(path, encoding="utf-8") as file:
         for line in file:
             line = line.strip()
             if line:

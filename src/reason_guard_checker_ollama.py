@@ -1,13 +1,12 @@
 from __future__ import annotations
 
-import json
 import shutil
 
 from src.pipeline_config import (
     OLLAMA_RESPONSES_JSONL,
-    SYNTHETIC_RESPONSES_JSONL,
     REASONGUARD_REPORT_JSON,
     REASONGUARD_SUMMARY_CSV,
+    SYNTHETIC_RESPONSES_JSONL,
 )
 
 

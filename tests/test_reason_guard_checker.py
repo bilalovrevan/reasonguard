@@ -4,10 +4,6 @@ from src.reason_guard_checker import (
     check_response,
     classify_severity,
     detect_v1_fabricated_reasoning,
-    detect_v2_contradicted_reasoning,
-    detect_v3_over_generalised_reasoning,
-    detect_v4_under_specified_reasoning,
-    detect_v5_incoherent_reasoning,
     extract_claims,
 )
 

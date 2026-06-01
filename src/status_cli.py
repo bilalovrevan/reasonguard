@@ -35,7 +35,7 @@ def _load_json(path: Path) -> dict | None:
     if not path.exists():
         return None
 
-    with open(path, "r", encoding="utf-8") as file:
+    with open(path, encoding="utf-8") as file:
         return json.load(file)
 
 

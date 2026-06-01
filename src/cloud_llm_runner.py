@@ -33,7 +33,6 @@ from src.pipeline_config import (
     ensure_project_directories,
 )
 
-
 CLOUD_RESPONSES_JSON = OUTPUT_DIR / "cloud_llm_responses_sample_003.json"
 CLOUD_RESPONSES_JSONL = OUTPUT_DIR / "cloud_llm_responses_sample_003.jsonl"
 CLOUD_RESPONSES_PREVIEW = OUTPUT_DIR / "cloud_llm_responses_preview.txt"
@@ -50,7 +49,7 @@ GEMINI_DEFAULT_MODEL = "gemini-1.5-flash"
 def load_jsonl(path: Path) -> list[dict[str, Any]]:
     records = []
 
-    with open(path, "r", encoding="utf-8") as file:
+    with open(path, encoding="utf-8") as file:
         for line in file:
             line = line.strip()
 

@@ -12,11 +12,10 @@ appear together in an assertion that the model itself is making.
 
 from __future__ import annotations
 
+from collections.abc import Iterable
 from dataclasses import dataclass
-from typing import Iterable
 
 from src.claim_extraction.negation_scope import NEGATION_TOKENS
-
 
 CONFLICTING_PAIRS: list[tuple[str, str]] = [
     ("normal", "malicious"),

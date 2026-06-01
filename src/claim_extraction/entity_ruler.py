@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from typing import Any
 
-
 ICS_ENTITY_PATTERNS: list[dict[str, Any]] = [
     {"label": "PROTOCOL", "pattern": [{"LOWER": "iec104"}]},
     {"label": "PROTOCOL", "pattern": [{"LOWER": "iec"}, {"TEXT": "-"}, {"LOWER": "104"}]},

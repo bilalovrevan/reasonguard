@@ -32,7 +32,6 @@ from src.pipeline_config import (
     ensure_project_directories,
 )
 
-
 VIOLATION_LABELS = ["NONE", "V1", "V2", "V3", "V4", "V5", "MIXED"]
 SEVERITY_LABELS = ["none", "low", "medium", "high"]
 
@@ -40,7 +39,7 @@ SEVERITY_LABELS = ["none", "low", "medium", "high"]
 def load_jsonl(path: Path) -> list[dict[str, Any]]:
     records = []
 
-    with open(path, "r", encoding="utf-8") as file:
+    with open(path, encoding="utf-8") as file:
         for line in file:
             line = line.strip()
             if line:
@@ -145,7 +144,7 @@ def compute_inter_rater_metrics(results_path: Path) -> dict[str, Any]:
     human_codes: list[str] = []
     matches = 0
 
-    with open(results_path, "r", encoding="utf-8") as file:
+    with open(results_path, encoding="utf-8") as file:
         reader = csv.DictReader(file)
 
         for row in reader:

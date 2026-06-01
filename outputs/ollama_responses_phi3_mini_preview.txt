@@ -1,13 +1,13 @@
 === OLLAMA LLM RESPONSE PREVIEW ===
-Total responses: 20
+Total responses: 100
 
 Response ID: evt_015867_ollama_phi3_mini
 Model: phi3:mini
 Event ID: evt_015867
 OK: True
-Elapsed seconds: 15.290670156478882
+Elapsed seconds: 12.830716848373413
 Response:
-The IEC104_OBSERVATION_UNCLASSIFIED label indicates that, based on the provided formal observation of event evt_015867 within dataset eon_iec at granularity atomic_row and timestamped as 1654646411950 using schema proxy_until_official_automaton_schema in version 2.1, the network traffic between source identifier 885 (client) and destination identifier 8 has been identified through IEC-104 protocol hint as an i_format_information_transfer pattern with a packet size of 62 bytes over ports 4115 to 2404. The observed ASDU fields, including address 4655, cot number 7, and item count one for type 103 devices, align consistently within the formal bound's parameters without any explicit indication of malicious intent or security breach as per the proxy_not_ground_truth_attack_label status.
+The IEC104_OBSERVATION_UNCLASSIFIED label indicates that, based on the provided formal observation of event evt_015867 within dataset eon_iec at granularity atomic_row and timestamped as 1654646411950 using schema proxy_until_official_automaton_schema in version 2.1, the network traffic between source identifier 885 (client) and destination identifier 8 (server), specifically through IEC protocol hint iec104 communication direction client_to_server with frame type i_format_information_transfer observed at a packet size of 62 bytes over port numbers 4115 for source and 2404 for the server, has been identified. The ASDU address is noted as 4655, along with an ASDU cot numbered 7 containing one item (asdu_items: 1) within a type of 103 (COT-type). This observation does not confirm any malicious activity or security breach and remains classified under the proxy formal label without ground truth attack verification.
 
 ================================================================================
 
@@ -15,9 +15,13 @@ Response ID: evt_003293_ollama_phi3_mini
 Model: phi3:mini
 Event ID: evt_003293
 OK: True
-Elapsed seconds: 14.169955015182495
+Elapsed seconds: 13.104505062103271
 Response:
-The IEC104_OBSERVATION_UNCLASSIFIED label indicates that, based on the provided formal observation of event evt_003293 within dataset eon_iec at granularity atomic_row and timestamped as 1654646405272 using schema proxy_until_official_automaton_schema in version 2.1, the network traffic between source identifier 38 (client) and destination identifier 37 (server), through ports 51770 and 2404 respectively, has been identified as an IEC-104 protocol communication with a packet size of 60 bytes wherein the length field is noted to be 18. The frame type i_format_information_transfer suggests that this event represents data transfer within industrial control systems (ICS) networks using IEC-104 standard, without any explicit indication towards malicious intent or confirmation of a security incident as per the formal class status and observation pattern provided in the bound.
+The IEC104_OBSERVATION_UNCLASSIFIED label has been applied to a network event, identified by Event ID evt_003293 within dataset eon_iec at atomic granularity level and timestamped as 1654646405272. The formal bound version is set at 2.1 with the schema status being proxy until official automaton schema confirmation, indicating that this label has not been ground-truth verified for an attack or malicious activity yet.
+
+The network event in question involves communication from source identifier 38 to destination identifier 37 over IEC protocol hint iec104 using the client_to_server direction with a packet size of 60 bytes and length field value of 18, observed through ASDU fields including address 1001, type 50 (indicating COT is 6), item count as one. The frame format used for this information transfer was i_format_information_transfer with a byte size indicative by the IEC-104 protocol hint and consistent ASDU fields observed in the formal bound data set, specifically using source port numbered at 51770 and destination port at 2404.
+
+Given that this observation is labeled as unclassified within a proxy class status by IEC104_OBSERVATION_UNCLASSIFIED formal label without any ground-truth attack verification, no definitive security conclusions can be drawn from the observed data alone at present.
 
 ================================================================================
 
@@ -25,9 +29,9 @@ Response ID: evt_000609_ollama_phi3_mini
 Model: phi3:mini
 Event ID: evt_000609
 OK: True
-Elapsed seconds: 15.826425075531006
+Elapsed seconds: 9.850772857666016
 Response:
-The IEC104_OBSERVATION_UNCLASSIFIED label indicates that, based on the provided formal observation of event evt_000609 within dataset eon_iec at granularity atomic_row and timestamped as 1654646404376 using schema proxy_until_official_automaton_schema version 2.1, the network traffic between source identifier 37 and destination identifier 38 has been identified through IEC-104 protocol hint with a packet size of 60 bytes (pkt_length field value is 18). The communication direction observed was server to client via port numbers 2404 for the source and 51770 for the destination. This traffic pattern, identified as iec104_information_transfer_pattern with frame type i_format_information_transfer, is associated solesly within these identifiers without any additional context or causality implied by this formal bound alone. The proxy-based classification of IEC104 protocol hint and the packet details remain consistent throughout our observation analysis; however, it's important to note that as per current information available in the formal class status—proxy_not_ground_truth_attack_label—no confirmed malicious intent or security breach can be concluded from this single event.
+The IEC104_OBSERVATION_UNCLASSIFIED label indicates that, based on the provided formal observation of event evt_000609 within dataset eon_iec at granularity atomic_row and timestamped as 1654646404376 using schema proxy_until_official_automaton_schema in version 2.1, the network traffic between source identifier 37 (source port: 2404) and destination identifier 38 (destination port: 51770), carrying a packet size of 60 bytes with an IEC-104 frame length field value of 18 in i_format_information_transfer pattern, cannot be classified as malicious or benign without further ground truth. The observed data aligns with the expected protocol hint iec104 and communication direction server_to0client but does not provide sufficient evidence for a security conclusion regarding this specific event's nature within industrial control systems network traffic analysis parameters set forth by IEC-104 standards.
 
 ================================================================================
 
@@ -35,9 +39,9 @@ Response ID: evt_005946_ollama_phi3_mini
 Model: phi3:mini
 Event ID: evt_005946
 OK: True
-Elapsed seconds: 13.481131076812744
+Elapsed seconds: 9.231608867645264
 Response:
-The IEC104 protocol hint indicates a server_to_client communication direction, with source identifier 1 and destination identifier 661 engaged in an i_format_information_transfer frame type event as per eon_iec dataset at timestamp ms: 1654646405954. The packet size is noted to be 74 bytes over a length field of 20, with source port set on 2404 and destination port on 1024. This event falls under the IEC104_OBSERVATION_UNCLASSIFIED formal class status within an atomic row granularity level in version 2.1 schema using a proxy until official automaton is established, with ASDU address of 4452 and type numbered as 103 for COT-6 items without additional data provided to confirm or deny security implications directly from the formal bound alone.
+The IEC104_OBSERVATION_UNCLASSIFIED label indicates that, based on the provided formal observation of event evt_005946 within dataset eon_iec at granularity atomic_row and timestamped as 1654646405954 using schema proxy_until_official_automaton_schema in version 2.1, the network activity between source identifier 1 (source port: 2404) and destination identifier 661 (destination port: 1024), with packet size of 74 bytes over a single ASDU address of 4452 for type 103 items in frame format i_format_information_transfer, cannot be definitively classified as normal or malicious. The communication direction is server-to-client and the protocol hinted at IEC104; however, without further ground truth attack labels to compare against, no security conclusion can currently be drawn from this observation alone.
 
 ================================================================================
 
@@ -45,8 +49,8 @@ Response ID: evt_005652_ollama_phi3_mini
 Model: phi3:mini
 Event ID: evt_005652
 OK: True
-Elapsed seconds: 13.023205041885376
+Elapsed seconds: 10.984755277633667
 Response:
-The IEC104_OBSERVATION_UNCLASSIFIED label indicates that, based on the provided formal observation of event evt_005652 within dataset eon_iec at granularity atomic_row and timestamped as 1654646405882 using schema proxy_until_official_automaton_schema in version 2.1, the network traffic observed between source identifier 38 (client) and destination identifier 37 (server), via ports 51770 and 2404 respectively, does not explicitly confirm a security incident or malicious activity within this IEC-104 communication event as per current formal class status. The packet size of 60 bytes with an ASDU length field value of 18 aligns with the observed i_format_information_transfer frame type and adheres to other specified protocol hints, ports, and fields within this IEC-104 network event observation without additional context suggesting malicious intent or causality.
+The IEC104_OBSERVATION_UNCLASSIFIED label indicates that, based on event ID evt_005652 within dataset eon_iec at granularity atomic_row and timestamped as 1654646405882 using formal bound version 2.1 with a proxy schema status of 'proxy_until_official_automaton_schema', the network event observed between source identifier 38 (client) and destination identifier 37 (server), utilizing protocol hint iec104, shows communication in client-to0 server direction via frame type i_format_information_transfer. The packet size was recorded at 60 bytes with a length field of 18 over source port 51770 and destination port 2404; the ASDU address observed is 1001, associated with COT value 6 for type 50 items in one item count. This observation does not confirm any security conclusion as it remains classified under IEC104_OBSERVATION_UNCLASSIFIED and lacks explicit malicious intent or causality within the formal bound provided, thus no mitigation actions are suggested at this time based on available data alone.
 
 ================================================================================

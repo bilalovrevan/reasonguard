@@ -23,7 +23,6 @@ from src.pipeline_config import (
     ensure_project_directories,
 )
 
-
 PER_MODEL_PATTERN = re.compile(r"ollama_responses_(?P<slug>.+?)\.jsonl$")
 EXCLUDED_PATTERNS = ("SAVED", "preview", "v1")
 
@@ -31,7 +30,7 @@ EXCLUDED_PATTERNS = ("SAVED", "preview", "v1")
 def load_jsonl(path: Path) -> list[dict[str, Any]]:
     records = []
 
-    with open(path, "r", encoding="utf-8") as file:
+    with open(path, encoding="utf-8") as file:
         for line in file:
             line = line.strip()
 

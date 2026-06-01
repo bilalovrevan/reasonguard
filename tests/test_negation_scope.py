@@ -20,7 +20,7 @@ except OSError:
 pytestmark = pytest.mark.skipif(_NLP is None, reason="en_core_web_lg not installed")
 
 
-from src.claim_extraction.negation_scope import (
+from src.claim_extraction.negation_scope import (  # noqa: E402
     filter_unsafe_terms,
     is_term_negated_in_doc,
 )

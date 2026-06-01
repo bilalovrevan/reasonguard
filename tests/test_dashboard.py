@@ -24,6 +24,6 @@ def test_severity_badges_cover_all_levels():
 
 
 def test_example_responses_are_non_empty_strings():
-    for label, text in app.EXAMPLE_RESPONSE_OPTIONS.items():
+    for _label, text in app.EXAMPLE_RESPONSE_OPTIONS.items():
         assert isinstance(text, str)
         assert len(text) > 50

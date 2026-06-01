@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from typing import Any
 
-
 PROXY_LABEL_SUFFIX = "_proxy_until_official_schema"
 
 

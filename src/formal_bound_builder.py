@@ -35,16 +35,15 @@ from src.mlflow_tracker import (
 from src.pipeline_config import (
     DATASET_NAME,
     EVENT_GRANULARITY,
+    FORMAL_BOUND_VERSION,
     FORMAL_BOUNDS_JSON,
     FORMAL_BOUNDS_JSONL,
     FORMAL_BOUNDS_PREVIEW,
     FORMAL_BOUNDS_SUMMARY,
-    FORMAL_BOUND_VERSION,
     MLFLOW_EXPERIMENT_FORMAL_BOUNDS,
     SAMPLE_INPUT_FILE,
     ensure_project_directories,
 )
-
 
 REQUIRED_COLUMNS = [
     "dstip",

@@ -2,8 +2,6 @@
 
 from __future__ import annotations
 
-import json
-
 from src.merge_ollama_responses import (
     discover_per_model_files,
     load_jsonl,

@@ -32,7 +32,6 @@ from src.pipeline_config import (
     ensure_project_directories,
 )
 
-
 SYSTEM_PROMPT = """You are an industrial control systems network security analyst.
 
 Your task is to explain a formally bounded IEC-104 network observation in precise operational English.
@@ -52,7 +51,7 @@ Strict rules:
 def load_jsonl(path) -> list[dict[str, Any]]:
     records = []
 
-    with open(path, "r", encoding="utf-8") as file:
+    with open(path, encoding="utf-8") as file:
         for line in file:
             line = line.strip()
             if line:

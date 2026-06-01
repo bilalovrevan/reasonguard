@@ -15,7 +15,7 @@ except OSError:
 pytestmark = pytest.mark.skipif(_NLP is None, reason="en_core_web_lg not installed")
 
 
-from src.claim_extraction.coherence import find_incoherent_sentences
+from src.claim_extraction.coherence import find_incoherent_sentences  # noqa: E402
 
 
 def test_conflicting_terms_in_same_sentence_are_flagged():

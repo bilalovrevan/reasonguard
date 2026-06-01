@@ -21,19 +21,18 @@ from src.pipeline_config import (
     ensure_project_directories,
 )
 
-
 PIPELINE_STATS_PATH = MEETING_PACK_DIR / "pipeline_stats.md"
 
 
 def load_json(path: Path) -> Any:
-    with open(path, "r", encoding="utf-8") as file:
+    with open(path, encoding="utf-8") as file:
         return json.load(file)
 
 
 def load_jsonl(path: Path) -> list[dict[str, Any]]:
     records = []
 
-    with open(path, "r", encoding="utf-8") as file:
+    with open(path, encoding="utf-8") as file:
         for line in file:
             line = line.strip()
 

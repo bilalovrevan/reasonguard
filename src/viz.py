@@ -45,7 +45,7 @@ VIOLATION_LABELS = {
 def load_jsonl(path: Path) -> list[dict[str, Any]]:
     records = []
 
-    with open(path, "r", encoding="utf-8") as file:
+    with open(path, encoding="utf-8") as file:
         for line in file:
             line = line.strip()
             if line:
@@ -121,7 +121,7 @@ def plot_clean_rate_bar(
     figure, axes = plt.subplots(figsize=(7.5, 4))
     bars = axes.bar(model_names, clean_rates, color="#3a86ff")
 
-    for bar, rate in zip(bars, clean_rates):
+    for bar, rate in zip(bars, clean_rates, strict=False):
         axes.text(
             bar.get_x() + bar.get_width() / 2,
             rate + 1.5,

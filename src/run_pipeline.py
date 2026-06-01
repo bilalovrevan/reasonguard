@@ -2,7 +2,6 @@ import subprocess
 import sys
 from pathlib import Path
 
-
 SCRIPTS = [
     "formal_bound_builder.py",
     "prompt_builder.py",

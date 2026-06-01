@@ -21,7 +21,6 @@ from src.pipeline_config import (
     ensure_project_directories,
 )
 
-
 EVENT_TYPE_REPORT_JSON = OUTPUT_DIR / "event_type_analysis.json"
 EVENT_TYPE_REPORT_CSV = OUTPUT_DIR / "event_type_analysis.csv"
 EVENT_TYPE_REPORT_MD = OUTPUT_DIR / "event_type_analysis.md"
@@ -30,7 +29,7 @@ EVENT_TYPE_REPORT_MD = OUTPUT_DIR / "event_type_analysis.md"
 def load_jsonl(path: Path) -> list[dict[str, Any]]:
     records = []
 
-    with open(path, "r", encoding="utf-8") as file:
+    with open(path, encoding="utf-8") as file:
         for line in file:
             line = line.strip()
 

@@ -14,9 +14,8 @@ the parser can connect it to a negation token or to a descriptive marker
 
 from __future__ import annotations
 
+from collections.abc import Iterable
 from dataclasses import dataclass
-from typing import Iterable
-
 
 NEGATION_TOKENS = {"not", "no", "never", "neither", "nor", "without"}
 DESCRIPTIVE_MARKERS = {"proxy", "schema"}

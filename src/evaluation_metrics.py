@@ -26,7 +26,6 @@ from src.pipeline_config import (
     ensure_project_directories,
 )
 
-
 VIOLATION_CLASSES = ["NONE", "V1", "V2", "V3", "V4", "V5", "MIXED"]
 PRIMARY_CLASSES = ["NONE", "V1", "V2", "V3", "V4", "V5"]
 
@@ -134,7 +133,7 @@ def load_annotation_pairs(results_path: Path) -> list[tuple[str, str]]:
 
     pairs: list[tuple[str, str]] = []
 
-    with open(results_path, "r", encoding="utf-8") as file:
+    with open(results_path, encoding="utf-8") as file:
         reader = csv.DictReader(file)
 
         for row in reader:
