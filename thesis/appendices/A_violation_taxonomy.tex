@@ -1,7 +1,152 @@
 \chapter{Reasoning Violation Taxonomy in Full Detail}
 \label{app:taxonomy}
 
-[Author's note: reproduce the V1--V5 definitions with worked ICS examples; include the
-list of attack, mitigation, causal, normality, and direction terms used by the
-rule-based detector; include the safe-negation patterns used to suppress false
-positives.]
+This appendix reproduces the V1--V5 taxonomy in full, with the rule-based
+detection logic, the lexicon term lists, and the safe-negation patterns that
+the production checker uses. The canonical source of truth is
+\texttt{src/reason\_guard\_checker.py}.
+
+\section{V1: Fabricated Reasoning}
+\label{sec:appendix-v1}
+
+\paragraph{Definition.}
+The AI asserts facts, causes, or entities not present in or derivable from
+the formal bound. Under the proxy bound, every \texttt{*\_claim\_allowed}
+flag in \texttt{machine\_constraints} defaults to \texttt{false}; therefore
+any unsupported attack, mitigation, causal, or numeric assertion fires V1.
+
+\paragraph{Detection.}
+For each candidate term, the detector applies a two-layer check:
+
+\begin{enumerate}
+  \item A spaCy dependency-parse filter
+        (\texttt{claim\_extraction/negation\_scope.py}) walks from the term
+        token up the dependency tree and treats the term as safe if any
+        ancestor has a \texttt{neg} child or a child whose lowered text is
+        in the negation set \{\texttt{not, no, never, neither, nor,
+        without}\}. The term is also treated as safe when its sentence
+        contains \texttt{proxy} or \texttt{schema}.
+  \item A substring-based safe-negation list
+        (\texttt{SAFE\_NEGATION\_PATTERNS}) provides the same protection
+        when spaCy is unavailable. Both layers are intentionally
+        conservative: a term is treated as unsafe whenever neither layer
+        can match it to a negation.
+\end{enumerate}
+
+\paragraph{Lexicon (excerpts).}
+The full lists are defined as Python constants in
+\texttt{reason\_guard\_checker.py}.
+
+\begin{itemize}
+  \item Attack terms: attack, malicious, replay, flooding, mitm,
+        man in the middle, scan, scanning, dos, denial of service,
+        command injection, intrusion, compromise, attacker, exploit.
+  \item Mitigation terms: isolate, isolated, shutdown, block, blocked,
+        quarantine, disconnect, emergency response, immediate response,
+        prevent further.
+  \item Causal terms: because, caused by, due to, therefore, in order to,
+        as a result, consequently, thus the cause, the cause of.
+  \item Numeric check: each integer in the response is compared against the
+        bound's feature values plus the constants $\{104, 2404\}$ plus the
+        observed timestamp; values not in this set and greater than 1\,000
+        are flagged.
+\end{itemize}
+
+\section{V2: Contradicted Reasoning}
+\label{sec:appendix-v2}
+
+\paragraph{Definition.}
+The AI explicitly contradicts a fact established by the formal bound.
+
+\paragraph{Detection.}
+The detector currently checks two contradiction cases:
+
+\begin{enumerate}
+  \item Direction inversion: the response uses the opposite of the bound's
+        \texttt{communication\_direction} and does not also mention the
+        bound's direction.
+  \item Identifier substitution: the response contains the literal
+        \texttt{destination\_id} value alongside the keyword \emph{source}
+        without containing the literal \texttt{source\_id} value.
+\end{enumerate}
+
+Additional contradiction cases will be added as they are observed in the
+M4 annotation pass.
+
+\section{V3: Over-Generalised Reasoning}
+\label{sec:appendix-v3}
+
+\paragraph{Definition.}
+The AI produces a correct high-level category but loses formally
+established specifics that the operator needs in order to act.
+
+\paragraph{Detection.}
+The detector fires V3 when any normality term appears in the response
+together with fewer than three of the formally observed specific values
+(source\_id, destination\_id, srcport, dstport, asdu\_type, asdu\_cot).
+Normality terms: normal traffic, benign, routine, typical, standard
+communication, no specific concern, normality.
+
+\section{V4: Under-Specified Reasoning}
+\label{sec:appendix-v4}
+
+\paragraph{Definition.}
+The AI omits formally established information that is operationally
+required for correct response.
+
+\paragraph{Detection.}
+The detector fires V4 when any of the following required references is
+missing from the response: source, destination, port, ASDU, and the
+combined uncertainty / proxy clarification. Missing references are
+reported as individual reason strings so the operator can correct the
+explanation rather than only learn that V4 has fired.
+
+\section{V5: Incoherent Reasoning}
+\label{sec:appendix-v5}
+
+\paragraph{Definition.}
+The AI explanation is internally self-contradictory, independent of the
+formal output.
+
+\paragraph{Detection.}
+The detector uses spaCy sentence segmentation
+(\texttt{claim\_extraction/coherence.py}) to find sentences that contain
+both members of a canonical conflicting pair. The detector explicitly
+skips sentences that contain a negation marker so that statements such as
+\emph{the bound does not confirm maliciousness or normality} are not
+treated as incoherent. The substring-based fallback applies when spaCy is
+unavailable.
+
+\paragraph{Conflicting pairs.}
+\begin{itemize}
+  \item \emph{normal} and \emph{malicious}
+  \item \emph{normal} and \emph{attack}
+  \item \emph{benign} and \emph{malicious}
+  \item \emph{routine} and \emph{attack}
+  \item \emph{isolated} and \emph{entire network}
+  \item \emph{single device} and \emph{entire network}
+  \item \emph{client-to-server} and \emph{server-to-client}
+\end{itemize}
+
+\section{Severity Mapping}
+\label{sec:appendix-severity}
+
+The mapping from the violation set to the severity level is:
+
+\begin{center}
+\begin{tabular}{ll}
+  \toprule
+  Violation set & Severity \\
+  \midrule
+  $\{$ V1 $\}$, $\{$ V2 $\}$, $\{$ V5 $\}$ (or any superset) & high \\
+  $\{$ V3, V4 $\}$ (without any high-severity class) & medium \\
+  $\{$ V3 $\}$ or $\{$ V4 $\}$ alone & low \\
+  $\emptyset$ & none \\
+  \bottomrule
+\end{tabular}
+\end{center}
+
+The mapping intentionally favours operator caution: any indication of
+fabricated, contradicted, or incoherent reasoning escalates the
+explanation to the high-severity review queue described in
+Section~\ref{sec:discussion-deployment}.

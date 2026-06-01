@@ -1,7 +1,134 @@
 \chapter{Prompt Specifications}
 \label{app:prompts}
 
-[Author's note: reproduce the system prompt and the user prompt template used in the
-evaluation, with the placeholder structure annotated. Include the three prompt
-variants compared in the 20-sample pilot and the rationale for selecting the
-production variant.]
+This appendix reproduces the production prompt used by \texttt{src/prompt\_builder.py}.
+Every LLM in the evaluation block in Chapter~\ref{ch:experimental-setup}
+receives this prompt with a single formal bound substituted into the user
+section.
+
+\section{System Prompt}
+\label{sec:system-prompt}
+
+The system prompt is constant across every call and defines the analyst role
+together with the strict rules that the explanation must respect.
+
+\begin{lstlisting}[language=,caption={Production system prompt.}]
+You are an industrial control systems network security analyst.
+
+Your task is to explain a formally bounded IEC-104 network observation in
+precise operational English.
+
+Strict rules:
+1. Use only facts explicitly provided in the formal bound.
+2. Do not invent attack types, malicious intent, causality, timing patterns,
+   affected assets, or mitigation actions.
+3. Do not claim that the observation is confirmed normal or confirmed
+   malicious unless the formal bound explicitly states that.
+4. Treat proxy formal classes as observation labels, not as verified attack
+   labels.
+5. Stay consistent with the source identifier, destination identifier, ports,
+   packet size, ASDU fields, protocol hint, and communication direction.
+6. If evidence is insufficient for a security conclusion, explicitly say that
+   the bound does not confirm a security conclusion.
+7. Write 3 to 5 sentences.
+8. Use professional analyst language.
+\end{lstlisting}
+
+\section{User Prompt Template}
+\label{sec:user-prompt}
+
+The user prompt is generated from a single formal bound. The placeholder
+fields are filled in by \texttt{prompt\_builder.build\_user\_prompt}.
+
+\begin{lstlisting}[language=,caption={User prompt template.}]
+Explain the following formally bounded ICS network event.
+
+Event metadata:
+- Event ID: <event_id>
+- Dataset: <dataset>
+- Event granularity: <event_granularity>
+- Timestamp ms: <timestamp_ms>
+- Formal bound version: <formal_bound_version>
+- Schema status: <schema_status>
+
+Formal observation:
+- Protocol hint: <protocol_hint>
+- Communication direction: <communication_direction>
+- Frame type: <frame_type>
+- Observation pattern: <observation_pattern>
+- Formal class: <formal_class>
+- Formal class status: <formal_class_status>
+
+Observed features:
+- source_id: <source_id>
+- destination_id: <destination_id>
+- bytes: <bytes>
+- pkt_length: <pkt_length>
+- srcport: <srcport>
+- dstport: <dstport>
+- asdu_address: <asdu_address>
+- asdu_cot: <asdu_cot>
+- asdu_items: <asdu_items>
+- asdu_type: <asdu_type>
+- frame_fmt: <frame_fmt>
+
+Allowed claims:
+<list of ten atomic statements that may be made>
+
+Required claims:
+<list of five statements that must be made>
+
+Forbidden claims:
+<list of eight statements that must not be made>
+
+Write the explanation now.
+\end{lstlisting}
+
+\section{Allowed, Required, and Forbidden Claims}
+\label{sec:claim-lists}
+
+The three claim lists are generated per bound by
+\texttt{formal\_bound\_builder.py}. Allowed claims are atomic statements
+derivable from the observed features. Required claims state that the
+explanation must mention the source identifier, the destination identifier,
+the port numbers, the ASDU fields, and the proxy nature of the formal class.
+Forbidden claims state that the explanation must not assert a confirmed
+attack, confirmed malice, an arbitrary attack class, additional devices, a
+causal explanation, an unobserved timing pattern, a mitigation requirement,
+or verified normal traffic.
+
+\section{Local Model Configuration}
+\label{sec:local-model-config}
+
+Every local model is called with identical generation parameters:
+
+\begin{itemize}
+  \item Temperature: 0.1
+  \item Top-p: 0.9
+  \item Backend: Ollama 0.23.3 with 4-bit quantisation
+  \item HTTP timeout: 180 seconds per request
+\end{itemize}
+
+The values are persisted in
+\texttt{src/pipeline\_config.py} (\texttt{OLLAMA\_TEMPERATURE},
+\texttt{OLLAMA\_TOP\_P}, \texttt{OLLAMA\_TIMEOUT\_SECONDS}) so that any run
+can be reproduced from the configuration alone.
+
+\section{Cloud Model Configuration}
+\label{sec:cloud-model-config}
+
+The cloud runner uses the same generation parameters where the vendor API
+supports them and a maximum-token cap of 600 tokens. The defaults can be
+overridden per run through environment variables
+(\texttt{OPENAI\_MODEL}, \texttt{GEMINI\_MODEL},
+\texttt{REASONGUARD\_CLOUD\_PILOT\_LIMIT}).
+
+\section{Prompt Variants}
+\label{sec:prompt-variants}
+
+The exposé specifies three prompt variants to be compared in a 20-sample
+pilot at the start of the evaluation block. The variants will be inserted
+here once the W11 pilot is run; the production variant in
+Sections~\ref{sec:system-prompt}--\ref{sec:user-prompt} is the current
+default and is also the variant used to produce every result in
+Chapter~\ref{ch:results}.
