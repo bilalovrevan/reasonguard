@@ -1,3 +1,19 @@
+"""Manual annotation pipeline for the V1-V5 ground-truth set.
+
+The exposé requires manually annotated explanation pairs (M4 milestone, week
+14). This module:
+
+1. Samples ``sample_size`` responses from the union of synthetic and Ollama
+   outputs (seeded by :data:`src.pipeline_config.RANDOM_SEED`).
+2. Writes the seed batch as a spreadsheet-friendly CSV with the machine
+   verdict next to empty human-label columns.
+3. Computes raw inter-rater agreement once the annotator returns the
+   completed file.
+
+The richer per-class precision, recall, F1, and Cohen's Kappa numbers are
+produced by :mod:`src.evaluation_metrics`.
+"""
+
 from __future__ import annotations
 
 import csv

@@ -1,3 +1,21 @@
+"""Runtime verification of LLM explanations against formally verified bounds.
+
+This module implements the central verification step of the ReasonGuard
+framework. For every (prompt, response) pair it produces:
+
+- a list of fired violation codes drawn from the V1-V5 taxonomy,
+- a severity rating (``high``, ``medium``, ``low``, ``none``),
+- per-violation reason strings, and
+- optional per-claim three-state verdicts (SUPPORTED, UNSUPPORTED,
+  CONTRADICTED) when spaCy and the ``en_core_web_lg`` model are installed.
+
+The detector intentionally combines two layers. A lexicon layer (curated
+attack, mitigation, causal, normality, and direction term lists) keeps the
+detector usable without optional dependencies. A spaCy layer (dependency
+parsing for negation scope, sentence segmentation for V5) refines V1 and V5
+when the model is available and is the layer described in the exposé.
+"""
+
 from __future__ import annotations
 
 import json

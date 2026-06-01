@@ -1,3 +1,20 @@
+"""Run pilot batches against locally hosted LLMs through the Ollama HTTP API.
+
+For each model listed in :data:`src.pipeline_config.OLLAMA_MODELS`, the runner
+iterates over the first ``OLLAMA_PILOT_LIMIT`` prompts from the prompt
+JSONL file, calls ``POST /api/generate``, and writes per-model artefacts to
+``outputs/`` plus a combined JSONL at
+:data:`src.pipeline_config.OLLAMA_RESPONSES_JSONL`. MLflow logs the per-model
+parameters and timing metrics under
+:data:`src.pipeline_config.MLFLOW_EXPERIMENT_OLLAMA`.
+
+Two environment variables let an ad-hoc run override the configuration
+without touching the source:
+
+- ``REASONGUARD_OLLAMA_MODELS`` — comma-separated subset of model names.
+- ``REASONGUARD_PILOT_LIMIT`` — integer prompt limit per model.
+"""
+
 from __future__ import annotations
 
 import json
@@ -99,14 +116,20 @@ def call_ollama(prompt: str, model_name: str) -> dict[str, Any]:
             "elapsed_seconds": elapsed_seconds,
         }
 
-    except urllib.error.URLError as error:
-        elapsed_seconds = time.time() - started_at
-
+    except (urllib.error.URLError, TimeoutError, OSError, ConnectionError) as error:
         return {
             "ok": False,
             "response": "",
-            "error": str(error),
-            "elapsed_seconds": elapsed_seconds,
+            "error": f"{type(error).__name__}: {error}",
+            "elapsed_seconds": time.time() - started_at,
+        }
+
+    except Exception as error:
+        return {
+            "ok": False,
+            "response": "",
+            "error": f"{type(error).__name__}: {error}",
+            "elapsed_seconds": time.time() - started_at,
         }
 
 

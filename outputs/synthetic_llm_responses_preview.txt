@@ -1,5 +1,5 @@
 === SYNTHETIC RESPONSE PREVIEW ===
-Total synthetic responses: 200
+Total synthetic responses: 500
 
 Response ID: evt_015867_clean_supported
 Type: clean_supported

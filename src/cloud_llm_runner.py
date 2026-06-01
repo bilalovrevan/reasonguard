@@ -1,3 +1,18 @@
+"""Run pilot batches against cloud LLMs (OpenAI, Gemini) via their HTTP APIs.
+
+The runner intentionally avoids the vendor SDKs and uses ``urllib`` directly
+to keep the dependency footprint small. A provider is skipped automatically
+when its API key environment variable is not set, so importing or executing
+this module is always safe even in secret-less environments.
+
+Environment variables consumed:
+
+- ``OPENAI_API_KEY`` — bearer token for the OpenAI Chat Completions endpoint.
+- ``GEMINI_API_KEY`` — API key for the Gemini generateContent endpoint.
+- ``OPENAI_MODEL`` / ``GEMINI_MODEL`` — optional model name overrides.
+- ``REASONGUARD_CLOUD_PILOT_LIMIT`` — integer prompt limit per provider.
+"""
+
 from __future__ import annotations
 
 import json

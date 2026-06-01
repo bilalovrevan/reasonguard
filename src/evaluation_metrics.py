@@ -1,3 +1,17 @@
+"""Per-class precision, recall, F1, accuracy, and Cohen's Kappa.
+
+This module compares the machine label produced by ReasonGuard with the
+human label in :data:`src.pipeline_config.ANNOTATION_RESULTS_CSV` and
+writes:
+
+- a JSON report with per-class numbers and the confusion matrix,
+- a markdown report rendering the same numbers as readable tables.
+
+The M5 milestone in the exposé requires Cohen's $\\kappa$ between
+ReasonGuard and a VUT Brno domain expert; that is computed by
+:func:`compute_cohens_kappa` using the linear (categorical) definition.
+"""
+
 from __future__ import annotations
 
 import csv

@@ -1,5 +1,5 @@
 === LLM PROMPT PREVIEW ===
-Total prompts created: 40
+Total prompts created: 100
 
 Event ID: evt_015867
 

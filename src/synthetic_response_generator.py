@@ -1,3 +1,12 @@
+"""Synthetic adversarial responses used to regression-test the V1-V5 detector.
+
+For every formal bound the generator produces a small set of canonical
+responses, one per V class plus one clean response, that the detector should
+classify correctly. Synthetic responses are the source of truth for the V1-V5
+regression tests; they let us verify that the detector still fires on the
+canonical failure modes after refactors.
+"""
+
 from __future__ import annotations
 
 import json

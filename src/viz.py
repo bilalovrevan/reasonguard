@@ -1,3 +1,11 @@
+"""Matplotlib figures consumed by the meeting pack and the thesis Results chapter.
+
+All figures are written to ``outputs/figures/`` and are deliberately
+self-contained: the script reads only from the persisted ReasonGuard report
+and the evaluation_metrics JSON so the figures can be regenerated at any
+point in the project life cycle.
+"""
+
 from __future__ import annotations
 
 import json

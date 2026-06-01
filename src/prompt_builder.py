@@ -1,3 +1,20 @@
+"""Build strict LLM prompts from JSON formal bounds.
+
+Each prompt comprises a fixed analyst system prompt and a user prompt that
+embeds the formal bound, including the explicit allowed, required, and
+forbidden claim lists. The user prompt is intentionally verbose so that any
+deviation by the LLM is a deliberate model failure rather than a
+prompt-engineering shortfall.
+
+Stratified sampling
+-------------------
+When the environment variable ``REASONGUARD_STRATIFY`` is set, the builder
+groups bounds by ``proxy_event_type`` and samples
+``REASONGUARD_PER_EVENT_TYPE`` bounds from each bucket (default 20). The
+sampler is seeded by :data:`src.pipeline_config.RANDOM_SEED` so the selection
+is reproducible.
+"""
+
 from __future__ import annotations
 
 import json

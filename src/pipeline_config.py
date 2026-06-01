@@ -1,3 +1,17 @@
+"""Central configuration for the ReasonGuard pipeline.
+
+This module is intentionally side-effect-free. It exposes:
+
+- absolute paths for every artefact the pipeline reads and writes,
+- the list of local LLM models that the Ollama runner iterates over,
+- the canonical list of proxy event types from the exposé,
+- random seeds, MLflow experiment names, and other run-level constants.
+
+Importing this module never touches the file system; the helper
+``ensure_project_directories`` is the single place that creates folders, and
+the pipeline scripts call it explicitly at the start of ``main``.
+"""
+
 from __future__ import annotations
 
 from pathlib import Path

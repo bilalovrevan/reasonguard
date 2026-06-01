@@ -1,3 +1,12 @@
+"""Per-(model x event-type) breakdown of ReasonGuard verdicts.
+
+The exposé requires a model-comparison and a condition-comparison analysis in
+weeks 16-17. This module is the building block for both: it joins the
+ReasonGuard report with the prompt-level proxy event type and produces a
+breakdown that can be loaded into the thesis as a table or into matplotlib
+as a heat map.
+"""
+
 from __future__ import annotations
 
 import csv
