@@ -1900,6 +1900,1906 @@
     }
   },
   {
+    "response_id": "evt_015867_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_015867",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646411950, an IEC-104 network event (evt_015867) occurred within the eon_iec dataset. The observed communication was from source identifier 885 to destination identifier 8, using ports 4115 and 2404 respectively. This communication followed the iec104_information_transfer_pattern and utilized the i_format_information_transfer frame type. The ASDU fields included an address of 4655, a COT value of 7, and one item with type 103. However, it is important to note that the formal class assigned to this observation is IEC104_OBSERVATION_UNCLASSIFIED, which serves as a proxy label and does not confirm or deny any malicious intent. The packet size was 62 bytes, with a packet length field of 20. No further conclusions can be drawn about the nature of this event based on the provided formal bound.",
+    "generation_ok": true,
+    "elapsed_seconds": 21.53336238861084,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646411950,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_003293_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_003293",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646405272, an information transfer event (event ID: evt_003293) occurred within the industrial control system network (dataset: eon_iec). The observed protocol was IEC-104, and the communication direction was from client to server. Specifically, source identifier 38 communicated with destination identifier 37 using port numbers 51770 and 2404 respectively. The packet size was 60 bytes, with a packet length field of 18.\n\nThe observed frame type was i_format_information_transfer, and the ASDU fields were as follows: address 1001, COT 6, type 50, and item count 1. This event conforms to the IEC104_information_transfer_pattern. However, it is important to note that the formal class assigned to this observation is a proxy label (IEC104_OBSERVATION_UNCLASSIFIED), which does not confirm or deny any security conclusions regarding potential cyber attacks or malicious activity.",
+    "generation_ok": true,
+    "elapsed_seconds": 16.857901096343994,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646405272,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_000609_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_000609",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646404376, an IEC-104 network event (evt_000609) occurred within the eon_iec dataset. The observed communication was from server to client between source identifier 37 and destination identifier 38. The source port was 2404, and the destination port was 51770. The packet size was 60 bytes, with a packet length field of 18.\n\nThe frame type was i_format_information_transfer, and the observed ASDU fields were as follows: address 1001, type 50, COT 7, and item count 1. This event conforms to the iec104_information_transfer_pattern. However, it is important to note that the formal class assigned to this observation (IEC104_OBSERVATION_UNCLASSIFIED) is a proxy label and does not confirm or deny any malicious intent. The event remains consistent with the IEC-104 protocol hint when present. No further conclusions can be drawn about the nature of this network event based on the provided formal bound.",
+    "generation_ok": true,
+    "elapsed_seconds": 18.987276792526245,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646404376,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_005946_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_005946",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646405954, an IEC-104 network event (evt_005946) occurred within the eon_iec dataset. The observed communication was from server to client, with source identifier 1 and destination identifier 661. The source port was 2404, and the destination port was 1024. The packet size was 74 bytes, and the packet length field indicated 20 bytes of data.\n\nThe observed frame type was i_format_information_transfer, and the protocol hint suggested IEC-104 communication. The ASDU address was 4452, the ASDU type was 103, the COT (Communication Object Type) was 6, and there was one ASDU item. This event conforms to the iec104_information_transfer_pattern. However, it is important to note that the formal class, IEC104_OBSERVATION_UNCLASSIFIED, is a proxy observation label and not a confirmed attack label. No further conclusions regarding maliciousness or cyber attacks can be drawn from this observation alone.",
+    "generation_ok": true,
+    "elapsed_seconds": 17.69379210472107,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646405954,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_005652_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_005652",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646405882, an IEC-104 information transfer event (event ID: evt_005652) occurred within the eon_iec dataset. The observed communication was from source identifier 38 to destination identifier 37, using ports 51770 and 2404 respectively. The packet size was 60 bytes, with a packet length field of 18.\n\nThe frame type was i_format_information_transfer, and the observed ASDU fields were as follows: address 1001, type 50, COT 6, and item count 1. This event conforms to the iec104_information_transfer_pattern. However, it is important to note that the formal class assigned to this observation, IEC104_OBSERVATION_UNCLASSIFIED, is a proxy label and does not confirm or deny any malicious intent. Without additional context or evidence, no security conclusions can be drawn from this observation alone.",
+    "generation_ok": true,
+    "elapsed_seconds": 16.5761981010437,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646405882,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_004683_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_004683",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646405628, an IEC-104 network event (evt_004683) occurred with the observed protocol being IEC104 and communication direction as client_to_server. The source identifier was 615 and the destination identifier was 1. The source port was 1024, while the destination port was 2404. The packet size was 74 bytes, with a packet length field of 20.\n\nThe observed frame type was i_format_information_transfer, and the ASDU address was 4117. The ASDU type was 103, COT was 7, and there was 1 ASDU item in this transfer. This event follows the iec104_information_transfer_pattern. However, it is important to note that the formal class assigned to this observation is a proxy label (IEC104_OBSERVATION_UNCLASSIFIED) and does not confirm any security conclusions regarding potential malicious activity.",
+    "generation_ok": true,
+    "elapsed_seconds": 17.53693723678589,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646405628,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_003685_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_003685",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646405370, an IEC-104 network event (evt_003685) occurred within the eon_iec dataset. The observed communication was from server to client between source identifier 37 and destination identifier 38. The source port was 2404, and the destination port was 51770. The packet size was 60 bytes, with a packet length field of 18.\n\nThe frame type was i_format_information_transfer, and the observed ASDU fields were as follows: address 1001, type 50, COT 7, and item count 1. This event conforms to the iec104_information_transfer_pattern. However, it is important to note that the formal class assigned to this observation (IEC104_OBSERVATION_UNCLASSIFIED) is a proxy label and does not confirm or deny any malicious intent. Without additional context or evidence, no security conclusions can be drawn from this observation alone.",
+    "generation_ok": true,
+    "elapsed_seconds": 17.74347710609436,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646405370,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_002293_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_002293",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646404992, an IEC-104 network event (evt_002293) occurred within the eon_iec dataset. The observed communication was from server to client between source identifier 37 and destination identifier 38. The source port was 2404, and the destination port was 51770. The packet size was 60 bytes, with a packet length field of 18.\n\nThe frame type was i_format_information_transfer, and the observed ASDU fields were as follows: address 1001, type 50, COT 7, and item count 1. This event conforms to the iec104_information_transfer_pattern. However, it is important to note that the formal class assigned to this observation, IEC104_OBSERVATION_UNCLASSIFIED, is a proxy label and does not confirm or deny any malicious intent. Without additional context or evidence, no security conclusions can be drawn from this event.",
+    "generation_ok": true,
+    "elapsed_seconds": 17.655711889266968,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646404992,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_010816_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_010816",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646407346, an IEC-104 network event (evt_010816) occurred in the eon_iec dataset with atomic row granularity. The observed protocol was IEC-104 and the communication direction was client-to-server. Specifically, source identifier 660 communicated with destination identifier 1 using port numbers 1026 (source) and 2404 (destination). The packet size was 74 bytes, with a packet length field of 20 bytes.\n\nThe observed frame type was i_format_information_transfer, and the ASDU fields were as follows: address 4162, COT 7, item count 1, and ASDU type 103. This event conforms to the iec104_information_transfer_pattern. However, it is important to note that the formal class IEC104_OBSERVATION_UNCLASSIFIED is a proxy observation label, not a confirmed attack label. Therefore, no definitive security conclusions can be drawn from this observation alone.",
+    "generation_ok": true,
+    "elapsed_seconds": 18.693410873413086,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646407346,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_001869_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_001869",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646404866, an IEC-104 network event (evt_001869) occurred within the eon_iec dataset. The observed communication was from source identifier 38 to destination identifier 37, using ports 51770 and 2404 respectively. This communication followed the iec104_information_transfer_pattern and utilized the i_format_information_transfer frame type. The packet size was 60 bytes, with a packet length field of 18. The ASDU fields included an address of 1001, a type of 50, COT of 6, and one item. It is important to note that the formal class associated with this observation is IEC104_OBSERVATION_UNCLASSIFIED, which serves as a proxy label and does not confirm or deny any malicious intent. The observed event should be further analyzed for potential security implications.",
+    "generation_ok": true,
+    "elapsed_seconds": 16.881891012191772,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646404866,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_007975_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_007975",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646406529, an IEC-104 network event (evt_007975) occurred with the observed protocol being IEC104 and the communication direction being server_to_client. The source identifier was 312, communicating with destination identifier 1. The source port was 2404, while the destination port was 48874. The packet size was 62 bytes, with a packet length field of 20 bytes.\n\nThe observed frame type was i_format_information_transfer, and the ASDU fields were as follows: the ASDU address was 61, the ASDU type was 103, the Communication Object Type (COT) was 7, and there was one ASDU item. This event conforms to the iec104_information_transfer_pattern. However, it is important to note that the formal class assigned to this observation is a proxy label, IEC104_OBSERVATION_UNCLASSIFIED, which does not confirm or deny any security conclusions regarding potential malicious activity.",
+    "generation_ok": true,
+    "elapsed_seconds": 19.267794847488403,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646406529,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_001324_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_001324",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646404663, an IEC-104 network event (evt_001324) occurred within the eon_iec dataset. The observed communication was from source identifier 38 to destination identifier 37, using ports 51770 and 2404 respectively. The packet size was 60 bytes, with a packet length field of 18. This event followed the iec104_information_transfer_pattern.\n\nThe frame type was i_format_information_transfer, and the ASDU address was 1001. The ASDU contained one item of type 50, with a Communication Object Type (COT) of 6. This event is labeled as IEC104_OBSERVATION_UNCLASSIFIED, which is a proxy observation label and not a confirmed attack label. It's important to note that the current formal class does not confirm any security conclusions regarding this network event.",
+    "generation_ok": true,
+    "elapsed_seconds": 18.42863702774048,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646404663,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_019755_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_019755",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646412949, an IEC-104 network event (evt_019755) occurred with the specified granularity of atomic_row. The observed protocol was IEC-104 and the communication direction was client-to-server. Specifically, source identifier 1 communicated with destination identifier 388 using port numbers 35346 (source) and 2404 (destination). The packet size was 62 bytes, with a packet length field of 20 bytes.\n\nThe observed frame type was i_format_information_transfer, and the ASDU fields were as follows: address 65535, COT 6, item count 1, and ASDU type 103. The event conforms to the iec104_information_transfer_pattern. However, it is important to note that the formal class assigned to this observation is a proxy label (IEC104_OBSERVATION_UNCLASSIFIED), which does not confirm or deny any malicious intent associated with the event. Without additional context or evidence, no definitive security conclusions can be drawn from this observation alone.",
+    "generation_ok": true,
+    "elapsed_seconds": 20.93727421760559,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646412949,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_010346_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_010346",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646407178, an IEC-104 information transfer event (event ID: evt_010346) occurred within the eon_iec dataset. The observed communication was from source identifier 38 to destination identifier 48, using ports 51820 and 2404 respectively. The packet size was 60 bytes, with a packet length field of 18.\n\nThe ASDU address was 1002, the ASDU type was 50, COT was 6, and there was one ASDU item in this transfer. This event conforms to the iec104_information_transfer_pattern and is labeled as IEC104_OBSERVATION_UNCLASSIFIED, which is a proxy observation label and not a confirmed attack label. It's important to note that the current formal bound does not confirm any security conclusions regarding this event.",
+    "generation_ok": true,
+    "elapsed_seconds": 18.740750074386597,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646407178,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_011073_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_011073",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646407429, an IEC-104 network event (evt_011073) occurred in the eon_iec dataset. The observed communication was from source identifier 38 to destination identifier 304, using ports 54114 and 2404 respectively. The packet size was 60 bytes, with a packet length field of 18. This event followed the iec104_information_transfer_pattern and utilized the i_format_information_transfer frame type. The ASDU fields included an address of 1003, a COT (Communication Object Type) of 6, and an ASDU item count of 1, with an ASDU type of 50. It is important to note that the current formal class, IEC104_OBSERVATION_UNCLASSIFIED, is a proxy observation label and not a confirmed attack label. The observed protocol hint was iec104, consistent with the rest of the event's characteristics. No further conclusions can be drawn about the nature or potential implications of this network event based on the provided formal bound.",
+    "generation_ok": true,
+    "elapsed_seconds": 21.86467409133911,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646407429,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_019765_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_019765",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646412952, an IEC-104 network event (evt_019765) occurred within the eon_iec dataset. The observed communication was from server to client, with source identifier 388 and destination identifier 18. The source port was 2404, and the destination port was 35146. The packet size was 62 bytes, with a packet length field of 20.\n\nThe observed frame type was i_format_information_transfer, and it adhered to the iec104_information_transfer_pattern. The ASDU address was 22, the ASDU type was 103, the COT (Communication Object Type) was 7, and there was one ASDU item.\n\nIt is important to note that the current formal class, IEC104_OBSERVATION_UNCLASSIFIED, is a proxy observation label and not a confirmed attack label. The presence of this label does not imply a verified cyber attack or maliciousness. Further analysis may be required for confirmation of such conclusions.",
+    "generation_ok": true,
+    "elapsed_seconds": 21.20504903793335,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646412952,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_005936_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_005936",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646405950, an IEC-104 network event (evt_005936) occurred with the specified granularity of atomic_row. The observed protocol was IEC-104, and the communication direction was server-to-client. Specifically, source identifier 1 communicated with destination identifier 660 using port numbers 2404 (source) and 1026 (destination). The packet size was 74 bytes, with a packet length field of 20.\n\nThe observed frame type was i_format_information_transfer, and the ASDU fields were as follows: address 4162, COT 6, item count 1, and ASDU type 103. This event conforms to the iec104_information_transfer_pattern. However, it is important to note that the formal class assigned to this observation is a proxy label (IEC104_OBSERVATION_UNCLASSIFIED), which does not confirm or deny any security conclusions regarding potential cyber attacks or malicious activity.",
+    "generation_ok": true,
+    "elapsed_seconds": 22.299346923828125,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646405950,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_005960_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_005960",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646405960, an IEC-104 network event (evt_005960) occurred in the eon_iec dataset with atomic granularity. The observed protocol was IEC-104, and the communication direction was client-to-server. Specifically, source identifier 428 communicated with destination identifier 1 using port numbers 1024 (source) and 2404 (destination). The packet size was 74 bytes, with a packet length field of 20.\n\nThe observed frame type was i_format_information_transfer, and the ASDU fields were as follows: address 4202, COT 7, item count 1, and type 103. This event conforms to the iec104_information_transfer_pattern. However, it is important to note that the formal class assigned to this observation is a proxy label (IEC104_OBSERVATION_UNCLASSIFIED), which does not confirm or deny any security conclusions regarding potential cyber attacks or malicious activity.",
+    "generation_ok": true,
+    "elapsed_seconds": 22.031782865524292,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646405960,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_000367_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_000367",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646404256, an IEC-104 network event (evt_000367) occurred within the eon_iec dataset. The observed communication was from source identifier 38 to destination identifier 37, using ports 51770 and 2404 respectively. The packet size was 60 bytes, with a packet length field of 18. This event adhered to the i_format_information_transfer frame type and the iec104_information_transfer_pattern. The ASDU fields included an address of 1001, a type of 50, COT of 6, and one item count. It is important to note that the formal class associated with this observation is IEC104_OBSERVATION_UNCLASSIFIED, which serves as a proxy label and does not confirm or deny any malicious intent. The observed event should be further analyzed for potential security implications, but no confirmed cyber attack or maliciousness can be claimed based on the provided formal bound.",
+    "generation_ok": true,
+    "elapsed_seconds": 21.807383060455322,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646404256,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_019780_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_019780",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646412958, an IEC-104 network event (evt_019780) occurred within the eon_iec dataset. The observed communication was from server to client, with source identifier 388 and destination identifier 1. The source port was 2404, and the destination port was 35346. The packet size was 62 bytes, but only 20 bytes were used in this specific frame.\n\nThe frame type was i_format_information_transfer, which is an information transfer message according to the IEC-104 protocol. The ASDU (Automatic Sequence of Control Units) fields included an address of 22, a COT (Common Object Type) of 7, and one item with type 103. This event conforms to the iec104_information_transfer_pattern.\n\nIt is important to note that the formal class assigned to this observation is IEC104_OBSERVATION_UNCLASSIFIED, which is a proxy label and not a confirmed attack label. Therefore, no security conclusions can be drawn based on this observation alone regarding potential cyber attacks or malicious activity.",
+    "generation_ok": true,
+    "elapsed_seconds": 24.26430106163025,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646412958,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_008567_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_008567",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646406663, an IEC-104 network event (evt_008567) occurred within the eon_iec dataset. The observed communication was of type i_format_information_transfer, following the iec104_information_transfer_pattern, from source identifier 48 to destination identifier 38. The source port was 2404, and the destination port was 51820. The packet size was 60 bytes, with a packet length field of 18.\n\nThe ASDU address was 1002, containing an ASDU type of 50, COT of 7, and one item. This event is labeled as IEC104_OBSERVATION_UNCLASSIFIED, which is a proxy observation label and not a confirmed attack label. It is important to note that the presence of this label does not confirm or deny any security conclusions.",
+    "generation_ok": true,
+    "elapsed_seconds": 21.24008798599243,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646406663,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_006311_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_006311",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646406058, an IEC-104 network event (evt_006311) occurred within the eon_iec dataset. The observed communication was of type i_format_information_transfer and followed the iec104_information_transfer_pattern. The source identifier was 48, communicating with destination identifier 38 via ports 2404 (source) and 51820 (destination). The packet size was 60 bytes, with a packet length field of 18. The ASDU fields included an address of 1002, type 50, COT 7, and one item. It is important to note that the formal class assigned to this observation is IEC104_OBSERVATION_UNCLASSIFIED, which serves as a proxy label and does not confirm or deny any malicious intent. The event's protocol hint was iec104, consistent with the observed ASDU fields. No further conclusions can be drawn about the nature of this network event based on the provided formal bound.",
+    "generation_ok": true,
+    "elapsed_seconds": 23.1595721244812,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646406058,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_005964_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_005964",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646405961, an information transfer event (event ID: evt_005964) occurred within the industrial control system network (dataset: eon_iec). The observed protocol was IEC-104, and the communication direction was from client to server. Specifically, source identifier 428 communicated with destination identifier 1 using port numbers 1024 and 2404 respectively. The packet size was 74 bytes, with a packet length field of 20 bytes.\n\nThe observed frame type was i_format_information_transfer, and the ASDU fields were as follows: ASDU address - 4202, ASDU type - 103, COT - 7, and ASDU item count - 1. This event conforms to the IEC104_information_transfer_pattern. However, it is important to note that the formal class assigned to this observation is a proxy label (IEC104_OBSERVATION_UNCLASSIFIED), which does not confirm or deny any malicious intent associated with this event. Without additional context or evidence, no definitive security conclusions can be drawn from this observation alone.",
+    "generation_ok": true,
+    "elapsed_seconds": 24.891849994659424,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646405961,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_006981_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_006981",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646406277, an IEC-104 network event (evt_006981) occurred within the eon_iec dataset. The observed communication was from server to client between source identifier 48 and destination identifier 38, using ports 2404 and 51820 respectively. The packet size was 60 bytes, with a packet length field of 18.\n\nThe event followed the iec104_information_transfer_pattern and the frame type was i_format_information_transfer. The ASDU address was 1002, the ASDU type was 50, COT was 7, and there was one ASDU item in this communication.\n\nIt is important to note that the formal class assigned to this observation is IEC104_OBSERVATION_UNCLASSIFIED, which is a proxy label and not a confirmed attack label. Therefore, while we can confirm the details of the observed network event, any potential security implications or malicious intent cannot be definitively determined based on the provided formal bound.",
+    "generation_ok": true,
+    "elapsed_seconds": 23.383937120437622,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646406277,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_004681_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_004681",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646405627, an IEC-104 network event (evt_004681) occurred with the observed protocol being IEC104 and communication direction as client_to_server. The source identifier was 615 and the destination identifier was 1. The source port was 1024, while the destination port was 2404. The packet size was 74 bytes, with a packet length field of 20.\n\nThe observed frame type was i_format_information_transfer, and the ASDU fields were as follows: the ASDU address was 4117, the COT (Communication Object Type) was 7, and there was one ASDU item with type 103. This event conforms to the iec104_information_transfer_pattern and is currently labeled as IEC104_OBSERVATION_UNCLASSIFIED, which is a proxy observation label and not a confirmed attack label. No further security conclusions can be drawn from this observation based on the provided formal bound.",
+    "generation_ok": true,
+    "elapsed_seconds": 23.992722034454346,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646405627,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_012433_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_012433",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "In the IEC-104 network event with ID 'evt_012433' and timestamp 1654646410975, an unidentified protocol was used for communication between source identifier 38 and destination identifier 791. The observed frame type was s_or_u_format_control, and the packet size was 46 bytes with a packet length field of 4. The source port was 51750, while the destination port was 2405. However, no ASDU data was present in this communication as indicated by the ASDU address, type, COT, and item count all being 0.\n\nIt is important to note that the formal class of this observation is UNKNOWN_NON_IEC104, which serves as a proxy label and does not confirm any specific attack or malicious activity. The observation pattern was unknown_or_non_iec104_pattern, indicating that it did not conform to the expected IEC-104 communication pattern. Further investigation is required to determine the nature of this network event and its potential impact on the industrial control system.",
+    "generation_ok": true,
+    "elapsed_seconds": 23.77013397216797,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646410975,
+      "protocol_hint": "unknown",
+      "communication_direction": "unknown",
+      "formal_class": "UNKNOWN_NON_IEC104",
+      "observation_pattern": "unknown_or_non_iec104_pattern"
+    }
+  },
+  {
+    "response_id": "evt_017606_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_017606",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "In the IEC-104 network event (evt_017606, eon_iec dataset), an information transfer frame was observed between source identifier 783 and destination identifier 38 at timestamp 1654646412418 ms. The source port was 2405, while the destination port was 51742. The packet size was 82 bytes, with a packet length field of 40. The ASDU address was 1617, and the ASDU type was 36, containing 2 items. The COT (Communication Object Type) was 3. However, the protocol hint is unknown, as well as the communication direction and observation pattern, which are labeled as UNKNOWN_NON_IEC104 according to the proxy formal class status. It should be noted that this formal class is a proxy observation label, not a confirmed attack label. The observed features do not provide sufficient evidence for a security conclusion regarding the nature of this network event.",
+    "generation_ok": true,
+    "elapsed_seconds": 24.60359501838684,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646412418,
+      "protocol_hint": "unknown",
+      "communication_direction": "unknown",
+      "formal_class": "UNKNOWN_NON_IEC104",
+      "observation_pattern": "unknown_or_non_iec104_pattern"
+    }
+  },
+  {
+    "response_id": "evt_014083_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_014083",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "In the IEC-104 network event with ID 'evt_014083' from dataset 'eon_iec', an unidentified protocol was used for communication between source identifier 831 and destination identifier 38, as indicated by the unknown protocol hint. The observed frame type was u_format_control, and the frame length field reported a packet size of 46 bytes and a packet length of 4.\n\nThe source port was 2405, while the destination port was 51790. No ASDU data was present in this communication, as evidenced by the observed ASDU address, type, COT, and item count all being 0. The formal class of this event is UNKNOWN_NON_IEC104, which serves as a proxy observation label and does not confirm any specific security conclusion.\n\nIt is important to note that the current formal class status is 'proxy_not_ground_truth_attack_label', indicating that it is not a confirmed attack label. Further investigation may be required to determine the nature of this communication and its potential impact on the industrial control system network.",
+    "generation_ok": true,
+    "elapsed_seconds": 26.04498815536499,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646411491,
+      "protocol_hint": "unknown",
+      "communication_direction": "unknown",
+      "formal_class": "UNKNOWN_NON_IEC104",
+      "observation_pattern": "unknown_or_non_iec104_pattern"
+    }
+  },
+  {
+    "response_id": "evt_000227_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_000227",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "In the IEC-104 network event (evt_000227, eon_iec dataset), an unknown protocol was used for communication between source identifier 84 and destination identifier 38. The observed frame type was i_format_information_transfer, with a source port of 2405 and a destination port of 51407. The packet size was 67 bytes, and the packet length field indicated 25 bytes. The ASDU address was 1404, the ASDU type was 36, COT was 3, and there was one ASDU item. However, the observation pattern was unknown or non-IEC104, and the formal class was classified as UNKNOWN_NON_IEC104, which is a proxy label and not a confirmed attack label. It's important to note that the current classification does not confirm any security conclusions about this network event.",
+    "generation_ok": true,
+    "elapsed_seconds": 21.940043210983276,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646404046,
+      "protocol_hint": "unknown",
+      "communication_direction": "unknown",
+      "formal_class": "UNKNOWN_NON_IEC104",
+      "observation_pattern": "unknown_or_non_iec104_pattern"
+    }
+  },
+  {
+    "response_id": "evt_012143_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_012143",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "In the IEC-104 network event with ID 'evt_012143' and timestamp 1654646410741, an unknown protocol was used in a communication between source identifier 38 and destination identifier 782. The observed packet size was 46 bytes, with a packet length field of 4, and the communication occurred on ports 51470 (source) and 2405 (destination). However, the communication direction remains unknown.\n\nThe frame type observed was s_or_u_format_control, but the ASDU fields indicate that no specific ASDU type, COT, or items were transmitted. The formal class of this event is UNKNOWN_NON_IEC104, which is a proxy observation label and not a confirmed attack label. It should be noted that the current schema status is 'proxy_until_official_automaton_schema', indicating that this classification may change upon the release of the official automaton schema.\n\nWithout further context or evidence, it cannot be confirmed whether this event represents normal or abnormal network behavior.",
+    "generation_ok": true,
+    "elapsed_seconds": 25.358633279800415,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646410741,
+      "protocol_hint": "unknown",
+      "communication_direction": "unknown",
+      "formal_class": "UNKNOWN_NON_IEC104",
+      "observation_pattern": "unknown_or_non_iec104_pattern"
+    }
+  },
+  {
+    "response_id": "evt_016447_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_016447",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "In the IEC-104 network event with Event ID 'evt_016447' and Timestamp '1654646412094', an unknown protocol was used for communication between source identifier 754 and destination identifier 38, as indicated by the 'unknown_protocol_hint'. The observed frame type was 'i_format_information_transfer', with a packet size of 67 bytes and a packet length field of 25. The ASDU fields included an address of 1708, a COT value of 3, an ASDU type of 36, and an item count of 1. The source port was 2405, and the destination port was 51826. It is important to note that the formal class assigned to this event is 'UNKNOWN_NON_IEC104', which serves as a proxy observation label and does not confirm any specific security conclusion. This observation does not provide sufficient evidence to claim normal or malicious traffic, nor does it suggest any replay, flooding, MITM, scanning, command injection, denial of service, or other cyber attack types.",
+    "generation_ok": true,
+    "elapsed_seconds": 27.502933979034424,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646412094,
+      "protocol_hint": "unknown",
+      "communication_direction": "unknown",
+      "formal_class": "UNKNOWN_NON_IEC104",
+      "observation_pattern": "unknown_or_non_iec104_pattern"
+    }
+  },
+  {
+    "response_id": "evt_012416_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_012416",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "In the IEC-104 network event with ID evt_012416, an unidentified protocol was observed in a communication between source identifier 788 and destination identifier 38. The source port was 2405, and the destination port was 51704. The packet size was 46 bytes, with a packet length field of 4. However, the frame type was u_format_control, which is not typically associated with IEC-104 communication. Furthermore, the ASDU fields (address, COT, type, and item count) were all set to zero. The observed pattern did not conform to known IEC-104 patterns or non-IEC-104 patterns recognized by the system. It is important to note that the proxy formal class assigned to this event is UNKNOWN_NON_IEC104, indicating that it does not represent a confirmed attack label but rather an unidentified network event. Without further context or additional information, no definitive conclusions can be drawn about the nature of this communication.",
+    "generation_ok": true,
+    "elapsed_seconds": 27.464690923690796,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646410961,
+      "protocol_hint": "unknown",
+      "communication_direction": "unknown",
+      "formal_class": "UNKNOWN_NON_IEC104",
+      "observation_pattern": "unknown_or_non_iec104_pattern"
+    }
+  },
+  {
+    "response_id": "evt_012147_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_012147",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "In the IEC-104 network event with ID 'evt_012147' from dataset 'eon_iec', an unidentified protocol was used in a communication between source identifier 780 and destination identifier 38, as indicated by the unknown protocol hint and frame type 'u_format_control'. The observed source port was 2405, while the destination port was 51473. The packet size was 46 bytes, with a packet length field of 4. No ASDU data was present in this communication, as evidenced by the ASDU address, type, COT, and item count all being 0.\n\nIt is important to note that the formal class assigned to this event is 'UNKNOWN_NON_IEC104', which serves as a proxy observation label and does not confirm any malicious intent or cyber attack. The observed communication pattern was 'unknown_or_non_iec104_pattern'. Further investigation may be required to determine the nature of this network event.",
+    "generation_ok": true,
+    "elapsed_seconds": 25.722541093826294,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646410745,
+      "protocol_hint": "unknown",
+      "communication_direction": "unknown",
+      "formal_class": "UNKNOWN_NON_IEC104",
+      "observation_pattern": "unknown_or_non_iec104_pattern"
+    }
+  },
+  {
+    "response_id": "evt_011957_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_011957",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646410380, an event identified as evt_011957 in the eon_iec dataset occurred. The observed communication involved source identifier 777 and destination identifier 38, using ports 2405 (source) and 51395 (destination). The packet size was 46 bytes, with a packet length field of 4. However, the protocol hint is unknown, as well as the communication direction.\n\nThe frame type observed was u_format_control, and the ASDU fields indicate that no ASDU was transmitted (ASDU address: 0, ASDU type: 0, COT: 0, ASDU item count: 0). The formal class of this event is UNKNOWN_NON_IEC104, which is a proxy observation label and not a confirmed attack label. The observation pattern is unknown_or_non_iec104_pattern, suggesting that the observed communication may not conform to standard IEC-104 patterns.\n\nIt is important to note that the current formal class does not confirm any security conclusion regarding this event. Further analysis and validation are required to determine if this event represents normal or abnormal behavior in the network.",
+    "generation_ok": true,
+    "elapsed_seconds": 28.904018878936768,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646410380,
+      "protocol_hint": "unknown",
+      "communication_direction": "unknown",
+      "formal_class": "UNKNOWN_NON_IEC104",
+      "observation_pattern": "unknown_or_non_iec104_pattern"
+    }
+  },
+  {
+    "response_id": "evt_005788_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_005788",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646405913, an event identified as evt_005788 in the eon_iec dataset was observed. The event features an unknown protocol and communication direction, with a frame type of u_format_control. This event involved source identifier 38 communicating with destination identifier 653 using ports 51746 (source) and 2405 (destination). The packet size was 46 bytes, and the packet length field indicated 4 bytes. No ASDU address, COT, or items were present in this event. The formal class of this observation is UNKNOWN_NON_IEC104, which is a proxy label and not a confirmed attack label. It should be noted that the observed pattern does not conform to known IEC-104 patterns, denoted as unknown_or_non_iec104_pattern. The nature of this communication remains unclear without further context or analysis.",
+    "generation_ok": true,
+    "elapsed_seconds": 23.99894118309021,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646405913,
+      "protocol_hint": "unknown",
+      "communication_direction": "unknown",
+      "formal_class": "UNKNOWN_NON_IEC104",
+      "observation_pattern": "unknown_or_non_iec104_pattern"
+    }
+  },
+  {
+    "response_id": "evt_008901_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_008901",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "In the IEC-104 network event with Event ID 'evt_008901' and Timestamp '1654646406772', an unknown protocol was used for communication between source identifier 734 and destination identifier 38. The observed source port was 2405, while the destination port was 51391. The packet size was 67 bytes, with a packet length field of 25. The frame type was i_format_information_transfer, and the ASDU fields included an address of 1414, a COT of 3, an ASDU type of 36, and an item count of 1. However, it is important to note that the observed pattern does not conform to known IEC-104 patterns or non-IEC-104 patterns as defined in the current schema. The proxy formal class assigned to this event is UNKNOWN_NON_IEC104, indicating that it does not match any known IEC-104 traffic patterns but does not necessarily imply a cyber attack or malicious activity. Without further context or evidence, no definitive security conclusion can be made regarding this network event.",
+    "generation_ok": true,
+    "elapsed_seconds": 28.043578147888184,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646406772,
+      "protocol_hint": "unknown",
+      "communication_direction": "unknown",
+      "formal_class": "UNKNOWN_NON_IEC104",
+      "observation_pattern": "unknown_or_non_iec104_pattern"
+    }
+  },
+  {
+    "response_id": "evt_016894_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_016894",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646412211, an event identified as evt_016894 occurred within the eon_iec dataset. The observed communication involved source identifier 900 and destination identifier 38, using ports 2405 (source) and 51408 (destination). The packet size was 46 bytes, with a packet length field of 4. However, the protocol hint associated with this communication is unknown, as well as the direction of the communication.\n\nThe frame type observed was u_format_control, and the ASDU fields included an address of 0, a COT value of 0, an ASDU type of 0, and no ASDU items. The formal class assigned to this event is UNKNOWN_NON_IEC104, which is a proxy observation label and not a confirmed attack label. The observation pattern was unknown_or_non_iec104_pattern, indicating that the communication does not conform to standard IEC-104 patterns or may not be an IEC-104 communication at all.\n\nIt is important to note that the current formal class does not confirm a security conclusion, as it is a proxy label and not ground truth. Further investigation is required to determine the nature and implications of this event.",
+    "generation_ok": true,
+    "elapsed_seconds": 26.953728914260864,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646412211,
+      "protocol_hint": "unknown",
+      "communication_direction": "unknown",
+      "formal_class": "UNKNOWN_NON_IEC104",
+      "observation_pattern": "unknown_or_non_iec104_pattern"
+    }
+  },
+  {
+    "response_id": "evt_019266_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_019266",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "In the IEC-104 network event with ID 'evt_019266' and timestamp 1654646412833, an unknown protocol was used for communication between source identifier 864 and destination identifier 8. The observed source port was 2405, while the destination port was 42320. The packet size was 79 bytes, with a packet length field of 25.\n\nThe frame type was i_format_information_transfer, and the ASDU fields were as follows: ASDU address - 431, ASDU type - 36, COT - 3, and ASDU item count - 1. However, the observation pattern was unknown or non-IEC104, and the protocol hint remains unidentified. It is important to note that the current formal class, UNKNOWN_NON_IEC104, is a proxy observation label and not a confirmed attack label.\n\nFurther investigation is required to determine the nature of this network event and whether it represents normal or abnormal traffic within the ICS network.",
+    "generation_ok": true,
+    "elapsed_seconds": 23.774348974227905,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646412833,
+      "protocol_hint": "unknown",
+      "communication_direction": "unknown",
+      "formal_class": "UNKNOWN_NON_IEC104",
+      "observation_pattern": "unknown_or_non_iec104_pattern"
+    }
+  },
+  {
+    "response_id": "evt_003618_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_003618",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646405355, an event identified as evt_003618 occurred within the eon_iec dataset. The observed communication involved source identifier 583 and destination identifier 38, using ports 2405 (source) and 51845 (destination). The packet size was 46 bytes, with a packet length field of 4. However, the protocol hint is unknown, as well as the communication direction.\n\nThe frame type observed was u_format_control, and the ASDU fields indicate that no ASDU was transmitted (ASDU address: 0, ASDU type: 0, COT: 0, ASDU item count: 0). The formal class of this event is UNKNOWN_NON_IEC104, which is a proxy observation label and not a confirmed attack label. The observation pattern is unknown_or_non_iec104_pattern, indicating that the observed communication may not conform to standard IEC-104 patterns.\n\nIt is important to note that the current formal class does not confirm any security conclusion regarding this event. Further investigation and analysis are required to determine if this event represents normal or abnormal behavior within the system.",
+    "generation_ok": true,
+    "elapsed_seconds": 24.573857069015503,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646405355,
+      "protocol_hint": "unknown",
+      "communication_direction": "unknown",
+      "formal_class": "UNKNOWN_NON_IEC104",
+      "observation_pattern": "unknown_or_non_iec104_pattern"
+    }
+  },
+  {
+    "response_id": "evt_002974_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_002974",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "In the IEC-104 network event with Event ID 'evt_002974' and Timestamp ms '1654646405182', an unknown protocol was observed, as indicated by the 'unknown' protocol hint. The frame type was identified as 'i_format_information_transfer'. Source identifier 126 communicated with destination identifier 38 via ports 2405 (source) and 51717 (destination). The packet size was 67 bytes, with a packet length field of 25. The ASDU fields observed were an address of 1813, a COT of 3, an ASDU type of 36, and an item count of 1. However, the observation pattern was 'unknown_or_non_iec104_pattern', which suggests that this communication may not conform to standard IEC-104 protocols. It is important to note that the formal class 'UNKNOWN_NON_IEC104' is a proxy label and does not confirm an attack or malicious activity. Further analysis is required to determine the nature of this network event.",
+    "generation_ok": true,
+    "elapsed_seconds": 22.920260906219482,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646405182,
+      "protocol_hint": "unknown",
+      "communication_direction": "unknown",
+      "formal_class": "UNKNOWN_NON_IEC104",
+      "observation_pattern": "unknown_or_non_iec104_pattern"
+    }
+  },
+  {
+    "response_id": "evt_012269_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_012269",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "In the IEC-104 network event with Event ID 'evt_012269' and Timestamp '1654646410866', an unknown protocol was observed in a communication between source identifier 38 and destination identifier 785. The source port was 63247, while the destination port was 2405. The packet size was 46 bytes, with a packet length field of 4. However, the frame type was s_or_u_format_control, which is not typically associated with IEC-104 traffic. Furthermore, the ASDU fields (address, COT, type, and item count) were all zero. The observed pattern does not conform to known IEC-104 patterns or non-IEC-104 patterns for which a ground truth automaton schema exists. It is important to note that the formal class 'UNKNOWN_NON_IEC104' is a proxy label and does not confirm an attack or malicious activity. Without additional context or information, it is not possible to determine if this event represents normal or abnormal network behavior.",
+    "generation_ok": true,
+    "elapsed_seconds": 23.249043941497803,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646410866,
+      "protocol_hint": "unknown",
+      "communication_direction": "unknown",
+      "formal_class": "UNKNOWN_NON_IEC104",
+      "observation_pattern": "unknown_or_non_iec104_pattern"
+    }
+  },
+  {
+    "response_id": "evt_017414_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_017414",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "In the IEC-104 network event with ID 'evt_017414' from dataset 'eon_iec', an unidentified protocol was used for communication between source identifier 909 and destination identifier 38, as indicated by the 'unknown' protocol hint. The observed frame type was 'u_format_control'. The source port was 2405, and the destination port was 51415. The packet size was 46 bytes, with a packet length field of 4. No ASDU address, COT, or items were present in this event.\n\nIt is important to note that the formal class assigned to this observation is 'UNKNOWN_NON_IEC104', which serves as a proxy label and does not confirm an attack or malicious activity. The observation pattern was 'unknown_or_non_iec104_pattern'. Further investigation is required to determine the nature of this network event and its potential impact on the industrial control system.",
+    "generation_ok": true,
+    "elapsed_seconds": 20.599297046661377,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646412363,
+      "protocol_hint": "unknown",
+      "communication_direction": "unknown",
+      "formal_class": "UNKNOWN_NON_IEC104",
+      "observation_pattern": "unknown_or_non_iec104_pattern"
+    }
+  },
+  {
+    "response_id": "evt_012267_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_012267",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "In the IEC-104 network event with ID 'evt_012267' and timestamp 1654646410866, an unidentified protocol was used in a communication between source identifier 38 and destination identifier 783. The observed packet size was 46 bytes, with a packet length field of 4, and the source port was 51742 while the destination port was 2405. However, the communication direction remains unknown.\n\nThe frame type observed was s_or_u_format_control, but the specific format (either S or U) could not be determined due to the unknown protocol hint. The ASDU fields in this event included an address of 0, a COT value of 0, and no items. The formal class assigned to this event is UNKNOWN_NON_IEC104, which indicates that it does not conform to the expected IEC-104 communication pattern (unknown_or_non_iec104_pattern). It's important to note that this formal class is a proxy observation label and should not be interpreted as a confirmed attack label.\n\nWithout additional context or evidence, no security conclusions can be confidently drawn from this event. Further investigation may be required to determine the nature of this communication and its potential impact on the industrial control system network.",
+    "generation_ok": true,
+    "elapsed_seconds": 26.381901025772095,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646410866,
+      "protocol_hint": "unknown",
+      "communication_direction": "unknown",
+      "formal_class": "UNKNOWN_NON_IEC104",
+      "observation_pattern": "unknown_or_non_iec104_pattern"
+    }
+  },
+  {
+    "response_id": "evt_017146_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_017146",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646412303, an event identified as evt_017146 occurred within the eon_iec dataset. The observed communication involved source identifier 38 and destination identifier 908, using ports 51483 (source) and 2405 (destination). The packet size was 46 bytes, with a packet length field of 4. However, the protocol hint is unknown, as well as the communication direction.\n\nThe frame type observed was u_format_control, and the ASDU fields were set as follows: address 0, COT 0, type 0, and item count 0. The formal class assigned to this event is UNKNOWN_NON_IEC104, which is a proxy observation label and not a confirmed attack label. The observation pattern was unknown_or_non_iec104_pattern. It is important to note that the current classification does not confirm any specific security conclusion regarding this network event.",
+    "generation_ok": true,
+    "elapsed_seconds": 21.795586109161377,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646412303,
+      "protocol_hint": "unknown",
+      "communication_direction": "unknown",
+      "formal_class": "UNKNOWN_NON_IEC104",
+      "observation_pattern": "unknown_or_non_iec104_pattern"
+    }
+  },
+  {
+    "response_id": "evt_015283_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_015283",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "In the IEC-104 network event with Event ID 'evt_015283' and Timestamp '1654646411801', an unidentified protocol was used in a communication between source identifier 8 and destination identifier 864. The observed frame type was s_or_u_format_control, and the packet size was 58 bytes with a packet length field of 4. The source port was 42320, and the destination port was 2405. However, no ASDU data was present in this communication as indicated by the ASDU address, COT, and item count all being 0. It is important to note that the formal class assigned to this event is UNKNOWN_NON_IEC104, which is a proxy observation label and not a confirmed attack label. The observation pattern was unknown or non-IEC104, indicating an unusual communication behavior within the network. Without further context or additional information, it is not possible to confirm whether this event represents normal or abnormal traffic.",
+    "generation_ok": true,
+    "elapsed_seconds": 22.697962045669556,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646411801,
+      "protocol_hint": "unknown",
+      "communication_direction": "unknown",
+      "formal_class": "UNKNOWN_NON_IEC104",
+      "observation_pattern": "unknown_or_non_iec104_pattern"
+    }
+  },
+  {
+    "response_id": "evt_010832_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_010832",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "In the IEC-104 network event with ID 'evt_010832' from dataset 'eon_iec', an unknown protocol was used for communication between source identifier 761 and destination identifier 38, as indicated by the 'unknown_protocol_hint'. The observed frame type was 'i_format_information_transfer', with a packet size of 67 bytes and a packet length field of 25. The ASDU fields were as follows: ASDU address - 1912, ASDU type - 33, COT - 3, and ASDU item count - 1. The source port was 2405, and the destination port was 51726. This event falls under the proxy formal class 'UNKNOWN_NON_IEC104', which is not a confirmed attack label but rather an observation label indicating that the event does not conform to the expected IEC-104 communication pattern as defined in the current schema status of 'proxy_not_ground_truth_attack_label'. The observation pattern was 'unknown_or_non_iec104_pattern', suggesting that the event may not adhere to the standard IEC-104 communication structure. However, without further context or additional information, it is not possible to confirm whether this event represents a security concern or normal network behavior.",
+    "generation_ok": true,
+    "elapsed_seconds": 27.31197714805603,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646407350,
+      "protocol_hint": "unknown",
+      "communication_direction": "unknown",
+      "formal_class": "UNKNOWN_NON_IEC104",
+      "observation_pattern": "unknown_or_non_iec104_pattern"
+    }
+  },
+  {
+    "response_id": "evt_000591_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_000591",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "In the IEC-104 network event with Event ID 'evt_000591', source identifier 38 and destination identifier 246 communicated using an unknown protocol, as indicated by the 'unknown' protocol hint. The communication direction is also unspecified in this observation. The frame type was identified as 's_or_u_format_control'.\n\nThe observed packet size was 46 bytes, with a packet length field of 4. The source port was 49975, and the destination port was 2405. However, no ASDU address, COT, or item count were present in this observation. The formal class assigned to this event is 'UNKNOWN_NON_IEC104', which serves as a proxy label and does not confirm an attack or malicious activity.\n\nIt should be noted that the observation pattern was 'unknown_or_non_iec104_pattern', indicating that the communication did not conform to standard IEC-104 patterns, but this does not necessarily imply any security concerns without further investigation and contextual analysis.",
+    "generation_ok": true,
+    "elapsed_seconds": 23.88006901741028,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646404366,
+      "protocol_hint": "unknown",
+      "communication_direction": "unknown",
+      "formal_class": "UNKNOWN_NON_IEC104",
+      "observation_pattern": "unknown_or_non_iec104_pattern"
+    }
+  },
+  {
+    "response_id": "evt_012500_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_012500",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "In the IEC-104 network event (evt_012500, eon_iec), an unidentified protocol was used for communication between source identifier 38 and destination identifier 761. The observed frame type was s_or_u_format_control, and the packet size was 46 bytes with a packet length field of 4. The source port was 51726, and the destination port was 2405. However, no ASDU data was present in this communication as indicated by the ASDU address, type, COT, and item count all being 0.\n\nIt is important to note that the current formal class assigned to this event is UNKNOWN_NON_IEC104, which is a proxy observation label and not a confirmed attack label. The observation pattern was unknown or non-IEC104, indicating that it does not conform to the expected IEC-104 communication patterns.\n\nWithout further context or information, it is not possible to confirm whether this event represents normal or abnormal network behavior.",
+    "generation_ok": true,
+    "elapsed_seconds": 23.989885807037354,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646411006,
+      "protocol_hint": "unknown",
+      "communication_direction": "unknown",
+      "formal_class": "UNKNOWN_NON_IEC104",
+      "observation_pattern": "unknown_or_non_iec104_pattern"
+    }
+  },
+  {
+    "response_id": "evt_013797_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_013797",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "In the IEC-104 network event with Event ID 'evt_013797' and Timestamp '1654646411413', an unknown protocol was observed, as indicated by the 'unknown' protocol hint. The communication direction is also unspecified in this formal bound. However, it is known that source identifier 38 communicated with destination identifier 831 via ports 51790 (source) and 2405 (destination). The packet size was 46 bytes, and the packet length field was 4. No ASDU address, type, COT, or items were specified in this event. It is important to note that the formal class 'UNKNOWN_NON_IEC104' is a proxy observation label, not a confirmed attack label. The observation pattern is 'unknown_or_non_iec104_pattern', indicating that this event does not conform to the expected IEC-104 communication pattern as defined in the current schema status of 'proxy_until_official_automaton_schema'. Without further context or additional information, it is not possible to confirm whether this network event represents normal or abnormal traffic.",
+    "generation_ok": true,
+    "elapsed_seconds": 25.950249910354614,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646411413,
+      "protocol_hint": "unknown",
+      "communication_direction": "unknown",
+      "formal_class": "UNKNOWN_NON_IEC104",
+      "observation_pattern": "unknown_or_non_iec104_pattern"
+    }
+  },
+  {
+    "response_id": "evt_004198_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_004198",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "In the IEC-104 network event with Event ID 'evt_004198' and Timestamp ms '1654646405509', an observation was made involving source identifier 38 and destination identifier 583. The observed packet size was 46 bytes, with a packet length field of 4. The source port was 51845, while the destination port was 2405. This communication utilized the u_format_control frame type, but the protocol hint remains unknown.\n\nRegarding the ASDU fields, the observed ASDU address was 0, the ASDU type was 0, COT was 0, and there were no ASDU items present in this communication. The formal class of this observation is UNKNOWN_NON_IEC104, which serves as a proxy label and does not confirm an attack or malicious activity. It should be noted that the communication direction and observation pattern are also unknown at this time. This event does not provide sufficient evidence to draw any security conclusions beyond those explicitly stated in the formal bound.",
+    "generation_ok": true,
+    "elapsed_seconds": 26.87033224105835,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646405509,
+      "protocol_hint": "unknown",
+      "communication_direction": "unknown",
+      "formal_class": "UNKNOWN_NON_IEC104",
+      "observation_pattern": "unknown_or_non_iec104_pattern"
+    }
+  },
+  {
+    "response_id": "evt_019686_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_019686",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646412931, an IEC-104 network event (evt_019686) occurred within the eon_iec dataset. The observed communication was from server to client, with source identifier 262 and destination identifier 1. The source port was 2404, and the destination port was 46820. The packet size was 79 bytes, but only 25 bytes were used in the frame length field (pkt_length).\n\nThe observed frame type was i_format_information_transfer, and it adhered to the dominant_iec104_measurement_pattern. The ASDU address was 225, the ASDU type was 36, and the ASDU Cot (Communication Object Type) was 3. Only one ASDU item was included in this frame.\n\nIt is important to note that the formal class assigned to this event is a proxy label, IEC104_BASELINE_MEASUREMENT_OBSERVATION, and it does not confirm or deny any malicious intent. The observation remains consistent with the IEC-104 protocol hint when present. No additional claims can be made about replay, flooding, MITM, scanning, command injection, denial of service, or other cyber attacks without explicit evidence in the formal bound.",
+    "generation_ok": true,
+    "elapsed_seconds": 37.02902030944824,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646412931,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_018668_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_018668",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646412687, an IEC-104 network event (evt_018668) occurred within the eon_iec dataset. The observed communication was from server to client, with source identifier 81 and destination identifier 18. The source port was 2404, and the destination port was 42406. The packet size was 67 bytes, with a packet length field of 25.\n\nThe observed frame type was i_format_information_transfer, and the ASDU fields were as follows: address 35, COT 3, item count 1, and ASDU type 36. This event conforms to the dominant_iec104_measurement_pattern and is labeled as a proxy observation under the IEC104_BASELINE_MEASUREMENT_OBSERVATION formal class. However, it's important to note that this label does not confirm an attack or malicious activity. Further investigation may be required for definitive conclusions regarding the nature of this network event.",
+    "generation_ok": true,
+    "elapsed_seconds": 36.25227403640747,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646412687,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_007668_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_007668",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646406424, an IEC-104 network event (evt_007668) occurred within the eon_iec dataset. The observed communication was from server to client, with source identifier 163 and destination identifier 1. The source port was 2404, and the destination port was 57498. The packet size was 79 bytes, but only 25 bytes were used in the frame length field.\n\nThe observed frame type was i_format_information_transfer, and it followed the dominant_iec104_measurement_pattern. The ASDU address was 220, with an ASDU type of 36, COT of 3, and a single item count. This event is classified as a proxy observation under the IEC104_BASELINE_MEASUREMENT_OBSERVATION formal class, which does not confirm or deny any security conclusions. It should be noted that this classification is a proxy label and not a confirmed attack label.",
+    "generation_ok": true,
+    "elapsed_seconds": 31.311189651489258,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646406424,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_001649_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_001649",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646404806, an IEC-104 network event (evt_001649) occurred with the observed protocol hint being iec104 and communication direction as server_to_client. The frame type was i_format_information_transfer, consistent with data transfer operations. The source of this communication was device 429, which transmitted data to device 1, using ports 2404 (source) and 43398 (destination). The packet size was 67 bytes, with a packet length field of 25 bytes.\n\nThe transmitted ASDU (Application-Specific Data Unit) had an address of 292, type 36, COT (Communication Object Type) 3, and one item. This ASDU is classified under the proxy formal class IEC104_BASELINE_MEASUREMENT_OBSERVATION, indicating a measurement observation, but it should be noted that this label does not confirm an attack or malicious activity. The observed event pattern was dominant_iec104_measurement_pattern, suggesting frequent occurrences of similar events in the network. However, without additional context or evidence, no security conclusions can be drawn from this observation alone.",
+    "generation_ok": true,
+    "elapsed_seconds": 39.949604988098145,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646404806,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_011166_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_011166",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646407470, an IEC-104 network event (evt_011166) occurred in the eon_iec dataset. The observed communication was from server to client, with source identifier 202 and destination identifier 18. The source port was 2404, and the destination port was 44612. The packet size was 67 bytes, and the packet length field was 25.\n\nThe frame type was i_format_information_transfer, and the observed ASDU fields were as follows: ASDU address 19, COT 3, and ASDU item count 1. The ASDU type was 36. This event conforms to the dominant_iec104_measurement_pattern and is labeled as a proxy observation under the IEC104_BASELINE_MEASUREMENT_OBSERVATION formal class, which does not confirm an attack label. It should be noted that this classification is a proxy and may not represent ground truth or confirmed malicious activity.",
+    "generation_ok": true,
+    "elapsed_seconds": 34.00393104553223,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646407470,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_005928_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_005928",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646405948, an IEC-104 network event (evt_005928) occurred within the eon_iec dataset. The observed communication was from server to client, with source identifier 390 and destination identifier 8. The source port was 2404, and the destination port was 59992. The packet size was 67 bytes, with a packet length field of 25.\n\nThe frame type was i_format_information_transfer, adhering to the dominant_iec104_measurement_pattern. The ASDU address was 303, and the ASDU type was 36, with COT (Communication Object Type) being 3 and a single ASDU item. This event falls under the proxy formal class of IEC104_BASELINE_MEASUREMENT_OBSERVATION, which is not a confirmed attack label but serves as an observation category for this type of network traffic. It's important to note that the current classification does not confirm any security conclusions regarding this event.",
+    "generation_ok": true,
+    "elapsed_seconds": 33.56728911399841,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646405948,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_016760_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_016760",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646412172, an IEC-104 network event (evt_016760) occurred within the eon_iec dataset. The observed communication was from server to client, with source identifier 121 and destination identifier 10. The source port was 2404, and the destination port was 49812. The packet size was 79 bytes, with a packet length field of 25.\n\nThe frame type was i_format_information_transfer, following the dominant_iec104_measurement_pattern. The ASDU address was 235, and the ASDU type was 36, while the COT (Communication Object Type) was 3. This ASDU contained a single item.\n\nIt is important to note that the formal class of this observation is IEC104_BASELINE_MEASUREMENT_OBSERVATION, which is a proxy label and not a confirmed attack label. The presence of this event does not confirm or deny any security conclusions without further investigation.",
+    "generation_ok": true,
+    "elapsed_seconds": 34.66665077209473,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646412172,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_012733_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_012733",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646411090, an IEC-104 network event (evt_012733) occurred within the eon_iec dataset. The observed communication was from server to client, with source identifier 497 and destination identifier 1. The source port was 2404, and the destination port was 58172. The packet size was 60 bytes, and the packet length field was 18.\n\nThe observed frame type was i_format_information_transfer, and the ASDU address was 83. The ASDU contained one item of type 13, with a Communication Object Type (COT) of 3. This event conforms to the iec104_information_transfer_pattern. However, it is important to note that the formal class associated with this observation is IEC104_OBSERVATION_UNCLASSIFIED, which is a proxy label and not a confirmed attack label. Therefore, no definitive conclusions regarding the security implications of this event can be drawn based on the provided information alone.",
+    "generation_ok": true,
+    "elapsed_seconds": 35.51763105392456,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646411090,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_012537_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_012537",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646411025, an IEC-104 network event (evt_012537) occurred with the observed protocol hint being iec104 and communication direction as server_to_client. The source of this communication was device with identifier 352, which transmitted data to device with identifier 1. This transmission took place on ports 2404 (source) and 48712 (destination). The packet size was 67 bytes, but the packet length field reported 25 bytes.\n\nThe transmitted frame followed the i_format_information_transfer format and adhered to the dominant_iec104_measurement_pattern. Specifically, it contained an ASDU with address 295, type 36, COT 3, and one item. This ASDU is classified as a proxy observation label under IEC104_BASELINE_MEASUREMENT_OBSERVATION, which does not confirm the event as malicious or normal traffic. It should be noted that this formal class is a proxy label and not a confirmed attack label.",
+    "generation_ok": true,
+    "elapsed_seconds": 35.35694909095764,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646411025,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_017932_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_017932",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646412501, an IEC-104 network event (evt_017932) occurred within the eon_iec dataset. The observed communication was from server to client, with source identifier 236 and destination identifier 237. The source port was 2404, and the destination port was 60450. The packet size was 60 bytes, and the packet length field indicated 18 bytes were used in this communication.\n\nThe observed frame type was i_format_information_transfer, and the ASDU fields included an address of 41, a COT (Communication Object Type) of 3, and one item with ASDU type 13. This event conforms to the iec104_information_transfer_pattern, but it is important to note that the formal class assigned to this observation, IEC104_OBSERVATION_UNCLASSIFIED, is a proxy label and not a confirmed attack label.\n\nWithout additional context or evidence, no security conclusions can be drawn from this observation alone.",
+    "generation_ok": true,
+    "elapsed_seconds": 33.60289788246155,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646412501,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_OBSERVATION_UNCLASSIFIED",
+      "observation_pattern": "iec104_information_transfer_pattern"
+    }
+  },
+  {
+    "response_id": "evt_017436_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_017436",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646412368, an IEC-104 network event (evt_017436) occurred within the eon_iec dataset. The observed communication was from server to client between source identifier 500 and destination identifier 501, using ports 2404 and 46420 respectively. The packet size was 67 bytes, with a packet length field of 25.\n\nThe frame type was i_format_information_transfer, adhering to the dominant_iec104_measurement_pattern. The ASDU address was 118, and the ASDU contained one item of type 36, with a Common Object Type (COT) of 3. This event is classified as a proxy observation under the IEC104_BASELINE_MEASUREMENT_OBSERVATION formal class, which does not confirm an attack label. It should be noted that this classification is provisional and may not represent ground truth or confirmed malicious activity.",
+    "generation_ok": true,
+    "elapsed_seconds": 32.98207497596741,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646412368,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_007343_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_007343",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646406355, an IEC-104 network event (evt_007343) occurred within the eon_iec dataset. The observed communication was from server to client, with source identifier 257 and destination identifier 1. The source port was 2404, and the destination port was 48694. The packet size was 79 bytes, but the packet length field reported 25 bytes.\n\nThe frame type was i_format_information_transfer, and the observed ASDU fields were as follows: ASDU address 302, COT 3, ASDU type 36, and ASDU item count 1. This event conforms to the dominant_iec104_measurement_pattern and is labeled as a proxy observation under the IEC104_BASELINE_MEASUREMENT_OBSERVATION formal class. However, it's important to note that this label does not confirm an attack or malicious activity. The event does not provide sufficient evidence for such conclusions.",
+    "generation_ok": true,
+    "elapsed_seconds": 35.157021045684814,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646406355,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_011678_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_011678",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646407861, an IEC-104 network event (evt_011678) occurred within the eon_iec dataset. The observed communication was from server to client, with source identifier 54 and destination identifier 18. The source port was 2404, and the destination port was 43354. The packet size was 67 bytes, and the packet length field indicated 25 bytes were used in this communication.\n\nThe observed frame type was i_format_information_transfer, and the ASDU fields included an address of 17, a COT (Communication Object Type) of 3, and an item count of 1. The ASDU type was 36. This event conforms to the dominant_iec104_measurement_pattern and is currently labeled as IEC104_BASELINE_MEASUREMENT_OBSERVATION, although it should be noted that this label is a proxy and not a confirmed attack label.\n\nThe formal bound does not provide sufficient evidence to confirm or deny any security conclusions regarding this network event.",
+    "generation_ok": true,
+    "elapsed_seconds": 32.17231273651123,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646407861,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_003897_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_003897",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646405421, an IEC-104 network event (evt_003897) occurred within the eon_iec dataset. The observed communication was from server to client, with source identifier 166 and destination identifier 1. The source port was 2404, and the destination port was 43452. The packet size was 79 bytes, but only 25 bytes were used in the packet length field.\n\nThe observed frame type was i_format_information_transfer, and the ASDU fields included an address of 50, a COT (Communication Object Type) of 3, and one item with type 36. This event conforms to the dominant_iec104_measurement_pattern and is classified as a proxy observation under the IEC104_BASELINE_MEASUREMENT_OBSERVATION formal class. However, it's important to note that this classification does not confirm the event as a cyber attack or malicious activity. Further investigation may be required for confirmation of normal or abnormal network behavior.",
+    "generation_ok": true,
+    "elapsed_seconds": 27.86547827720642,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646405421,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_014244_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_014244",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646411525, an IEC-104 network event (evt_014244) occurred in the eon_iec dataset. The observed communication was from server to client, with source identifier 166 and destination identifier 1. The source port was 2404, and the destination port was 43452. The packet size was 79 bytes, but only 25 bytes were used in the frame length field.\n\nThe observed frame type was i_format_information_transfer, and it followed the dominant_iec104_measurement_pattern. The ASDU address was 50, the ASDU type was 36, the COT (Communication Object Type) was 3, and there was one ASDU item. This event is classified as a proxy observation under the IEC104_BASELINE_MEASUREMENT_OBSERVATION formal class, which does not confirm an attack label. It's important to note that this classification is a proxy and may not represent ground truth or confirmed malicious activity.",
+    "generation_ok": true,
+    "elapsed_seconds": 28.013731956481934,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646411525,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_001456_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_001456",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646404722, an IEC-104 network event (evt_001456) occurred within the eon_iec dataset. The observed communication was from server to client, with source identifier 130 and destination identifier 1. The source port was 2404, and the destination port was 51574. The packet size was 79 bytes, but only 25 bytes were used in the packet length field.\n\nThe frame type was i_format_information_transfer, and the observed ASDU fields included an address of 27, a COT (Communication Object Type) of 3, and an item count of 1. The ASDU type was 36. This event conforms to the dominant_iec104_measurement_pattern and is currently labeled as IEC104_BASELINE_MEASUREMENT_OBSERVATION, although it should be noted that this label is a proxy and not a confirmed attack label. No further conclusions regarding maliciousness or cyber attacks can be drawn from the provided formal bound.",
+    "generation_ok": true,
+    "elapsed_seconds": 26.00705099105835,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646404722,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_000963_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_000963",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646404521, an IEC-104 network event (evt_000963) occurred within the eon_iec dataset. The observed communication was from server to client, with source identifier 180 and destination identifier 10. The source port was 2404, and the destination port was 40288. The packet size was 79 bytes, but only 25 bytes were used in the packet length field.\n\nThe observed frame type was i_format_information_transfer, and it followed the dominant_iec104_measurement_pattern. The ASDU address was 82, the ASDU type was 36, and the COT (Communication Object Type) was 3. Only one ASDU item was transmitted. This event is labeled as a proxy observation under the IEC104_BASELINE_MEASUREMENT_OBSERVATION formal class, which does not confirm an attack label. It's important to note that this classification is a proxy and may not represent ground truth or confirmed malicious activity.",
+    "generation_ok": true,
+    "elapsed_seconds": 25.60599970817566,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646404521,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_013387_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_013387",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646411302, an IEC-104 network event (evt_013387) occurred within the eon_iec dataset. The observed communication was from server to client, with source identifier 188 and destination identifier 10. The source port was 2404, and the destination port was 46402. The packet size was 67 bytes, and the packet length field was 25.\n\nThe frame type was i_format_information_transfer, and the observed ASDU fields were as follows: ASDU address 304, COT 3, and ASDU item count 1. The ASDU type was 36. This event conforms to the dominant_iec104_measurement_pattern and is labeled as a proxy IEC104_BASELINE_MEASUREMENT_OBSERVATION. However, it's important to note that this formal class does not confirm an attack label. The protocol hint indicates that the observed event was an IEC-104 communication, but no further conclusions about the nature or intent of the traffic can be drawn from the provided information.",
+    "generation_ok": true,
+    "elapsed_seconds": 25.389533042907715,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646411302,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_004652_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_004652",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646405617, an IEC-104 network event (evt_004652) occurred within the eon_iec dataset. The observed communication was from server to client, with source identifier 192 and destination identifier 1. The source port was 2404, and the destination port was 40844. The packet size was 79 bytes, but only 25 bytes were used in the packet length field.\n\nThe frame type was i_format_information_transfer, and the observed ASDU fields included an address of 294, a COT (Communication Object Type) of 3, and one item with ASDU type 36. This event conforms to the dominant_iec104_measurement_pattern and is labeled as IEC104_BASELINE_MEASUREMENT_OBSERVATION, although it should be noted that this label is a proxy observation and not a confirmed attack label.\n\nThe current formal bound does not provide sufficient evidence to confirm or deny any security conclusions regarding this network event.",
+    "generation_ok": true,
+    "elapsed_seconds": 26.718940019607544,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646405617,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_015637_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_015637",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646411905, an IEC-104 network event (evt_015637) was observed in the eon_iec dataset. The event followed the dominant_iec104_measurement_pattern and was classified as a proxy observation under the IEC104_BASELINE_MEASUREMENT_OBSERVATION formal class, which does not confirm an attack label. The observed communication direction was server-to-client between source identifier 365 and destination identifier 366. The source port was 2404, and the destination port was 56358. The packet size was 94 bytes, with a packet length field of 25. The ASDU address was 35, the ASDU type was 36, the COT was 3, and there was one ASDU item in the frame. This event is consistent with the IEC-104 protocol hint and observed ASDU fields, but it does not confirm any specific cyber attack or malicious activity.",
+    "generation_ok": true,
+    "elapsed_seconds": 30.55854320526123,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646411905,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_005862_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_005862",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646405932, an IEC-104 network event (evt_005862) occurred within the eon_iec dataset. The observed communication was from server to client, with source identifier 435 and destination identifier 434. The source port was 2404, and the destination port was 49820. The packet size was 67 bytes, and the packet length field indicated 25 bytes were used in this frame.\n\nThe observed frame type was i_format_information_transfer, and it followed the dominant_iec104_measurement_pattern. The ASDU address was 220, the ASDU type was 36, and the COT (Communication Object Type) was 3. This frame contained a single ASDU item.\n\nIt is important to note that the formal class assigned to this observation is IEC104_BASELINE_MEASUREMENT_OBSERVATION, which is currently considered a proxy observation label and not a confirmed attack label. The presence of this observation does not confirm or deny any security conclusions.",
+    "generation_ok": true,
+    "elapsed_seconds": 30.34464693069458,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646405932,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_019929_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_019929",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 165464641307ms, an IEC-104 network event (evt_019929) occurred with the observed protocol being iec104 and communication direction as server_to_client. The source of this communication was device with identifier 207, which transmitted data to device with identifier 1. This transmission took place on ports 2404 (source) and 56756 (destination). The packet size was 67 bytes, with a packet length field of 25.\n\nThe observed frame type was i_format_information_transfer, and the ASDU fields were as follows: address 85, COT 3, type 36, and item count 1. This event conforms to the dominant_iec104_measurement_pattern and is classified under the proxy formal class IEC104_BASELINE_MEASUREMENT_OBSERVATION. However, it is important to note that this classification is a proxy label and does not confirm or deny any malicious intent associated with this event.",
+    "generation_ok": true,
+    "elapsed_seconds": 20.712571144104004,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646413007,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_001665_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_001665",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646404817, an IEC-104 network event (evt_001665) occurred in the eon_iec dataset. The observed communication was from server to client, with source identifier 226 and destination identifier 1. The source port was 2404, and the destination port was 57928. The packet size was 79 bytes, but only 25 bytes were used in the frame length field.\n\nThe observed frame type was i_format_information_transfer, and it adhered to the dominant_iec104_measurement_pattern. The ASDU address was 13, the COT (Communication Object Type) was 3, and there was one ASDU item with type 36. This event is classified as a proxy observation under the IEC104_BASELINE_MEASUREMENT_OBSERVATION formal class, which does not confirm an attack label. However, it is important to note that this classification is provisional and may require further validation before being considered ground truth.",
+    "generation_ok": true,
+    "elapsed_seconds": 20.868642807006836,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646404817,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_017303_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_017303",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646412332, an IEC-104 network event (evt_017303) occurred within the eon_iec dataset. The observed communication was from server to client, with source identifier 204 and destination identifier 1. The source port was 2404, and the destination port was 47192. The packet size was 67 bytes, with a packet length field of 25.\n\nThe frame type was i_format_information_transfer, adhering to the dominant_iec104_measurement_pattern. The ASDU address was 19, and the ASDU type was 36. The Communication Object Type (COT) was 3, and there was one ASDU item in this transmission.\n\nIt is important to note that the formal class assigned to this observation is a proxy label, IEC104_BASELINE_MEASUREMENT_OBSERVATION, which does not confirm an attack or malicious activity. The interpretation of this event requires further analysis and contextual understanding to determine its potential implications for network security.",
+    "generation_ok": true,
+    "elapsed_seconds": 20.560930013656616,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646412332,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_004751_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_004751",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646405648, an IEC-104 network event (evt_004751) occurred with the observed protocol hint being iec104 and communication direction as server_to_client. The frame type was i_format_information_transfer, adhering to the dominant_iec104_measurement_pattern. The source of this event was device 378, which communicated with destination device 10 via ports 2404 (source) and 41502 (destination). The packet size was 79 bytes, with a packet length field of 25. The ASDU fields included an address of 1, type 36, COT 3, and item count 1. This event is labeled as IEC100_BASELINE_MEASUREMENT_OBSERVATION, however, it should be noted that this label is a proxy observation and not a confirmed attack label. No further conclusions regarding the nature of this event can be made based on the provided formal bound.",
+    "generation_ok": true,
+    "elapsed_seconds": 21.445132970809937,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646405648,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_BASELINE_MEASUREMENT_OBSERVATION",
+      "observation_pattern": "dominant_iec104_measurement_pattern"
+    }
+  },
+  {
+    "response_id": "evt_019183_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_019183",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646412820, an IEC-104 control frame observation (IEC104_CONTROL_FRAME_OBSERVATION) was detected in the eon_iec dataset. The observed communication direction was client-to-server between source identifier 286 and destination identifier 285. The source port was 50332, while the destination port was 2404. The packet size was 46 bytes, with a packet length field of 4.\n\nThe frame type observed was s_or_u_format_control, and it adhered to the iec104_control_frame_pattern. However, it is important to note that the current formal class is a proxy observation label (proxy_not_ground_truth_attack_label), not a confirmed attack label. The ASDU fields observed were an address of 0, type of 0, COT of 0, and no items.\n\nThis observation does not provide sufficient evidence to confirm or deny any security conclusions. Further analysis is required to determine the nature and potential implications of this IEC-104 control frame communication.",
+    "generation_ok": true,
+    "elapsed_seconds": 21.248033046722412,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646412820,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_002043_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_002043",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646404898, an IEC-104 network event (evt_002043) occurred with the observed protocol being IEC104 and communication direction as server_to_client. The source identifier was 468 and the destination identifier was 8. The source port was 2404, while the destination port was 39518. The packet size was 58 bytes, with a packet length field of 4. No ASDU items were present in this frame, as indicated by an ASDU address of 0, ASDU type of 0, COT of 0, and an ASDU item count of 0. The observed frame type was u_format_control, consistent with the IEC104 control frame pattern (iec104_control_frame_pattern). It is important to note that the formal class label IEC104_CONTROL_FRAME_OBSERVATION is a proxy observation and not a confirmed attack label. The interpretation of this event as normal or malicious traffic cannot be definitively concluded based on the provided information.",
+    "generation_ok": true,
+    "elapsed_seconds": 22.169244050979614,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646404898,
+      "protocol_hint": "iec104",
+      "communication_direction": "server_to_client",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_008377_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_008377",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646406631, an IEC-104 control frame observation (IEC104_CONTROL_FRAME_OBSERVATION) was detected in the eon_iec dataset. The observed communication direction was client-to-server between source identifier 10 and destination identifier 21. The source port was 44970, while the destination port was 2404. The packet size was 46 bytes, with a packet length field of 4. The ASDU fields observed were an address of 0, type of 0, COT of 0, and no items. This observation follows the iec104_control_frame_pattern and is labeled as a proxy observation, not a confirmed attack label according to the formal bound version 2.1. It's important to note that this observation does not confirm any specific security conclusion due to the use of a proxy formal class.",
+    "generation_ok": true,
+    "elapsed_seconds": 22.50479292869568,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646406631,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_006150_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_006150",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646406010, an IEC-104 control frame event (evt_006150) was observed in the eon_iec dataset. The source identifier was 1 and the destination identifier was 204. The source port was 47192, while the destination port was 2404. The packet size was 46 bytes, with a packet length field of 4. This frame followed the IEC104_control_frame_pattern and was labeled as an IEC104_CONTROL_FRAME_OBSERVATION, which is a proxy observation label, not a confirmed attack label. The ASDU fields observed were: address (0), type (0), COT (0), and item count (0). This event occurred over the IEC-104 protocol, with the communication direction being client_to_server. No further conclusions can be drawn about the nature of this event based on the provided formal bound.",
+    "generation_ok": true,
+    "elapsed_seconds": 23.630156993865967,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646406010,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_010032_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_010032",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646407091, an IEC-104 control frame observation (IEC104_CONTROL_FRAME_OBSERVATION) was detected in the network event dataset (eon_iec). The observed communication direction was client-to-server between source identifier 419 and destination identifier 418, using ports 60204 and 2404 respectively. The frame type was s_or_u_format_control, and the packet size was 46 bytes with a packet length field of 4. No ASDU items were present in this observation, as indicated by an ASDU address of 0, ASDU type of 0, COT of 0, and an empty ASDU item count. The proxy formal class for this event is IEC104_CONTROL_FRAME_OBSERVATION, and the observation pattern followed was iec104_control_frame_pattern. It's important to note that this formal class is a proxy observation label, not a confirmed attack label. No further conclusions can be drawn about the nature or intent of this network event based on the provided formal bound.",
+    "generation_ok": true,
+    "elapsed_seconds": 24.706794261932373,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646407091,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_014095_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_014095",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646411492, an IEC-104 control frame event (evt_014095) was observed in the eon_iec dataset. The communication direction was from source identifier 1 to destination identifier 55, using ports 44926 and 2404 respectively. The packet size was 46 bytes, with a packet length field of 4. The frame type was s_or_u_format_control, and the observed ASDU fields included an address of 0, type of 0, COT of 0, and no items. This event conforms to the iec104_control_frame_pattern and is classified as a proxy observation under the IEC104_CONTROL_FRAME_OBSERVATION formal class, which does not confirm an attack label. The observed protocol hint was IEC-104, consistent with the ASDU fields. No further conclusions can be drawn about the nature or potential impact of this event based on the provided formal bound.",
+    "generation_ok": true,
+    "elapsed_seconds": 22.858363151550293,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646411492,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_018435_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_018435",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646412621, an IEC-104 control frame observation (IEC104_CONTROL_FRAME_OBSERVATION) was detected in the eon_iec dataset. The observed communication direction was client-to-server between source identifier 10 and destination identifier 121, using ports 49812 and 2404 respectively. The frame type was s_or_u_format_control, and the packet size was 58 bytes with a packet length field of 4. The ASDU fields observed were an address of 0, type of 0, COT of 0, and no items. This observation follows the iec104_control_frame_pattern but should be noted that the formal class is a proxy label, not a confirmed attack label. No further conclusions can be drawn about the nature or potential impact of this event based on the provided information.",
+    "generation_ok": true,
+    "elapsed_seconds": 21.126311779022217,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646412621,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_008035_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_008035",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646406547, an IEC-104 control frame observation (IEC104_CONTROL_FRAME_OBSERVATION) was detected in the eon_iec dataset. The observed communication direction was client-to-server between source identifier 10 and destination identifier 182, using ports 47672 and 2404 respectively. The packet size was 46 bytes, with a packet length field of 4. The ASDU fields included an address of 0, type of 0, COT of 0, and no items. This observation follows the iec104_control_frame_pattern and is labeled as a proxy observation, not a confirmed attack label according to the formal class status. No further security conclusions can be drawn from this single event without additional context or evidence.",
+    "generation_ok": true,
+    "elapsed_seconds": 16.824392795562744,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646406547,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_003427_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_003427",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646405308, an IEC-104 network event (evt_003427) occurred with the observed protocol hint being iec104 and communication direction as client_to_server. The source identifier was 8 and the destination identifier was 570. The source port was 47106, while the destination port was 2404. The packet size was 58 bytes, with a packet length field of 4. No ASDU items were present in this frame, as indicated by an ASDU address of 0, ASDU type of 0, COT of 0, and an ASDU item count of 0. The observed frame type was u_format_control, following the iec104_control_frame_pattern. It is important to note that the formal class IEC104_CONTROL_FRAME_OBSERVATION is a proxy observation label, not a confirmed attack label. No further conclusions can be drawn about the nature of this event without additional context or information.",
+    "generation_ok": true,
+    "elapsed_seconds": 21.64049220085144,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646405308,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_008134_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_008134",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646406568, an IEC-104 control frame event (evt_008134) was observed in the eon_iec dataset. The communication occurred from source identifier 1 to destination identifier 63 using port numbers 48396 and 2404 respectively. The frame type was s_or_u_format_control, as defined by the IEC-104 protocol hint. The observed packet size was 58 bytes, with a packet length field of 4. No ASDU items were present in this frame, as indicated by an ASDU address of 0, ASDU type of 0, COT of 0, and an item count of 0. This observation conforms to the iec104_control_frame_pattern. However, it is important to note that the formal class IEC104_CONTROL_FRAME_OBSERVATION is a proxy label and does not confirm a security conclusion. The nature of this event remains undetermined without additional context or evidence.",
+    "generation_ok": true,
+    "elapsed_seconds": 23.25409197807312,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646406568,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_007828_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_007828",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646406485, an IEC-104 control frame observation (IEC104_CONTROL_FRAME_OBSERVATION) was detected in the eon_iec dataset. The observed communication direction was client-to-server between source identifier 1 and destination identifier 57. The source port was 34440, and the destination port was 2404. The packet size was 46 bytes, with a packet length field of 4.\n\nThe ASDU fields observed were an address of 0, type of 0, COT of 0, and no items. This frame followed the iec104_control_frame_pattern. However, it is important to note that the current formal class is a proxy observation label (proxy_not_ground_truth_attack_label), not a confirmed attack label. Therefore, any conclusions regarding malicious activity cannot be definitively drawn from this observation alone.",
+    "generation_ok": true,
+    "elapsed_seconds": 20.107425212860107,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646406485,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_004435_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_004435",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646405567, an IEC-104 network event (evt_004435) occurred within the eon_iec dataset. The observed communication was from source identifier 10 to destination identifier 182, using ports 47672 and 2404 respectively. The packet size was 46 bytes, with a packet length field of 4. The frame type was s_or_u_format_control, following the iec104_control_frame_pattern. However, it is important to note that the formal class IEC104_CONTROL_FRAME_OBSERVATION is a proxy observation label and not a confirmed attack label. The ASDU fields observed were an address of 0, type of 0, COT of 0, and no items. This event does not confirm any specific security conclusion based on the provided information.",
+    "generation_ok": true,
+    "elapsed_seconds": 20.918126106262207,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646405567,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_014866_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_014866",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "In the IEC-104 network event (evt_014866, eon_iec), a communication occurred from source identifier 18 to destination identifier 860 using port numbers 54142 and 2404 respectively. The observed packet size was 58 bytes with a packet length field of 4. This event adheres to the IEC104 protocol hint, specifically the s_or_u_format_control frame type, and follows the iec104_control_frame_pattern. However, it is important to note that the formal class IEC104_CONTROL_FRAME_OBSERVATION is a proxy observation label, not a confirmed attack label. The ASDU fields observed were an address of 0, type of 0, COT of 0, and no items present. This event does not confirm any specific cybersecurity conclusion based on the provided formal bound.",
+    "generation_ok": true,
+    "elapsed_seconds": 19.65127396583557,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646411671,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_005853_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_005853",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646405930, an IEC-104 control frame observation (IEC104_CONTROL_FRAME_OBSERVATION) was detected in the eon_iec dataset. The observed communication direction was client-to-server between source identifier 434 and destination identifier 435. The source port was 49820, while the destination port was 2404. The packet size was 46 bytes, with a packet length field of 4. The ASDU fields observed were an address of 0, type of 0, COT of 0, and no items. This observation follows the iec104_control_frame_pattern and is classified as a proxy observation label (proxy_not_ground_truth_attack_label), not a confirmed attack label. It should be noted that this observation does not confirm or deny any security conclusions based on the provided information.",
+    "generation_ok": true,
+    "elapsed_seconds": 20.371444940567017,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646405930,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_015549_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_015549",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "In the IEC-104 network at the specified timestamp (1654646411882 ms), an event identified as evt_015549 occurred. The event involves a communication from source identifier 283 to destination identifier 282, using port numbers 49192 and 2404 respectively. This communication adheres to the IEC-104 protocol and follows the s_or_u_format_control frame type.\n\nThe observed frame does not carry any ASDU data, as indicated by the ASDU address, type, COT, and item count all being 0. The packet size is 46 bytes, with a packet length field of 4. This event is labeled as IEC104_CONTROL_FRAME_OBSERVATION, which is a proxy observation label and not a confirmed attack label. It should be noted that the presence of this label does not confirm or deny any malicious activity associated with the observed communication.",
+    "generation_ok": true,
+    "elapsed_seconds": 18.715361833572388,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646411882,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_015146_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_015146",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "In the IEC-104 network at the specified timestamp (1654646411757 ms), an event identified as evt_015146 occurred, containing a data packet with a size of 46 bytes and a packet length field of 4. This packet was transmitted from source identifier 18 to destination identifier 142 using port 40904 for the source and port 2404 for the destination. The observed frame type was s_or_u_format_control, adhering to the IEC-104 protocol hint.\n\nThe ASDU fields of this packet were as follows: an address of 0, a COT (Communication Object Type) of 0, and no items (ASDU item count of 0). The frame format conformed to the iec104_control_frame_pattern. It is important to note that the formal class assigned to this observation is IEC104_CONTROL_FRAME_OBSERVATION, which is a proxy label and not a confirmed attack label. Therefore, no definitive conclusions regarding maliciousness can be drawn from this observation alone.",
+    "generation_ok": true,
+    "elapsed_seconds": 24.18681502342224,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646411757,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_014424_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_014424",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646411562, an IEC-104 control frame observation (IEC104_CONTROL_FRAME_OBSERVATION) was detected in the eon_iec dataset. The observed communication direction was client-to-server between source identifier 70 and destination identifier 69, using ports 39002 and 2404 respectively. The frame type was s_or_u_format_control, and the packet size was 46 bytes with a packet length field of 4. The ASDU fields included an address of 0, type of 0, COT of 0, and no items. This observation follows the iec104_control_frame_pattern and is classified as a proxy observation label (proxy_not_ground_truth_attack_label), not a confirmed attack label. The current formal class does not confirm a security conclusion regarding this event.",
+    "generation_ok": true,
+    "elapsed_seconds": 23.65032124519348,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646411562,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_001386_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_001386",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646404688, an IEC-104 control frame event (evt_001386) was observed in the eon_iec dataset. The source identifier for this event was 10, and it communicated with destination identifier 191 using ports 35954 (source) and 2404 (destination). The packet size of the frame was 46 bytes, while the packet length field indicated a value of 4. No ASDU items were present in this control frame, as the ASDU item count was 0. The observed ASDU address, type, and COT fields were all 0. It is important to note that the formal class for this observation is IEC104_CONTROL_FRAME_OBSERVATION, which is a proxy label and not a confirmed attack label. This observation adheres to the IEC104 protocol hint and the iec104_control_frame_pattern. However, without additional context or information, it is not possible to confirm whether this event represents normal or abnormal traffic.",
+    "generation_ok": true,
+    "elapsed_seconds": 23.897422075271606,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646404688,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_013438_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_013438",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646411323, an IEC-104 control frame event (evt_013438) was observed in the eon_iec dataset. The communication occurred from source identifier 18 to destination identifier 39 using ports 47578 and 2404 respectively. The packet size was 58 bytes, with a packet length field of 4. The frame type was s_or_u_format_control, and the observed ASDU fields included an address of 0, type of 0, COT of 0, and no items. This event conforms to the iec104_control_frame_pattern and is labeled as a proxy observation under the IEC104_CONTROL_FRAME_OBSERVATION formal class, which does not confirm an attack label. The current version of the schema is 2.1 and it is marked as 'proxy_until_official_automaton_schema', indicating that this classification may be subject to change upon the release of the official automaton schema.",
+    "generation_ok": true,
+    "elapsed_seconds": 24.599194049835205,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646411323,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_014077_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_014077",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646411490, an IEC-104 control frame event (evt_014077) was observed in the eon_iec dataset. The communication direction was client-to-server between source identifier 18 and destination identifier 622, using ports 58804 and 2404 respectively. The packet size was 46 bytes, with a packet length field of 4. The observed frame type was s_or_u_format_control, and the ASDU fields included an address of 0, a type of 0, COT of 0, and no items. This event falls under the proxy formal class IEC104_CONTROL_FRAME_OBSERVATION, following the iec104_control_frame_pattern, but it is important to note that this classification does not confirm an attack label. The observed features are consistent with the specified IEC-104 protocol hint when present. No further conclusions can be drawn about the nature or potential impact of this event based on the provided formal bound.",
+    "generation_ok": true,
+    "elapsed_seconds": 21.106897115707397,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646411490,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_003765_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_003765",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "In the IEC-104 network at the specified timestamp (1654646405386 ms), an event identified as evt_003765 occurred within the eon_iec dataset. The observed communication was from source identifier 1 to destination identifier 192, using port numbers 40844 and 2404 respectively. The frame type was s_or_u_format_control, adhering to the iec104_control_frame_pattern. The packet size was 58 bytes, with a packet length field of 4. No ASDU items were present in this observation, as indicated by an ASDU address, type, COT, and item count of 0.\n\nIt is important to note that the formal class associated with this event is IEC104_CONTROL_FRAME_OBSERVATION, which serves as a proxy label and does not confirm any specific security conclusion. The observation pattern, iec104_control_frame_pattern, provides context for understanding the structure of the communication but does not imply any malicious intent or confirmed cyber attack.",
+    "generation_ok": true,
+    "elapsed_seconds": 19.952502012252808,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646405386,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_011850_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_011850",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646409785, an IEC-104 control frame observation (IEC104_CONTROL_FRAME_OBSERVATION) was detected in the eon_iec dataset. The observed communication direction was client-to-server between source identifier 10 and destination identifier 111. The source port was 60370, while the destination port was 2404. The packet size was 46 bytes, with a packet length field of 4. The ASDU fields observed were an address of 0, type of 0, COT of 0, and no items. This observation follows the iec104_control_frame_pattern and is labeled as a proxy observation, not a confirmed attack label according to the formal class status. No further security conclusions can be drawn from this bound without additional context or evidence.",
+    "generation_ok": true,
+    "elapsed_seconds": 16.907161951065063,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646409785,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_016174_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_016174",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646412012, an IEC-104 control frame observation (IEC104_CONTROL_FRAME_OBSERVATION) was detected in the eon_iec dataset. The observed communication direction was client-to-server between source identifier 18 and destination identifier 205. The source port was 43500, while the destination port was 2404. The packet size was 58 bytes, with a packet length field of 4. The ASDU fields observed were an address of 0, type of 0, COT of 0, and no items. This observation follows the iec104_control_frame_pattern and is classified as a proxy observation label (proxy_not_ground_truth_attack_label), not a confirmed attack label. The protocol hint for this event was IEC-104.",
+    "generation_ok": true,
+    "elapsed_seconds": 17.18633008003235,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646412012,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_005220_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_005220",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646405757, an IEC-104 network event (evt_005220) occurred within the eon_iec dataset. The observed communication was from source identifier 8 to destination identifier 626, using port numbers 59778 and 2404 respectively. The frame type was s_or_u_format_control, as defined by the IEC104 protocol hint. The packet size was 58 bytes, with a packet length field of 4. No ASDU items were present in this observation, as indicated by an ASDU address, type, COT, and item count of 0.\n\nIt is important to note that the formal class associated with this event is IEC104_CONTROL_FRAME_OBSERVATION, which is a proxy label and not a confirmed attack label. The observation pattern followed was iec104_control_frame_pattern. No further conclusions regarding the nature or potential impact of this network event can be drawn based on the provided formal bound.",
+    "generation_ok": true,
+    "elapsed_seconds": 18.972951650619507,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646405757,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
+    "response_id": "evt_003443_ollama_mistral_7b-instruct-v0_3-q4_0",
+    "original_event_id": "evt_003443",
+    "response_type": "real_llm_output",
+    "model_name": "mistral:7b-instruct-v0.3-q4_0",
+    "model_backend": "ollama_local",
+    "response": "At timestamp 1654646405312, an IEC-104 control frame event (evt_003443) was observed in the eon_iec dataset. The source identifier for this event was 1, and it communicated with destination identifier 57. The communication occurred on ports 34440 (source) and 2404 (destination). The packet size was 46 bytes, and the packet length field indicated a length of 4.\n\nThe observed frame type was s_or_u_format_control, and it adhered to the iec104_control_frame_pattern. The ASDU fields included an address of 0, a COT value of 0, an ASDU type of 0, and no ASDU items.\n\nIt is important to note that the formal class for this observation is IEC104_CONTROL_FRAME_OBSERVATION, which is a proxy label and not a confirmed attack label. The presence of this event does not confirm or deny any malicious activity within the system. Further analysis would be required to determine if this event represents normal or abnormal behavior.",
+    "generation_ok": true,
+    "elapsed_seconds": 20.269394874572754,
+    "error": null,
+    "metadata": {
+      "dataset": "eon_iec",
+      "timestamp_ms": 1654646405312,
+      "protocol_hint": "iec104",
+      "communication_direction": "client_to_server",
+      "formal_class": "IEC104_CONTROL_FRAME_OBSERVATION",
+      "observation_pattern": "iec104_control_frame_pattern"
+    }
+  },
+  {
     "response_id": "evt_015867_ollama_phi3_mini",
     "original_event_id": "evt_015867",
     "response_type": "real_llm_output",

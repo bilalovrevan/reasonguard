@@ -2,9 +2,9 @@
 
 SUMMARY:
 {
-  "total_responses": 700,
-  "no_violation": 218,
-  "V1_fabricated_reasoning": 144,
+  "total_responses": 800,
+  "no_violation": 309,
+  "V1_fabricated_reasoning": 153,
   "V2_contradicted_reasoning": 75,
   "V3_over_generalised_reasoning": 100,
   "V4_under_specified_reasoning": 443,

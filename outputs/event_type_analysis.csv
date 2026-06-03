@@ -3,6 +3,10 @@ llama3.1:8b-instruct-q4_0,function_code_violation_proxy_until_official_schema,25
 llama3.1:8b-instruct-q4_0,network_scan_proxy_until_official_schema,25,21,0.84,3,0,0,1,0,0.12,0.0,0.0,0.04,0.0
 llama3.1:8b-instruct-q4_0,normal_modbus_polling_proxy_until_official_schema,25,17,0.68,4,0,0,5,0,0.16,0.0,0.0,0.2,0.0
 llama3.1:8b-instruct-q4_0,topology_change_proxy_until_official_schema,25,18,0.72,5,0,0,2,0,0.2,0.0,0.0,0.08,0.0
+mistral:7b-instruct-v0.3-q4_0,function_code_violation_proxy_until_official_schema,25,22,0.88,3,0,0,0,0,0.12,0.0,0.0,0.0,0.0
+mistral:7b-instruct-v0.3-q4_0,network_scan_proxy_until_official_schema,25,24,0.96,1,0,0,0,0,0.04,0.0,0.0,0.0,0.0
+mistral:7b-instruct-v0.3-q4_0,normal_modbus_polling_proxy_until_official_schema,25,23,0.92,2,0,0,0,0,0.08,0.0,0.0,0.0,0.0
+mistral:7b-instruct-v0.3-q4_0,topology_change_proxy_until_official_schema,25,22,0.88,3,0,0,0,0,0.12,0.0,0.0,0.0,0.0
 phi3:mini,function_code_violation_proxy_until_official_schema,25,16,0.64,5,0,0,4,1,0.2,0.0,0.0,0.16,0.04
 phi3:mini,network_scan_proxy_until_official_schema,25,1,0.04,21,0,0,5,1,0.84,0.0,0.0,0.2,0.04
 phi3:mini,normal_modbus_polling_proxy_until_official_schema,25,15,0.6,3,0,0,8,0,0.12,0.0,0.0,0.32,0.0

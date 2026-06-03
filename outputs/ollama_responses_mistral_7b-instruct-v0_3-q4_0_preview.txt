@@ -1,0 +1,60 @@
+=== OLLAMA LLM RESPONSE PREVIEW ===
+Total responses: 100
+
+Response ID: evt_015867_ollama_mistral_7b-instruct-v0_3-q4_0
+Model: mistral:7b-instruct-v0.3-q4_0
+Event ID: evt_015867
+OK: True
+Elapsed seconds: 21.53336238861084
+Response:
+At timestamp 1654646411950, an IEC-104 network event (evt_015867) occurred within the eon_iec dataset. The observed communication was from source identifier 885 to destination identifier 8, using ports 4115 and 2404 respectively. This communication followed the iec104_information_transfer_pattern and utilized the i_format_information_transfer frame type. The ASDU fields included an address of 4655, a COT value of 7, and one item with type 103. However, it is important to note that the formal class assigned to this observation is IEC104_OBSERVATION_UNCLASSIFIED, which serves as a proxy label and does not confirm or deny any malicious intent. The packet size was 62 bytes, with a packet length field of 20. No further conclusions can be drawn about the nature of this event based on the provided formal bound.
+
+================================================================================
+
+Response ID: evt_003293_ollama_mistral_7b-instruct-v0_3-q4_0
+Model: mistral:7b-instruct-v0.3-q4_0
+Event ID: evt_003293
+OK: True
+Elapsed seconds: 16.857901096343994
+Response:
+At timestamp 1654646405272, an information transfer event (event ID: evt_003293) occurred within the industrial control system network (dataset: eon_iec). The observed protocol was IEC-104, and the communication direction was from client to server. Specifically, source identifier 38 communicated with destination identifier 37 using port numbers 51770 and 2404 respectively. The packet size was 60 bytes, with a packet length field of 18.
+
+The observed frame type was i_format_information_transfer, and the ASDU fields were as follows: address 1001, COT 6, type 50, and item count 1. This event conforms to the IEC104_information_transfer_pattern. However, it is important to note that the formal class assigned to this observation is a proxy label (IEC104_OBSERVATION_UNCLASSIFIED), which does not confirm or deny any security conclusions regarding potential cyber attacks or malicious activity.
+
+================================================================================
+
+Response ID: evt_000609_ollama_mistral_7b-instruct-v0_3-q4_0
+Model: mistral:7b-instruct-v0.3-q4_0
+Event ID: evt_000609
+OK: True
+Elapsed seconds: 18.987276792526245
+Response:
+At timestamp 1654646404376, an IEC-104 network event (evt_000609) occurred within the eon_iec dataset. The observed communication was from server to client between source identifier 37 and destination identifier 38. The source port was 2404, and the destination port was 51770. The packet size was 60 bytes, with a packet length field of 18.
+
+The frame type was i_format_information_transfer, and the observed ASDU fields were as follows: address 1001, type 50, COT 7, and item count 1. This event conforms to the iec104_information_transfer_pattern. However, it is important to note that the formal class assigned to this observation (IEC104_OBSERVATION_UNCLASSIFIED) is a proxy label and does not confirm or deny any malicious intent. The event remains consistent with the IEC-104 protocol hint when present. No further conclusions can be drawn about the nature of this network event based on the provided formal bound.
+
+================================================================================
+
+Response ID: evt_005946_ollama_mistral_7b-instruct-v0_3-q4_0
+Model: mistral:7b-instruct-v0.3-q4_0
+Event ID: evt_005946
+OK: True
+Elapsed seconds: 17.69379210472107
+Response:
+At timestamp 1654646405954, an IEC-104 network event (evt_005946) occurred within the eon_iec dataset. The observed communication was from server to client, with source identifier 1 and destination identifier 661. The source port was 2404, and the destination port was 1024. The packet size was 74 bytes, and the packet length field indicated 20 bytes of data.
+
+The observed frame type was i_format_information_transfer, and the protocol hint suggested IEC-104 communication. The ASDU address was 4452, the ASDU type was 103, the COT (Communication Object Type) was 6, and there was one ASDU item. This event conforms to the iec104_information_transfer_pattern. However, it is important to note that the formal class, IEC104_OBSERVATION_UNCLASSIFIED, is a proxy observation label and not a confirmed attack label. No further conclusions regarding maliciousness or cyber attacks can be drawn from this observation alone.
+
+================================================================================
+
+Response ID: evt_005652_ollama_mistral_7b-instruct-v0_3-q4_0
+Model: mistral:7b-instruct-v0.3-q4_0
+Event ID: evt_005652
+OK: True
+Elapsed seconds: 16.5761981010437
+Response:
+At timestamp 1654646405882, an IEC-104 information transfer event (event ID: evt_005652) occurred within the eon_iec dataset. The observed communication was from source identifier 38 to destination identifier 37, using ports 51770 and 2404 respectively. The packet size was 60 bytes, with a packet length field of 18.
+
+The frame type was i_format_information_transfer, and the observed ASDU fields were as follows: address 1001, type 50, COT 6, and item count 1. This event conforms to the iec104_information_transfer_pattern. However, it is important to note that the formal class assigned to this observation, IEC104_OBSERVATION_UNCLASSIFIED, is a proxy label and does not confirm or deny any malicious intent. Without additional context or evidence, no security conclusions can be drawn from this observation alone.
+
+================================================================================
