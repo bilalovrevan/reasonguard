@@ -1,0 +1,15 @@
+{
+  "dataset": "matousek_iec104_hmi",
+  "schema_status": "ground_truth_hmi_dataset",
+  "formal_bound_version": "3.0-hmi",
+  "total_bounds": 300,
+  "ground_truth_class_counts": {
+    "normal_hmi_traffic": 100,
+    "masquerading_attack": 100,
+    "replay_attack": 100
+  },
+  "communication_direction_counts": {
+    "server_to_client": 211,
+    "client_to_server": 89
+  }
+}
