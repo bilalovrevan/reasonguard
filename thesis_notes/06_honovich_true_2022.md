@@ -6,12 +6,23 @@ Reference: Honovich, O. et al. (2022). TRUE: Re-Evaluating Factual Consistency
 Evaluation. *NAACL 2022*.
 
 ## 1. Main argument
-[State that previous factual-consistency benchmarks are not directly comparable and
-that TRUE provides a unified evaluation methodology.]
+[FACTUAL EXTRACTION -- AI-assisted, from the arXiv abstract (2204.04991). Verify
+against the full NAACL paper before citing.]
+Prior factual-consistency metrics were developed and evaluated in isolation, one
+task/dataset at a time, fragmenting progress; existing meta-evaluation also only
+measured system-level correlation with human judgment, leaving example-level
+accuracy of these metrics unclear. TRUE unifies evaluation across 11 existing
+datasets that carry manual factual-consistency annotations.
 
 ## 2. Methodology
-[Describe the benchmark consolidation, the metric definitions, and the cross-task
-evaluation methodology.]
+[Same caveat as above.]
+Consolidates 11 benchmarks under one evaluation protocol and introduces an
+example-level (not just system-level) meta-evaluation approach. Benchmarking a range
+of metric families found that large-scale NLI-based metrics and question-generation-
+and-answering-based metrics achieve the strongest and mutually complementary results,
+recommended as the starting point for anyone building a new factual-consistency
+metric -- directly relevant to how ReasonGuard's own claim-verification approach
+should be framed and compared in Chapter 2.
 
 ## 3. Direct relevance to ReasonGuard
 This is the evaluation methodology reference. Use to:

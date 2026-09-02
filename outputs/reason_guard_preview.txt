@@ -2,13 +2,13 @@
 
 SUMMARY:
 {
-  "total_responses": 800,
-  "no_violation": 309,
-  "V1_fabricated_reasoning": 153,
+  "total_responses": 1000,
+  "no_violation": 226,
+  "V1_fabricated_reasoning": 347,
   "V2_contradicted_reasoning": 75,
   "V3_over_generalised_reasoning": 100,
-  "V4_under_specified_reasoning": 443,
-  "V5_incoherent_reasoning": 2
+  "V4_under_specified_reasoning": 543,
+  "V5_incoherent_reasoning": 37
 }
 
 {
@@ -60,142 +60,8 @@ SUMMARY:
     "mentions_proxy": true,
     "mentions_not_confirmed": true
   },
-  "spacy_claims": {
-    "entities": [
-      [
-        "iec104",
-        "PROTOCOL"
-      ],
-      [
-        "source identifier",
-        "NETWORK_ENDPOINT"
-      ],
-      [
-        "885",
-        "CARDINAL"
-      ],
-      [
-        "destination identifier",
-        "NETWORK_ENDPOINT"
-      ],
-      [
-        "8",
-        "CARDINAL"
-      ],
-      [
-        "source port",
-        "NETWORK_ENDPOINT"
-      ],
-      [
-        "4115",
-        "DATE"
-      ],
-      [
-        "destination port",
-        "NETWORK_ENDPOINT"
-      ],
-      [
-        "2404",
-        "CARDINAL"
-      ],
-      [
-        "client_to_server",
-        "DIRECTION"
-      ],
-      [
-        "ASDU",
-        "ASDU_FIELD"
-      ],
-      [
-        "103",
-        "CARDINAL"
-      ],
-      [
-        "COT",
-        "ASDU_FIELD"
-      ],
-      [
-        "1",
-        "CARDINAL"
-      ],
-      [
-        "4655",
-        "CARDINAL"
-      ],
-      [
-        "proxy",
-        "UNCERTAINTY"
-      ],
-      [
-        "does not confirm",
-        "UNCERTAINTY"
-      ]
-    ],
-    "numbers": [
-      885,
-      8,
-      4115,
-      2404,
-      103,
-      7,
-      1,
-      4655
-    ],
-    "protocols": [
-      "iec104"
-    ],
-    "directions": [
-      "client_to_server"
-    ],
-    "attack_categories": [],
-    "mitigation_terms": [],
-    "normality_terms": [],
-    "uncertainty_terms": [
-      "proxy",
-      "does not confirm"
-    ],
-    "asdu_mentions": 1,
-    "source_mentions": 2,
-    "destination_mentions": 2,
-    "port_mentions": 2
-  },
-  "per_claim_verdicts": [
-    {
-      "claim": "communication_direction",
-      "verdict": "SUPPORTED",
-      "evidence": [
-        "client_to_server"
-      ]
-    },
-    {
-      "claim": "source_identifier_present",
-      "verdict": "SUPPORTED",
-      "evidence": [
-        "source_mentions=2"
-      ]
-    },
-    {
-      "claim": "destination_identifier_present",
-      "verdict": "SUPPORTED",
-      "evidence": [
-        "destination_mentions=2"
-      ]
-    },
-    {
-      "claim": "port_information_present",
-      "verdict": "SUPPORTED",
-      "evidence": [
-        "port_mentions=2"
-      ]
-    },
-    {
-      "claim": "asdu_fields_present",
-      "verdict": "SUPPORTED",
-      "evidence": [
-        "asdu_mentions=1"
-      ]
-    }
-  ]
+  "spacy_claims": null,
+  "per_claim_verdicts": null
 }
 
 {
@@ -258,83 +124,8 @@ SUMMARY:
     "mentions_proxy": false,
     "mentions_not_confirmed": false
   },
-  "spacy_claims": {
-    "entities": [
-      [
-        "replay attack",
-        "ATTACK_CATEGORY"
-      ],
-      [
-        "8",
-        "CARDINAL"
-      ],
-      [
-        "isolated",
-        "MITIGATION"
-      ]
-    ],
-    "numbers": [
-      8,
-      104
-    ],
-    "protocols": [],
-    "directions": [],
-    "attack_categories": [
-      "replay attack"
-    ],
-    "mitigation_terms": [
-      "isolated"
-    ],
-    "normality_terms": [],
-    "uncertainty_terms": [],
-    "asdu_mentions": 0,
-    "source_mentions": 0,
-    "destination_mentions": 1,
-    "port_mentions": 0
-  },
-  "per_claim_verdicts": [
-    {
-      "claim": "communication_direction",
-      "verdict": "UNSUPPORTED",
-      "evidence": []
-    },
-    {
-      "claim": "source_identifier_present",
-      "verdict": "UNSUPPORTED",
-      "evidence": []
-    },
-    {
-      "claim": "destination_identifier_present",
-      "verdict": "SUPPORTED",
-      "evidence": [
-        "destination_mentions=1"
-      ]
-    },
-    {
-      "claim": "port_information_present",
-      "verdict": "UNSUPPORTED",
-      "evidence": []
-    },
-    {
-      "claim": "asdu_fields_present",
-      "verdict": "UNSUPPORTED",
-      "evidence": []
-    },
-    {
-      "claim": "attack_category_claim",
-      "verdict": "UNSUPPORTED",
-      "evidence": [
-        "replay attack"
-      ]
-    },
-    {
-      "claim": "mitigation_claim",
-      "verdict": "UNSUPPORTED",
-      "evidence": [
-        "isolated"
-      ]
-    }
-  ]
+  "spacy_claims": null,
+  "per_claim_verdicts": null
 }
 
 {
@@ -386,92 +177,8 @@ SUMMARY:
     "mentions_proxy": false,
     "mentions_not_confirmed": false
   },
-  "spacy_claims": {
-    "entities": [
-      [
-        "server_to_client",
-        "DIRECTION"
-      ],
-      [
-        "source identifier",
-        "NETWORK_ENDPOINT"
-      ],
-      [
-        "885",
-        "CARDINAL"
-      ],
-      [
-        "destination identifier",
-        "NETWORK_ENDPOINT"
-      ],
-      [
-        "8",
-        "CARDINAL"
-      ],
-      [
-        "ASDU",
-        "ASDU_FIELD"
-      ],
-      [
-        "103",
-        "CARDINAL"
-      ]
-    ],
-    "numbers": [
-      885,
-      8,
-      103
-    ],
-    "protocols": [],
-    "directions": [
-      "server_to_client"
-    ],
-    "attack_categories": [],
-    "mitigation_terms": [],
-    "normality_terms": [],
-    "uncertainty_terms": [],
-    "asdu_mentions": 1,
-    "source_mentions": 1,
-    "destination_mentions": 1,
-    "port_mentions": 1
-  },
-  "per_claim_verdicts": [
-    {
-      "claim": "communication_direction",
-      "verdict": "CONTRADICTED",
-      "evidence": [
-        "server_to_client"
-      ]
-    },
-    {
-      "claim": "source_identifier_present",
-      "verdict": "SUPPORTED",
-      "evidence": [
-        "source_mentions=1"
-      ]
-    },
-    {
-      "claim": "destination_identifier_present",
-      "verdict": "SUPPORTED",
-      "evidence": [
-        "destination_mentions=1"
-      ]
-    },
-    {
-      "claim": "port_information_present",
-      "verdict": "SUPPORTED",
-      "evidence": [
-        "port_mentions=1"
-      ]
-    },
-    {
-      "claim": "asdu_fields_present",
-      "verdict": "SUPPORTED",
-      "evidence": [
-        "asdu_mentions=1"
-      ]
-    }
-  ]
+  "spacy_claims": null,
+  "per_claim_verdicts": null
 }
 
 {
@@ -528,69 +235,8 @@ SUMMARY:
     "mentions_proxy": false,
     "mentions_not_confirmed": false
   },
-  "spacy_claims": {
-    "entities": [
-      [
-        "routine",
-        "NORMALITY"
-      ],
-      [
-        "typical",
-        "NORMALITY"
-      ]
-    ],
-    "numbers": [
-      104
-    ],
-    "protocols": [],
-    "directions": [],
-    "attack_categories": [],
-    "mitigation_terms": [],
-    "normality_terms": [
-      "routine",
-      "typical"
-    ],
-    "uncertainty_terms": [],
-    "asdu_mentions": 0,
-    "source_mentions": 0,
-    "destination_mentions": 0,
-    "port_mentions": 0
-  },
-  "per_claim_verdicts": [
-    {
-      "claim": "communication_direction",
-      "verdict": "UNSUPPORTED",
-      "evidence": []
-    },
-    {
-      "claim": "source_identifier_present",
-      "verdict": "UNSUPPORTED",
-      "evidence": []
-    },
-    {
-      "claim": "destination_identifier_present",
-      "verdict": "UNSUPPORTED",
-      "evidence": []
-    },
-    {
-      "claim": "port_information_present",
-      "verdict": "UNSUPPORTED",
-      "evidence": []
-    },
-    {
-      "claim": "asdu_fields_present",
-      "verdict": "UNSUPPORTED",
-      "evidence": []
-    },
-    {
-      "claim": "normality_claim",
-      "verdict": "UNSUPPORTED",
-      "evidence": [
-        "routine",
-        "typical"
-      ]
-    }
-  ]
+  "spacy_claims": null,
+  "per_claim_verdicts": null
 }
 
 {
@@ -637,54 +283,6 @@ SUMMARY:
     "mentions_proxy": false,
     "mentions_not_confirmed": true
   },
-  "spacy_claims": {
-    "entities": [
-      [
-        "ASDU",
-        "ASDU_FIELD"
-      ]
-    ],
-    "numbers": [
-      104
-    ],
-    "protocols": [],
-    "directions": [],
-    "attack_categories": [],
-    "mitigation_terms": [],
-    "normality_terms": [],
-    "uncertainty_terms": [],
-    "asdu_mentions": 1,
-    "source_mentions": 0,
-    "destination_mentions": 0,
-    "port_mentions": 0
-  },
-  "per_claim_verdicts": [
-    {
-      "claim": "communication_direction",
-      "verdict": "UNSUPPORTED",
-      "evidence": []
-    },
-    {
-      "claim": "source_identifier_present",
-      "verdict": "UNSUPPORTED",
-      "evidence": []
-    },
-    {
-      "claim": "destination_identifier_present",
-      "verdict": "UNSUPPORTED",
-      "evidence": []
-    },
-    {
-      "claim": "port_information_present",
-      "verdict": "UNSUPPORTED",
-      "evidence": []
-    },
-    {
-      "claim": "asdu_fields_present",
-      "verdict": "SUPPORTED",
-      "evidence": [
-        "asdu_mentions=1"
-      ]
-    }
-  ]
+  "spacy_claims": null,
+  "per_claim_verdicts": null
 }

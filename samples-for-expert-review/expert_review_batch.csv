@@ -1,0 +1,629 @@
+sample_id,formal_bound_summary,ai_explanation,expert_violation_class,expert_severity,expert_confidence_1to5,expert_notes
+ER-001,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is client_to_server.
+- The observed frame type is s_or_u_format_control.
+- Source identifier 1 communicated with destination identifier 204.
+- The observed source port is 47192 and the observed destination port is 2404.
+- The observed packet size is 46 bytes and the packet length field is 4.
+- The observed ASDU address is 0.
+- The observed ASDU type is 0, COT is 0, and ASDU item count is 0.
+- The proxy formal class is IEC104_CONTROL_FRAME_OBSERVATION.
+- The observation pattern is iec104_control_frame_pattern.","Here is a precise operational English explanation of the formally bounded IEC-104 network observation:
+
+On June 15, 2022, at 23:40:06 UTC (timestamp ms: 1654646406010), an atomic-row event was observed in the eon_iec dataset. The observed protocol hint is iec104, and the communication direction is client_to_server. The source identifier 1 communicated with destination identifier 204 using ports srcport 47192 and dstport 2404. The packet size is 46 bytes, and the packet length field is 4. The ASDU address is 0, COT is 0, and ASDU item count is 0. The observed frame type is s_or_u_format_control, and the observation pattern is iec104_control_frame_pattern. The current formal class is IEC104_CONTROL_FRAME_OBSERVATION, which is a proxy observation label and not a confirmed attack label.",,,,
+ER-002,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is unknown.
+- The observed communication direction is unknown.
+- The observed frame type is u_format_control.
+- Source identifier 780 communicated with destination identifier 38.
+- The observed source port is 2405 and the observed destination port is 51473.
+- The observed packet size is 46 bytes and the packet length field is 4.
+- The observed ASDU address is 0.
+- The observed ASDU type is 0, COT is 0, and ASDU item count is 0.
+- The proxy formal class is UNKNOWN_NON_IEC104.
+- The observation pattern is unknown_or_non_iec104_pattern.","The observation labeled as evt_012147 within the eon_iec dataset at atomic granularity, timestamped precisely at 1654646410745 according to Formal Bound version 2.1 and using a schema that is not yet officially ground-truth for attack labeling (proxy_until_official_automaton_schema), presents an anomaly in the network traffic pattern of our industrial control system's IEC-104 communication protocol, which remains unidentified due to its unknown nature. Source identifier 780 has transmitted a packet size of 46 bytes via source port 2405 and destination port 51473 with an ASDU address set at zero across all fields (address, COT count, item quantity), while the frame format is u_format_control. The formal class assigned to this event as UNKNOWN_NON_IEC104 indicates that it does not conform to recognized IEC-104 patterns and cannot be immediately labeled with a confirmed attack type based on current schema status, thus remaining at the proxy observation stage without further ground truth validation.",,,,
+ER-003,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is unknown.
+- The observed communication direction is unknown.
+- The observed frame type is s_or_u_format_control.
+- Source identifier 38 communicated with destination identifier 783.
+- The observed source port is 51742 and the observed destination port is 2405.
+- The observed packet size is 46 bytes and the packet length field is 4.
+- The observed ASDU address is 0.
+- The observed ASDU type is 0, COT is 0, and ASDU item count is 0.
+- The proxy formal class is UNKNOWN_NON_IEC104.
+- The observation pattern is unknown_or_non_iec104_pattern.","In the IEC-104 network event with ID 'evt_012267' and timestamp 1654646410866, an unidentified protocol was used in a communication between source identifier 38 and destination identifier 783. The observed packet size was 46 bytes, with a packet length field of 4, and the source port was 51742 while the destination port was 2405. However, the communication direction remains unknown.
+
+The frame type observed was s_or_u_format_control, but the specific format (either S or U) could not be determined due to the unknown protocol hint. The ASDU fields in this event included an address of 0, a COT value of 0, and no items. The formal class assigned to this event is UNKNOWN_NON_IEC104, which indicates that it does not conform to the expected IEC-104 communication pattern (unknown_or_non_iec104_pattern). It's important to note that this formal class is a proxy observation label and should not be interpreted as a confirmed attack label.
+
+Without additional context or evidence, no security conclusions can be confidently drawn from this event. Further investigation may be required to determine the nature of this communication and its potential impact on the industrial control system network.",,,,
+ER-004,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is server_to_client.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 226 communicated with destination identifier 1.
+- The observed source port is 2404 and the observed destination port is 57928.
+- The observed packet size is 79 bytes and the packet length field is 25.
+- The observed ASDU address is 13.
+- The observed ASDU type is 36, COT is 3, and ASDU item count is 1.
+- The proxy formal class is IEC104_BASELINE_MEASUREMENT_OBSERVATION.
+- The observation pattern is dominant_iec104_measurement_pattern.","Here is a precise operational English explanation of the formally bounded IEC-104 network observation:
+
+On timestamp 1654646404817, source identifier 226 communicated with destination identifier 1 over an iec104 protocol hint in server_to_client direction. The observed frame type was i_format_information_transfer and the dominant observation pattern was dominant_iec104_measurement_pattern. The proxy formal class for this event is IEC104_BASELINE_MEASUREMENT_OBSERVATION, which should be treated as a label indicating the presence of an IEC-104 measurement transfer, rather than a confirmed attack label. The observed features include source port 2404 and destination port 57928, packet size 79 bytes and length field 25, ASDU address 13, type 36, COT 3, and item count 1.",,,,
+ER-005,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is unknown.
+- The observed communication direction is unknown.
+- The observed frame type is u_format_control.
+- Source identifier 777 communicated with destination identifier 38.
+- The observed source port is 2405 and the observed destination port is 51395.
+- The observed packet size is 46 bytes and the packet length field is 4.
+- The observed ASDU address is 0.
+- The observed ASDU type is 0, COT is 0, and ASDU item count is 0.
+- The proxy formal class is UNKNOWN_NON_IEC104.
+- The observation pattern is unknown_or_non_iec104_pattern.","The network observation labeled as evt_011957 within eon_iec dataset, at granularity atomic_row and timestamped precisely to ms 1654646410380 under Formal Bound version 2.1 with a proxy schema status of 'proxy_until_official_automaton_schema', presents an intriguing case for analysis due to its unknown protocol hint, communication direction, and observation pattern classified as UNKNOWN_NON_IEC104 by the formal system in use. The data exchange occurred between source identifier 777 and destination identifier 38 over a byte size of 46 bytes with packet length field set to 4; this was facilitated through ports 2405 (source) and 51395 (destination). Notably, the observed ASDU fields indicate an absence in addressing, coterminous elements, type specification, as well as item count. As such, while these details are recorded within our formal system's constraints without implying malicious intent or causality beyond this single timestamped event, it is important to recognize that current classifications remain at the proxy observation level and do not confirm any specific security threat conclusions based on available data alone.",,,,
+ER-006,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is client_to_server.
+- The observed frame type is s_or_u_format_control.
+- Source identifier 283 communicated with destination identifier 282.
+- The observed source port is 49192 and the observed destination port is 2404.
+- The observed packet size is 46 bytes and the packet length field is 4.
+- The observed ASDU address is 0.
+- The observed ASDU type is 0, COT is 0, and ASDU item count is 0.
+- The proxy formal class is IEC104_CONTROL_FRAME_OBSERVATION.
+- The observation pattern is iec104_control_frame_pattern.","The IEC104 control frame pattern was observed within a client_to_server communication direction, where source identifier 283 sent data to destination identifier 282 using protocol hint iec104 at timestamp ms: 1654646411882. The packet size recorded is 46 bytes with the length field set as 4 and transmitted over ports 49192 (source) to 2404 (destination). This event falls under the IEC104_CONTROL_FRAME_OBSERVATION formal class, which serves as a proxy observation label. The ASDU address is noted at zero with no items or COT value present in this atomic row of data from eon_iec dataset using schema status: proxy_until_official_automaton_schema version 2.1. As the IEC104 protocol hint and observed packet details align, it's important to note that while these observations are consistent with expected network behavior for an industrial control system utilizing IEC-104 communication standards, they do not confirm any malicious activity or security breach without further investigation into ground truth attack labels.",,,,
+ER-007,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is unknown.
+- The observed communication direction is unknown.
+- The observed frame type is s_or_u_format_control.
+- Source identifier 38 communicated with destination identifier 783.
+- The observed source port is 51742 and the observed destination port is 2405.
+- The observed packet size is 46 bytes and the packet length field is 4.
+- The observed ASDU address is 0.
+- The observed ASDU type is 0, COT is 0, and ASDU item count is 0.
+- The proxy formal class is UNKNOWN_NON_IEC104.
+- The observation pattern is unknown_or_non_iec104_pattern.","Here is the explanation:
+
+On timestamp 1654646410866 ms, source identifier 38 communicated with destination identifier 783 over an unknown protocol hint and communication direction. The observed frame type was s_or_u_format_control. The packet size was 46 bytes, with a packet length field of 4. The source port was 51742 and the destination port was 2405. The ASDU address, COT, and item count were all 0. The proxy formal class for this observation is UNKNOWN_NON_IEC104, indicating that the observed pattern does not conform to IEC-104 protocol standards. This classification is a proxy label and not a confirmed attack label.",,,,
+ER-008,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is server_to_client.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 188 communicated with destination identifier 10.
+- The observed source port is 2404 and the observed destination port is 46402.
+- The observed packet size is 67 bytes and the packet length field is 25.
+- The observed ASDU address is 304.
+- The observed ASDU type is 36, COT is 3, and ASDU item count is 1.
+- The proxy formal class is IEC104_BASELINE_MEASUREMENT_OBSERVATION.
+- The observation pattern is dominant_iec104_measurement_pattern.","At timestamp 1654646411302, an IEC-104 network event (evt_013387) occurred within the eon_iec dataset. The observed communication was from server to client, with source identifier 188 and destination identifier 10. The source port was 2404, and the destination port was 46402. The packet size was 67 bytes, and the packet length field was 25.
+
+The frame type was i_format_information_transfer, and the observed ASDU fields were as follows: ASDU address 304, COT 3, and ASDU item count 1. The ASDU type was 36. This event conforms to the dominant_iec104_measurement_pattern and is labeled as a proxy IEC104_BASELINE_MEASUREMENT_OBSERVATION. However, it's important to note that this formal class does not confirm an attack label. The protocol hint indicates that the observed event was an IEC-104 communication, but no further conclusions about the nature or intent of the traffic can be drawn from the provided information.",,,,
+ER-009,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is unknown.
+- The observed communication direction is unknown.
+- The observed frame type is u_format_control.
+- Source identifier 38 communicated with destination identifier 831.
+- The observed source port is 51790 and the observed destination port is 2405.
+- The observed packet size is 46 bytes and the packet length field is 4.
+- The observed ASDU address is 0.
+- The observed ASDU type is 0, COT is 0, and ASDU item count is 0.
+- The proxy formal class is UNKNOWN_NON_IEC104.
+- The observation pattern is unknown_or_non_iec104_pattern.","The formally bounded network observation identified by Event ID evt_013797 within eon_iec dataset at granularity atomic_row and timestamped as 1654646411413, indicates a communication event where source identifier 38 engaged with destination identifier 831. The packet size observed was consistent with the u_format_control frame type across an unspecified protocol hint within unknown directionality of traffic flow between these entities. Notably, this formal class label as UNKNOWN_NON_IEC104 suggests that while it is recognized through proxy mechanisms and aligns partially to IEC-104 format control frames due to the frame type observed, its full classification remains unverified against ground truth attack labels. The packet length field was 4 bytes long with a total payload of 46 bytes transmitted over source port 51790 towards destination port 2405; all ASDU fields were reported as zero for address, cot, and item count respectively while the type remained undetermined at this granularity. Given that no confirmed malicious intent or causality is established within these bounds, it remains a proxy observation pending further analysis to confirm normalcy or potential security implications of such network activity patterns in an industrial control system context.",,,,
+ER-010,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is unknown.
+- The observed communication direction is unknown.
+- The observed frame type is u_format_control.
+- Source identifier 583 communicated with destination identifier 38.
+- The observed source port is 2405 and the observed destination port is 51845.
+- The observed packet size is 46 bytes and the packet length field is 4.
+- The observed ASDU address is 0.
+- The observed ASDU type is 0, COT is 0, and ASDU item count is 0.
+- The proxy formal class is UNKNOWN_NON_IEC104.
+- The observation pattern is unknown_or_non_iec104_pattern.","At timestamp 1654646405355, an event identified as evt_003618 occurred within the eon_iec dataset. The observed communication involved source identifier 583 and destination identifier 38, using ports 2405 (source) and 51845 (destination). The packet size was 46 bytes, with a packet length field of 4. However, the protocol hint is unknown, as well as the communication direction.
+
+The frame type observed was u_format_control, and the ASDU fields indicate that no ASDU was transmitted (ASDU address: 0, ASDU type: 0, COT: 0, ASDU item count: 0). The formal class of this event is UNKNOWN_NON_IEC104, which is a proxy observation label and not a confirmed attack label. The observation pattern is unknown_or_non_iec104_pattern, indicating that the observed communication may not conform to standard IEC-104 patterns.
+
+It is important to note that the current formal class does not confirm any security conclusion regarding this event. Further investigation and analysis are required to determine if this event represents normal or abnormal behavior within the system.",,,,
+ER-011,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is client_to_server.
+- The observed frame type is s_or_u_format_control.
+- Source identifier 10 communicated with destination identifier 21.
+- The observed source port is 44970 and the observed destination port is 2404.
+- The observed packet size is 46 bytes and the packet length field is 4.
+- The observed ASDU address is 0.
+- The observed ASDU type is 0, COT is 0, and ASDU item count is 0.
+- The proxy formal class is IEC104_CONTROL_FRAME_OBSERVATION.
+- The observation pattern is iec104_control_frame_pattern.","The IEC104 control frame pattern was observed in a network communication from source identifier 10 to destination identifier 21, following an event timestamp of 1654646406631 ms using protocol hint iec104 within the formal bound version 2.1 and under proxy_until_official_automaton_schema schema status conditions. The communication direction was client-to0server with a s_or_u_format_control frame type, where source port is noted as 44970 and destination port at 2404; the packet size recorded stands at 46 bytes within an atomic row granularity level of observation. The formal class IEC104_CONTROL_FRAME_OBSERVATION, which serves merely as a proxy label for this pattern without ground truth attack confirmation, aligns with observed ASDU fields such as address (0), COT (also 0), and item count (0). No additional claims beyond the formal bound can be made regarding causality or mitigation actions.",,,,
+ER-012,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is server_to_client.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 390 communicated with destination identifier 8.
+- The observed source port is 2404 and the observed destination port is 59992.
+- The observed packet size is 67 bytes and the packet length field is 25.
+- The observed ASDU address is 303.
+- The observed ASDU type is 36, COT is 3, and ASDU item count is 1.
+- The proxy formal class is IEC104_BASELINE_MEASUREMENT_OBSERVATION.
+- The observation pattern is dominant_iec104_measurement_pattern.","Here is a precise operational English explanation of the formally bounded IEC-104 network observation:
+
+On June 15, 2022, at 23:40:05.948 UTC, an IEC-104 communication event was observed between source identifier 390 and destination identifier 8. The protocol hint for this event is iec104, indicating that it conforms to the IEC-104 protocol standard. The communication direction is server_to_client, meaning that the server (source identifier 390) sent a message to the client (destination identifier 8). The observed frame type is i_format_information_transfer, and the proxy formal class for this event is IEC104_BASELINE_MEASUREMENT_OBSERVATION, indicating that it conforms to a baseline measurement pattern. The observed ASDU fields include an address of 303, a COT of 3, one item count, and an ASDU type of 36.",,,,
+ER-013,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is server_to_client.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 497 communicated with destination identifier 1.
+- The observed source port is 2404 and the observed destination port is 58172.
+- The observed packet size is 60 bytes and the packet length field is 18.
+- The observed ASDU address is 83.
+- The observed ASDU type is 13, COT is 3, and ASDU item count is 1.
+- The proxy formal class is IEC104_OBSERVATION_UNCLASSIFIED.
+- The observation pattern is iec104_information_transfer_pattern.","At timestamp 1654646411090, an IEC-104 network event (evt_012733) occurred within the eon_iec dataset. The observed communication was from server to client, with source identifier 497 and destination identifier 1. The source port was 2404, and the destination port was 58172. The packet size was 60 bytes, and the packet length field was 18.
+
+The observed frame type was i_format_information_transfer, and the ASDU address was 83. The ASDU contained one item of type 13, with a Communication Object Type (COT) of 3. This event conforms to the iec104_information_transfer_pattern. However, it is important to note that the formal class associated with this observation is IEC104_OBSERVATION_UNCLASSIFIED, which is a proxy label and not a confirmed attack label. Therefore, no definitive conclusions regarding the security implications of this event can be drawn based on the provided information alone.",,,,
+ER-014,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is server_to_client.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 163 communicated with destination identifier 1.
+- The observed source port is 2404 and the observed destination port is 57498.
+- The observed packet size is 79 bytes and the packet length field is 25.
+- The observed ASDU address is 220.
+- The observed ASDU type is 36, COT is 3, and ASDU item count is 1.
+- The proxy formal class is IEC104_BASELINE_MEASUREMENT_OBSERVATION.
+- The observation pattern is dominant_iec104_measurement_pattern.","At timestamp 1654646406424, an IEC-104 network event (evt_007668) occurred within the eon_iec dataset. The observed communication was from server to client, with source identifier 163 and destination identifier 1. The source port was 2404, and the destination port was 57498. The packet size was 79 bytes, but only 25 bytes were used in the frame length field.
+
+The observed frame type was i_format_information_transfer, and it followed the dominant_iec104_measurement_pattern. The ASDU address was 220, with an ASDU type of 36, COT of 3, and a single item count. This event is classified as a proxy observation under the IEC104_BASELINE_MEASUREMENT_OBSERVATION formal class, which does not confirm or deny any security conclusions. It should be noted that this classification is a proxy label and not a confirmed attack label.",,,,
+ER-015,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is client_to_server.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 615 communicated with destination identifier 1.
+- The observed source port is 1024 and the observed destination port is 2404.
+- The observed packet size is 74 bytes and the packet length field is 20.
+- The observed ASDU address is 4117.
+- The observed ASDU type is 103, COT is 7, and ASDU item count is 1.
+- The proxy formal class is IEC104_OBSERVATION_UNCLASSIFIED.
+- The observation pattern is iec104_information_transfer_pattern.","At timestamp 1654646405627, an IEC-104 network event (evt_004681) occurred with the observed protocol being IEC104 and communication direction as client_to_server. The source identifier was 615 and the destination identifier was 1. The source port was 1024, while the destination port was 2404. The packet size was 74 bytes, with a packet length field of 20.
+
+The observed frame type was i_format_information_transfer, and the ASDU fields were as follows: the ASDU address was 4117, the COT (Communication Object Type) was 7, and there was one ASDU item with type 103. This event conforms to the iec104_information_transfer_pattern and is currently labeled as IEC104_OBSERVATION_UNCLASSIFIED, which is a proxy observation label and not a confirmed attack label. No further security conclusions can be drawn from this observation based on the provided formal bound.",,,,
+ER-016,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is client_to_server.
+- The observed frame type is s_or_u_format_control.
+- Source identifier 1 communicated with destination identifier 57.
+- The observed source port is 34440 and the observed destination port is 2404.
+- The observed packet size is 46 bytes and the packet length field is 4.
+- The observed ASDU address is 0.
+- The observed ASDU type is 0, COT is 0, and ASDU item count is 0.
+- The proxy formal class is IEC104_CONTROL_FRAME_OBSERVATION.
+- The observation pattern is iec104_control_frame_pattern.","At timestamp 1654646406485, an IEC-104 control frame observation (IEC104_CONTROL_FRAME_OBSERVATION) was detected in the eon_iec dataset. The observed communication direction was client-to-server between source identifier 1 and destination identifier 57. The source port was 34440, and the destination port was 2404. The packet size was 46 bytes, with a packet length field of 4.
+
+The ASDU fields observed were an address of 0, type of 0, COT of 0, and no items. This frame followed the iec104_control_frame_pattern. However, it is important to note that the current formal class is a proxy observation label (proxy_not_ground_truth_attack_label), not a confirmed attack label. Therefore, any conclusions regarding malicious activity cannot be definitively drawn from this observation alone.",,,,
+ER-017,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is unknown.
+- The observed communication direction is unknown.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 126 communicated with destination identifier 38.
+- The observed source port is 2405 and the observed destination port is 51717.
+- The observed packet size is 67 bytes and the packet length field is 25.
+- The observed ASDU address is 1813.
+- The observed ASDU type is 36, COT is 3, and ASDU item count is 1.
+- The proxy formal class is UNKNOWN_NON_IEC104.
+- The observation pattern is unknown_or_non_iec104_pattern.","The network observation identified by Event ID evt_002974 within eon_iec dataset at granularity atomic_row and timestamped as 1654646405182, involves communication between source identifier 126 and destination identifier 38. The packet size was recorded to be 67 bytes with a length field of 25 over ports 2405 (source) and 51717 (destination). This event utilized the i_format_information_transfer frame type, aligning with IEC-104 protocol standards. However, due to an unknown communication direction and unverified formal class UNKNOWN_NON_IEC104 status as a proxy observation label, no definitive security conclusion can be drawn from the available data alone at this time. The ASDU address was 1813 with type 36 COT item count of one in an unspecified communication direction and protocol hint remains unknown based on version 2.1 schema status under a proxy_until_official_automaton_schema dataset, which does not confirm any malicious activity or security breach without further investigation into the formal class ground truth attack label.",,,,
+ER-018,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is client_to_server.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 38 communicated with destination identifier 37.
+- The observed source port is 51770 and the observed destination port is 2404.
+- The observed packet size is 60 bytes and the packet length field is 18.
+- The observed ASDU address is 1001.
+- The observed ASDU type is 50, COT is 6, and ASDU item count is 1.
+- The proxy formal class is IEC104_OBSERVATION_UNCLASSIFIED.
+- The observation pattern is iec104_information_transfer_pattern.","The IEC104_OBSERVATION_UNCLASSIFIED label indicates that, as of version 2.1 with a proxy schema status until an official automaton is established for classification, we have identified communication between source identifier 38 and destination identifier 37 within the industrial control system (ICS) network using IEC-104 protocol over client_to0server direction at timestamp ms: 1654646404256. The observed packet size was recorded as 60 bytes with a length field of 18, transmitted through source port 51770 and destination port 2404 respectively. This event aligns with the iec104_information_transfer_pattern within an atomic row granularity level in eon_iec dataset without any explicit indication towards malicious intent or causality, as per the formal bound provided. The ASDU address was noted to be 1001, and associated fields such as COT (6), type (50), item count (1) were consistent with standard IEC-104 communication parameters for information transfer frames within this dataset's schema status of proxy_until_official_automaton_schema.",,,,
+ER-019,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is client_to_server.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 38 communicated with destination identifier 37.
+- The observed source port is 51770 and the observed destination port is 2404.
+- The observed packet size is 60 bytes and the packet length field is 18.
+- The observed ASDU address is 1001.
+- The observed ASDU type is 50, COT is 6, and ASDU item count is 1.
+- The proxy formal class is IEC104_OBSERVATION_UNCLASSIFIED.
+- The observation pattern is iec104_information_transfer_pattern.","Here is a precise operational English explanation of the formally bounded IEC-104 network observation:
+
+On timestamp 1654646405272, source identifier 38 communicated with destination identifier 37 over an iec104 protocol hint in client_to_server direction. The observed frame type was i_format_information_transfer and followed the iec104_information_transfer_pattern. The communication involved a packet size of 60 bytes and a packet length field of 18. The ASDU address was 1001, with an ASDU type of 50, COT of 6, and ASDU item count of 1. The current formal class is IEC104_OBSERVATION_UNCLASSIFIED, which is a proxy observation label and not a confirmed attack label.",,,,
+ER-020,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is server_to_client.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 388 communicated with destination identifier 18.
+- The observed source port is 2404 and the observed destination port is 35146.
+- The observed packet size is 62 bytes and the packet length field is 20.
+- The observed ASDU address is 22.
+- The observed ASDU type is 103, COT is 7, and ASDU item count is 1.
+- The proxy formal class is IEC104_OBSERVATION_UNCLASSIFIED.
+- The observation pattern is iec104_information_transfer_pattern.","Here is a formally bounded IEC-104 network observation in precise operational English:
+
+On 2022-06-15 at 14:31:52.952, an IEC-104 server-to-client communication was observed between source identifier 388 and destination identifier 18. The observed protocol hint is iec104, with the frame type being i_format_information_transfer. The source port is 2404 and the destination port is 35146. The packet size is 62 bytes, with a packet length field of 20. The ASDU address is 22, ASDU type is 103, COT is 7, and ASDU item count is 1. The observed communication pattern matches iec104_information_transfer_pattern. The current formal class for this observation is IEC104_OBSERVATION_UNCLASSIFIED, which is a proxy label and not a confirmed attack label.",,,,
+ER-021,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is server_to_client.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 312 communicated with destination identifier 1.
+- The observed source port is 2404 and the observed destination port is 48874.
+- The observed packet size is 62 bytes and the packet length field is 20.
+- The observed ASDU address is 61.
+- The observed ASDU type is 103, COT is 7, and ASDU item count is 1.
+- The proxy formal class is IEC104_OBSERVATION_UNCLASSIFIED.
+- The observation pattern is iec104_information_transfer_pattern.","The IEC104_OBSERVATION_UNCLASSIFIED label indicates that, based on the provided formal observation of event evt_007975 within dataset eon_iec at granularity atomic_row and timestamped as 1654646406529 using schema proxy_until_official_automaton_schema in version 2.1, the network traffic between source identifier 312 (server) to destination identifier 1 has been identified through a pattern consistent with iec104 information transfer protocols and direction server_to_client. The packet size of 62 bytes transmitted over port numbers 2404 from source and 48874 at the destination, along with ASDU fields such as address 61, cot number 7, type 103 (COT), item count one, all align within expected IEC-104 communication parameters. As this formal class status is proxy_not_ground_truth_attack_label and no additional malicious intent or causality has been established beyond the observed packet exchange at a single timestamp, it remains an unclassified observation pending further analysis to confirm normalcy or identify potential security concerns within IEC-104 network traffic.",,,,
+ER-022,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is unknown.
+- The observed communication direction is unknown.
+- The observed frame type is u_format_control.
+- Source identifier 38 communicated with destination identifier 831.
+- The observed source port is 51790 and the observed destination port is 2405.
+- The observed packet size is 46 bytes and the packet length field is 4.
+- The observed ASDU address is 0.
+- The observed ASDU type is 0, COT is 0, and ASDU item count is 0.
+- The proxy formal class is UNKNOWN_NON_IEC104.
+- The observation pattern is unknown_or_non_iec104_pattern.","Here is a precise operational English explanation of the formally bounded IEC-104 network observation:
+
+On timestamp 1654646411413, source identifier 38 communicated with destination identifier 831 over an unknown protocol hint and communication direction. The observed frame type was u_format_control. The packet size was 46 bytes, with a packet length field of 4. The source port was 51790 and the destination port was 2405. The ASDU address, COT, and item count were all 0. The proxy formal class is UNKNOWN_NON_IEC104, indicating that the observation pattern is unknown or non-IEC104. This classification is a proxy label and not a confirmed attack label.",,,,
+ER-023,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is client_to_server.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 428 communicated with destination identifier 1.
+- The observed source port is 1024 and the observed destination port is 2404.
+- The observed packet size is 74 bytes and the packet length field is 20.
+- The observed ASDU address is 4202.
+- The observed ASDU type is 103, COT is 7, and ASDU item count is 1.
+- The proxy formal class is IEC104_OBSERVATION_UNCLASSIFIED.
+- The observation pattern is iec104_information_transfer_pattern.","At timestamp 1654646405961, an information transfer event (event ID: evt_005964) occurred within the industrial control system network (dataset: eon_iec). The observed protocol was IEC-104, and the communication direction was from client to server. Specifically, source identifier 428 communicated with destination identifier 1 using port numbers 1024 and 2404 respectively. The packet size was 74 bytes, with a packet length field of 20 bytes.
+
+The observed frame type was i_format_information_transfer, and the ASDU fields were as follows: ASDU address - 4202, ASDU type - 103, COT - 7, and ASDU item count - 1. This event conforms to the IEC104_information_transfer_pattern. However, it is important to note that the formal class assigned to this observation is a proxy label (IEC104_OBSERVATION_UNCLASSIFIED), which does not confirm or deny any malicious intent associated with this event. Without additional context or evidence, no definitive security conclusions can be drawn from this observation alone.",,,,
+ER-024,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is server_to_client.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 48 communicated with destination identifier 38.
+- The observed source port is 2404 and the observed destination port is 51820.
+- The observed packet size is 60 bytes and the packet length field is 18.
+- The observed ASDU address is 1002.
+- The observed ASDU type is 50, COT is 7, and ASDU item count is 1.
+- The proxy formal class is IEC104_OBSERVATION_UNCLASSIFIED.
+- The observation pattern is iec104_information_transfer_pattern.","The IEC104_OBSERVATION_UNCLASSIFIED label indicates that, based on the provided formal observation of event evt_006981 within dataset eon_iec at granularity atomic_row and timestamped as 1654646406277 under schema proxy_until_official_automaton_schema (version 2.1), the network traffic between source identifier 48 and destination identifier 38 via server-to0client communication direction is identified by an IEC104 protocol hint, with a packet size of 60 bytes containing frame type i_format_information_transfer data as per iec104_information_transfer_pattern. The source port observed was 2404 and the destination port was 51820; this communication included an ASDU address of 1002, with a COT value of 7, one item in the ASDU type set to 50, all within bounds consistent for IEC-104 protocol. As per current formal class status and without additional context or ground truth attack labels present, this observation remains as an unclassified proxy label indicating no confirmed malicious intent but rather a standard communication exchange under these parameters at the given timestamp in time.",,,,
+ER-025,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is server_to_client.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 257 communicated with destination identifier 1.
+- The observed source port is 2404 and the observed destination port is 48694.
+- The observed packet size is 79 bytes and the packet length field is 25.
+- The observed ASDU address is 302.
+- The observed ASDU type is 36, COT is 3, and ASDU item count is 1.
+- The proxy formal class is IEC104_BASELINE_MEASUREMENT_OBSERVATION.
+- The observation pattern is dominant_iec104_measurement_pattern.","At timestamp 1654646406355, an IEC-104 network event (evt_007343) occurred within the eon_iec dataset. The observed communication was from server to client, with source identifier 257 and destination identifier 1. The source port was 2404, and the destination port was 48694. The packet size was 79 bytes, but the packet length field reported 25 bytes.
+
+The frame type was i_format_information_transfer, and the observed ASDU fields were as follows: ASDU address 302, COT 3, ASDU type 36, and ASDU item count 1. This event conforms to the dominant_iec104_measurement_pattern and is labeled as a proxy observation under the IEC104_BASELINE_MEASUREMENT_OBSERVATION formal class. However, it's important to note that this label does not confirm an attack or malicious activity. The event does not provide sufficient evidence for such conclusions.",,,,
+ER-026,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is server_to_client.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 121 communicated with destination identifier 10.
+- The observed source port is 2404 and the observed destination port is 49812.
+- The observed packet size is 79 bytes and the packet length field is 25.
+- The observed ASDU address is 235.
+- The observed ASDU type is 36, COT is 3, and ASDU item count is 1.
+- The proxy formal class is IEC104_BASELINE_MEASUREMENT_OBSERVATION.
+- The observation pattern is dominant_iec104_measurement_pattern.","Here is a precise operational English explanation of the formally bounded IEC-104 network observation:
+
+On timestamp 1654646412172, source identifier 121 communicated with destination identifier 10 over the iec104 protocol hint in server_to_client direction. The observed frame type was i_format_information_transfer and the dominant observation pattern was dominant_iec104_measurement_pattern. The proxy formal class for this event is IEC104_BASELINE_MEASUREMENT_OBSERVATION, which should be treated as a label indicating the presence of baseline measurement traffic rather than a confirmed attack label. The observed features include source port 2404, destination port 49812, packet size 79 bytes and length field 25, ASDU address 235, type 36, COT 3, and item count 1.",,,,
+ER-027,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is client_to_server.
+- The observed frame type is s_or_u_format_control.
+- Source identifier 70 communicated with destination identifier 69.
+- The observed source port is 39002 and the observed destination port is 2404.
+- The observed packet size is 46 bytes and the packet length field is 4.
+- The observed ASDU address is 0.
+- The observed ASDU type is 0, COT is 0, and ASDU item count is 0.
+- The proxy formal class is IEC104_CONTROL_FRAME_OBSERVATION.
+- The observation pattern is iec104_control_frame_pattern.","Here is a precise operational English explanation of the formally bounded IEC-104 network observation:
+
+On timestamp 1654646411562, source identifier 70 communicated with destination identifier 69 over an iec104 protocol hint in client_to_server direction. The observed frame type was s_or_u_format_control and matched the iec104_control_frame_pattern pattern. The communication occurred on source port 39002 and destination port 2404, with a packet size of 46 bytes and a packet length field of 4. The ASDU address, COT, and item count were all 0. This observation is classified as IEC104_CONTROL_FRAME_OBSERVATION, which is currently a proxy formal class label and not a confirmed attack label.",,,,
+ER-028,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is client_to_server.
+- The observed frame type is s_or_u_format_control.
+- Source identifier 419 communicated with destination identifier 418.
+- The observed source port is 60204 and the observed destination port is 2404.
+- The observed packet size is 46 bytes and the packet length field is 4.
+- The observed ASDU address is 0.
+- The observed ASDU type is 0, COT is 0, and ASDU item count is 0.
+- The proxy formal class is IEC104_CONTROL_FRAME_OBSERVATION.
+- The observation pattern is iec104_control_frame_pattern.","At timestamp 1654646407091, an IEC-104 control frame observation (IEC104_CONTROL_FRAME_OBSERVATION) was detected in the network event dataset (eon_iec). The observed communication direction was client-to-server between source identifier 419 and destination identifier 418, using ports 60204 and 2404 respectively. The frame type was s_or_u_format_control, and the packet size was 46 bytes with a packet length field of 4. No ASDU items were present in this observation, as indicated by an ASDU address of 0, ASDU type of 0, COT of 0, and an empty ASDU item count. The proxy formal class for this event is IEC104_CONTROL_FRAME_OBSERVATION, and the observation pattern followed was iec104_control_frame_pattern. It's important to note that this formal class is a proxy observation label, not a confirmed attack label. No further conclusions can be drawn about the nature or intent of this network event based on the provided formal bound.",,,,
+ER-029,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is unknown.
+- The observed communication direction is unknown.
+- The observed frame type is u_format_control.
+- Source identifier 909 communicated with destination identifier 38.
+- The observed source port is 2405 and the observed destination port is 51415.
+- The observed packet size is 46 bytes and the packet length field is 4.
+- The observed ASDU address is 0.
+- The observed ASDU type is 0, COT is 0, and ASDU item count is 0.
+- The proxy formal class is UNKNOWN_NON_IEC104.
+- The observation pattern is unknown_or_non_iec104_pattern.","Here is a precise operational English explanation of the formally bounded IEC-104 network observation:
+
+On June 15, 2022, at 14:30:12.363 UTC (timestamp ms: 1654646412363), an event occurred on the eon_iec dataset with Event ID evt_017414. The observed communication involved source identifier 909 and destination identifier 38. The observed protocol hint is unknown, as well as the communication direction. The frame type was identified as u_format_control. The proxy formal class for this observation is UNKNOWN_NON_IEC104, indicating that the observed pattern does not conform to standard IEC-104 protocols.
+
+The observed features include a packet size of 46 bytes and a packet length field of 4. The source port was 2405, and the destination port was 51415. The ASDU address, COT, type, items count were all 0. This observation does not confirm a security conclusion due to insufficient evidence in the formal bound.",,,,
+ER-030,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is client_to_server.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 615 communicated with destination identifier 1.
+- The observed source port is 1024 and the observed destination port is 2404.
+- The observed packet size is 74 bytes and the packet length field is 20.
+- The observed ASDU address is 4117.
+- The observed ASDU type is 103, COT is 7, and ASDU item count is 1.
+- The proxy formal class is IEC104_OBSERVATION_UNCLASSIFIED.
+- The observation pattern is iec104_information_transfer_pattern.","At timestamp 1654646405628, an IEC-104 network event (evt_004683) occurred with the observed protocol being IEC104 and communication direction as client_to_server. The source identifier was 615 and the destination identifier was 1. The source port was 1024, while the destination port was 2404. The packet size was 74 bytes, with a packet length field of 20.
+
+The observed frame type was i_format_information_transfer, and the ASDU address was 4117. The ASDU type was 103, COT was 7, and there was 1 ASDU item in this transfer. This event follows the iec104_information_transfer_pattern. However, it is important to note that the formal class assigned to this observation is a proxy label (IEC104_OBSERVATION_UNCLASSIFIED) and does not confirm any security conclusions regarding potential malicious activity.",,,,
+ER-031,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is unknown.
+- The observed communication direction is unknown.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 783 communicated with destination identifier 38.
+- The observed source port is 2405 and the observed destination port is 51742.
+- The observed packet size is 82 bytes and the packet length field is 40.
+- The observed ASDU address is 1617.
+- The observed ASDU type is 36, COT is 3, and ASDU item count is 2.
+- The proxy formal class is UNKNOWN_NON_IEC104.
+- The observation pattern is unknown_or_non_iec104_pattern.","In the IEC-104 network event (evt_017606, eon_iec dataset), an information transfer frame was observed between source identifier 783 and destination identifier 38 at timestamp 1654646412418 ms. The source port was 2405, while the destination port was 51742. The packet size was 82 bytes, with a packet length field of 40. The ASDU address was 1617, and the ASDU type was 36, containing 2 items. The COT (Communication Object Type) was 3. However, the protocol hint is unknown, as well as the communication direction and observation pattern, which are labeled as UNKNOWN_NON_IEC104 according to the proxy formal class status. It should be noted that this formal class is a proxy observation label, not a confirmed attack label. The observed features do not provide sufficient evidence for a security conclusion regarding the nature of this network event.",,,,
+ER-032,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is unknown.
+- The observed communication direction is unknown.
+- The observed frame type is u_format_control.
+- Source identifier 38 communicated with destination identifier 583.
+- The observed source port is 51845 and the observed destination port is 2405.
+- The observed packet size is 46 bytes and the packet length field is 4.
+- The observed ASDU address is 0.
+- The observed ASDU type is 0, COT is 0, and ASDU item count is 0.
+- The proxy formal class is UNKNOWN_NON_IEC104.
+- The observation pattern is unknown_or_non_iec104_pattern.","The network observation labeled as evt_004198 within eon_iec dataset, timestamped at 1654646405509 and classified under Formal Bound version 2.1 with a proxy schema status, presents an intriguing case for analysis due to its unknown protocol hint and communication direction alongside the u_format_control frame type observed in atomic row granularity. Source identifier 38 engaged with destination identifier 583 over ports 51845 (source) and 2405 (destination), transmitting a packet of size 46 bytes, as indicated by pkt_length field value of 4. The ASDU address is noted to be zero across all fields: type, COT, items—all reflecting the absence of data within these parameters for this specific event instance.
+
+
+The formal class assigned to this observation stands at UNKNOWN_NON_IEC104; however, it's crucial to recognize that such a label represents only an interim proxy classification rather than definitive evidence of malicious activity or network anomalies within the IEC-104 protocol context. Given these observations and without additional information beyond this single timestamped event, no further security conclusions can be drawn regarding potential threats like replay attacks, flooding, MITM strategies, command injections, scanning activities, denial of service incidents, or the necessity for immediate mitigation actions such as isolating network segments.
+
+
+As per current formal class status and available data within this observation's scope, no confirmed normalcy nor malicious intent can be asserted beyond what is explicitly stated in these parameters alone.",,,,
+ER-033,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is server_to_client.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 435 communicated with destination identifier 434.
+- The observed source port is 2404 and the observed destination port is 49820.
+- The observed packet size is 67 bytes and the packet length field is 25.
+- The observed ASDU address is 220.
+- The observed ASDU type is 36, COT is 3, and ASDU item count is 1.
+- The proxy formal class is IEC104_BASELINE_MEASUREMENT_OBSERVATION.
+- The observation pattern is dominant_iec104_measurement_pattern.","Here is a precise operational English explanation of the formally bounded IEC-104 network observation:
+
+On timestamp 1654646405932, source identifier 435 communicated with destination identifier 434 over the iec104 protocol in server_to_client direction. The observed frame type was i_format_information_transfer and the dominant observation pattern was dominant_iec104_measurement_pattern. The proxy formal class for this event is IEC104_BASELINE_MEASUREMENT_OBSERVATION, which should be treated as a label indicating the presence of an IEC-104 baseline measurement observation, rather than a confirmed attack label. The observed features include source port 2404 and destination port 49820, packet size 67 bytes and length field 25, ASDU address 220, type 36, COT 3, and item count 1.",,,,
+ER-034,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is unknown.
+- The observed communication direction is unknown.
+- The observed frame type is s_or_u_format_control.
+- Source identifier 38 communicated with destination identifier 791.
+- The observed source port is 51750 and the observed destination port is 2405.
+- The observed packet size is 46 bytes and the packet length field is 4.
+- The observed ASDU address is 0.
+- The observed ASDU type is 0, COT is 0, and ASDU item count is 0.
+- The proxy formal class is UNKNOWN_NON_IEC104.
+- The observation pattern is unknown_or_non_iec104_pattern.","In the IEC-104 network event with ID 'evt_012433' and timestamp 1654646410975, an unidentified protocol was used for communication between source identifier 38 and destination identifier 791. The observed frame type was s_or_u_format_control, and the packet size was 46 bytes with a packet length field of 4. The source port was 51750, while the destination port was 2405. However, no ASDU data was present in this communication as indicated by the ASDU address, type, COT, and item count all being 0.
+
+It is important to note that the formal class of this observation is UNKNOWN_NON_IEC104, which serves as a proxy label and does not confirm any specific attack or malicious activity. The observation pattern was unknown_or_non_iec104_pattern, indicating that it did not conform to the expected IEC-104 communication pattern. Further investigation is required to determine the nature of this network event and its potential impact on the industrial control system.",,,,
+ER-035,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is unknown.
+- The observed communication direction is unknown.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 761 communicated with destination identifier 38.
+- The observed source port is 2405 and the observed destination port is 51726.
+- The observed packet size is 67 bytes and the packet length field is 25.
+- The observed ASDU address is 1912.
+- The observed ASDU type is 33, COT is 3, and ASDU item count is 1.
+- The proxy formal class is UNKNOWN_NON_IEC104.
+- The observation pattern is unknown_or_non_iec104_pattern.","Here is a precise operational English explanation of the formally bounded IEC-104 network observation:
+
+On timestamp 1654646407350, source identifier 761 communicated with destination identifier 38 over an unknown protocol hint and communication direction. The observed frame type was i_format_information_transfer. The packet size was 67 bytes, with a packet length field of 25. The ASDU address was 1912, the ASDU type was 33, COT was 3, and ASDU item count was 1. The source port was 2405 and destination port was 51726. The current formal class is UNKNOWN_NON_IEC104, which is a proxy observation label and not a confirmed attack label.",,,,
+ER-036,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is unknown.
+- The observed communication direction is unknown.
+- The observed frame type is s_or_u_format_control.
+- Source identifier 38 communicated with destination identifier 761.
+- The observed source port is 51726 and the observed destination port is 2405.
+- The observed packet size is 46 bytes and the packet length field is 4.
+- The observed ASDU address is 0.
+- The observed ASDU type is 0, COT is 0, and ASDU item count is 0.
+- The proxy formal class is UNKNOWN_NON_IEC104.
+- The observation pattern is unknown_or_non_iec104_pattern.","The network observation identified by Event ID evt_012500 within dataset eon_iec, timestamped at 1654646411006 and classified under Formal Bound version 2.1 with a proxy schema status, presents an anomaly in the IEC-104 network communication pattern between source identifier 38 and destination identifier 761. The observed packet size is consistent at 46 bytes across all packets within this event series, which aligns with standardized ASDU fields for control frames as per s_or_u_format_control specifications. However, the formal class label UNKNOWN_NON_IEC104 indicates that while there are deviations from expected IEC-104 communication patterns—as suggested by an unknown protocol hint and direction of traffic—the observed data does not provide sufficient evidence to confirm a security incident or malicious intent. The absence of ASDU address, COT value, and item count further complicates the attribution without additional contextual information from official automata schemas for IEC-104 communication patterns within this industrial control system network event.",,,,
+ER-037,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is server_to_client.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 130 communicated with destination identifier 1.
+- The observed source port is 2404 and the observed destination port is 51574.
+- The observed packet size is 79 bytes and the packet length field is 25.
+- The observed ASDU address is 27.
+- The observed ASDU type is 36, COT is 3, and ASDU item count is 1.
+- The proxy formal class is IEC104_BASELINE_MEASUREMENT_OBSERVATION.
+- The observation pattern is dominant_iec104_measurement_pattern.","Here is a precise operational English explanation of the formally bounded IEC-104 network observation:
+
+On timestamp 1654646404722, an IEC-104 protocol hint was observed in server-to-client communication direction. The source identifier 130 communicated with destination identifier 1 using ports 2404 and 51574, respectively. The packet size was 79 bytes, with a packet length field of 25. The ASDU address was 27, type was 36, COT was 3, and item count was 1. The observed frame type was i_format_information_transfer, and the dominant observation pattern was dominant_iec104_measurement_pattern. The proxy formal class is IEC104_BASELINE_MEASUREMENT_OBSERVATION, which should not be considered a confirmed attack label.",,,,
+ER-038,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is server_to_client.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 312 communicated with destination identifier 1.
+- The observed source port is 2404 and the observed destination port is 48874.
+- The observed packet size is 62 bytes and the packet length field is 20.
+- The observed ASDU address is 61.
+- The observed ASDU type is 103, COT is 7, and ASDU item count is 1.
+- The proxy formal class is IEC104_OBSERVATION_UNCLASSIFIED.
+- The observation pattern is iec104_information_transfer_pattern.","Here is a precise operational English explanation of the formally bounded IEC-104 network observation:
+
+On timestamp 1654646406529, source identifier 312 communicated with destination identifier 1 over an iec104 protocol hint in server_to_client direction. The observed frame type was i_format_information_transfer and followed the iec104_information_transfer_pattern. The communication involved a packet size of 62 bytes and a packet length field of 20. The ASDU address was 61, ASDU type was 103 with COT 7, and ASDU item count was 1. The observed source port was 2404 and the observed destination port was 48874. The current formal class is IEC104_OBSERVATION_UNCLASSIFIED, which is a proxy observation label and not a confirmed attack label.",,,,
+ER-039,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is server_to_client.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 262 communicated with destination identifier 1.
+- The observed source port is 2404 and the observed destination port is 46820.
+- The observed packet size is 79 bytes and the packet length field is 25.
+- The observed ASDU address is 225.
+- The observed ASDU type is 36, COT is 3, and ASDU item count is 1.
+- The proxy formal class is IEC104_BASELINE_MEASUREMENT_OBSERVATION.
+- The observation pattern is dominant_iec104_measurement_pattern.","Here is a precise operational English explanation of the formally bounded IEC-104 network observation:
+
+On timestamp 1654646412931, server identifier 262 communicated with client identifier 1 over an iec104 protocol hint in a server_to_client communication direction. The observed frame type was i_format_information_transfer and the dominant observation pattern was dominant_iec104_measurement_pattern. The source port was 2404 and the destination port was 46820. The packet size was 79 bytes with a length field of 25. The ASDU address was 225, COT was 3, and item count was 1, with an ASDU type of 36. This observation is labeled as IEC104_BASELINE_MEASUREMENT_OBSERVATION, which is currently a proxy formal class and not a confirmed attack label.",,,,
+ER-040,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is unknown.
+- The observed communication direction is unknown.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 864 communicated with destination identifier 8.
+- The observed source port is 2405 and the observed destination port is 42320.
+- The observed packet size is 79 bytes and the packet length field is 25.
+- The observed ASDU address is 431.
+- The observed ASDU type is 36, COT is 3, and ASDU item count is 1.
+- The proxy formal class is UNKNOWN_NON_IEC104.
+- The observation pattern is unknown_or_non_iec104_pattern.","The formally bounded network observation identified by Event ID evt_019266 within eon_iec dataset, at granularity atomic_row and timestamped as 1654646412833 using Formal Bound version 2.1 with a proxy schema status of UNKNO0UNTI
+
+Upon analysis, the source identifier (source_id) is marked as '864', while communicating to destination identifier ('8') through an unspecified protocol hint and communication direction within this formal bound framework. The packet size observed was 79 bytes with a length field of 25; these details align precisely with ASDU address, type (36), COT value (3), and item count (1) as per the schema status provided in proxy_until_official_automaton_schema format.
+
+The formal class label assigned to this observation is UNKNOWN_NON_IEC104; it indicates that while there are non-conformities with IEC 104 standards, these do not necessarily equate to a confirmed cyber attack or malicious intent within the bounds of our current schema. This label serves as an interim proxy observation until further ground truth can be established through additional analysis and verification against official ICS network protocols such as IEC-104.
+
+Given that this formal class is not a confirmed security conclusion, no mitigation actions or causal explanations are suggested at this juncture within the bounds of our current observation framework.",,,,
+ER-041,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is client_to_server.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 38 communicated with destination identifier 304.
+- The observed source port is 54114 and the observed destination port is 2404.
+- The observed packet size is 60 bytes and the packet length field is 18.
+- The observed ASDU address is 1003.
+- The observed ASDU type is 50, COT is 6, and ASDU item count is 1.
+- The proxy formal class is IEC104_OBSERVATION_UNCLASSIFIED.
+- The observation pattern is iec104_information_transfer_pattern.","The IEC104_OBSERVATION_UNCLASSIFIED label indicates that, based on event ID evt_011073 within dataset eon_iec at granularity atomic_row and timestamped as 1654646407429 using formal bound version 2.1 with the proxy schema status in place until an official automaton schema is established, a client-to-server communication event occurred via IEC protocol hint iec104. The source identifier marked by ID 38 engaged in data transfer to destination identifier 304 through ports 54114 and 2404 respectively. This exchange involved an i_format_information_transfer frame type, with a packet size of 60 bytes where the length field was noted as 18. The ASDU address observed is 1003; associated fields include COT value 6, one item count (ASDU items), and Type 50 indicating an analog input status report from substation to control system within a single timestamped event without any additional context provided for causality or malicious intent. The formal class label does not confirm this as attack traffic but rather serves as a proxy observation pending further analysis against the official automaton schema, with no mitigation actions implied in the current bound information.",,,,
+ER-042,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is server_to_client.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 204 communicated with destination identifier 1.
+- The observed source port is 2404 and the observed destination port is 47192.
+- The observed packet size is 67 bytes and the packet length field is 25.
+- The observed ASDU address is 19.
+- The observed ASDU type is 36, COT is 3, and ASDU item count is 1.
+- The proxy formal class is IEC104_BASELINE_MEASUREMENT_OBSERVATION.
+- The observation pattern is dominant_iec104_measurement_pattern.","Here is a precise operational English explanation of the formally bounded IEC-104 network observation:
+
+On timestamp 1654646412332, source identifier 204 communicated with destination identifier 1 over the iec104 protocol in server_to_client direction. The observed frame type was i_format_information_transfer and the dominant observation pattern was dominant_iec104_measurement_pattern. The proxy formal class assigned to this event is IEC104_BASELINE_MEASUREMENT_OBSERVATION, which should be treated as a label indicating the presence of baseline measurement traffic rather than a confirmed attack label. The observed features include source port 2404, destination port 47192, packet size 67 bytes and length field 25, ASDU address 19, type 36, COT 3, and item count 1.",,,,
+ER-043,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is server_to_client.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 365 communicated with destination identifier 366.
+- The observed source port is 2404 and the observed destination port is 56358.
+- The observed packet size is 94 bytes and the packet length field is 25.
+- The observed ASDU address is 35.
+- The observed ASDU type is 36, COT is 3, and ASDU item count is 1.
+- The proxy formal class is IEC104_BASELINE_MEASUREMENT_OBSERVATION.
+- The observation pattern is dominant_iec104_measurement_pattern.","At timestamp 1654646411905, an IEC-104 network event (evt_015637) was observed in the eon_iec dataset. The event followed the dominant_iec104_measurement_pattern and was classified as a proxy observation under the IEC104_BASELINE_MEASUREMENT_OBSERVATION formal class, which does not confirm an attack label. The observed communication direction was server-to-client between source identifier 365 and destination identifier 366. The source port was 2404, and the destination port was 56358. The packet size was 94 bytes, with a packet length field of 25. The ASDU address was 35, the ASDU type was 36, the COT was 3, and there was one ASDU item in the frame. This event is consistent with the IEC-104 protocol hint and observed ASDU fields, but it does not confirm any specific cyber attack or malicious activity.",,,,
+ER-044,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is client_to_server.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 38 communicated with destination identifier 37.
+- The observed source port is 51770 and the observed destination port is 2404.
+- The observed packet size is 60 bytes and the packet length field is 18.
+- The observed ASDU address is 1001.
+- The observed ASDU type is 50, COT is 6, and ASDU item count is 1.
+- The proxy formal class is IEC104_OBSERVATION_UNCLASSIFIED.
+- The observation pattern is iec104_information_transfer_pattern.","At timestamp 1654646405882, an IEC-104 information transfer event (event ID: evt_005652) occurred within the eon_iec dataset. The observed communication was from source identifier 38 to destination identifier 37, using ports 51770 and 2404 respectively. The packet size was 60 bytes, with a packet length field of 18.
+
+The frame type was i_format_information_transfer, and the observed ASDU fields were as follows: address 1001, type 50, COT 6, and item count 1. This event conforms to the iec104_information_transfer_pattern. However, it is important to note that the formal class assigned to this observation, IEC104_OBSERVATION_UNCLASSIFIED, is a proxy label and does not confirm or deny any malicious intent. Without additional context or evidence, no security conclusions can be drawn from this observation alone.",,,,
+ER-045,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is unknown.
+- The observed communication direction is unknown.
+- The observed frame type is s_or_u_format_control.
+- Source identifier 8 communicated with destination identifier 864.
+- The observed source port is 42320 and the observed destination port is 2405.
+- The observed packet size is 58 bytes and the packet length field is 4.
+- The observed ASDU address is 0.
+- The observed ASDU type is 0, COT is 0, and ASDU item count is 0.
+- The proxy formal class is UNKNOWN_NON_IEC104.
+- The observation pattern is unknown_or_non_iec104_pattern.","In the IEC-104 network event with Event ID 'evt_015283' and Timestamp '1654646411801', an unidentified protocol was used in a communication between source identifier 8 and destination identifier 864. The observed frame type was s_or_u_format_control, and the packet size was 58 bytes with a packet length field of 4. The source port was 42320, and the destination port was 2405. However, no ASDU data was present in this communication as indicated by the ASDU address, COT, and item count all being 0. It is important to note that the formal class assigned to this event is UNKNOWN_NON_IEC104, which is a proxy observation label and not a confirmed attack label. The observation pattern was unknown or non-IEC104, indicating an unusual communication behavior within the network. Without further context or additional information, it is not possible to confirm whether this event represents normal or abnormal traffic.",,,,
+ER-046,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is server_to_client.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 388 communicated with destination identifier 1.
+- The observed source port is 2404 and the observed destination port is 35346.
+- The observed packet size is 62 bytes and the packet length field is 20.
+- The observed ASDU address is 22.
+- The observed ASDU type is 103, COT is 7, and ASDU item count is 1.
+- The proxy formal class is IEC104_OBSERVATION_UNCLASSIFIED.
+- The observation pattern is iec104_information_transfer_pattern.","The IEC104 protocol hint indicates a server_to_client communication direction, with source identifier 388 sending data to destination identifier 1 via ports 2404 and 35346 respectively. The packet size is recorded at 62 bytes over the length field of 20 within an atomic row granularity in dataset eon_iec under formal bound version 2.1, using a proxy until official schema validation for IEC-104 communication patterns. Notably, this event falls into the unclassified category as per its current classification status and is not yet confirmed to be associated with any specific attack type or malicious intent based on available evidence within the formal bound itself. The ASDU address of 22, along with a single item count (1) for an IEC-104 information transfer pattern under observation class IEC104_OBSERVATION_UNCLASSIFIED suggests that this event is still pending further analysis to be grounded as either normal or malicious activity.",,,,
+ER-047,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is server_to_client.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 188 communicated with destination identifier 10.
+- The observed source port is 2404 and the observed destination port is 46402.
+- The observed packet size is 67 bytes and the packet length field is 25.
+- The observed ASDU address is 304.
+- The observed ASDU type is 36, COT is 3, and ASDU item count is 1.
+- The proxy formal class is IEC104_BASELINE_MEASUREMENT_OBSERVATION.
+- The observation pattern is dominant_iec104_measurement_pattern.","The IEC104 network observation, identified by Event ID evt_013387 within dataset eon_iec at granularity atomic_row and timestamped as 1654646411302 using Formal Bound version 2.1 under the schema proxy_until_official_automaton_schema, indicates a communication event between source identifier 188 and destination identifier 10 via server-to0client direction with an observed packet size of 67 bytes (pkt_length: 25). The IEC protocol hint iec104 is confirmed in this transmission. Notably, the frame type i_format_information_transfer aligns with expected behavior for a baseline measurement observation within industrial control systems using IEC-104 communication standards. It's important to highlight that while source port 2404 and destination port 46402 are involved in this transmission, the formal class label assigned as IEC104_BASELINE_MEASUREMENT_OBSERVATION is a proxy observation rather than an indication of confirmed malicious activity. The ASDU address observed was 304 with type 36 and COT value 3 for one item (asdu_items: 1). This information, consistent with the IEC-104 protocol hint provided in the formal bound, suggests a standard operational pattern rather than an anomaly. As such, no immediate security conclusions can be drawn from this observation alone without further context or evidence of malicious intent beyond what is explicitly stated within the formal bounds observed at timestamp 1654646411302.",,,,
+ER-048,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is client_to_server.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 38 communicated with destination identifier 37.
+- The observed source port is 51770 and the observed destination port is 2404.
+- The observed packet size is 60 bytes and the packet length field is 18.
+- The observed ASDU address is 1001.
+- The observed ASDU type is 50, COT is 6, and ASDU item count is 1.
+- The proxy formal class is IEC104_OBSERVATION_UNCLASSIFIED.
+- The observation pattern is iec104_information_transfer_pattern.","Here is a precise operational English explanation of the formally bounded IEC-104 network observation:
+
+On timestamp 1654646404866, source identifier 38 communicated with destination identifier 37 over an iec104 protocol hint in client_to_server direction. The observed frame type was i_format_information_transfer and followed the iec104_information_transfer_pattern. The communication involved a packet size of 60 bytes and a packet length field of 18. The ASDU address was 1001, with an ASDU type of 50, COT of 6, and ASDU item count of 1. The current formal class is IEC104_OBSERVATION_UNCLASSIFIED, which is a proxy observation label and not a confirmed attack label.",,,,
+ER-049,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is iec104.
+- The observed communication direction is client_to_server.
+- The observed frame type is i_format_information_transfer.
+- Source identifier 38 communicated with destination identifier 48.
+- The observed source port is 51820 and the observed destination port is 2404.
+- The observed packet size is 60 bytes and the packet length field is 18.
+- The observed ASDU address is 1002.
+- The observed ASDU type is 50, COT is 6, and ASDU item count is 1.
+- The proxy formal class is IEC104_OBSERVATION_UNCLASSIFIED.
+- The observation pattern is iec104_information_transfer_pattern.","At timestamp 1654646407178, an IEC-104 information transfer event (event ID: evt_010346) occurred within the eon_iec dataset. The observed communication was from source identifier 38 to destination identifier 48, using ports 51820 and 2404 respectively. The packet size was 60 bytes, with a packet length field of 18.
+
+The ASDU address was 1002, the ASDU type was 50, COT was 6, and there was one ASDU item in this transfer. This event conforms to the iec104_information_transfer_pattern and is labeled as IEC104_OBSERVATION_UNCLASSIFIED, which is a proxy observation label and not a confirmed attack label. It's important to note that the current formal bound does not confirm any security conclusions regarding this event.",,,,
+ER-050,"[Formal bound v2.1, schema status: proxy_until_official_automaton_schema]
+- The observed protocol hint is unknown.
+- The observed communication direction is unknown.
+- The observed frame type is u_format_control.
+- Source identifier 583 communicated with destination identifier 38.
+- The observed source port is 2405 and the observed destination port is 51845.
+- The observed packet size is 46 bytes and the packet length field is 4.
+- The observed ASDU address is 0.
+- The observed ASDU type is 0, COT is 0, and ASDU item count is 0.
+- The proxy formal class is UNKNOWN_NON_IEC104.
+- The observation pattern is unknown_or_non_iec104_pattern.","The network observation identified by Event ID evt_003618 within eon_iec dataset, at granularity atomic_row and timestamped as 1654646405355 using Formal Bound version 2.1 with the proxy schema status of UNKNO0UNTT OATOM SCHEMA, presents a communication between source identifier 583 and destination identifier 38 over an unknown protocol hint through an unspecified direction in IEC-104 format control frames (u_format_control). The packet size is noted as 46 bytes with the length field set to 4. ASDU address, type, COT, and item count are all marked at zero values for this particular observation pattern labeled UNKNOWN_NON_IEC104 by proxy formal class status indicating it's not a ground truth attack label but rather an unverified network event within the IEC-104 framework. Given that no confirmed malicious intent or causality is explicitly stated, and with insufficient evidence to draw definitive security conclusions from this single timestamped observation alone, further analysis remains necessary for accurate assessment of potential threats in accordance with industrial control systems network protocols such as IEC-104.",,,,

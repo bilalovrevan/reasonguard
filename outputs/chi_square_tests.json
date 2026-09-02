@@ -1,0 +1,50 @@
+{
+  "violation_category_vs_model": {
+    "groups": [
+      "gemini-2.5-flash-lite",
+      "gpt-4o-mini",
+      "llama3.1:8b-instruct-q4_0",
+      "mistral:7b-instruct-v0.3-q4_0",
+      "phi3:mini",
+      "synthetic_rule_based"
+    ],
+    "labels": [
+      "NONE",
+      "V1",
+      "V4",
+      "V5",
+      "MIXED"
+    ],
+    "dropped_labels_all_zero": [
+      "V2",
+      "V3"
+    ],
+    "chi2": 1073.4748,
+    "p_value": 0.0,
+    "dof": 20,
+    "significant_at_0_05": true
+  },
+  "violation_category_vs_proxy_event_type": {
+    "groups": [
+      "function_code_violation_proxy_until_official_schema",
+      "network_scan_proxy_until_official_schema",
+      "normal_modbus_polling_proxy_until_official_schema",
+      "topology_change_proxy_until_official_schema"
+    ],
+    "labels": [
+      "NONE",
+      "V1",
+      "V4",
+      "V5",
+      "MIXED"
+    ],
+    "dropped_labels_all_zero": [
+      "V2",
+      "V3"
+    ],
+    "chi2": 39.0946,
+    "p_value": 0.000102,
+    "dof": 12,
+    "significant_at_0_05": true
+  }
+}

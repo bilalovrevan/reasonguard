@@ -6,12 +6,27 @@ Reference: Leucker, M. & Schallhart, C. (2009). A Brief Account of Runtime
 Verification. *Journal of Logic and Algebraic Programming*, 78(5), 293–303.
 
 ## 1. Main argument
-[State the formal definition of runtime verification and the distinction it draws
-from static verification and from testing.]
+[FACTUAL EXTRACTION -- AI-assisted. I could not retrieve the full paywalled text
+(ScienceDirect blocked automated fetch); this is based on the paper's well-established
+public description as a foundational RV survey, not a direct read of the PDF. Verify
+the exact wording against the actual paper before citing.]
+Runtime verification (RV) is defined as a lightweight formal-methods discipline that
+checks whether a single (typically finite) execution trace of a running system
+satisfies a formal specification. This sits between two more extreme approaches:
+exhaustive static verification / model checking (reasons over *all* possible
+executions of a model, but does not scale to real deployed systems) and testing
+(observes real executions, but without a formal specification or completeness
+guarantee). A monitor, synthesized automatically from the specification, evaluates
+the trace incrementally.
 
 ## 2. Methodology
-[Describe the monitor specification formalism, the safety/liveness distinction, and
-the categories of properties that can be checked at run time.]
+[Same caveat as above.]
+Surveys monitor-synthesis techniques from temporal-logic-style specifications and
+discusses the safety/liveness distinction specifically in the finite-trace setting:
+a safety violation can be conclusively detected from a finite prefix, but a liveness
+property generally cannot be conclusively verified or falsified from a finite trace
+alone. Reviews trace-based semantics and practical monitor-implementation
+approaches.
 
 ## 3. Direct relevance to ReasonGuard
 ReasonGuard treats the formal verdict as the runtime monitor specification and the AI

@@ -1,0 +1,47 @@
+=== CLOUD LLM RESPONSE PREVIEW ===
+Total responses: 200
+
+Response ID: evt_015867_cloud_openai_gpt-4o-mini
+Model: gpt-4o-mini
+OK: True
+Elapsed: 1.890824794769287
+Response:
+The observed event, identified as evt_015867, pertains to an IEC-104 communication where source identifier 885 communicated with destination identifier 8. The communication direction is client-to-server, utilizing the IEC-104 protocol, specifically an information transfer frame type. The source port was 4115, while the destination port was 2404. The packet size was recorded at 62 bytes with a length field of 20, and the ASDU fields indicate an ASDU address of 4655, an ASDU type of 103, a COT of 7, and a single ASDU item. It is important to note that the current formal class is labeled as IEC104_OBSERVATION_UNCLASSIFIED, which serves as a proxy observation label and does not confirm any malicious activity.
+
+================================================================================
+
+Response ID: evt_003293_cloud_openai_gpt-4o-mini
+Model: gpt-4o-mini
+OK: True
+Elapsed: 1.6900060176849365
+Response:
+The observed event, identified as evt_003293, involves a communication using the IEC-104 protocol, specifically in a client-to-server direction. The source identifier 38 communicated with destination identifier 37 over source port 51770 and destination port 2404. The packet size was recorded at 60 bytes, with a packet length of 18. The ASDU fields indicate an ASDU address of 1001, an ASDU type of 50, a cause of transmission (COT) value of 6, and a single ASDU item. It is important to note that the current formal class is labeled as IEC104_OBSERVATION_UNCLASSIFIED, which serves as a proxy observation label and does not confirm any malicious activity.
+
+================================================================================
+
+Response ID: evt_000609_cloud_openai_gpt-4o-mini
+Model: gpt-4o-mini
+OK: True
+Elapsed: 2.182591199874878
+Response:
+The observed event, identified as evt_000609, pertains to an IEC-104 communication where source identifier 37 communicated with destination identifier 38. The communication direction is server-to-client, utilizing the IEC-104 protocol, specifically indicating an information transfer frame type (i_format_information_transfer). The source port is noted as 2404, while the destination port is 51770. The ASDU fields indicate an ASDU address of 1001, an ASDU type of 50, a cause of transmission (COT) value of 7, and a single ASDU item. It is important to note that the current formal class is labeled as IEC104_OBSERVATION_UNCLASSIFIED, which serves as a proxy observation label and does not confirm any malicious activity.
+
+================================================================================
+
+Response ID: evt_005946_cloud_openai_gpt-4o-mini
+Model: gpt-4o-mini
+OK: True
+Elapsed: 2.063375949859619
+Response:
+The observed event, identified as evt_005946, involves a communication using the IEC-104 protocol, specifically in the server-to-client direction. The source identifier is 1, and it communicated with destination identifier 661. The source port is 2404, while the destination port is 1024. The packet size is 74 bytes, with a packet length of 20 bytes. The ASDU address is 4452, and the ASDU type is 103, with a cause of transmission (COT) value of 6 and one ASDU item present. It is important to note that the current formal class is labeled as IEC104_OBSERVATION_UNCLASSIFIED, indicating that it is a proxy observation label and not a confirmed attack label.
+
+================================================================================
+
+Response ID: evt_005652_cloud_openai_gpt-4o-mini
+Model: gpt-4o-mini
+OK: True
+Elapsed: 1.8735377788543701
+Response:
+The observed event, identified as evt_005652, involves a communication using the IEC-104 protocol, specifically in a client-to-server direction. The source identifier 38 communicated with destination identifier 37 over source port 51770 and destination port 2404. The packet size was recorded at 60 bytes, with a packet length of 18. The ASDU fields indicate an ASDU address of 1001, an ASDU type of 50, a cause of transmission (COT) value of 6, and a single ASDU item. It is important to note that the current formal class is labeled as IEC104_OBSERVATION_UNCLASSIFIED, which serves as a proxy observation label and does not confirm any malicious activity.
+
+================================================================================

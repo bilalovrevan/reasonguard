@@ -43,7 +43,7 @@ CLOUD_TOP_P = 0.9
 CLOUD_MAX_TOKENS = 600
 
 OPENAI_DEFAULT_MODEL = "gpt-4o-mini"
-GEMINI_DEFAULT_MODEL = "gemini-1.5-flash"
+GEMINI_DEFAULT_MODEL = "gemini-2.5-flash-lite"  # gemini-1.5-flash was retired by Google before Aug 2026; 2.5-flash-lite has a free tier
 
 
 def load_jsonl(path: Path) -> list[dict[str, Any]]:
@@ -133,6 +133,18 @@ def call_openai(
             "elapsed_seconds": elapsed,
         }
 
+    except urllib.error.HTTPError as error:
+        try:
+            body = error.read().decode("utf-8", errors="replace")[:500]
+        except Exception:
+            body = "(could not read error body)"
+        return {
+            "ok": False,
+            "response": "",
+            "error": f"HTTP {error.code} {error.reason}: {body}",
+            "elapsed_seconds": time.time() - started,
+        }
+
     except urllib.error.URLError as error:
         return {
             "ok": False,
@@ -191,6 +203,18 @@ def call_gemini(
             "response": message,
             "raw": parsed,
             "elapsed_seconds": elapsed,
+        }
+
+    except urllib.error.HTTPError as error:
+        try:
+            body = error.read().decode("utf-8", errors="replace")[:500]
+        except Exception:
+            body = "(could not read error body)"
+        return {
+            "ok": False,
+            "response": "",
+            "error": f"HTTP {error.code} {error.reason}: {body}",
+            "elapsed_seconds": time.time() - started,
         }
 
     except urllib.error.URLError as error:

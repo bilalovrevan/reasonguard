@@ -1,0 +1,139 @@
+{
+  "sample_count": 200,
+  "accuracy": 0.3,
+  "macro_precision": 0.2736,
+  "macro_recall": 0.2401,
+  "macro_f1": 0.1871,
+  "cohens_kappa": 0.1602,
+  "per_class": [
+    {
+      "label": "NONE",
+      "precision": 0.2625,
+      "recall": 0.4286,
+      "f1": 0.3256,
+      "support": 49,
+      "true_positive": 21,
+      "false_positive": 59,
+      "false_negative": 28,
+      "true_negative": 92
+    },
+    {
+      "label": "V1",
+      "precision": 0.9,
+      "recall": 0.0918,
+      "f1": 0.1667,
+      "support": 98,
+      "true_positive": 9,
+      "false_positive": 1,
+      "false_negative": 89,
+      "true_negative": 101
+    },
+    {
+      "label": "V2",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 17,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 17,
+      "true_negative": 183
+    },
+    {
+      "label": "V3",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 2,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 2,
+      "true_negative": 198
+    },
+    {
+      "label": "V4",
+      "precision": 0.4792,
+      "recall": 0.92,
+      "f1": 0.6301,
+      "support": 25,
+      "true_positive": 23,
+      "false_positive": 25,
+      "false_negative": 2,
+      "true_negative": 150
+    },
+    {
+      "label": "V5",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0,
+      "true_negative": 200
+    }
+  ],
+  "confusion_matrix": {
+    "NONE": {
+      "NONE": 21,
+      "V1": 0,
+      "V2": 0,
+      "V3": 0,
+      "V4": 7,
+      "V5": 0,
+      "MIXED": 21
+    },
+    "V1": {
+      "NONE": 54,
+      "V1": 9,
+      "V2": 0,
+      "V3": 0,
+      "V4": 13,
+      "V5": 0,
+      "MIXED": 22
+    },
+    "V2": {
+      "NONE": 3,
+      "V1": 1,
+      "V2": 0,
+      "V3": 0,
+      "V4": 3,
+      "V5": 0,
+      "MIXED": 10
+    },
+    "V3": {
+      "NONE": 0,
+      "V1": 0,
+      "V2": 0,
+      "V3": 0,
+      "V4": 0,
+      "V5": 0,
+      "MIXED": 2
+    },
+    "V4": {
+      "NONE": 2,
+      "V1": 0,
+      "V2": 0,
+      "V3": 0,
+      "V4": 23,
+      "V5": 0
+    },
+    "V5": {
+      "NONE": 0,
+      "V1": 0,
+      "V2": 0,
+      "V3": 0,
+      "V4": 0,
+      "V5": 0
+    },
+    "MIXED": {
+      "NONE": 0,
+      "V1": 0,
+      "V2": 0,
+      "V3": 0,
+      "V4": 2,
+      "V5": 0,
+      "MIXED": 7
+    }
+  }
+}

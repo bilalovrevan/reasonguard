@@ -189,7 +189,12 @@ def _label_counts(labels: list[str]) -> dict[str, int]:
 def main() -> None:
     ensure_project_directories()
 
-    batch = build_annotation_batch(sample_size=50)
+    size = 200
+    for arg in sys.argv[1:]:
+        if arg.startswith("--size="):
+            size = int(arg.split("=", 1)[1])
+
+    batch = build_annotation_batch(sample_size=size)
     write_annotation_csv(batch, ANNOTATION_INPUT_CSV)
 
     print("Manual annotation batch generated successfully.")
@@ -197,7 +202,8 @@ def main() -> None:
     print(f"CSV: {ANNOTATION_INPUT_CSV}")
     print("")
     print("Annotation instructions:")
-    print("  1. Open the CSV in your spreadsheet editor.")
+    print("  1. Open the CSV in your spreadsheet editor, or run `python -m src.annotate_cli`")
+    print("     for a faster one-row-at-a-time terminal flow.")
     print("  2. For each row, fill in the human_label column with one of:")
     print(f"     {', '.join(VIOLATION_LABELS)}")
     print(f"  3. Fill in human_severity with one of: {', '.join(SEVERITY_LABELS)}.")

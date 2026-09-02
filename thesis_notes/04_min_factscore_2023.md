@@ -6,12 +6,24 @@ Reference: Min, S. et al. (2023). FActScore: Fine-Grained Atomic Evaluation of F
 Precision in Long Form Text Generation. *EMNLP 2023*.
 
 ## 1. Main argument
-[State that long-form text generation requires evaluation at the level of atomic
-facts and not at the level of entire passages.]
+[FACTUAL EXTRACTION -- AI-assisted, from the arXiv abstract (2305.14251) and public
+project material. Verify against the full paper before citing exact figures.]
+Long-form generations typically mix supported and unsupported claims, so judging an
+entire passage as simply "factual" or "not factual" loses information; the paper
+argues evaluation must happen at the level of individual atomic facts. Human
+evaluation of biography generations from InstructGPT, ChatGPT, and PerplexityAI found
+even a strong system like ChatGPT is only about 58% factually precise under this
+finer-grained scoring.
 
 ## 2. Methodology
-[Describe the atomic-fact decomposition pipeline, the verification step against a
-knowledge base, and the human-evaluation methodology used to validate the metric.]
+[Same caveat as above.]
+A generated passage is decomposed into atomic facts; each atomic fact is then
+verified for support against a reliable knowledge source. This was first done via
+costly human annotation, then automated with a retrieval-plus-strong-LM pipeline
+that reaches under 2% error relative to human judgment -- making it feasible to
+score at scale (6,500 generations across 13 models; the paper estimates this would
+have cost ~$26K if done entirely by human annotators). Released as an installable
+package (`pip install factscore`).
 
 ## 3. Direct relevance to ReasonGuard
 This is the closest methodology to the claim-extraction step in ReasonGuard. Note:

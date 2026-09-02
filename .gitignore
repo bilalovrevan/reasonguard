@@ -72,3 +72,13 @@ logs/
 # Local environment overrides
 .env
 .env.local
+
+# LaTeX build artifacts
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.tmp
+*.toc
+*.out
+*.synctex.gz

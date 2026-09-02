@@ -6,13 +6,22 @@ Reference: Maynez, J. et al. (2020). On Faithfulness and Factuality in Abstracti
 Summarization. *ACL 2020*.
 
 ## 1. Main argument
-[State the distinction between faithfulness (the summary is consistent with the
-source) and factuality (the summary is consistent with the world), and the empirical
-finding that abstractive summaries often violate faithfulness.]
+[FACTUAL EXTRACTION -- AI-assisted, from the arXiv abstract (2005.00661) only; the
+precise faithfulness-vs-factuality definitions and the hallucination taxonomy could
+not be retrieved from the accessible abstract text -- these need to come from your
+own read of the full ACL paper, not from this note.]
+Neural abstractive summarization models frequently hallucinate content unsupported
+by the source document. Across the systems tested, pretrained models produced
+summaries that were better not only by ROUGE but also more faithful/factual than
+non-pretrained models.
 
 ## 2. Methodology
-[Describe the human annotation protocol, the hallucination taxonomy proposed in the
-paper, and the empirical findings across models.]
+[Confirmed from the abstract: large-scale human evaluation was used to characterise
+hallucinations across systems, and the paper reports that textual-entailment-based
+metrics correlate better with human faithfulness judgments than standard overlap
+metrics like ROUGE. The specific annotation protocol and taxonomy categories are
+NOT filled in here -- read the full paper for those, since they matter for how you
+frame ReasonGuard's own three-state claim classifier in Chapter 2/3.]
 
 ## 3. Direct relevance to ReasonGuard
 This paper defines the faithfulness problem that ReasonGuard addresses in a different
