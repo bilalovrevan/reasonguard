@@ -10,8 +10,14 @@ Brno University of Technology.
 
 The first dataset, \emph{Modbus Dataset for ICS Anomaly Detection}
 \autocite{RysavyMatousek2021Modbus}, captures Modbus traffic from a
-controlled industrial testbed. The dataset is used for the function code
-violation and replay attack event types in the exposé.
+controlled industrial testbed. The exposé originally planned to source the
+function-code-violation and replay-attack event types from this dataset. In
+the implemented pipeline this has not yet happened: both event types are
+currently derived as proxies from the second (smart-grid) dataset described
+below, and the Modbus dataset itself is not yet consumed by any pipeline
+stage. Section~\ref{sec:event-type-distribution} reports the resulting
+counts, and this scope gap is carried forward as a stated limitation and
+future-work item in Chapter~\ref{ch:discussion}.
 
 The second dataset, \emph{ICS Dataset for Smart Grid Anomaly Detection}
 \autocite{MatousekRysavyGrofcik2022SmartGrid}, captures IEC-104 traffic from
@@ -85,9 +91,17 @@ Under the proxy classifier (Section~\ref{subsec:proxy-event-types}) the
 
 The fifth canonical event type (replay attack) is absent from the current
 sample. The evaluation therefore covers four of the five canonical event
-types under the proxy regime; the fifth will be added once the
-function\_code\_violation and replay\_attack categories are sourced from the
-Modbus dataset.
+types under the proxy regime. Both \texttt{function\_code\_violation} and
+\texttt{replay\_attack} are named in the exposé as Modbus-sourced event
+types (Section~\ref{sec:datasets}); in the current pipeline
+\texttt{function\_code\_violation} is instead observed as a proxy label on
+the smart-grid dataset (44 of 20\,000 bounds) and \texttt{replay\_attack}
+does not occur at all. A chi-square test of independence confirms that the
+distribution of ReasonGuard violation verdicts is significantly associated
+with proxy event type ($\chi^2=39.09$, $df=12$, $p<0.001$; full results in
+\texttt{outputs/chi\_square\_tests.md}), i.e.\ the event-type signal is not
+noise even under the proxy schema. Sourcing both event types directly from
+the Modbus dataset remains future work (Chapter~\ref{ch:discussion}).
 
 \section{Language Models}
 \label{sec:models}
@@ -168,7 +182,11 @@ are added to the same combined report and the same per-event-type analysis.
 The verification step is the same for all three populations: every response
 is processed by \texttt{src/reason\_guard\_checker.py}, which produces the
 V1--V5 violation set, the severity rating, and (when spaCy is installed) the
-per-claim three-state verdicts.
+per-claim three-state verdicts. The merged report
+(\texttt{outputs/reason\_guard\_report.jsonl}) combines all three
+populations into 1\,000 verified responses: 500 synthetic regression
+responses, 300 local-model responses (3 models $\times$ 100 prompts), and
+200 cloud-model responses (2 models $\times$ 100 prompts).
 
 \section{Manual Annotation}
 \label{sec:manual-annotation}
@@ -190,6 +208,20 @@ matrix, and Cohen's $\kappa$. A separate blind 50-sample batch, built by
 second supervisor for independent assessment at the M5 milestone; Cohen's
 $\kappa$ between ReasonGuard and that external judgement is reported
 alongside the internal annotation results in Chapter~\ref{ch:results}.
+
+On the completed 200-pair internal batch, ReasonGuard's verdicts achieve an
+accuracy of 0.30, a macro-averaged F1 of 0.1871, and a Cohen's $\kappa$ of
+0.1602 against the human labels (full per-class precision/recall/F1 and the
+confusion matrix are in \texttt{outputs/evaluation\_metrics.md} and are
+reproduced in Chapter~\ref{ch:results}). Both figures fall short of the
+exposé's target thresholds ($\kappa \geq 0.70$, F1 $\geq 0.80$); the
+per-class breakdown attributes most of the gap to the V4 (under-specified
+reasoning) detector, whose rule-based implementation over-triggers relative
+to the human annotation criterion (precision 0.48, recall 0.92 for V4),
+while V1 (fabricated reasoning) shows the opposite pattern (precision 0.90,
+recall 0.09). This asymmetry, and its implications for using a rule-based
+checker as a sole verification gate, is interpreted in
+Chapter~\ref{ch:discussion}.
 
 \section{Tracking, Reproducibility, and Data Provenance}
 \label{sec:reproducibility}
