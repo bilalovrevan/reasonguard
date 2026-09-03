@@ -16,8 +16,17 @@ the polish pass happens once the violation taxonomy and the schema are frozen.
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 from typing import Any
+
+# Streamlit Cloud (and `streamlit run src/dashboard/app.py` from an unusual cwd)
+# only puts this file's own directory on sys.path, so the `src.*` package
+# imports below fail with ModuleNotFoundError unless the repo root is added
+# explicitly first.
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
 
 import streamlit as st
 
