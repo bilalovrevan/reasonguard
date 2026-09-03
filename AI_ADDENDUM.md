@@ -160,3 +160,25 @@ language/editing feedback on author-written text, project planning).
   approval). Category: code/pipeline engineering, LaTeX build maintenance, factual
   legal-reference drafting, project status reporting -- explicitly permitted; no
   thesis prose written for Chapters 2/3/6/7.
+- 2026-09-03 | Claude | Deployed the Streamlit dashboard to Streamlit Community
+  Cloud (share.streamlit.io) at Ravan's explicit request, after he signed into
+  Streamlit and GitHub himself (I never touched a password/2FA field -- he
+  completed both sign-ins, and separately clicked through the "Connect here"
+  private-repo OAuth grant after I asked him in chat first). Filled the deploy
+  form (repo bilalovrevan/reasonguard, branch main, src/dashboard/app.py) via
+  browser automation. First deploy attempt crashed with ModuleNotFoundError:
+  the entrypoint does `from src.pipeline_config import ...`, but Streamlit
+  Cloud only puts the entrypoint file's own directory on sys.path, not the
+  repo root. Fixed by inserting the repo root at the front of sys.path before
+  those imports (commit 84d8804) -- a mechanical packaging bug, not a research
+  or content change. Second issue: the dashboard's default data file
+  (outputs/formal_bounds_sample_003.jsonl, 20,000 rows) is gitignored for size
+  (70+ MB), so the deployed app had no data to show. Fixed by committing a
+  small (20-row, ~70KB) unmodified subset of the same real file
+  (outputs/formal_bounds_sample_003_demo.jsonl) and having the dashboard fall
+  back to it with an on-screen note when the full file is absent (commit
+  4c11449) -- local behaviour against the full file is unchanged, verified
+  both paths load correctly. Live app: reasonguard-dashboard.streamlit.app.
+  Category: code/pipeline engineering, deployment -- explicitly permitted; no
+  research data was altered, only a small real subset of it was copied for
+  demo purposes.
