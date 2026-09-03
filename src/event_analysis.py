@@ -327,8 +327,14 @@ def main() -> None:
     print(f"Markdown: {EVENT_TYPE_REPORT_MD}")
 
     # Chi-square: is violation category independent of (a) model, (b) proxy event type?
+    # Synthetic responses are a rule-based baseline, not a language model, so they are
+    # excluded from the model association test (thesis Sec. 3.10); they stay in the
+    # event-type test below.
     model_groups, labels, model_matrix = build_contingency_table(
-        report_records, lambda r: r.get("model_name") or "unknown"
+        report_records,
+        lambda r: None
+        if (r.get("model_name") or "unknown") == "synthetic_rule_based"
+        else (r.get("model_name") or "unknown"),
     )
     event_groups, _labels, event_matrix = build_contingency_table(
         report_records, lambda r: event_type_lookup.get(r.get("event_id") or "")

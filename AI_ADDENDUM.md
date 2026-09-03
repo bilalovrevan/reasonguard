@@ -182,3 +182,19 @@ language/editing feedback on author-written text, project planning).
   Category: code/pipeline engineering, deployment -- explicitly permitted; no
   research data was altered, only a small real subset of it was copied for
   demo purposes.
+- 2026-09-03 (cont'd) | Claude | Deployed app hit one more issue after the two
+  code fixes above landed: Streamlit Cloud's incremental "Updated app!" reload
+  re-ran the script without reimporting already-loaded modules, so the running
+  process still had the OLD src.pipeline_config object cached in memory and
+  raised ImportError: cannot import name 'FORMAL_BOUNDS_DEMO_JSONL' even
+  though the committed source was correct (confirmed by viewing the raw file
+  on GitHub). A full "Reboot app" (not just the incremental update) cleared
+  the stale process and picked up the real code. Verified end-to-end after
+  reboot: bound selector loads the 20-row demo subset with the on-screen
+  note, and running the V1 (fabricated attack) example through "Verify with
+  ReasonGuard" correctly returns Severity HIGH with V1+V4 violations and
+  their reason lists. The "per-claim verdicts unavailable, install spaCy/
+  en_core_web_lg" message is expected/by-design on Cloud (that dependency is
+  optional and not installed there) -- not a bug. Live app:
+  https://reasonguard-dashboard.streamlit.app. Category: deployment,
+  verification -- explicitly permitted.

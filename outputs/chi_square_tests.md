@@ -7,11 +7,11 @@ category is associated with that grouping variable.
 
 ## violation_category_vs_model
 
-- Groups: gemini-2.5-flash-lite, gpt-4o-mini, llama3.1:8b-instruct-q4_0, mistral:7b-instruct-v0.3-q4_0, phi3:mini, synthetic_rule_based
+- Groups: gemini-2.5-flash-lite, gpt-4o-mini, llama3.1:8b-instruct-q4_0, mistral:7b-instruct-v0.3-q4_0, phi3:mini
 - Violation labels tested: NONE, V1, V4, V5, MIXED
 - Labels dropped (zero count across all groups): V2, V3
-- Chi-square statistic: 1073.4748
-- Degrees of freedom: 20
+- Chi-square statistic: 649.0541
+- Degrees of freedom: 16
 - p-value: 0.0
 - Significant at alpha=0.05: yes -- reject H0, violation category is associated with this grouping variable
 

@@ -82,3 +82,6 @@ logs/
 *.toc
 *.out
 *.synctex.gz
+
+# thesis docx generator (local tooling)
+.thesis_build/

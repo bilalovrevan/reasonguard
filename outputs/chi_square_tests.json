@@ -5,8 +5,7 @@
       "gpt-4o-mini",
       "llama3.1:8b-instruct-q4_0",
       "mistral:7b-instruct-v0.3-q4_0",
-      "phi3:mini",
-      "synthetic_rule_based"
+      "phi3:mini"
     ],
     "labels": [
       "NONE",
@@ -19,9 +18,9 @@
       "V2",
       "V3"
     ],
-    "chi2": 1073.4748,
+    "chi2": 649.0541,
     "p_value": 0.0,
-    "dof": 20,
+    "dof": 16,
     "significant_at_0_05": true
   },
   "violation_category_vs_proxy_event_type": {
