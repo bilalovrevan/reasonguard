@@ -30,7 +30,7 @@ if str(_REPO_ROOT) not in sys.path:
 
 import streamlit as st
 
-from src.pipeline_config import FORMAL_BOUNDS_JSONL
+from src.pipeline_config import FORMAL_BOUNDS_DEMO_JSONL, FORMAL_BOUNDS_JSONL
 from src.reason_guard_checker import check_response
 
 EXAMPLE_RESPONSE_OPTIONS = {
@@ -152,11 +152,25 @@ def render_main_panel() -> None:
     )
 
     bounds = load_first_bounds(FORMAL_BOUNDS_JSONL, limit=10)
+    using_demo_bounds = False
+
+    if not bounds:
+        # The full 20,000-row file is gitignored for size; fall back to the
+        # small git-tracked demo subset so the dashboard still works on a
+        # checkout that only has the repository (e.g. Streamlit Cloud).
+        bounds = load_first_bounds(FORMAL_BOUNDS_DEMO_JSONL, limit=10)
+        using_demo_bounds = bool(bounds)
 
     if not bounds:
         st.warning(
-            "No formal bounds were found at `outputs/formal_bounds_sample_003.jsonl`. "
-            "Run `python -m src.formal_bound_builder` first."
+            "No formal bounds were found at `outputs/formal_bounds_sample_003.jsonl` "
+            "or the demo fallback. Run `python -m src.formal_bound_builder` first."
+        )
+    elif using_demo_bounds:
+        st.info(
+            "Showing the 20-bound demo subset (`outputs/formal_bounds_sample_003_demo.jsonl`) "
+            "because the full 20,000-row file isn't present in this environment. "
+            "Run the pipeline locally for the full set."
         )
 
     bound_labels = [f"{bound['event_id']} ({bound['formal_class']})" for bound in bounds]

@@ -37,6 +37,11 @@ SAMPLE_INPUT_FILE = RAW_DATA_DIR / "sample_003.csv"
 
 FORMAL_BOUNDS_JSON = OUTPUT_DIR / "formal_bounds_sample_003.json"
 FORMAL_BOUNDS_JSONL = OUTPUT_DIR / "formal_bounds_sample_003.jsonl"
+# Small, git-tracked subset of the first N real formal bounds from the file
+# above, which is itself gitignored for size (70+ MB). The dashboard falls
+# back to this when running somewhere (e.g. Streamlit Community Cloud) that
+# only has the git repository, not the full local outputs/ directory.
+FORMAL_BOUNDS_DEMO_JSONL = OUTPUT_DIR / "formal_bounds_sample_003_demo.jsonl"
 FORMAL_BOUNDS_PREVIEW = OUTPUT_DIR / "formal_bounds_preview.txt"
 FORMAL_BOUNDS_SUMMARY = OUTPUT_DIR / "formal_bounds_summary.json"
 
