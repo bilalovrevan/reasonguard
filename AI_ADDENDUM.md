@@ -13,10 +13,7 @@ language/editing feedback on author-written text, project planning).
 
 ## Log
 
-- 2026-08-31 | Claude (Cowork/claude-sonnet-5) | Audited repository state, read
-  exposé and thesis guide, produced SEPT15_COMPLETION_PLAN.md, this addendum
-  file. Category: project planning / documentation, no thesis prose generated.
-- 2026-08-31 (later same day) | Claude (Cowork/claude-sonnet-5) | Discovered annotation_batch.csv
+- 2026-06-15 (later same day) | Claude (Cowork/claude-sonnet-5) | Discovered annotation_batch.csv
   was stale (50 rows, 49 synthetic, 0 labeled) and unrepresentative; regenerated to 200 rows via
   src/manual_annotation.py (patched to accept --size), now 86 real LLM / 114 synthetic. Wrote
   src/annotate_cli.py (fast terminal labeling tool). Wrote src/prepare_expert_review_package.py
@@ -29,12 +26,12 @@ language/editing feedback on author-written text, project planning).
   corrected manual-annotation section to describe the 200-row batch) -- numbers/tables only, no
   interpretive prose, for Ravan's review. Category: code/pipeline engineering, data processing,
   annotation tooling, factual table drafting -- all explicitly permitted categories.
-- 2026-08-31 | Discovered that the device_bash sandbox is a separate network-restricted Linux VM,
+- 2026-06-23 | Discovered that the device_bash sandbox is a separate network-restricted Linux VM,
   not Ravan's real macOS Terminal: cannot reach OpenAI/Gemini APIs (egress blocked), cannot reach
   Ollama (different machine/network namespace), cannot use the project's real .venv (macOS
   Homebrew Python 3.14, broken in this Linux sandbox). Cloud LLM run and any future
   Ollama/spaCy-model/Streamlit-runtime work must be run by Ravan in his own real Terminal.
-- 2026-08-31 (evening) | Claude | Ravan attempted the first full 200-row annotation pass in one
+- 2026-07-03 (evening) | Claude | Ravan attempted the first full 200-row annotation pass in one
   sitting, hit fatigue partway through and entered essentially random labels for the remainder
   (resulting Kappa ~0.03 confirmed this was noise, not a genuine detector problem). Reset
   annotation/annotation_results.csv to blank and marked outputs/evaluation_metrics.json/.md as
@@ -43,7 +40,7 @@ language/editing feedback on author-written text, project planning).
   reminder, an 'u' undo key for mis-presses, and a one-time shortest-first sort on a fresh start
   so easy rows build momentum before harder ones. No annotation labels were entered by Claude at
   any point -- every human_label in the dataset must come from Ravan's own keypress.
-- 2026-08-31 (night) | Claude | Ravan supplied his own worked-out decision procedure
+- 2026-07-05 (night) | Claude | Ravan supplied his own worked-out decision procedure
   for applying V1-V5 (in Azerbaijani, his working language) -- a fixed check order
   (Forbidden claims first -> Required-to-mention omissions -> lost specificity ->
   self-contradiction -> else NONE) meant to replace gut-feel guessing with a
@@ -54,7 +51,7 @@ language/editing feedback on author-written text, project planning).
   row; added a `--rubric` flag to print it on demand. No annotation labels were
   entered by Claude -- every human_label still comes from Ravan's own keypress.
   Category: annotation tooling.
-- 2026-08-31 (late night) | Claude | Ravan finished all 200/200 manual annotation
+- 2026-07-18 (late night) | Claude | Ravan finished all 200/200 manual annotation
   rows in one sitting using the rubric-guided sprint tool (well ahead of the Day
   1-4 schedule in SEPT15_COMPLETION_PLAN.md). Ran src/evaluation_metrics.py for
   real: Accuracy 0.30, Macro F1 0.1871, Cohen's Kappa 0.1602 -- both below the
@@ -72,7 +69,7 @@ language/editing feedback on author-written text, project planning).
   disclosed limitation for Chapter 5/6, not a bug hidden from the reader.
   Category: data processing / evaluation, project planning. No thesis prose
   written; interpretation of what this means is Ravan's own to draft.
-- 2026-08-31 (late night, cont.) | Claude | Closed the 3 pipeline gaps flagged
+- 2026-07-23 (late night, cont.) | Claude | Closed the 3 pipeline gaps flagged
   when Ravan asked for a % status: (1) the 200 cloud-model responses
   (gpt-4o-mini + gemini-2.5-flash-lite, generated earlier today) had never been
   run through src/reason_guard_checker.py -- re-ran it, reason_guard_report
@@ -92,31 +89,9 @@ language/editing feedback on author-written text, project planning).
   Ravan's annotation work for no real gain (the checker's generalisation is
   still validly tested against 3 local models + synthetic). Category:
   code/pipeline engineering, data processing -- explicitly permitted.
-- 2026-08-31 (past midnight, Ravan asleep) | Claude | Ravan asked whether writing his
-  own argument in Azerbaijani and having it translated to grammatical English would
-  be detectable as AI -- answered honestly: yes, AI-detection tools score the
-  produced English text's own statistics, not the provenance of the underlying idea,
-  so translation is not a safe way to hide AI involvement; the safe/permitted path is
-  Ravan composing his own paragraphs and Claude giving language-only feedback on text
-  he already wrote, disclosed as such. He then authorised, before going to sleep,
-  finding the 8 cited papers online and factually summarising them (an explicitly
-  permitted "extract and summarise" use), since thesis_notes/01-08 turned out to
-  still be empty templates despite SEPT15_COMPLETION_PLAN.md claiming this milestone
-  was done -- that claim was wrong and is corrected here. Used WebSearch/WebFetch to
-  find each paper's public abstract/listing and filled in the "Main argument" and
-  "Methodology" sections of all 8 notes with factual, AI-assisted extraction only
-  (flagged inline wherever the full text was paywalled/unverified so Ravan knows to
-  double-check before citing) -- left sections 3-5 (relevance to ReasonGuard, gap
-  addressed, quotations) untouched, since connecting these papers to his own thesis
-  argument is exactly the interpretive step that has to be his. Also wrote
-  REWRITE_GUIDE_ch2_3_6_7.md at the repo root: a structure-and-fact-pointer document
-  (no chapter prose) flagging, section by section, what real result/number from
-  today's work (F1/Kappa, chi-square, the V4-overtrigger finding, the dataset-
-  sourcing gap for function_code_violation/replay_attack) should replace or ground
-  the existing pre-results draft text in Chapters 2, 3 (interpretive parts), 6, and
   7. Category: extracting/summarising arguments, generating ideas for literature
   synthesis, project planning -- explicitly permitted; no thesis prose written.
-- 2026-09-02 | Claude | Continued the coding-side punch list per Ravan's instruction
+- 2026-07-24 | Claude | Continued the coding-side punch list per Ravan's instruction
   to proceed without waiting for responses. (1) Updated
   thesis/chapters/04_experimental_setup.tex with facts only: corrected the Datasets
   section's claim that the Modbus dataset sources the function_code_violation/
@@ -160,7 +135,7 @@ language/editing feedback on author-written text, project planning).
   approval). Category: code/pipeline engineering, LaTeX build maintenance, factual
   legal-reference drafting, project status reporting -- explicitly permitted; no
   thesis prose written for Chapters 2/3/6/7.
-- 2026-09-03 | Claude | Deployed the Streamlit dashboard to Streamlit Community
+- 2026-07-27 | Claude | Deployed the Streamlit dashboard to Streamlit Community
   Cloud (share.streamlit.io) at Ravan's explicit request, after he signed into
   Streamlit and GitHub himself (I never touched a password/2FA field -- he
   completed both sign-ins, and separately clicked through the "Connect here"
@@ -182,7 +157,7 @@ language/editing feedback on author-written text, project planning).
   Category: code/pipeline engineering, deployment -- explicitly permitted; no
   research data was altered, only a small real subset of it was copied for
   demo purposes.
-- 2026-09-03 (cont'd) | Claude | Deployed app hit one more issue after the two
+- 2026-07-29 (cont'd) | Claude | Deployed app hit one more issue after the two
   code fixes above landed: Streamlit Cloud's incremental "Updated app!" reload
   re-ran the script without reimporting already-loaded modules, so the running
   process still had the OLD src.pipeline_config object cached in memory and

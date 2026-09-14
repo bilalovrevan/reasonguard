@@ -76,17 +76,28 @@ def per_model_violation_counts(records: list[dict[str, Any]]) -> dict[str, dict[
     return counts
 
 
+SYNTHETIC_MODEL_NAME = "synthetic_rule_based"
+SYNTHETIC_TICK_LABEL = "regression fixtures\n(not a model)"
+
+
 def plot_per_model_violation_bars(
     counts: dict[str, dict[str, int]],
     output_path: Path,
 ) -> None:
-    model_names = sorted(counts)
+    real_names = sorted(name for name in counts if name != SYNTHETIC_MODEL_NAME)
+    model_names = real_names + ([SYNTHETIC_MODEL_NAME] if SYNTHETIC_MODEL_NAME in counts else [])
     n_models = len(model_names)
     n_codes = len(VIOLATION_CODES)
 
-    figure, axes = plt.subplots(figsize=(8.5, 4.5))
+    # Leave a visual gap between the five real models and the synthetic regression
+    # fixtures so the fixtures are not read as a sixth model (see thesis Sec. 4.1).
+    has_synthetic = SYNTHETIC_MODEL_NAME in counts
+    x_positions = list(range(len(real_names)))
+    if has_synthetic:
+        x_positions.append(len(real_names) + 1)
+
+    figure, axes = plt.subplots(figsize=(9, 4.5))
     bar_width = 0.8 / n_codes
-    x_positions = list(range(n_models))
 
     for index, code in enumerate(VIOLATION_CODES):
         rates = [
@@ -94,10 +105,29 @@ def plot_per_model_violation_bars(
             for name in model_names
         ]
         offsets = [position + (index - n_codes / 2 + 0.5) * bar_width for position in x_positions]
-        axes.bar(offsets, rates, width=bar_width, label=VIOLATION_LABELS[code])
+        bars = axes.bar(
+            offsets,
+            rates,
+            width=bar_width,
+            label=VIOLATION_LABELS[code],
+            color=f"C{index}",
+        )
+        if has_synthetic:
+            # Hatch only the last (synthetic) bar of this violation code so it reads
+            # as visually distinct from the five real-model bars.
+            bars[-1].set_hatch("//")
+            bars[-1].set_edgecolor("black")
+            bars[-1].set_linewidth(0.6)
+
+    if has_synthetic:
+        axes.axvline(len(real_names) + 0.5, color="grey", linestyle="--", linewidth=0.8)
+
+    tick_labels = list(real_names)
+    if has_synthetic:
+        tick_labels.append(SYNTHETIC_TICK_LABEL)
 
     axes.set_xticks(x_positions)
-    axes.set_xticklabels(model_names, rotation=15, ha="right")
+    axes.set_xticklabels(tick_labels, rotation=15, ha="right")
     axes.set_ylabel("Violation rate (%)")
     axes.set_ylim(0, 100)
     axes.set_title("ReasonGuard V1-V5 violation rate per model")
@@ -112,14 +142,29 @@ def plot_clean_rate_bar(
     counts: dict[str, dict[str, int]],
     output_path: Path,
 ) -> None:
-    model_names = sorted(counts)
+    real_names = sorted(name for name in counts if name != SYNTHETIC_MODEL_NAME)
+    has_synthetic = SYNTHETIC_MODEL_NAME in counts
+    model_names = real_names + ([SYNTHETIC_MODEL_NAME] if has_synthetic else [])
     clean_rates = [
         (counts[name]["clean"] / counts[name]["total"]) * 100 if counts[name]["total"] else 0
         for name in model_names
     ]
 
-    figure, axes = plt.subplots(figsize=(7.5, 4))
-    bars = axes.bar(model_names, clean_rates, color="#3a86ff")
+    # Leave a visual gap before the synthetic regression-fixture bar (see thesis Sec. 4.1)
+    # so it is not read as a sixth model alongside the five real ones.
+    x_positions = list(range(len(real_names)))
+    if has_synthetic:
+        x_positions.append(len(real_names) + 1)
+
+    figure, axes = plt.subplots(figsize=(8, 4))
+    colors = ["#3a86ff"] * len(real_names) + (["#3a86ff"] if has_synthetic else [])
+    bars = axes.bar(x_positions, clean_rates, color=colors, width=0.6)
+
+    if has_synthetic:
+        bars[-1].set_hatch("//")
+        bars[-1].set_edgecolor("black")
+        bars[-1].set_linewidth(0.6)
+        axes.axvline(len(real_names) + 0.5, color="grey", linestyle="--", linewidth=0.8)
 
     for bar, rate in zip(bars, clean_rates, strict=False):
         axes.text(
@@ -130,11 +175,16 @@ def plot_clean_rate_bar(
             fontsize=9,
         )
 
+    tick_labels = list(real_names)
+    if has_synthetic:
+        tick_labels.append(SYNTHETIC_TICK_LABEL)
+
+    axes.set_xticks(x_positions)
     axes.set_ylabel("Clean response rate (%)")
     axes.set_ylim(0, 100)
     axes.set_title("Clean response rate per model (no V1-V5 fired)")
     axes.grid(axis="y", linestyle=":", alpha=0.4)
-    plt.setp(axes.get_xticklabels(), rotation=15, ha="right")
+    axes.set_xticklabels(tick_labels, rotation=15, ha="right")
     figure.tight_layout()
     figure.savefig(output_path, dpi=160)
     plt.close(figure)
